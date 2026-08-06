@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as AccountRouteImport } from './routes/account'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as CartRouteImport } from './routes/cart'
 import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as ReturnsPolicyRouteImport } from './routes/returns-policy'
+import { Route as ShippingPolicyRouteImport } from './routes/shipping-policy'
 import { Route as ShopRouteImport } from './routes/shop'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as AccountIndexRouteImport } from './routes/account.index'
 import { Route as AccountAddressesRouteImport } from './routes/account.addresses'
 import { Route as AccountOrdersRouteImport } from './routes/account.orders'
@@ -26,6 +32,11 @@ import { Route as ProductSkuRouteImport } from './routes/product.$sku'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AccountRoute = AccountRouteImport.update({
@@ -48,9 +59,34 @@ const CheckoutRoute = CheckoutRouteImport.update({
   path: '/checkout',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReturnsPolicyRoute = ReturnsPolicyRouteImport.update({
+  id: '/returns-policy',
+  path: '/returns-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShippingPolicyRoute = ShippingPolicyRouteImport.update({
+  id: '/shipping-policy',
+  path: '/shipping-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ShopRoute = ShopRouteImport.update({
   id: '/shop',
   path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AccountIndexRoute = AccountIndexRouteImport.update({
@@ -91,11 +127,17 @@ const ProductSkuRoute = ProductSkuRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/account': typeof AccountRouteWithChildren
   '/auth': typeof AuthRoute
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/returns-policy': typeof ReturnsPolicyRoute
+  '/shipping-policy': typeof ShippingPolicyRoute
   '/shop': typeof ShopRoute
+  '/terms': typeof TermsRoute
   '/account/addresses': typeof AccountAddressesRoute
   '/account/orders': typeof AccountOrdersRoute
   '/account/wishlist': typeof AccountWishlistRoute
@@ -106,10 +148,16 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/returns-policy': typeof ReturnsPolicyRoute
+  '/shipping-policy': typeof ShippingPolicyRoute
   '/shop': typeof ShopRoute
+  '/terms': typeof TermsRoute
   '/account/addresses': typeof AccountAddressesRoute
   '/account/orders': typeof AccountOrdersRoute
   '/account/wishlist': typeof AccountWishlistRoute
@@ -121,11 +169,17 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/account': typeof AccountRouteWithChildren
   '/auth': typeof AuthRoute
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/returns-policy': typeof ReturnsPolicyRoute
+  '/shipping-policy': typeof ShippingPolicyRoute
   '/shop': typeof ShopRoute
+  '/terms': typeof TermsRoute
   '/account/addresses': typeof AccountAddressesRoute
   '/account/orders': typeof AccountOrdersRoute
   '/account/wishlist': typeof AccountWishlistRoute
@@ -138,11 +192,17 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/account'
     | '/auth'
     | '/cart'
     | '/checkout'
+    | '/contact'
+    | '/privacy-policy'
+    | '/returns-policy'
+    | '/shipping-policy'
     | '/shop'
+    | '/terms'
     | '/account/addresses'
     | '/account/orders'
     | '/account/wishlist'
@@ -153,10 +213,16 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/auth'
     | '/cart'
     | '/checkout'
+    | '/contact'
+    | '/privacy-policy'
+    | '/returns-policy'
+    | '/shipping-policy'
     | '/shop'
+    | '/terms'
     | '/account/addresses'
     | '/account/orders'
     | '/account/wishlist'
@@ -167,11 +233,17 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/account'
     | '/auth'
     | '/cart'
     | '/checkout'
+    | '/contact'
+    | '/privacy-policy'
+    | '/returns-policy'
+    | '/shipping-policy'
     | '/shop'
+    | '/terms'
     | '/account/addresses'
     | '/account/orders'
     | '/account/wishlist'
@@ -183,11 +255,17 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   AccountRoute: typeof AccountRouteWithChildren
   AuthRoute: typeof AuthRoute
   CartRoute: typeof CartRoute
   CheckoutRoute: typeof CheckoutRoute
+  ContactRoute: typeof ContactRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  ReturnsPolicyRoute: typeof ReturnsPolicyRoute
+  ShippingPolicyRoute: typeof ShippingPolicyRoute
   ShopRoute: typeof ShopRoute
+  TermsRoute: typeof TermsRoute
   BrandSlugRoute: typeof BrandSlugRoute
   OrderOrderNumberRoute: typeof OrderOrderNumberRoute
   ProductSkuRoute: typeof ProductSkuRoute
@@ -200,6 +278,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/account': {
@@ -230,11 +315,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CheckoutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/returns-policy': {
+      id: '/returns-policy'
+      path: '/returns-policy'
+      fullPath: '/returns-policy'
+      preLoaderRoute: typeof ReturnsPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shipping-policy': {
+      id: '/shipping-policy'
+      path: '/shipping-policy'
+      fullPath: '/shipping-policy'
+      preLoaderRoute: typeof ShippingPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/shop': {
       id: '/shop'
       path: '/shop'
       fullPath: '/shop'
       preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/account/': {
@@ -308,11 +428,17 @@ const AccountRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   AccountRoute: AccountRouteWithChildren,
   AuthRoute: AuthRoute,
   CartRoute: CartRoute,
   CheckoutRoute: CheckoutRoute,
+  ContactRoute: ContactRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  ReturnsPolicyRoute: ReturnsPolicyRoute,
+  ShippingPolicyRoute: ShippingPolicyRoute,
   ShopRoute: ShopRoute,
+  TermsRoute: TermsRoute,
   BrandSlugRoute: BrandSlugRoute,
   OrderOrderNumberRoute: OrderOrderNumberRoute,
   ProductSkuRoute: ProductSkuRoute,
