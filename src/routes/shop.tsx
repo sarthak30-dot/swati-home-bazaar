@@ -8,15 +8,15 @@ import { rupees } from "@/lib/format";
 import { cn } from "@/lib/utils";
 
 type ShopSearch = {
-  brands?: string;
-  categories?: string;
-  min?: number;
-  max?: number;
-  rating?: number;
-  discount?: number;
-  q?: string;
-  sort?: string;
-  page?: number;
+  brands?: string | undefined;
+  categories?: string | undefined;
+  min?: number | undefined;
+  max?: number | undefined;
+  rating?: number | undefined;
+  discount?: number | undefined;
+  q?: string | undefined;
+  sort?: string | undefined;
+  page?: number | undefined;
 };
 
 export const Route = createFileRoute("/shop")({
@@ -74,7 +74,7 @@ function Shop() {
   const page = search.page ?? 1;
 
   const setSearch = (patch: Partial<ShopSearch>) =>
-    navigate({ search: (prev) => ({ ...prev, page: undefined, ...patch }) });
+    navigate({ search: (prev: ShopSearch) => ({ ...prev, page: undefined, ...patch }) });
 
   const { data: brands } = useQuery({ queryKey: ["brands"], queryFn: fetchBrands });
   const { data: categories } = useQuery({ queryKey: ["categories"], queryFn: fetchCategories });
@@ -107,7 +107,7 @@ function Shop() {
   const toggleList = (key: "brands" | "categories", value: string) => {
     const current = key === "brands" ? selBrands : selCats;
     const next = current.includes(value)
-      ? current.filter((v) => v !== value)
+      ? current.filter((v: string) => v !== value)
       : [...current, value];
     setSearch({ [key]: next.length ? next.join(",") : undefined } as Partial<ShopSearch>);
   };
@@ -291,7 +291,7 @@ function Shop() {
                 <button
                   type="button"
                   disabled={page <= 1}
-                  onClick={() => navigate({ search: (p) => ({ ...p, page: page - 1 }) })}
+                  onClick={() => navigate({ search: (p: ShopSearch) => ({ ...p, page: page - 1 }) })}
                   className="rounded-lg border border-border px-4 py-2 text-sm disabled:opacity-40"
                 >
                   Previous
@@ -302,7 +302,7 @@ function Shop() {
                 <button
                   type="button"
                   disabled={page >= pages}
-                  onClick={() => navigate({ search: (p) => ({ ...p, page: page + 1 }) })}
+                  onClick={() => navigate({ search: (p: ShopSearch) => ({ ...p, page: page + 1 }) })}
                   className="rounded-lg border border-border px-4 py-2 text-sm disabled:opacity-40"
                 >
                   Next
