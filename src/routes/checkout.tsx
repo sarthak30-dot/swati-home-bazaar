@@ -140,7 +140,12 @@ function Checkout() {
       if (saveAddress) {
         const { data: inserted } = await supabase
           .from("addresses")
-          .insert({ ...parsed.data, customer_id: user.id, is_default: !addresses?.length })
+          .insert({
+            ...parsed.data,
+            line2: parsed.data.line2 ?? null,
+            customer_id: user.id,
+            is_default: !addresses?.length,
+          })
           .select("id")
           .maybeSingle();
         addressId = inserted?.id ?? null;
