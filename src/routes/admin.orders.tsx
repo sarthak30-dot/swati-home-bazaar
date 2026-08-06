@@ -39,8 +39,11 @@ function AdminOrders() {
     },
   });
 
-  const update = async (id: string, patch: Record<string, string>) => {
-    const { error } = await supabase.from("orders").update(patch).eq("id", id);
+  const update = async (id: string, patch: { status?: string; payment_status?: string }) => {
+    const { error } = await supabase
+      .from("orders")
+      .update(patch as never)
+      .eq("id", id);
     if (error) toast.error("Could not update the order");
     else {
       toast.success("Order updated");

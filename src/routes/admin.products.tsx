@@ -22,7 +22,7 @@ function AdminProducts() {
   const { data, isFetching } = useQuery({
     queryKey: ["admin-products", q, page],
     placeholderData: keepPreviousData,
-    queryFn: () => fetchShop({ q: q || undefined, page, sort: "new" }),
+    queryFn: () => fetchShop({ ...(q ? { q } : {}), page, sort: "new" }),
   });
 
   const total = data?.total ?? 0;
@@ -76,11 +76,11 @@ function AdminProducts() {
         const cols = row.split(",").map((c) => c.trim());
         const sku = cols[skuIdx];
         if (!sku) continue;
-        const patch: Record<string, number> = {};
-        if (priceIdx > -1 && cols[priceIdx]) patch["selling_price"] = Number(cols[priceIdx]);
-        if (stockIdx > -1 && cols[stockIdx]) patch["stock_qty"] = Math.round(Number(cols[stockIdx]));
+        const patch: { selling_price?: number; stock_qty?: number } = {};
+        if (priceIdx > -1 && cols[priceIdx]) patch.selling_price = Number(cols[priceIdx]);
+        if (stockIdx > -1 && cols[stockIdx]) patch.stock_qty = Math.round(Number(cols[stockIdx]));
         if (!Object.keys(patch).length) continue;
-        const { error } = await supabase.from("product_variants").update(patch).eq("sku_id", sku);
+        const { error } = await supabase.from("product_variants").update(patch as never).eq("sku_id", sku);
         if (error) failed += 1;
         else updated += 1;
       }
