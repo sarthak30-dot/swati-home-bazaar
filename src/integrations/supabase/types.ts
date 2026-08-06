@@ -134,6 +134,13 @@ export type Database = {
             foreignKeyName: "cart_items_product_variant_id_fkey"
             columns: ["product_variant_id"]
             isOneToOne: false
+            referencedRelation: "catalog_variants"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "cart_items_product_variant_id_fkey"
+            columns: ["product_variant_id"]
+            isOneToOne: false
             referencedRelation: "product_variants"
             referencedColumns: ["id"]
           },
@@ -168,6 +175,13 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "brands"
             referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "categories_brand_id_fkey"
+            columns: ["brand_id"]
+            isOneToOne: false
+            referencedRelation: "catalog_variants"
+            referencedColumns: ["brand_id"]
           },
         ]
       }
@@ -283,6 +297,13 @@ export type Database = {
             columns: ["order_id"]
             isOneToOne: false
             referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "order_items_product_variant_id_fkey"
+            columns: ["product_variant_id"]
+            isOneToOne: false
+            referencedRelation: "catalog_variants"
             referencedColumns: ["id"]
           },
           {
@@ -417,6 +438,13 @@ export type Database = {
             foreignKeyName: "product_variants_product_id_fkey"
             columns: ["product_id"]
             isOneToOne: false
+            referencedRelation: "catalog_variants"
+            referencedColumns: ["product_id"]
+          },
+          {
+            foreignKeyName: "product_variants_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
             referencedRelation: "products"
             referencedColumns: ["id"]
           },
@@ -466,6 +494,20 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "brands"
             referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "products_brand_id_fkey"
+            columns: ["brand_id"]
+            isOneToOne: false
+            referencedRelation: "catalog_variants"
+            referencedColumns: ["brand_id"]
+          },
+          {
+            foreignKeyName: "products_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "catalog_variants"
+            referencedColumns: ["category_id"]
           },
           {
             foreignKeyName: "products_category_id_fkey"
@@ -528,6 +570,13 @@ export type Database = {
             foreignKeyName: "wishlist_items_product_variant_id_fkey"
             columns: ["product_variant_id"]
             isOneToOne: false
+            referencedRelation: "catalog_variants"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "wishlist_items_product_variant_id_fkey"
+            columns: ["product_variant_id"]
+            isOneToOne: false
             referencedRelation: "product_variants"
             referencedColumns: ["id"]
           },
@@ -535,7 +584,39 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      catalog_variants: {
+        Row: {
+          brand_id: string | null
+          brand_name: string | null
+          brand_slug: string | null
+          capacity_or_size: string | null
+          category_id: string | null
+          category_name: string | null
+          category_slug: string | null
+          color: string | null
+          color_hex: string | null
+          created_at: string | null
+          description: string | null
+          discount_pct: number | null
+          id: string | null
+          image_url: string | null
+          is_active: boolean | null
+          light_color_hex: string | null
+          mrp: number | null
+          pack_or_carton_qty: number | null
+          product_id: string | null
+          product_name: string | null
+          product_slug: string | null
+          rating: number | null
+          rating_count: number | null
+          selling_price: number | null
+          sku_id: string | null
+          specifications: Json | null
+          stock_qty: number | null
+          variant_code: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       has_role: {
