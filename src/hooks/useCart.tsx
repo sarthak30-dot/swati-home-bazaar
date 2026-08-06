@@ -115,7 +115,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
       } else {
         const next = [...guestLines];
         const idx = next.findIndex((l) => l.variantId === variantId);
-        if (idx >= 0) next[idx] = { ...next[idx], qty: next[idx].qty + qty };
+        const current = idx >= 0 ? next[idx] : undefined;
+        if (current) next[idx] = { variantId, qty: current.qty + qty };
         else next.push({ variantId, qty });
         persistGuest(next);
       }
