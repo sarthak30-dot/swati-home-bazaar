@@ -76,9 +76,9 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.218 0 89.9);
 
-  /* Shell accent taken from the catalogue covers: Pigeon/Yera signature red. */
-  --gold: oklch(0.545 0.221 27.5);
-  --gold-tint: oklch(0.962 0.019 22);
+  /* Shell accent: warm mustard gold. */
+  --gold: oklch(0.66 0.128 77.4);
+  --gold-tint: oklch(0.963 0.032 87);
   --success: oklch(0.565 0.136 148.3);
   --success-foreground: oklch(1 0 0);
 
@@ -92,38 +92,39 @@
   --yera: oklch(0.532 0.208 25.3);
   --yera-tint: oklch(0.961 0.018 20);
 
-  /* Neutral shell default = catalogue red; overridden inside brand contexts. */
+  /* Neutral shell default = gold; overridden inside brand contexts. */
   --brand: var(--gold);
   --brand-tint: var(--gold-tint);
   --brand-foreground: oklch(1 0 0);
 
 
-  --primary: oklch(0.545 0.221 27.5);
+  --primary: oklch(0.66 0.128 77.4);
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.962 0.019 22);
+  --secondary: oklch(0.963 0.032 87);
   --secondary-foreground: oklch(0.218 0 89.9);
-  --muted: oklch(0.98 0.004 20);
-  --muted-foreground: oklch(0.518 0.01 25);
-  --accent: oklch(0.962 0.019 22);
+  --muted: oklch(0.98 0.006 85);
+  --muted-foreground: oklch(0.518 0.012 85);
+  --accent: oklch(0.963 0.032 87);
   --accent-foreground: oklch(0.218 0 89.9);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.912 0.008 25);
-  --input: oklch(0.912 0.008 25);
-  --ring: oklch(0.545 0.221 27.5);
-  --chart-1: oklch(0.545 0.221 27.5);
+  --border: oklch(0.912 0.01 85);
+  --input: oklch(0.912 0.01 85);
+  --ring: oklch(0.66 0.128 77.4);
+  --chart-1: oklch(0.66 0.128 77.4);
   --chart-2: oklch(0.596 0.108 219.6);
   --chart-3: oklch(0.351 0.095 257.1);
   --chart-4: oklch(0.532 0.208 25.3);
   --chart-5: oklch(0.565 0.136 148.3);
-  --sidebar: oklch(0.98 0.004 20);
+  --sidebar: oklch(0.98 0.006 85);
   --sidebar-foreground: oklch(0.218 0 89.9);
-  --sidebar-primary: oklch(0.545 0.221 27.5);
+  --sidebar-primary: oklch(0.66 0.128 77.4);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.962 0.019 22);
+  --sidebar-accent: oklch(0.963 0.032 87);
   --sidebar-accent-foreground: oklch(0.218 0 89.9);
-  --sidebar-border: oklch(0.912 0.008 25);
-  --sidebar-ring: oklch(0.545 0.221 27.5);
+  --sidebar-border: oklch(0.912 0.01 85);
+  --sidebar-ring: oklch(0.66 0.128 77.4);
+
 
 }
 
