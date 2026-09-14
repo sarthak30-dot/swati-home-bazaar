@@ -22,6 +22,7 @@ import { rupees } from "@/lib/format";
 import { PRODUCTS } from "@/data/products";
 import { BRAND_CLASS, BRAND_NAME_TO_SLUG, type Brand, type Product } from "@/types/product";
 import { ProductCard } from "@/components/ProductCard";
+import { SafeImage } from "@/components/SafeImage";
 import {
   Dialog,
   DialogContent,
@@ -325,23 +326,20 @@ function ImageGallery({ product }: { product: Product }) {
         onMouseMove={handleMouseMove}
         onMouseLeave={() => setZoom(null)}
       >
-        {src ? (
-          <img
-            src={src}
-            alt={product.name}
-            draggable={false}
-            className="h-full w-full object-contain transition-transform duration-150 ease-out"
-            style={
-              zoom
-                ? { transform: "scale(2.2)", transformOrigin: `${zoom.x}% ${zoom.y}%` }
-                : {}
-            }
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center bg-brand-tint">
-            <span className="font-display text-2xl font-bold text-brand/30">{product.brand}</span>
-          </div>
-        )}
+        <SafeImage
+          src={src || null}
+          alt={product.name}
+          fallbackLabel={product.name}
+          fallbackSublabel={product.brand === "Stovekraft Pigeon" ? "Pigeon" : product.brand}
+          draggable={false}
+          priority
+          className="h-full w-full object-contain transition-transform duration-150 ease-out"
+          style={
+            zoom
+              ? { transform: "scale(2.2)", transformOrigin: `${zoom.x}% ${zoom.y}%` }
+              : {}
+          }
+        />
 
         {/* Out-of-stock overlay */}
         {!product.inStock && (
@@ -389,7 +387,7 @@ function ImageGallery({ product }: { product: Product }) {
                   : "border-border hover:border-brand/40",
               )}
             >
-              <img
+              <SafeImage
                 src={img}
                 alt={`View ${i + 1}`}
                 className="h-full w-full object-cover"

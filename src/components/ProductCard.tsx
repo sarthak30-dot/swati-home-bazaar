@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { rupees } from "@/lib/format";
 import { type Product, type Brand, BRAND_CLASS } from "@/types/product";
+import { SafeImage } from "@/components/SafeImage";
 
 // Static brand pill classes — no template literals (Tailwind v4 scanner requires static strings)
 const BRAND_PILL: Record<Brand, string> = {
@@ -54,23 +55,19 @@ export function ProductCard({ product, className }: ProductCardProps) {
     >
       {/* Image region */}
       <div className="relative overflow-hidden bg-muted aspect-square">
-        {product.images.primary ? (
-          <img
-            src={product.images.primary}
-            alt={product.name}
-            className={cn(
-              "h-full w-full object-cover transition-opacity duration-300",
-              hasHover && "group-hover:opacity-0",
-            )}
-          />
-        ) : (
-          <div className="h-full w-full bg-brand-tint flex items-center justify-center">
-            <ShoppingCart className="h-10 w-10 text-brand/30" />
-          </div>
-        )}
+        <SafeImage
+          src={product.images.primary}
+          alt={product.name}
+          fallbackLabel={product.name}
+          fallbackSublabel={product.brand === "Stovekraft Pigeon" ? "Pigeon" : product.brand}
+          className={cn(
+            "h-full w-full object-cover transition-opacity duration-300",
+            hasHover && "group-hover:opacity-0",
+          )}
+        />
 
         {hasHover && (
-          <img
+          <SafeImage
             src={product.images.hover}
             alt={product.name}
             className="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"

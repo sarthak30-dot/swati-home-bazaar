@@ -17,6 +17,7 @@ import { PRODUCTS } from "@/data/products";
 import { ALL_BRANDS, BRAND_CLASS, BRAND_NAME_TO_SLUG, type Brand, type MainCategory } from "@/types/product";
 import { ProductCard } from "@/components/ProductCard";
 import { FilterSidebar, FilterDrawer, PRICE_MIN, PRICE_MAX, type CapacityRange } from "@/components/FilterSidebar";
+import { SafeImage } from "@/components/SafeImage";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -228,27 +229,27 @@ function HeroBanner() {
                 {/* Product showcase — desktop only */}
                 <div className="relative hidden h-80 lg:block">
                   {images[0] && (
-                    <img
+                    <SafeImage
                       src={images[0]}
                       alt=""
+                      priority
                       className="absolute right-0 top-0 h-72 w-72 rounded-3xl object-cover shadow-2xl rotate-1 ring-4 ring-brand/10"
-                      loading="eager"
                     />
                   )}
                   {images[1] && (
-                    <img
+                    <SafeImage
                       src={images[1]}
                       alt=""
+                      priority
                       className="absolute bottom-0 right-48 h-44 w-44 rounded-2xl object-cover shadow-xl -rotate-2 ring-2 ring-brand/10"
-                      loading="eager"
                     />
                   )}
                   {images[2] && (
-                    <img
+                    <SafeImage
                       src={images[2]}
                       alt=""
+                      priority
                       className="absolute bottom-10 right-4 h-36 w-36 rounded-2xl object-cover shadow-lg rotate-3 ring-2 ring-brand/10"
-                      loading="eager"
                     />
                   )}
                   {images.length === 0 && (
