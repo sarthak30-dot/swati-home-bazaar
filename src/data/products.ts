@@ -148,6 +148,7 @@ export const PRODUCTS: Product[] = [
     material: "Stainless Steel",
     images: {
       primary: dubblin("main_image-1788413554536-792894829.webp") || AI["db-001"].primary,
+      realAsset: "/images/products/DB-DREAM-LB-primary.webp",
       hover:   dubblin("second_main_image-1788413554537-582086474.webp") || AI["db-001"].hover,
     },
     features: [
@@ -173,6 +174,7 @@ export const PRODUCTS: Product[] = [
     material: "Stainless Steel",
     images: {
       primary: dubblin("main_image-1786615583998-129817546.webp") || AI["db-002"].primary,
+      realAsset: "/images/products/DB-RUGBY-MUG2-primary.webp",
       hover:   dubblin("second_main_image-1786615584028-627875774.webp") || AI["db-002"].hover,
     },
     features: [
@@ -198,6 +200,7 @@ export const PRODUCTS: Product[] = [
     material: "Stainless Steel",
     images: {
       primary: dubblin("main_image-1787129356948-70224425.webp") || AI["db-003"].primary,
+      realAsset: "/images/products/DB-YORK-540-primary.webp",
       hover:   dubblin("second_main_image-1787129356949-345659360.webp") || AI["db-003"].hover,
     },
     features: [
@@ -223,6 +226,7 @@ export const PRODUCTS: Product[] = [
     material: "Stainless Steel",
     images: {
       primary: dubblin("main_image-1772870353545-222062932.webp") || AI["db-004"].primary,
+      realAsset: "/images/products/DB-CREST-600-primary.webp",
       hover:   dubblin("second_main_image-1772870353545-879569652.webp") || AI["db-004"].hover,
     },
     features: [
@@ -247,6 +251,7 @@ export const PRODUCTS: Product[] = [
     material: "Stainless Steel",
     images: {
       primary: AI["db-005"].primary,
+      realAsset: "/images/products/DB-ZOOM-550-primary.webp",
       hover:   AI["db-005"].hover,
     },
     features: [
@@ -271,6 +276,7 @@ export const PRODUCTS: Product[] = [
     material: "Stainless Steel",
     images: {
       primary: AI["db-006"].primary,
+      realAsset: "/images/products/DB-CRAZE-450-primary.webp",
       hover:   AI["db-006"].hover,
     },
     features: [
@@ -294,6 +300,7 @@ export const PRODUCTS: Product[] = [
     material: "Stainless Steel",
     images: {
       primary: AI["db-007"].primary,
+      realAsset: "/images/products/DB-SLIM-LB-primary.webp",
       hover:   AI["db-007"].hover,
     },
     features: [
@@ -318,6 +325,7 @@ export const PRODUCTS: Product[] = [
     material: "Borosilicate Glass",
     images: {
       primary: AI["db-008"].primary,
+      realAsset: "/images/products/DB-STREAM-750-primary.webp",
       hover:   AI["db-008"].hover,
     },
     features: [
@@ -346,6 +354,7 @@ export const PRODUCTS: Product[] = [
     material: "Crystal-clear glass",
     images: {
       primary: yera("TH10ALG_2.jpg") || AI["yp-001"].primary,
+      realAsset: "/images/products/YP-PRIMA-OAK-300-primary.webp",
       hover:   yera("TH10ALG_1_f1b4f8b6-c062-4ded-ac1b-4a99b397c90a.jpg") || AI["yp-001"].hover,
     },
     features: [
@@ -373,6 +382,7 @@ export const PRODUCTS: Product[] = [
     material: "Crystal-clear glass",
     images: {
       primary: yera("Prima_-_TB320_main_1.jpg") || AI["yp-002"].primary,
+      realAsset: "/images/products/YP-PRIMA-ORIANA-320-primary.webp",
       hover:   yera("Prima-TB320_3.jpg") || AI["yp-002"].hover,
     },
     features: [
@@ -399,6 +409,7 @@ export const PRODUCTS: Product[] = [
     material: "Colored crystal glass",
     images: {
       primary: yera("TH10ALG-Blue_extra1_57359b48-082b-438b-8f6e-b23ee606a86f.jpg") || AI["yp-003"].primary,
+      realAsset: "/images/products/YP-PRIMA-MRC-BLUE-primary.webp",
       hover:   yera("TH10ALG-Blue_main1.jpg") || AI["yp-003"].hover,
     },
     features: [
@@ -425,6 +436,7 @@ export const PRODUCTS: Product[] = [
     material: "Colored crystal glass",
     images: {
       primary: yera("TH10ALG-Green_extra1.jpg") || AI["yp-004"].primary,
+      realAsset: "/images/products/YP-PRIMA-MRC-GREEN-primary.webp",
       hover:   yera("TH10ALG-Green_main1.jpg") || AI["yp-004"].hover,
     },
     features: [
@@ -451,6 +463,7 @@ export const PRODUCTS: Product[] = [
     material: "Crystal-clear glass",
     images: {
       primary: yera("TH10OD_2.jpg") || AI["yp-005"].primary,
+      realAsset: "/images/products/YP-PRIMA-GENEVA-285-primary.webp",
       hover:   yera("TH10OD_extra1.jpg") || AI["yp-005"].hover,
     },
     features: [
@@ -477,6 +490,7 @@ export const PRODUCTS: Product[] = [
     material: "Crystal-clear glass",
     images: {
       primary: yera("TH10CB_2_878ae08e-529e-43bd-907a-209dce41de6b.jpg") || AI["yp-006"].primary,
+      realAsset: "/images/products/YP-PRIMA-VENICE-300-primary.webp",
       hover:   yera("TH10CB_1.jpg") || AI["yp-006"].hover,
     },
     features: [
@@ -501,6 +515,7 @@ export const PRODUCTS: Product[] = [
     material: "Crystal-clear glass",
     images: {
       primary: yera("main_1.jpg") || AI["yp-007"].primary,
+      realAsset: "/images/products/YP-PRIMA-SANTORINI-primary.webp",
       hover:   yera("Carafe_Set_Package_2.png") || AI["yp-007"].hover,
     },
     features: [
@@ -529,6 +544,7 @@ export const PRODUCTS: Product[] = [
     material: "Stainless Steel",
     images: {
       primary: pigeon("stkIPT1lI1FA9rfM1tR3CfghYb0z5JMCDzZj6NRq.webp") || AI["pg-001"].primary,
+      realAsset: "/images/products/PG-KETTLE-HOT-1.5-primary.webp",
       hover:   AI["pg-001"].hover,
     },
     features: [
@@ -555,6 +571,7 @@ export const PRODUCTS: Product[] = [
     material: "Stainless Steel",
     images: {
       primary: pigeon("NvgJCVbz1xDg6bEpKHFAkViRoAb63K24Nab0cdea.webp") || AI["pg-002"].primary,
+      realAsset: "/images/products/PG-SWIFT-KETTLE-1.5-primary.webp",
       hover:   AI["pg-002"].hover,
     },
     features: [
@@ -581,6 +598,7 @@ export const PRODUCTS: Product[] = [
     material: "Ceramic-coated Aluminium",
     images: {
       primary: pigeon("USMfPT4rkRzGMfTkmn3gGH4LYNI4OkirmtV7v4y2.webp") || AI["pg-003"].primary,
+      realAsset: "/images/products/PG-MABEL-CER-3L-primary.webp",
       hover:   AI["pg-003"].hover,
     },
     features: [
@@ -607,6 +625,7 @@ export const PRODUCTS: Product[] = [
     material: "Ceramic-coated Aluminium",
     images: {
       primary: pigeon("QEPka3lnhym4t0UWanye9BDULkAAcrQqfCq3wucM.webp") || AI["pg-004"].primary,
+      realAsset: "/images/products/PG-MABEL-CER-5L-primary.webp",
       hover:   AI["pg-004"].hover,
     },
     features: [
@@ -632,6 +651,7 @@ export const PRODUCTS: Product[] = [
     material: "Aluminium inner pot",
     images: {
       primary: pigeon("W6fnc3QNrj9hiOB6JCOtnVjIqfvyXGv6VhK7wLFX.webp") || AI["pg-005"].primary,
+      realAsset: "/images/products/PG-JOY-ERC-1.8-primary.webp",
       hover:   AI["pg-005"].hover,
     },
     features: [
@@ -658,6 +678,7 @@ export const PRODUCTS: Product[] = [
     material: "Aluminium inner pot",
     images: {
       primary: pigeon("vxvsXJZY6HDqdsj91EJfbbo1xhVAbjJc0ZFa7M1B.webp") || AI["pg-006"].primary,
+      realAsset: "/images/products/PG-JOY-ERC-2.8-primary.webp",
       hover:   AI["pg-006"].hover,
     },
     features: [
@@ -683,6 +704,7 @@ export const PRODUCTS: Product[] = [
     material: "Stainless Steel inner pot",
     images: {
       primary: pigeon("jRKCOegOyKkCbN91N0aWDnHWVQp3wBQgpv9Ouoa7.webp") || AI["pg-007"].primary,
+      realAsset: "/images/products/PG-INOX-PRO-STMR-1-primary.webp",
       hover:   AI["pg-007"].hover,
     },
     features: [
@@ -709,6 +731,7 @@ export const PRODUCTS: Product[] = [
     material: "ABS + food-grade non-stick basket",
     images: {
       primary: pigeon("QHYcyDjphdGEMXiA4DWeWmFWJEfZUyo4WouUDQpA.webp") || AI["pg-008"].primary,
+      realAsset: "/images/products/PG-AIRFRY-CRISPA-primary.webp",
       hover:   AI["pg-008"].hover,
     },
     features: [

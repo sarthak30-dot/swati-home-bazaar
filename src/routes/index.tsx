@@ -13,7 +13,7 @@ import {
   Utensils,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { PRODUCTS } from "@/data/products";
+import { PRODUCTS, resolveProductImage, getAiProductImage } from "@/data/products";
 import { ALL_BRANDS, BRAND_CLASS, BRAND_NAME_TO_SLUG, type Brand, type MainCategory } from "@/types/product";
 import { ProductCard } from "@/components/ProductCard";
 import { FilterSidebar, FilterDrawer, PRICE_MIN, PRICE_MAX, type CapacityRange } from "@/components/FilterSidebar";
@@ -75,9 +75,9 @@ const HERO_SLIDES = [
 const HERO_IMAGES: Record<string, string[]> = Object.fromEntries(
   (["Dubblin", "YERA Prima", "Stovekraft Pigeon"] as Brand[]).map((brand) => [
     BRAND_NAME_TO_SLUG[brand],
-    PRODUCTS.filter((p) => p.brand === brand && p.images.primary)
+    PRODUCTS.filter((p) => p.brand === brand)
       .slice(0, 3)
-      .map((p) => p.images.primary),
+      .map((p) => resolveProductImage(p)),
   ]),
 );
 
@@ -199,7 +199,7 @@ function HeroBanner() {
             )}
           >
             <div className="h-full bg-brand-tint">
-              <div className="mx-auto grid h-full max-w-7xl items-center gap-8 px-4 py-14 lg:grid-cols-2 lg:py-20">
+              <div className="mx-auto grid h-full max-w-7xl items-center gap-6 px-4 py-10 grid-cols-2 sm:gap-8 lg:py-20">
                 {/* Text */}
                 <div className="max-w-lg">
                   <span className="inline-block rounded-full bg-brand/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-brand">
@@ -226,14 +226,14 @@ function HeroBanner() {
                   </div>
                 </div>
 
-                {/* Product showcase — desktop only */}
-                <div className="relative hidden h-80 lg:block">
+                {/* Product showcase */}
+                <div className="relative h-56 sm:h-72 lg:h-80">
                   {images[0] && (
                     <SafeImage
                       src={images[0]}
                       alt=""
                       priority
-                      className="absolute right-0 top-0 h-72 w-72 rounded-3xl object-cover shadow-2xl rotate-1 ring-4 ring-brand/10"
+                      className="absolute right-0 top-0 h-44 w-44 sm:h-64 sm:w-64 lg:h-72 lg:w-72 rounded-3xl object-cover shadow-2xl rotate-1 ring-4 ring-brand/10"
                     />
                   )}
                   {images[1] && (
@@ -241,7 +241,7 @@ function HeroBanner() {
                       src={images[1]}
                       alt=""
                       priority
-                      className="absolute bottom-0 right-48 h-44 w-44 rounded-2xl object-cover shadow-xl -rotate-2 ring-2 ring-brand/10"
+                      className="absolute bottom-0 right-32 sm:right-44 lg:right-48 h-28 w-28 sm:h-40 sm:w-40 lg:h-44 lg:w-44 rounded-2xl object-cover shadow-xl -rotate-2 ring-2 ring-brand/10"
                     />
                   )}
                   {images[2] && (
@@ -249,7 +249,7 @@ function HeroBanner() {
                       src={images[2]}
                       alt=""
                       priority
-                      className="absolute bottom-10 right-4 h-36 w-36 rounded-2xl object-cover shadow-lg rotate-3 ring-2 ring-brand/10"
+                      className="absolute bottom-6 right-2 sm:bottom-10 sm:right-4 h-24 w-24 sm:h-32 sm:w-32 lg:h-36 lg:w-36 rounded-2xl object-cover shadow-lg rotate-3 ring-2 ring-brand/10"
                     />
                   )}
                   {images.length === 0 && (
