@@ -1,0 +1,8 @@
+{
+  "buildCommand": "npm run build",
+  "framework": null,
+  "outputDirectory": ".output/public",
+  "env": {
+    "NITRO_PRESET": "vercel"
+  }
+}
