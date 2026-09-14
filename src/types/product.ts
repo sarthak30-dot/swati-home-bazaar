@@ -30,7 +30,11 @@ export interface Product {
   packSize?: number;
   material?: string;
   images: {
+    /** Active image shown in the UI — AI placeholder until real photo is ready. */
     primary: string;
+    /** Path to the real local photo (e.g. '/images/products/DB-DREAM-LB.webp').
+     *  When present, `resolveProductImage()` returns this instead of `primary`. */
+    realAsset?: string;
     hover?: string;
   };
   features?: string[];

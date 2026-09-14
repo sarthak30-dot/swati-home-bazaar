@@ -19,7 +19,7 @@ import {
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { rupees } from "@/lib/format";
-import { PRODUCTS } from "@/data/products";
+import { PRODUCTS, resolveProductImage } from "@/data/products";
 import { BRAND_CLASS, BRAND_NAME_TO_SLUG, type Brand, type Product } from "@/types/product";
 import { ProductCard } from "@/components/ProductCard";
 import { SafeImage } from "@/components/SafeImage";
@@ -304,7 +304,7 @@ function getCompat(product: Product) {
 // ── ImageGallery ──────────────────────────────────────────────────────────────
 
 function ImageGallery({ product }: { product: Product }) {
-  const images = [product.images.primary, product.images.hover].filter(Boolean) as string[];
+  const images = [resolveProductImage(product), product.images.hover].filter(Boolean) as string[];
   const [selected, setSelected] = useState(0);
   const [zoom, setZoom] = useState<{ x: number; y: number } | null>(null);
 

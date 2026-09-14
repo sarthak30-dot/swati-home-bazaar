@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { rupees } from "@/lib/format";
 import { type Product, type Brand, BRAND_CLASS } from "@/types/product";
+import { resolveProductImage } from "@/data/products";
 import { SafeImage } from "@/components/SafeImage";
 
 // Static brand pill classes — no template literals (Tailwind v4 scanner requires static strings)
@@ -56,7 +57,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
       {/* Image region */}
       <div className="relative overflow-hidden bg-muted aspect-square">
         <SafeImage
-          src={product.images.primary}
+          src={resolveProductImage(product)}
           alt={product.name}
           fallbackLabel={product.name}
           fallbackSublabel={product.brand === "Stovekraft Pigeon" ? "Pigeon" : product.brand}
@@ -68,7 +69,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
 
         {hasHover && (
           <SafeImage
-            src={product.images.hover}
+            src={product.images.hover ?? null}
             alt={product.name}
             className="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           />
