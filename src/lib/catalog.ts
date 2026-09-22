@@ -27,8 +27,21 @@ export type CatalogVariant = {
   category_id: string | null;
   category_name: string | null;
   category_slug: string | null;
-  rating: number;
+  /** Real average from `reviews`, rounded to 1 decimal. `null` when the product has no reviews yet. */
+  rating: number | null;
   rating_count: number;
+};
+
+export type Review = {
+  id: string;
+  customer_id: string;
+  product_id: string;
+  order_item_id: string;
+  rating: number;
+  title: string | null;
+  body: string | null;
+  created_at: string;
+  updated_at: string;
 };
 
 export type Brand = {
@@ -48,16 +61,19 @@ export type Category = {
   brand_id: string | null;
 };
 
+// Each property admits `undefined` explicitly: callers build this object with
+// ternaries that yield `undefined`, which `exactOptionalPropertyTypes: true`
+// rejects against a bare `?:`.
 export type ShopFilters = {
-  brands?: string[];
-  categories?: string[];
-  minPrice?: number;
-  maxPrice?: number;
-  minRating?: number;
-  minDiscount?: number;
-  q?: string;
-  sort?: string;
-  page?: number;
+  brands?: string[] | undefined;
+  categories?: string[] | undefined;
+  minPrice?: number | undefined;
+  maxPrice?: number | undefined;
+  minRating?: number | undefined;
+  minDiscount?: number | undefined;
+  q?: string | undefined;
+  sort?: string | undefined;
+  page?: number | undefined;
 };
 
 export const PAGE_SIZE = 24;
@@ -81,6 +97,29 @@ export async function fetchCategories(): Promise<Category[]> {
 }
 
 const SELECT = "*";
+
+/**
+ * Variant count per category slug, for the department landing pages.
+ *
+ * Supabase's REST API has no GROUP BY, and an RPC for this would be a schema
+ * change. Selecting a single column across the whole catalogue is ~920 short
+ * strings, so counting client-side is cheaper than it looks — and React Query
+ * caches the result for the session.
+ */
+export async function fetchCategoryCounts(): Promise<Record<string, number>> {
+  const { data, error } = await supabase
+    .from("catalog_variants")
+    .select("category_slug")
+    .eq("is_active", true);
+  if (error) throw error;
+
+  const counts: Record<string, number> = {};
+  for (const row of data ?? []) {
+    const slug = (row as { category_slug: string | null }).category_slug;
+    if (slug) counts[slug] = (counts[slug] ?? 0) + 1;
+  }
+  return counts;
+}
 
 export async function fetchShop(filters: ShopFilters) {
   let query = supabase
@@ -107,7 +146,10 @@ export async function fetchShop(filters: ShopFilters) {
       query = query.order("discount_pct", { ascending: false });
       break;
     case "rating":
-      query = query.order("rating", { ascending: false });
+      // Products with no reviews yet have rating = NULL — sink them to the
+      // bottom rather than letting Postgres's default NULLS FIRST (for DESC)
+      // put unrated products ahead of a genuine 5-star item.
+      query = query.order("rating", { ascending: false, nullsFirst: false });
       break;
     default:
       query = query.order("created_at", { ascending: false });
@@ -122,11 +164,37 @@ export async function fetchShop(filters: ShopFilters) {
 }
 
 export async function fetchRail(kind: "deals" | "bestsellers" | "new", limit = 12) {
-  let query = supabase.from("catalog_variants").select(SELECT).eq("is_active", true).gt("stock_qty", 0);
+  let query = supabase
+    .from("catalog_variants")
+    .select(SELECT)
+    .eq("is_active", true)
+    .gt("stock_qty", 0);
   if (kind === "deals") query = query.order("discount_pct", { ascending: false });
   else if (kind === "bestsellers") query = query.order("rating_count", { ascending: false });
   else query = query.order("created_at", { ascending: false });
   const { data, error } = await query.limit(limit);
+  if (error) throw error;
+  return (data ?? []) as CatalogVariant[];
+}
+
+/**
+ * Candidate "hero" variants for one brand, best first.
+ *
+ * Returns a pool rather than a single row because whether a variant actually
+ * renders a photo depends on the generated image manifest, which lives in the
+ * UI layer and is invisible to Postgres. The caller picks the first candidate
+ * that resolves to an image.
+ */
+export async function fetchBrandBest(brandSlug: string, limit = 24) {
+  const { data, error } = await supabase
+    .from("catalog_variants")
+    .select(SELECT)
+    .eq("is_active", true)
+    .eq("brand_slug", brandSlug)
+    .gt("stock_qty", 0)
+    .order("rating", { ascending: false })
+    .order("rating_count", { ascending: false })
+    .limit(limit);
   if (error) throw error;
   return (data ?? []) as CatalogVariant[];
 }
@@ -168,4 +236,75 @@ export async function fetchVariantsByIds(ids: string[]) {
   const { data, error } = await supabase.from("catalog_variants").select(SELECT).in("id", ids);
   if (error) throw error;
   return (data ?? []) as CatalogVariant[];
+}
+
+export async function fetchReviews(productId: string) {
+  const { data, error } = await supabase
+    .from("reviews")
+    .select("*")
+    .eq("product_id", productId)
+    .order("created_at", { ascending: false });
+  if (error) throw error;
+  return (data ?? []) as Review[];
+}
+
+export async function fetchMyReview(productId: string, customerId: string) {
+  const { data, error } = await supabase
+    .from("reviews")
+    .select("*")
+    .eq("product_id", productId)
+    .eq("customer_id", customerId)
+    .maybeSingle();
+  if (error) throw error;
+  return data as Review | null;
+}
+
+/**
+ * The order_item that would back a new review for this product by this
+ * customer: a delivered order_item for the product, chosen arbitrarily when
+ * more than one qualifies. `undefined` when the customer hasn't bought this
+ * product or it hasn't been delivered yet — RLS enforces the same rule
+ * server-side, this is only for deciding whether to show the review form.
+ */
+export async function fetchReviewEligibility(
+  productId: string,
+  customerId: string,
+): Promise<string | undefined> {
+  const { data, error } = await supabase
+    .from("order_items")
+    .select("id, orders!inner(status,customer_id), product_variants!inner(product_id)")
+    .eq("orders.customer_id", customerId)
+    .eq("orders.status", "delivered")
+    .eq("product_variants.product_id", productId)
+    .limit(1)
+    .maybeSingle();
+  if (error) throw error;
+  return data?.id;
+}
+
+export async function submitReview(input: {
+  productId: string;
+  customerId: string;
+  orderItemId: string;
+  rating: number;
+  title: string | null;
+  body: string | null;
+}) {
+  const { error } = await supabase.from("reviews").insert({
+    product_id: input.productId,
+    customer_id: input.customerId,
+    order_item_id: input.orderItemId,
+    rating: input.rating,
+    title: input.title,
+    body: input.body,
+  });
+  if (error) throw error;
+}
+
+export async function updateReview(
+  reviewId: string,
+  input: { rating: number; title: string | null; body: string | null },
+) {
+  const { error } = await supabase.from("reviews").update(input).eq("id", reviewId);
+  if (error) throw error;
 }

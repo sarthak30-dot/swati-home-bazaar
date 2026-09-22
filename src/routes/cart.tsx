@@ -62,6 +62,8 @@ function CartPage() {
                   capacity={variant.capacity_or_size}
                   brandSlug={variant.brand_slug}
                   imageUrl={variant.image_url}
+                  variantCode={variant.variant_code}
+                  productSlug={variant.product_slug}
                 />
               </Link>
               <div className="min-w-0">

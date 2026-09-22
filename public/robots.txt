@@ -1,8 +1,16 @@
 User-agent: Googlebot
 Allow: /
+Disallow: /admin
+Disallow: /account
+Disallow: /checkout
+Disallow: /cart
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin
+Disallow: /account
+Disallow: /checkout
+Disallow: /cart
 
 User-agent: Twitterbot
 Allow: /
@@ -12,3 +20,11 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /account
+Disallow: /checkout
+Disallow: /cart
+
+# TODO: once you have a production domain, uncomment and fill this in —
+# also set VITE_SITE_URL in .env so scripts/build-sitemap.mjs emits matching URLs.
+# Sitemap: https://your-real-domain.example/sitemap.xml

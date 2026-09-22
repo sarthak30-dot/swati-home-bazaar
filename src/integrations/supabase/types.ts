@@ -100,6 +100,51 @@ export type Database = {
         }
         Relationships: []
       }
+      bulk_enquiries: {
+        Row: {
+          city: string | null
+          company: string | null
+          created_at: string
+          department: string | null
+          email: string | null
+          id: string
+          message: string | null
+          name: string
+          phone: string
+          pin: string | null
+          quantity: string | null
+          status: Database["public"]["Enums"]["bulk_enquiry_status"]
+        }
+        Insert: {
+          city?: string | null
+          company?: string | null
+          created_at?: string
+          department?: string | null
+          email?: string | null
+          id?: string
+          message?: string | null
+          name: string
+          phone: string
+          pin?: string | null
+          quantity?: string | null
+          status?: Database["public"]["Enums"]["bulk_enquiry_status"]
+        }
+        Update: {
+          city?: string | null
+          company?: string | null
+          created_at?: string
+          department?: string | null
+          email?: string | null
+          id?: string
+          message?: string | null
+          name?: string
+          phone?: string
+          pin?: string | null
+          quantity?: string | null
+          status?: Database["public"]["Enums"]["bulk_enquiry_status"]
+        }
+        Relationships: []
+      }
       cart_items: {
         Row: {
           created_at: string
@@ -518,6 +563,82 @@ export type Database = {
           },
         ]
       }
+      serviceable_pins: {
+        Row: {
+          area_name: string | null
+          created_at: string
+          pin: string
+        }
+        Insert: {
+          area_name?: string | null
+          created_at?: string
+          pin: string
+        }
+        Update: {
+          area_name?: string | null
+          created_at?: string
+          pin?: string
+        }
+        Relationships: []
+      }
+      reviews: {
+        Row: {
+          body: string | null
+          created_at: string
+          customer_id: string
+          id: string
+          order_item_id: string
+          product_id: string
+          rating: number
+          title: string | null
+          updated_at: string
+        }
+        Insert: {
+          body?: string | null
+          created_at?: string
+          customer_id: string
+          id?: string
+          order_item_id: string
+          product_id: string
+          rating: number
+          title?: string | null
+          updated_at?: string
+        }
+        Update: {
+          body?: string | null
+          created_at?: string
+          customer_id?: string
+          id?: string
+          order_item_id?: string
+          product_id?: string
+          rating?: number
+          title?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "reviews_customer_id_fkey"
+            columns: ["customer_id"]
+            isOneToOne: false
+            referencedRelation: "customers"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "reviews_order_item_id_fkey"
+            columns: ["order_item_id"]
+            isOneToOne: false
+            referencedRelation: "order_items"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "reviews_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "products"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       user_roles: {
         Row: {
           created_at: string
@@ -629,6 +750,7 @@ export type Database = {
     }
     Enums: {
       app_role: "admin" | "customer"
+      bulk_enquiry_status: "new" | "contacted" | "quoted" | "closed"
       coupon_type: "percent" | "flat"
       order_status:
         | "placed"

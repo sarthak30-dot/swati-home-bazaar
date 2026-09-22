@@ -18,6 +18,7 @@ function AdminProducts() {
   const [page, setPage] = useState(1);
   const [drafts, setDrafts] = useState<Record<string, Draft>>({});
   const [csvBusy, setCsvBusy] = useState(false);
+  const [uploadBusy, setUploadBusy] = useState<Set<string>>(new Set());
 
   const { data, isFetching } = useQuery({
     queryKey: ["admin-products", q, page],
@@ -95,6 +96,36 @@ function AdminProducts() {
     }
   };
 
+  const uploadImage = async (id: string, skuId: string, file: File) => {
+    setUploadBusy((prev) => new Set(prev).add(id));
+    try {
+      const ext = file.name.split(".").pop()?.toLowerCase() ?? "jpg";
+      const path = `${skuId}.${ext}`;
+      const { error: uploadErr } = await supabase.storage
+        .from("product-images")
+        .upload(path, file, { upsert: true });
+      if (uploadErr) throw uploadErr;
+      const { data: { publicUrl } } = supabase.storage
+        .from("product-images")
+        .getPublicUrl(path);
+      const { error: updateErr } = await supabase
+        .from("product_variants")
+        .update({ image_url: publicUrl })
+        .eq("id", id);
+      if (updateErr) throw updateErr;
+      toast.success("Image saved");
+      queryClient.invalidateQueries({ queryKey: ["admin-products"] });
+    } catch {
+      toast.error("Upload failed — check storage bucket permissions");
+    } finally {
+      setUploadBusy((prev) => {
+        const next = new Set(prev);
+        next.delete(id);
+        return next;
+      });
+    }
+  };
+
   return (
     <div className="space-y-4">
       <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
@@ -132,6 +163,7 @@ function AdminProducts() {
             <tr>
               <th className="p-3">Product</th>
               <th className="p-3">SKU</th>
+              <th className="p-3">Image</th>
               <th className="p-3">MRP</th>
               <th className="p-3">Selling price</th>
               <th className="p-3">Stock</th>
@@ -155,6 +187,35 @@ function AdminProducts() {
                     </span>
                   </td>
                   <td className="p-3 text-xs text-muted-foreground">{item.sku_id}</td>
+                  <td className="p-3">
+                    <div className="flex items-center gap-2">
+                      {item.image_url && (
+                        <img
+                          src={item.image_url}
+                          alt=""
+                          className="h-9 w-9 rounded-lg object-cover border border-border"
+                        />
+                      )}
+                      <label className="cursor-pointer text-xs font-medium text-gold hover:underline">
+                        {uploadBusy.has(item.id)
+                          ? "Uploading…"
+                          : item.image_url
+                            ? "Replace"
+                            : "Upload"}
+                        <input
+                          type="file"
+                          accept="image/*"
+                          className="hidden"
+                          disabled={uploadBusy.has(item.id)}
+                          onChange={(e) => {
+                            const file = e.target.files?.[0];
+                            if (file) uploadImage(item.id, item.sku_id, file);
+                            e.target.value = "";
+                          }}
+                        />
+                      </label>
+                    </div>
+                  </td>
                   <td className="p-3">{rupees(item.mrp)}</td>
                   <td className="p-3">
                     <input

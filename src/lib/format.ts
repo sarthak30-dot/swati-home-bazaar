@@ -34,6 +34,13 @@ export const ORDER_STATUS_LABELS: Record<string, string> = {
   returned: "Returned",
 };
 
+export const ENQUIRY_STATUS_LABELS: Record<string, string> = {
+  new: "New",
+  contacted: "Contacted",
+  quoted: "Quoted",
+  closed: "Closed",
+};
+
 export const ORDER_PIPELINE = [
   "placed",
   "confirmed",

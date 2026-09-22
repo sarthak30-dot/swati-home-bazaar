@@ -20,7 +20,9 @@ const TABS = [
   { to: "/admin", label: "Dashboard", exact: true },
   { to: "/admin/products", label: "Inventory", exact: false },
   { to: "/admin/orders", label: "Orders", exact: false },
+  { to: "/admin/enquiries", label: "Enquiries", exact: false },
   { to: "/admin/coupons", label: "Coupons", exact: false },
+  { to: "/admin/pins", label: "Delivery PINs", exact: false },
 ] as const;
 
 function AdminLayout() {

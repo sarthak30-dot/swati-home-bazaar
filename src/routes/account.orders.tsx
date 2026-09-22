@@ -41,9 +41,7 @@ function Orders() {
   return (
     <div className="space-y-4">
       {data.map((order) => {
-        const stepIndex = ORDER_PIPELINE.indexOf(
-          order.status as (typeof ORDER_PIPELINE)[number],
-        );
+        const stepIndex = ORDER_PIPELINE.indexOf(order.status as (typeof ORDER_PIPELINE)[number]);
         const cancelled = order.status === "cancelled" || order.status === "returned";
         return (
           <div key={order.id} className="rounded-2xl border border-border p-5">
@@ -91,6 +89,15 @@ function Orders() {
                   <span className="min-w-0">
                     <span className="line-clamp-1 font-medium">{line.product_name}</span>
                     <span className="text-xs text-muted-foreground">Qty {line.qty}</span>
+                    {order.status === "delivered" && line.sku_id && (
+                      <Link
+                        to="/product/$sku"
+                        params={{ sku: line.sku_id }}
+                        className="block text-xs font-semibold text-gold hover:underline"
+                      >
+                        Write a review
+                      </Link>
+                    )}
                   </span>
                   <span className="shrink-0">{rupees(line.line_total)}</span>
                 </li>

@@ -1,11 +1,12 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
-import { SlidersHorizontal, X } from "lucide-react";
+import { Search, SlidersHorizontal, X } from "lucide-react";
 import { useState } from "react";
 import { fetchBrands, fetchCategories, fetchShop, PAGE_SIZE } from "@/lib/catalog";
 import { ProductCard, ProductCardSkeleton } from "@/components/store/ProductCard";
 import { rupees } from "@/lib/format";
 import { cn } from "@/lib/utils";
+import { DEPARTMENTS } from "@/lib/departments";
 
 type ShopSearch = {
   brands?: string | undefined;
@@ -57,17 +58,21 @@ const SORTS = [
   { value: "rating", label: "Customer rating" },
 ];
 
+// Bands are non-linear because the catalogue is: prices run Rs. 33 to Rs. 39,995
+// with a median near Rs. 1,200, so even quarters would leave the top band empty.
 const PRICE_BANDS = [
   { label: "Under Rs. 500", min: undefined, max: 500 },
   { label: "Rs. 500 - 1,500", min: 500, max: 1500 },
   { label: "Rs. 1,500 - 3,000", min: 1500, max: 3000 },
-  { label: "Above Rs. 3,000", min: 3000, max: undefined },
+  { label: "Rs. 3,000 - 8,000", min: 3000, max: 8000 },
+  { label: "Above Rs. 8,000", min: 8000, max: undefined },
 ];
 
 function Shop() {
   const search = Route.useSearch();
   const navigate = useNavigate({ from: "/shop" });
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [catFilter, setCatFilter] = useState("");
 
   const selBrands = search.brands ? search.brands.split(",") : [];
   const selCats = search.categories ? search.categories.split(",") : [];
@@ -103,6 +108,12 @@ function Shop() {
   const visibleCats = (categories ?? []).filter(
     (c) => !brandIds.length || !c.brand_id || brandIds.includes(c.brand_id),
   );
+  // A selected category always stays visible, so a search term can never hide
+  // a filter that is currently applied.
+  const matchingCats = visibleCats.filter(
+    (c) =>
+      selCats.includes(c.slug) || c.name.toLowerCase().includes(catFilter.trim().toLowerCase()),
+  );
 
   const toggleList = (key: "brands" | "categories", value: string) => {
     const current = key === "brands" ? selBrands : selCats;
@@ -116,8 +127,8 @@ function Shop() {
     selBrands.length +
     selCats.length +
     (search.min != null || search.max != null ? 1 : 0) +
-    (search.rating ? 1 : 0) +
-    (search.discount ? 1 : 0);
+    (search.discount ? 1 : 0) +
+    (search.rating ? 1 : 0);
 
   const filterPanel = (
     <div className="space-y-6">
@@ -139,9 +150,50 @@ function Shop() {
       </div>
 
       <div>
+        <h3 className="mb-2 text-sm font-semibold">Department</h3>
+        <div className="space-y-1">
+          {DEPARTMENTS.map((d) => {
+            const active =
+              d.categorySlugs.length === selCats.length &&
+              d.categorySlugs.every((s) => selCats.includes(s));
+            return (
+              <button
+                key={d.slug}
+                type="button"
+                onClick={() =>
+                  setSearch({ categories: active ? undefined : d.categorySlugs.join(",") })
+                }
+                className={cn(
+                  "block w-full truncate rounded-lg border px-3 py-1.5 text-left text-sm",
+                  active ? "border-gold bg-gold-tint font-semibold text-gold" : "border-border",
+                )}
+              >
+                {d.name}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      <div>
         <h3 className="mb-2 text-sm font-semibold">Category</h3>
+        {/* 51 categories is past the point where a plain list is scannable, so
+            the facet gets its own search box. */}
+        <div className="relative mb-2">
+          <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
+          <input
+            value={catFilter}
+            onChange={(e) => setCatFilter(e.target.value)}
+            placeholder="Search categories"
+            aria-label="Search categories"
+            className="w-full rounded-lg border border-border bg-muted/60 py-1.5 pl-8 pr-2 text-xs outline-none focus:border-gold"
+          />
+        </div>
         <div className="max-h-64 space-y-1.5 overflow-y-auto pr-1">
-          {visibleCats.map((c) => (
+          {matchingCats.length === 0 && (
+            <p className="py-2 text-xs text-muted-foreground">No categories match.</p>
+          )}
+          {matchingCats.map((c) => (
             <label key={c.id} className="flex cursor-pointer items-center gap-2 text-sm">
               <input
                 type="checkbox"
@@ -165,7 +217,9 @@ function Shop() {
                 key={band.label}
                 type="button"
                 onClick={() =>
-                  setSearch(active ? { min: undefined, max: undefined } : { min: band.min, max: band.max })
+                  setSearch(
+                    active ? { min: undefined, max: undefined } : { min: band.min, max: band.max },
+                  )
                 }
                 className={cn(
                   "block w-full rounded-lg border px-3 py-1.5 text-left text-sm",
@@ -180,25 +234,6 @@ function Shop() {
       </div>
 
       <div>
-        <h3 className="mb-2 text-sm font-semibold">Customer rating</h3>
-        <div className="flex flex-wrap gap-2">
-          {[4.5, 4, 3.5].map((r) => (
-            <button
-              key={r}
-              type="button"
-              onClick={() => setSearch({ rating: search.rating === r ? undefined : r })}
-              className={cn(
-                "rounded-lg border px-3 py-1.5 text-sm",
-                search.rating === r ? "border-gold bg-gold-tint font-semibold text-gold" : "border-border",
-              )}
-            >
-              {r}+
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div>
         <h3 className="mb-2 text-sm font-semibold">Discount</h3>
         <div className="flex flex-wrap gap-2">
           {[10, 20, 30].map((d) => (
@@ -208,7 +243,9 @@ function Shop() {
               onClick={() => setSearch({ discount: search.discount === d ? undefined : d })}
               className={cn(
                 "rounded-lg border px-3 py-1.5 text-sm",
-                search.discount === d ? "border-gold bg-gold-tint font-semibold text-gold" : "border-border",
+                search.discount === d
+                  ? "border-gold bg-gold-tint font-semibold text-gold"
+                  : "border-border",
               )}
             >
               {d}%+
@@ -217,12 +254,31 @@ function Shop() {
         </div>
       </div>
 
+      <div>
+        <h3 className="mb-2 text-sm font-semibold">Customer rating</h3>
+        <div className="flex flex-wrap gap-2">
+          {[4, 3].map((r) => (
+            <button
+              key={r}
+              type="button"
+              onClick={() => setSearch({ rating: search.rating === r ? undefined : r })}
+              className={cn(
+                "rounded-lg border px-3 py-1.5 text-sm",
+                search.rating === r
+                  ? "border-gold bg-gold-tint font-semibold text-gold"
+                  : "border-border",
+              )}
+            >
+              {r}★ &amp; up
+            </button>
+          ))}
+        </div>
+      </div>
+
       {activeCount > 0 && (
         <button
           type="button"
-          onClick={() =>
-            navigate({ search: { q: search.q, sort: search.sort } })
-          }
+          onClick={() => navigate({ search: { q: search.q, sort: search.sort } })}
           className="w-full rounded-lg border border-border py-2 text-sm font-semibold"
         >
           Clear all filters
@@ -291,7 +347,9 @@ function Shop() {
                 <button
                   type="button"
                   disabled={page <= 1}
-                  onClick={() => navigate({ search: (p: ShopSearch) => ({ ...p, page: page - 1 }) })}
+                  onClick={() =>
+                    navigate({ search: (p: ShopSearch) => ({ ...p, page: page - 1 }) })
+                  }
                   className="rounded-lg border border-border px-4 py-2 text-sm disabled:opacity-40"
                 >
                   Previous
@@ -302,7 +360,9 @@ function Shop() {
                 <button
                   type="button"
                   disabled={page >= pages}
-                  onClick={() => navigate({ search: (p: ShopSearch) => ({ ...p, page: page + 1 }) })}
+                  onClick={() =>
+                    navigate({ search: (p: ShopSearch) => ({ ...p, page: page + 1 }) })
+                  }
                   className="rounded-lg border border-border px-4 py-2 text-sm disabled:opacity-40"
                 >
                   Next

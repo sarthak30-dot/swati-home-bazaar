@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as AccountRouteImport } from './routes/account'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AuthRouteImport } from './routes/auth'
+import { Route as BulkOrdersRouteImport } from './routes/bulk-orders'
 import { Route as CartRouteImport } from './routes/cart'
 import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -28,9 +29,12 @@ import { Route as AccountOrdersRouteImport } from './routes/account.orders'
 import { Route as AccountWishlistRouteImport } from './routes/account.wishlist'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
 import { Route as AdminCouponsRouteImport } from './routes/admin.coupons'
+import { Route as AdminEnquiriesRouteImport } from './routes/admin.enquiries'
 import { Route as AdminOrdersRouteImport } from './routes/admin.orders'
+import { Route as AdminPinsRouteImport } from './routes/admin.pins'
 import { Route as AdminProductsRouteImport } from './routes/admin.products'
 import { Route as BrandSlugRouteImport } from './routes/brand.$slug'
+import { Route as DepartmentSlugRouteImport } from './routes/department.$slug'
 import { Route as OrderOrderNumberRouteImport } from './routes/order.$orderNumber'
 import { Route as ProductSkuRouteImport } from './routes/product.$sku'
 
@@ -57,6 +61,11 @@ const AdminRoute = AdminRouteImport.update({
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
   path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BulkOrdersRoute = BulkOrdersRouteImport.update({
+  id: '/bulk-orders',
+  path: '/bulk-orders',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CartRoute = CartRouteImport.update({
@@ -129,9 +138,19 @@ const AdminCouponsRoute = AdminCouponsRouteImport.update({
   path: '/coupons',
   getParentRoute: () => AdminRoute,
 } as any)
+const AdminEnquiriesRoute = AdminEnquiriesRouteImport.update({
+  id: '/enquiries',
+  path: '/enquiries',
+  getParentRoute: () => AdminRoute,
+} as any)
 const AdminOrdersRoute = AdminOrdersRouteImport.update({
   id: '/orders',
   path: '/orders',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminPinsRoute = AdminPinsRouteImport.update({
+  id: '/pins',
+  path: '/pins',
   getParentRoute: () => AdminRoute,
 } as any)
 const AdminProductsRoute = AdminProductsRouteImport.update({
@@ -142,6 +161,11 @@ const AdminProductsRoute = AdminProductsRouteImport.update({
 const BrandSlugRoute = BrandSlugRouteImport.update({
   id: '/brand/$slug',
   path: '/brand/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DepartmentSlugRoute = DepartmentSlugRouteImport.update({
+  id: '/department/$slug',
+  path: '/department/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OrderOrderNumberRoute = OrderOrderNumberRouteImport.update({
@@ -161,6 +185,7 @@ export interface FileRoutesByFullPath {
   '/account': typeof AccountRouteWithChildren
   '/admin': typeof AdminRouteWithChildren
   '/auth': typeof AuthRoute
+  '/bulk-orders': typeof BulkOrdersRoute
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
@@ -173,9 +198,12 @@ export interface FileRoutesByFullPath {
   '/account/orders': typeof AccountOrdersRoute
   '/account/wishlist': typeof AccountWishlistRoute
   '/admin/coupons': typeof AdminCouponsRoute
+  '/admin/enquiries': typeof AdminEnquiriesRoute
   '/admin/orders': typeof AdminOrdersRoute
+  '/admin/pins': typeof AdminPinsRoute
   '/admin/products': typeof AdminProductsRoute
   '/brand/$slug': typeof BrandSlugRoute
+  '/department/$slug': typeof DepartmentSlugRoute
   '/order/$orderNumber': typeof OrderOrderNumberRoute
   '/product/$sku': typeof ProductSkuRoute
   '/account/': typeof AccountIndexRoute
@@ -185,6 +213,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
+  '/bulk-orders': typeof BulkOrdersRoute
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
@@ -197,9 +226,12 @@ export interface FileRoutesByTo {
   '/account/orders': typeof AccountOrdersRoute
   '/account/wishlist': typeof AccountWishlistRoute
   '/admin/coupons': typeof AdminCouponsRoute
+  '/admin/enquiries': typeof AdminEnquiriesRoute
   '/admin/orders': typeof AdminOrdersRoute
+  '/admin/pins': typeof AdminPinsRoute
   '/admin/products': typeof AdminProductsRoute
   '/brand/$slug': typeof BrandSlugRoute
+  '/department/$slug': typeof DepartmentSlugRoute
   '/order/$orderNumber': typeof OrderOrderNumberRoute
   '/product/$sku': typeof ProductSkuRoute
   '/account': typeof AccountIndexRoute
@@ -212,6 +244,7 @@ export interface FileRoutesById {
   '/account': typeof AccountRouteWithChildren
   '/admin': typeof AdminRouteWithChildren
   '/auth': typeof AuthRoute
+  '/bulk-orders': typeof BulkOrdersRoute
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
@@ -224,9 +257,12 @@ export interface FileRoutesById {
   '/account/orders': typeof AccountOrdersRoute
   '/account/wishlist': typeof AccountWishlistRoute
   '/admin/coupons': typeof AdminCouponsRoute
+  '/admin/enquiries': typeof AdminEnquiriesRoute
   '/admin/orders': typeof AdminOrdersRoute
+  '/admin/pins': typeof AdminPinsRoute
   '/admin/products': typeof AdminProductsRoute
   '/brand/$slug': typeof BrandSlugRoute
+  '/department/$slug': typeof DepartmentSlugRoute
   '/order/$orderNumber': typeof OrderOrderNumberRoute
   '/product/$sku': typeof ProductSkuRoute
   '/account/': typeof AccountIndexRoute
@@ -240,6 +276,7 @@ export interface FileRouteTypes {
     | '/account'
     | '/admin'
     | '/auth'
+    | '/bulk-orders'
     | '/cart'
     | '/checkout'
     | '/contact'
@@ -252,9 +289,12 @@ export interface FileRouteTypes {
     | '/account/orders'
     | '/account/wishlist'
     | '/admin/coupons'
+    | '/admin/enquiries'
     | '/admin/orders'
+    | '/admin/pins'
     | '/admin/products'
     | '/brand/$slug'
+    | '/department/$slug'
     | '/order/$orderNumber'
     | '/product/$sku'
     | '/account/'
@@ -264,6 +304,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/auth'
+    | '/bulk-orders'
     | '/cart'
     | '/checkout'
     | '/contact'
@@ -276,9 +317,12 @@ export interface FileRouteTypes {
     | '/account/orders'
     | '/account/wishlist'
     | '/admin/coupons'
+    | '/admin/enquiries'
     | '/admin/orders'
+    | '/admin/pins'
     | '/admin/products'
     | '/brand/$slug'
+    | '/department/$slug'
     | '/order/$orderNumber'
     | '/product/$sku'
     | '/account'
@@ -290,6 +334,7 @@ export interface FileRouteTypes {
     | '/account'
     | '/admin'
     | '/auth'
+    | '/bulk-orders'
     | '/cart'
     | '/checkout'
     | '/contact'
@@ -302,9 +347,12 @@ export interface FileRouteTypes {
     | '/account/orders'
     | '/account/wishlist'
     | '/admin/coupons'
+    | '/admin/enquiries'
     | '/admin/orders'
+    | '/admin/pins'
     | '/admin/products'
     | '/brand/$slug'
+    | '/department/$slug'
     | '/order/$orderNumber'
     | '/product/$sku'
     | '/account/'
@@ -317,6 +365,7 @@ export interface RootRouteChildren {
   AccountRoute: typeof AccountRouteWithChildren
   AdminRoute: typeof AdminRouteWithChildren
   AuthRoute: typeof AuthRoute
+  BulkOrdersRoute: typeof BulkOrdersRoute
   CartRoute: typeof CartRoute
   CheckoutRoute: typeof CheckoutRoute
   ContactRoute: typeof ContactRoute
@@ -326,6 +375,7 @@ export interface RootRouteChildren {
   ShopRoute: typeof ShopRoute
   TermsRoute: typeof TermsRoute
   BrandSlugRoute: typeof BrandSlugRoute
+  DepartmentSlugRoute: typeof DepartmentSlugRoute
   OrderOrderNumberRoute: typeof OrderOrderNumberRoute
   ProductSkuRoute: typeof ProductSkuRoute
 }
@@ -365,6 +415,13 @@ declare module '@tanstack/react-router' {
       path: '/auth'
       fullPath: '/auth'
       preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bulk-orders': {
+      id: '/bulk-orders'
+      path: '/bulk-orders'
+      fullPath: '/bulk-orders'
+      preLoaderRoute: typeof BulkOrdersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cart': {
@@ -465,11 +522,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminCouponsRouteImport
       parentRoute: typeof AdminRoute
     }
+    '/admin/enquiries': {
+      id: '/admin/enquiries'
+      path: '/enquiries'
+      fullPath: '/admin/enquiries'
+      preLoaderRoute: typeof AdminEnquiriesRouteImport
+      parentRoute: typeof AdminRoute
+    }
     '/admin/orders': {
       id: '/admin/orders'
       path: '/orders'
       fullPath: '/admin/orders'
       preLoaderRoute: typeof AdminOrdersRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/pins': {
+      id: '/admin/pins'
+      path: '/pins'
+      fullPath: '/admin/pins'
+      preLoaderRoute: typeof AdminPinsRouteImport
       parentRoute: typeof AdminRoute
     }
     '/admin/products': {
@@ -484,6 +555,13 @@ declare module '@tanstack/react-router' {
       path: '/brand/$slug'
       fullPath: '/brand/$slug'
       preLoaderRoute: typeof BrandSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/department/$slug': {
+      id: '/department/$slug'
+      path: '/department/$slug'
+      fullPath: '/department/$slug'
+      preLoaderRoute: typeof DepartmentSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/order/$orderNumber': {
@@ -522,14 +600,18 @@ const AccountRouteWithChildren =
 
 interface AdminRouteChildren {
   AdminCouponsRoute: typeof AdminCouponsRoute
+  AdminEnquiriesRoute: typeof AdminEnquiriesRoute
   AdminOrdersRoute: typeof AdminOrdersRoute
+  AdminPinsRoute: typeof AdminPinsRoute
   AdminProductsRoute: typeof AdminProductsRoute
   AdminIndexRoute: typeof AdminIndexRoute
 }
 
 const AdminRouteChildren: AdminRouteChildren = {
   AdminCouponsRoute: AdminCouponsRoute,
+  AdminEnquiriesRoute: AdminEnquiriesRoute,
   AdminOrdersRoute: AdminOrdersRoute,
+  AdminPinsRoute: AdminPinsRoute,
   AdminProductsRoute: AdminProductsRoute,
   AdminIndexRoute: AdminIndexRoute,
 }
@@ -542,6 +624,7 @@ const rootRouteChildren: RootRouteChildren = {
   AccountRoute: AccountRouteWithChildren,
   AdminRoute: AdminRouteWithChildren,
   AuthRoute: AuthRoute,
+  BulkOrdersRoute: BulkOrdersRoute,
   CartRoute: CartRoute,
   CheckoutRoute: CheckoutRoute,
   ContactRoute: ContactRoute,
@@ -551,6 +634,7 @@ const rootRouteChildren: RootRouteChildren = {
   ShopRoute: ShopRoute,
   TermsRoute: TermsRoute,
   BrandSlugRoute: BrandSlugRoute,
+  DepartmentSlugRoute: DepartmentSlugRoute,
   OrderOrderNumberRoute: OrderOrderNumberRoute,
   ProductSkuRoute: ProductSkuRoute,
 }
