@@ -169,9 +169,9 @@ export const IMAGE_BY_SLUG: Record<string, string> = {
   "pigeon-blossom-erc": "/images/products/pigeon/erc-ruby-rice-cooker.jpg",
 
   // --- Inox Hydra (bottle/lunch) ---
-  "pigeon-inox-hydra": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "pigeon-inox-hydra-plus": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "pigeon-inox-hydra-duo-900ml": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
+  "pigeon-inox-hydra": "/images/products/pigeon/inox-hydra-lunchset.jpg",
+  "pigeon-inox-hydra-plus": "/images/products/pigeon/inox-hydra-lunchset.jpg",
+  "pigeon-inox-hydra-duo-900ml": "/images/products/pigeon/inox-hydra-lunchset.jpg",
 
   // --- Electric Kettles ---
   "pigeon-hot-kettle-1-5l": "/images/products/pigeon/hot-kettle.jpg",
