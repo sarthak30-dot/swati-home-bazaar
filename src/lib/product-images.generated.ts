@@ -63,10 +63,6 @@ export const IMAGE_BY_VARIANT: Record<string, string> = {
   "19003856": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
   "19004266": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
   "19004291": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "19004292": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "19004293": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "19004367": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "19004368": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
   // ERC Inox Pro with Steamer (yellow/pink/grey) - rice cooker with steamer
   "19004560": "/images/products/pigeon/multi-cook-kessel.jpg",
   "19004561": "/images/products/pigeon/multi-cook-kessel.jpg",
@@ -146,12 +142,10 @@ export const IMAGE_BY_SLUG: Record<string, string> = {
   "pigeon-storm-kadai-200-ib": "/images/products/pigeon/storm-cooker.jpg",
   "pigeon-storm-kadai-300-ib": "/images/products/pigeon/storm-cooker.jpg",
 
-  // --- Mixer Grinders ---
-  "pigeon-classic-lite-550w-2-jar": "/images/products/pigeon/enora-mixer-grinder.jpg",
-  "pigeon-smarty-550w": "/images/products/pigeon/smarty-mixer-grinder.jpg",
-  "pigeon-sonik-750w": "/images/products/pigeon/smarty-mixer-grinder.jpg",
-  "pigeon-ultrax-5": "/images/products/pigeon/smarty-mixer-grinder.jpg",
-  "pigeon-personal-blender": "/images/products/pigeon/personal-blender.jpg",
+  // --- Mixer Grinders (verified against live product slugs) ---
+  "pigeon-enora-500w-3-jar": "/images/products/pigeon/enora-mixer-grinder.jpg",
+  "pigeon-classic-lite-550w-2-jar": "/images/products/pigeon/smarty-mixer-grinder.jpg",
+  "pigeon-nutri-blender-600w-2-jar": "/images/products/pigeon/personal-blender.jpg",
 
   // --- Electric Rice Cookers (ERC) ---
   "pigeon-inox-1l-dx": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
@@ -164,25 +158,37 @@ export const IMAGE_BY_SLUG: Record<string, string> = {
   "pigeon-inox-pro-with-steamer-1-8l-double-pot-pink": "/images/products/pigeon/multi-cook-kessel.jpg",
   "pigeon-inox-pro-with-steamer-1l-dx-grey": "/images/products/pigeon/multi-cook-kessel.jpg",
   "pigeon-inox-pro-with-steamer-1-8l-double-pot-grey": "/images/products/pigeon/multi-cook-kessel.jpg",
-  "pigeon-erc-joy-unlimited": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
-  "pigeon-erc-ruby": "/images/products/pigeon/erc-ruby-rice-cooker.jpg",
-  "pigeon-blossom-erc": "/images/products/pigeon/erc-ruby-rice-cooker.jpg",
+  "pigeon-joy-unlimited-1-8l-dx-single-pot": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "pigeon-joy-unlimited-1-8l-double-pot": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "pigeon-joy-unlimited-2-8l-dx-single-pot": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "pigeon-joy-unlimited-4-2l-dx-single-pot": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "pigeon-joy-unlimited-0-6l-dx-single-pot": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "pigeon-joy-unlimited-0-6l-double-pot": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "pigeon-joy-unlimited-1l-dx-single-pot": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "pigeon-joy-unlimited-1l-double-pot": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "pigeon-ruby-1-8l-dx-single-pot": "/images/products/pigeon/erc-ruby-rice-cooker.jpg",
+  "pigeon-ruby-1l-double-pot": "/images/products/pigeon/erc-ruby-rice-cooker.jpg",
 
-  // --- Inox Hydra (bottle/lunch) ---
+  // --- Inox Hydra (bottle/lunch, water-bottle category) ---
   "pigeon-inox-hydra": "/images/products/pigeon/inox-hydra-lunchset.jpg",
   "pigeon-inox-hydra-plus": "/images/products/pigeon/inox-hydra-lunchset.jpg",
   "pigeon-inox-hydra-duo-900ml": "/images/products/pigeon/inox-hydra-lunchset.jpg",
 
-  // --- Electric Kettles ---
+  // --- Electric Kettles (verified against live product slugs) ---
   "pigeon-hot-kettle-1-5l": "/images/products/pigeon/hot-kettle.jpg",
-  "pigeon-hot-electric-kettle-1-8l": "/images/products/pigeon/hot-kettle.jpg",
-  "pigeon-evoke-kettle": "/images/products/pigeon/evoke-kettle.jpg",
-  "pigeon-travex-kettle-300ml": "/images/products/pigeon/evoke-kettle.jpg",
-  "pigeon-multi-kessel": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "pigeon-evoke-kettle-1-8l-red": "/images/products/pigeon/evoke-kettle.jpg",
+  "pigeon-multi-cooker-2-5l-with-steamer": "/images/products/pigeon/multi-cook-kessel.jpg",
 
-  // --- Air Fryers ---
-  "pigeon-ivo-healthifry-airfryer": "/images/products/pigeon/ivo-airfryer.jpg",
-  "pigeon-airfryer": "/images/products/pigeon/airfryer.jpg",
+  // --- Air Fryers (verified against live product slugs) ---
+  "pigeon-healthifry-digital-air-fryer-4-2l": "/images/products/pigeon/ivo-airfryer.jpg",
+  "pigeon-healthifry-digital-air-fryer-3-3l": "/images/products/pigeon/ivo-airfryer.jpg",
+  "pigeon-healthifry-manual-air-fryer": "/images/products/pigeon/airfryer.jpg",
+
+  // --- Small appliances (verified against live product slugs) ---
+  "pigeon-pop-up-toaster-black": "/images/products/pigeon/pop-up-toaster-black.jpg",
+  "pigeon-pop-up-toaster-white": "/images/products/pigeon/pop-up-toaster-white.jpg",
+  "pigeon-wet-grinder-2l-nutrova": "/images/products/pigeon/wet-grinder-nutrova.jpg",
+  "pigeon-compact-2-burner-ss": "/images/products/pigeon/compact-2-burner-ss.jpg",
 
   // --- Dubblin ---
   "dubblin-craze": "/images/products/dubblin/craze-550.jpg",
