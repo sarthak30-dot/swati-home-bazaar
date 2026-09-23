@@ -273,7 +273,11 @@
 }
 
 @utility animate-word {
-  animation: se-word 9s ease-in-out infinite;
+  /* backwards: before an offset word's animation-delay elapses, it renders
+     at the 0% keyframe (hidden) instead of falling back to default styles
+     (fully opaque, untransformed) — without this, every delayed word sits
+     visible on top of the current one until its own cycle starts. */
+  animation: se-word 9s ease-in-out infinite backwards;
 }
 
 /* Two soft gold blooms behind the hero copy. */
