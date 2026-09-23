@@ -67,23 +67,51 @@ export const IMAGE_BY_VARIANT: Record<string, string> = {
   "19004293": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
   "19004367": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
   "19004368": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "19004560": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "19004561": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "19004562": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "19004563": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "19004564": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "19004565": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
+  // ERC Inox Pro with Steamer (yellow/pink/grey) - rice cooker with steamer
+  "19004560": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "19004561": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "19004562": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "19004563": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "19004564": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "19004565": "/images/products/pigeon/multi-cook-kessel.jpg",
   "19004590": "/images/products/pigeon/inner-lid-rio.jpg",
   "19004591": "/images/products/pigeon/inner-lid-rio.jpg",
-  "1190010931": "/images/products/pigeon/inox-cooker-inner-ibss.jpg"
+  "1190010931": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
+
+  // ERC Joy Unlimited (Electric Rice Cooker) - white body
+  "19001508": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "19001509": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "19001507": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "19001510": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "19004404": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "19004341": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "19005021": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "19004987": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+
+  // ERC Ruby (Electric Rice Cooker) - red body
+  "19001766": "/images/products/pigeon/erc-ruby-rice-cooker.jpg",
+  "19001767": "/images/products/pigeon/erc-ruby-rice-cooker.jpg",
+  "19001511": "/images/products/pigeon/erc-ruby-rice-cooker.jpg",
+
+  // Inox ERC (stainless body rice cooker)
+  "19004292": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "19004293": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "19004367": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "19004368": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+
+  // Mixer grinders
+  "19004932": "/images/products/pigeon/multi-cook-kessel.jpg"
 };
 
 /** product slug -> public image path (fallback when the variant has no match) */
 export const IMAGE_BY_SLUG: Record<string, string> = {
+  // --- Pressure Cookers ---
   "pigeon-inox-outer-lid": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
   "pigeon-inox-plus-outer-lid": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
   "pigeon-inox-pro-outer-lid": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
   "pigeon-inox-sigma": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
+  "pigeon-inox-ss-inner-lid": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
+  "pigeon-inox-pro-inner-lid": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
   "pigeon-classic-aluminium": "/images/products/pigeon/classic-al-cooker.jpg",
   "pigeon-classic-aluminium-5l-ib": "/images/products/pigeon/classic-al-cooker.jpg",
   "pigeon-mila-2l-aluminium": "/images/products/pigeon/mila-cooker.jpg",
@@ -93,6 +121,16 @@ export const IMAGE_BY_SLUG: Record<string, string> = {
   "pigeon-storm-ib-3l-aluminium": "/images/products/pigeon/storm-cooker.jpg",
   "pigeon-storm-ib-5l-aluminium": "/images/products/pigeon/storm-cooker.jpg",
   "pigeon-inner-lid-triply": "/images/products/pigeon/inner-lid-rio.jpg",
+  "pigeon-titanium-handi-2l-hard-anodised": "/images/products/pigeon/titanium-handi-biryani.jpg",
+  "pigeon-titanium-handi-3l-hard-anodised": "/images/products/pigeon/titanium-handi-biryani.jpg",
+  "pigeon-titanium-handi-5l-hard-anodised": "/images/products/pigeon/titanium-handi-biryani.jpg",
+  "pigeon-titanium-3l-hard-anodised": "/images/products/pigeon/titanium-cooker-inner.jpg",
+  "pigeon-titanium-5l-hard-anodised": "/images/products/pigeon/titanium-cooker-inner.jpg",
+  "pigeon-titanium-easy-cook-combi-3l": "/images/products/pigeon/titanium-cooker-inner.jpg",
+  "pigeon-titanium-hard-anodised": "/images/products/pigeon/titanium-cooker-inner.jpg",
+  "pigeon-amelia-hard-anodised": "/images/products/pigeon/amelia-cooker.jpg",
+
+  // --- Cookware ---
   "pigeon-storm-flat-tawa-250": "/images/products/pigeon/storm-cooker.jpg",
   "pigeon-storm-flat-tawa-280": "/images/products/pigeon/storm-cooker.jpg",
   "pigeon-storm-flat-tawa-250-ib": "/images/products/pigeon/storm-cooker.jpg",
@@ -107,30 +145,46 @@ export const IMAGE_BY_SLUG: Record<string, string> = {
   "pigeon-storm-kadai-200": "/images/products/pigeon/storm-cooker.jpg",
   "pigeon-storm-kadai-200-ib": "/images/products/pigeon/storm-cooker.jpg",
   "pigeon-storm-kadai-300-ib": "/images/products/pigeon/storm-cooker.jpg",
-  "pigeon-classic-lite-550w-2-jar": "/images/products/pigeon/classic-al-cooker.jpg",
-  "pigeon-inox-1l-dx": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "pigeon-inox-1l-sdx-double-pot": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "pigeon-inox-1-8l-sdx-double-pot": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "pigeon-inox-1-8l-dx": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "pigeon-inox-pro-with-steamer-1l-dx-yellow": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "pigeon-inox-pro-with-steamer-1-8l-double-pot-yellow": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "pigeon-inox-pro-with-steamer-1l-dx-pink": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "pigeon-inox-pro-with-steamer-1-8l-double-pot-pink": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "pigeon-inox-pro-with-steamer-1l-dx-grey": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "pigeon-inox-pro-with-steamer-1-8l-double-pot-grey": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
+
+  // --- Mixer Grinders ---
+  "pigeon-classic-lite-550w-2-jar": "/images/products/pigeon/enora-mixer-grinder.jpg",
+  "pigeon-smarty-550w": "/images/products/pigeon/smarty-mixer-grinder.jpg",
+  "pigeon-sonik-750w": "/images/products/pigeon/smarty-mixer-grinder.jpg",
+  "pigeon-ultrax-5": "/images/products/pigeon/smarty-mixer-grinder.jpg",
+  "pigeon-personal-blender": "/images/products/pigeon/personal-blender.jpg",
+
+  // --- Electric Rice Cookers (ERC) ---
+  "pigeon-inox-1l-dx": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "pigeon-inox-1l-sdx-double-pot": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "pigeon-inox-1-8l-sdx-double-pot": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "pigeon-inox-1-8l-dx": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "pigeon-inox-pro-with-steamer-1l-dx-yellow": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "pigeon-inox-pro-with-steamer-1-8l-double-pot-yellow": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "pigeon-inox-pro-with-steamer-1l-dx-pink": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "pigeon-inox-pro-with-steamer-1-8l-double-pot-pink": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "pigeon-inox-pro-with-steamer-1l-dx-grey": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "pigeon-inox-pro-with-steamer-1-8l-double-pot-grey": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "pigeon-erc-joy-unlimited": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
+  "pigeon-erc-ruby": "/images/products/pigeon/erc-ruby-rice-cooker.jpg",
+  "pigeon-blossom-erc": "/images/products/pigeon/erc-ruby-rice-cooker.jpg",
+
+  // --- Inox Hydra (bottle/lunch) ---
   "pigeon-inox-hydra": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
   "pigeon-inox-hydra-plus": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
   "pigeon-inox-hydra-duo-900ml": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "pigeon-titanium-handi-2l-hard-anodised": "/images/products/pigeon/titanium-cooker-inner.jpg",
-  "pigeon-titanium-handi-3l-hard-anodised": "/images/products/pigeon/titanium-cooker-inner.jpg",
-  "pigeon-titanium-handi-5l-hard-anodised": "/images/products/pigeon/titanium-cooker-inner.jpg",
-  "pigeon-titanium-3l-hard-anodised": "/images/products/pigeon/titanium-cooker-inner.jpg",
-  "pigeon-titanium-5l-hard-anodised": "/images/products/pigeon/titanium-cooker-inner.jpg",
-  "pigeon-titanium-easy-cook-combi-3l": "/images/products/pigeon/titanium-cooker-inner.jpg",
-  "pigeon-titanium-hard-anodised": "/images/products/pigeon/titanium-cooker-inner.jpg",
-  "pigeon-amelia-hard-anodised": "/images/products/pigeon/amelia-cooker.jpg",
-  "pigeon-inox-ss-inner-lid": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
-  "pigeon-inox-pro-inner-lid": "/images/products/pigeon/inox-cooker-inner-ibss.jpg",
+
+  // --- Electric Kettles ---
+  "pigeon-hot-kettle-1-5l": "/images/products/pigeon/hot-kettle.jpg",
+  "pigeon-hot-electric-kettle-1-8l": "/images/products/pigeon/hot-kettle.jpg",
+  "pigeon-evoke-kettle": "/images/products/pigeon/evoke-kettle.jpg",
+  "pigeon-travex-kettle-300ml": "/images/products/pigeon/evoke-kettle.jpg",
+  "pigeon-multi-kessel": "/images/products/pigeon/multi-cook-kessel.jpg",
+
+  // --- Air Fryers ---
+  "pigeon-ivo-healthifry-airfryer": "/images/products/pigeon/ivo-airfryer.jpg",
+  "pigeon-airfryer": "/images/products/pigeon/airfryer.jpg",
+
+  // --- Dubblin ---
   "dubblin-craze": "/images/products/dubblin/craze-550.jpg",
   "dubblin-rage": "/images/products/dubblin/rage-1200.jpg",
   "dubblin-bold": "/images/products/dubblin/bold-1200.jpg",
