@@ -96,7 +96,7 @@ export const IMAGE_BY_VARIANT: Record<string, string> = {
   "19004368": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
 
   // Mixer grinders
-  "19004932": "/images/products/pigeon/multi-cook-kessel.jpg"
+  "19004932": "/images/products/pigeon/multi-cook-kessel.jpg",
 };
 
 /** product slug -> public image path (fallback when the variant has no match) */
@@ -153,11 +153,14 @@ export const IMAGE_BY_SLUG: Record<string, string> = {
   "pigeon-inox-1-8l-sdx-double-pot": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
   "pigeon-inox-1-8l-dx": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
   "pigeon-inox-pro-with-steamer-1l-dx-yellow": "/images/products/pigeon/multi-cook-kessel.jpg",
-  "pigeon-inox-pro-with-steamer-1-8l-double-pot-yellow": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "pigeon-inox-pro-with-steamer-1-8l-double-pot-yellow":
+    "/images/products/pigeon/multi-cook-kessel.jpg",
   "pigeon-inox-pro-with-steamer-1l-dx-pink": "/images/products/pigeon/multi-cook-kessel.jpg",
-  "pigeon-inox-pro-with-steamer-1-8l-double-pot-pink": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "pigeon-inox-pro-with-steamer-1-8l-double-pot-pink":
+    "/images/products/pigeon/multi-cook-kessel.jpg",
   "pigeon-inox-pro-with-steamer-1l-dx-grey": "/images/products/pigeon/multi-cook-kessel.jpg",
-  "pigeon-inox-pro-with-steamer-1-8l-double-pot-grey": "/images/products/pigeon/multi-cook-kessel.jpg",
+  "pigeon-inox-pro-with-steamer-1-8l-double-pot-grey":
+    "/images/products/pigeon/multi-cook-kessel.jpg",
   "pigeon-joy-unlimited-1-8l-dx-single-pot": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
   "pigeon-joy-unlimited-1-8l-double-pot": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
   "pigeon-joy-unlimited-2-8l-dx-single-pot": "/images/products/pigeon/erc-joy-rice-cooker.jpg",
@@ -190,13 +193,75 @@ export const IMAGE_BY_SLUG: Record<string, string> = {
   "pigeon-wet-grinder-2l-nutrova": "/images/products/pigeon/wet-grinder-nutrova.jpg",
   "pigeon-compact-2-burner-ss": "/images/products/pigeon/compact-2-burner-ss.jpg",
 
+  // --- Cookers: additional aluminium / hard-anodised families ---
+  "pigeon-deluxe-aluminium": "/images/products/pigeon/mila-cooker.jpg",
+  "pigeon-deluxe-calida-3l": "/images/products/pigeon/mila-cooker.jpg",
+  "pigeon-deluxe-calida-5l-ib": "/images/products/pigeon/mila-cooker.jpg",
+  "pigeon-mini-combo-2l-3l-aluminium": "/images/products/pigeon/mila-cooker.jpg",
+  "pigeon-rio-3l-aluminium": "/images/products/pigeon/mila-cooker.jpg",
+  "pigeon-all-in-one-super-cooker-3l-hard-anodised":
+    "/images/products/pigeon/titanium-cooker-inner.jpg",
+  "pigeon-all-in-one-super-cooker-5l-hard-anodised":
+    "/images/products/pigeon/titanium-cooker-inner.jpg",
+  "pigeon-super-cooker-value-pack-5l-hard-anodised":
+    "/images/products/pigeon/titanium-cooker-inner.jpg",
+
+  // --- Electric pressure cooker ---
+  "pigeon-electra-smart-cook-epc": "/images/products/pigeon/electra-smart-cook.jpg",
+
+  // --- Induction & infrared cooktops ---
+  "pigeon-eva-infrared-cooktop-2000w": "/images/products/pigeon/eva-infrared-cooktop.jpg",
+  "pigeon-radiant-infrared-cooktop-2200w": "/images/products/pigeon/radiant-infrared-cooktop.jpg",
+  "pigeon-rapido-touch-dx-2100w": "/images/products/pigeon/rapido-induction.jpg",
+  "pigeon-rapido-sleek-2100w": "/images/products/pigeon/rapido-induction.jpg",
+
+  // --- Air-fryer oven, OTG & ovens ---
+  "pigeon-12l-air-fusion-air-fryer-oven": "/images/products/pigeon/air-fusion-oven.jpg",
+  "pigeon-otg-with-rotisserie-20l": "/images/products/pigeon/otg-20l.jpg",
+  "pigeon-electric-oven-9l-with-tray-grill": "/images/products/pigeon/otg-20l.jpg",
+  "pigeon-electric-oven-14l-with-tray-grill": "/images/products/pigeon/otg-20l.jpg",
+  "pigeon-otg-25l-with-rotisserie": "/images/products/pigeon/otg-rotisserie-25l.jpg",
+  "pigeon-otg-air-fryer-25l-with-rotisserie": "/images/products/pigeon/otg-rotisserie-25l.jpg",
+  "pigeon-otg-30l-with-rotisserie": "/images/products/pigeon/otg-rotisserie-30l.jpg",
+  "pigeon-oven-toaster-40l-with-rotisserie": "/images/products/pigeon/oven-toaster-40l.jpg",
+
+  // --- Sandwich makers & coffee maker ---
+  "pigeon-panini-sandwich-griller-black": "/images/products/pigeon/panini-griller.jpg",
+  "pigeon-sandwich-griller-black": "/images/products/pigeon/panini-griller.jpg",
+  "pigeon-sandwich-toaster-black": "/images/products/pigeon/sandwich-toaster.jpg",
+  "pigeon-modern-cucina-coffee-maker": "/images/products/pigeon/coffee-maker.jpg",
+
+  // --- Garment steamer ---
+  "pigeon-hand-steamer-1200w-blue": "/images/products/pigeon/hand-steamer.jpg",
+  "pigeon-hand-steamer-1200w-pink": "/images/products/pigeon/hand-steamer.jpg",
+
+  // --- Idli makers (stainless steel) ---
+  "pigeon-idly-maker-3-plates": "/images/products/pigeon/idli-maker-ss.jpg",
+  "pigeon-idly-maker-4-plates": "/images/products/pigeon/idli-maker-ss.jpg",
+  "pigeon-idly-maker-5-plates": "/images/products/pigeon/idli-maker-ss.jpg",
+  "pigeon-idly-maker-6-plates": "/images/products/pigeon/idli-maker-ss.jpg",
+
+  // --- Non-stick cookware set ---
+  "pigeon-nonstick-4-pc-carlo": "/images/products/pigeon/nonstick-cookware-set.jpg",
+
+  // --- Cast-iron (Wondercast) ---
+  "pigeon-wondercast-flat-tawa-280": "/images/products/pigeon/cast-iron-tawa.jpg",
+  "pigeon-wondercast-flat-tawa-280-ib": "/images/products/pigeon/cast-iron-tawa.jpg",
+  "pigeon-wondercast-flat-tawa-300": "/images/products/pigeon/cast-iron-tawa.jpg",
+  "pigeon-paniyarakkal-9-round": "/images/products/pigeon/cast-iron-appe.jpg",
+  "pigeon-wondercast-paniyarakkal-7-rounds": "/images/products/pigeon/cast-iron-appe.jpg",
+  "pigeon-wondercast-paniyarakkal-11-rounds": "/images/products/pigeon/cast-iron-appe.jpg",
+  "pigeon-wondercast-paniyarakkal-12-rounds": "/images/products/pigeon/cast-iron-appe.jpg",
+  "pigeon-wondercast-long-handle-paniyarakkal-12-rounds":
+    "/images/products/pigeon/cast-iron-appe.jpg",
+
   // --- Dubblin ---
   "dubblin-craze": "/images/products/dubblin/craze-550.jpg",
   "dubblin-rage": "/images/products/dubblin/rage-1200.jpg",
   "dubblin-bold": "/images/products/dubblin/bold-1200.jpg",
   "dubblin-rock": "/images/products/dubblin/rock-1200.jpg",
   "dubblin-slim-senior": "/images/products/dubblin/slim.jpg",
-  "dubblin-smartlock-flat": "/images/products/dubblin/smartlock-flat-2000.jpg"
+  "dubblin-smartlock-flat": "/images/products/dubblin/smartlock-flat-2000.jpg",
 };
 
 /**
@@ -205,7 +270,7 @@ export const IMAGE_BY_SLUG: Record<string, string> = {
  * decoration (hero collage, category artwork) where nothing claims otherwise.
  */
 export const DECORATIVE_IMAGES: Record<string, string[]> = {
-  "pigeon": [
+  pigeon: [
     "/images/products/pigeon/cast-iron-ss-01.jpg",
     "/images/products/pigeon/cast-iron-ss-02.jpg",
     "/images/products/pigeon/cast-iron-ss-03.jpg",
@@ -327,8 +392,8 @@ export const DECORATIVE_IMAGES: Record<string, string[]> = {
     "/images/products/pigeon/p15-g08-01.jpg",
     "/images/products/pigeon/p15-g09-01.jpg",
     "/images/products/pigeon/p15-g10-01.jpg",
-    "/images/products/pigeon/p15-g11-01.jpg"
+    "/images/products/pigeon/p15-g11-01.jpg",
   ],
-  "dubblin": [],
-  "yera": []
+  dubblin: [],
+  yera: [],
 };
