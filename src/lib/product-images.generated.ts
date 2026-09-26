@@ -287,6 +287,12 @@ export const IMAGE_BY_SLUG: Record<string, string> = {
   "pigeon-nutri-master-400w-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
   "pigeon-orb-750w-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
   "pigeon-femme-750w-black-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+  // coloured 3-jar variants (photo is black/orange; colour may not match exactly)
+  "pigeon-especial-750w-3-jar-grey": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+  "pigeon-especial-750w-3-jar-red": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+  "pigeon-femme-750w-blue-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+  "pigeon-femme-750w-red-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+  "pigeon-orb-alpine-green-750w-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
 
   // --- Dubblin ---
   "dubblin-craze": "/images/products/dubblin/craze-550.jpg",
