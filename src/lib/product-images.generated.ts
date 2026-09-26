@@ -255,6 +255,27 @@ export const IMAGE_BY_SLUG: Record<string, string> = {
   "pigeon-wondercast-long-handle-paniyarakkal-12-rounds":
     "/images/products/pigeon/cast-iron-appe.jpg",
 
+  // --- Gas stoves (glass top; matched on burner count) ---
+  "pigeon-ayush-2-burner": "/images/products/pigeon/gas-2burner-glass-black.jpg",
+  "pigeon-ayush-2-burner-auto-ignition": "/images/products/pigeon/gas-2burner-glass-black.jpg",
+  "pigeon-ayush-blk-2-burner": "/images/products/pigeon/gas-2burner-glass-black.jpg",
+  "pigeon-carbon-2-burner": "/images/products/pigeon/gas-2burner-glass-black.jpg",
+  "pigeon-sleek-2-burner": "/images/products/pigeon/gas-2burner-glass-black.jpg",
+  "pigeon-smart-2-burner": "/images/products/pigeon/gas-2burner-glass-black.jpg",
+  "pigeon-jumbo-2-burner": "/images/products/pigeon/gas-2burner-glass-black.jpg",
+  "pigeon-cosmic-2-burner-sabaf": "/images/products/pigeon/gas-2burner-glass-grey.jpg",
+  "pigeon-infinity-2-burner-sabaf": "/images/products/pigeon/gas-2burner-glass-grey.jpg",
+  "pigeon-infinity-2-burner-sabaf-auto": "/images/products/pigeon/gas-2burner-glass-grey.jpg",
+  "pigeon-infinity-gold-2-burner-sabaf": "/images/products/pigeon/gas-2burner-glass-grey.jpg",
+  "pigeon-ayush-4-burner": "/images/products/pigeon/gas-4burner-glass.jpg",
+  "pigeon-cosmic-4-burner-sabaf": "/images/products/pigeon/gas-4burner-glass.jpg",
+  "pigeon-infinity-4-burner-sabaf": "/images/products/pigeon/gas-4burner-glass.jpg",
+  "pigeon-infinity-4-burner-sabaf-auto": "/images/products/pigeon/gas-4burner-glass.jpg",
+  "pigeon-infinity-gold-4-burner-sabaf": "/images/products/pigeon/gas-4burner-glass.jpg",
+  "pigeon-sleek-4-burner": "/images/products/pigeon/gas-4burner-glass.jpg",
+  "pigeon-smart-4-burner": "/images/products/pigeon/gas-4burner-glass.jpg",
+  "pigeon-jumbo-4-burner": "/images/products/pigeon/gas-4burner-glass.jpg",
+
   // --- Dubblin ---
   "dubblin-craze": "/images/products/dubblin/craze-550.jpg",
   "dubblin-rage": "/images/products/dubblin/rage-1200.jpg",
@@ -262,6 +283,17 @@ export const IMAGE_BY_SLUG: Record<string, string> = {
   "dubblin-rock": "/images/products/dubblin/rock-1200.jpg",
   "dubblin-slim-senior": "/images/products/dubblin/slim.jpg",
   "dubblin-smartlock-flat": "/images/products/dubblin/smartlock-flat-2000.jpg",
+
+  // --- Dubblin storage / airtight containers (wired to existing catalogue art) ---
+  "dubblin-smartlock-rectangular": "/images/products/dubblin/smartlock-rect.jpg",
+  "dubblin-smartlock-round": "/images/products/dubblin/smartlock-round.jpg",
+  "dubblin-fresher": "/images/products/dubblin/fresher.jpg",
+  "dubblin-bento": "/images/products/dubblin/bento.jpg",
+  "dubblin-bento-2": "/images/products/dubblin/bento-2.jpg",
+  "dubblin-buffet": "/images/products/dubblin/buffet.jpg",
+  "dubblin-treat": "/images/products/dubblin/treat.jpg",
+  "dubblin-crunch": "/images/products/dubblin/crunch.jpg",
+  "dubblin-munch": "/images/products/dubblin/munch.jpg",
 };
 
 /**
