@@ -276,6 +276,18 @@ export const IMAGE_BY_SLUG: Record<string, string> = {
   "pigeon-smart-4-burner": "/images/products/pigeon/gas-4burner-glass.jpg",
   "pigeon-jumbo-4-burner": "/images/products/pigeon/gas-4burner-glass.jpg",
 
+  // --- Mixer grinders (3-jar; neutral/black models, to match the photo) ---
+  "pigeon-astratouch-750w-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+  "pigeon-atom-500w-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+  "pigeon-black-pearl-mx7-750w-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+  "pigeon-egnite-750w-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+  "pigeon-excella-550w-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+  "pigeon-glory-550w-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+  "pigeon-mega-mixi-750w-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+  "pigeon-nutri-master-400w-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+  "pigeon-orb-750w-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+  "pigeon-femme-750w-black-3-jar": "/images/products/pigeon/mixer-grinder-3jar.jpg",
+
   // --- Dubblin ---
   "dubblin-craze": "/images/products/dubblin/craze-550.jpg",
   "dubblin-rage": "/images/products/dubblin/rage-1200.jpg",
