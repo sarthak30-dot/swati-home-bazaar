@@ -72,6 +72,7 @@ export function BrandSpotlight() {
                     name={item.product_name}
                     capacity={item.capacity_or_size}
                     brandSlug={item.brand_slug}
+                    categorySlug={item.category_slug}
                     imageUrl={item.image_url}
                     variantCode={item.variant_code}
                     productSlug={item.product_slug}

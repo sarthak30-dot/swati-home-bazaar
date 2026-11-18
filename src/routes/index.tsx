@@ -19,6 +19,8 @@ import { brandClass } from "@/components/store/ProductImage";
 import { HomeHero } from "@/components/store/HomeHero";
 import { BrandSpotlight } from "@/components/store/BrandSpotlight";
 import { DEPARTMENTS, assertCategoriesMapped, type DepartmentSlug } from "@/lib/departments";
+import { QueryError } from "@/components/store/QueryError";
+import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -35,6 +37,7 @@ export const Route = createFileRoute("/")({
         content: "Authorised Delhi retailer for Pigeon, Dubblin and Yera Glassware.",
       },
     ],
+    links: [{ rel: "canonical", href: absoluteUrl("/") }],
   }),
   component: Home,
 });
@@ -63,7 +66,13 @@ function Home() {
     queryKey: ["category-counts"],
     queryFn: fetchCategoryCounts,
   });
-  const { data: fresh, isLoading: freshLoading } = useQuery({
+  const {
+    data: fresh,
+    isLoading: freshLoading,
+    isError: freshError,
+    isFetching: freshFetching,
+    refetch: refetchFresh,
+  } = useQuery({
     queryKey: ["rail", "new"],
     queryFn: () => fetchRail("new", 12),
   });
@@ -162,6 +171,9 @@ function Home() {
             View all
           </Link>
         </div>
+        {freshError && !fresh && (
+          <QueryError className="mt-4" onRetry={() => refetchFresh()} retrying={freshFetching} />
+        )}
         <div className="no-scrollbar mt-4 flex snap-x gap-4 overflow-x-auto pb-2">
           {freshLoading
             ? Array.from({ length: 6 }).map((_, i) => (

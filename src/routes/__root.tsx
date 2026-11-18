@@ -13,6 +13,8 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { MobileNav } from "@/components/layout/MobileNav";
+import { absoluteUrl, SITE_NAME } from "@/lib/site";
 import { AuthProvider } from "@/hooks/useAuth";
 import { CartProvider } from "@/hooks/useCart";
 import { Toaster } from "@/components/ui/sonner";
@@ -95,6 +97,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "Authorised retailer of Pigeon, Dubblin and Yera Glassware.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: SITE_NAME },
+      { property: "og:image", content: absoluteUrl("/og-default.jpg") },
+      { name: "twitter:image", content: absoluteUrl("/og-default.jpg") },
+      { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -135,14 +141,21 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <CartProvider>
-          <div className="flex min-h-screen flex-col">
+          <div className="flex min-h-screen flex-col pb-16 lg:pb-0">
+            <a
+              href="#main"
+              className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[60] focus:rounded-lg focus:bg-gold focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+            >
+              Skip to content
+            </a>
             <Header />
-            <main className="flex-1">
+            <main id="main" tabIndex={-1} className="flex-1 outline-none">
               {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
               <Outlet />
             </main>
             <Footer />
           </div>
+          <MobileNav />
           <Toaster position="top-center" richColors />
         </CartProvider>
       </AuthProvider>

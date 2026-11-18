@@ -1,8 +1,16 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import { Search, SlidersHorizontal, X } from "lucide-react";
-import { useState } from "react";
-import { fetchBrands, fetchCategories, fetchShop, PAGE_SIZE } from "@/lib/catalog";
+import { useEffect, useState } from "react";
+import {
+  fetchBrands,
+  fetchCategories,
+  fetchFacetAvailability,
+  fetchShop,
+  PAGE_SIZE,
+} from "@/lib/catalog";
+import { QueryError } from "@/components/store/QueryError";
+import { absoluteUrl } from "@/lib/site";
 import { ProductCard, ProductCardSkeleton } from "@/components/store/ProductCard";
 import { rupees } from "@/lib/format";
 import { cn } from "@/lib/utils";
@@ -46,6 +54,9 @@ export const Route = createFileRoute("/shop")({
         content: "Filter 800+ home and kitchen SKUs by brand, category, price and discount.",
       },
     ],
+    // Filter/sort/page permutations are duplicates of the same catalogue, so
+    // they all point at the one canonical listing.
+    links: [{ rel: "canonical", href: absoluteUrl("/shop") }],
   }),
   component: Shop,
 });
@@ -84,7 +95,17 @@ function Shop() {
   const { data: brands } = useQuery({ queryKey: ["brands"], queryFn: fetchBrands });
   const { data: categories } = useQuery({ queryKey: ["categories"], queryFn: fetchCategories });
 
-  const { data, isLoading, isFetching } = useQuery({
+  const { data: facets } = useQuery({
+    queryKey: ["facet-availability"],
+    queryFn: fetchFacetAvailability,
+    staleTime: 10 * 60 * 1000,
+  });
+  // Show a facet if it can return something, or if it is already applied so
+  // it can always be switched off.
+  const showDiscount = facets?.discount === true || Boolean(search.discount);
+  const showRating = facets?.rating === true || Boolean(search.rating);
+
+  const { data, isLoading, isFetching, isError, refetch } = useQuery({
     queryKey: ["shop", search],
     placeholderData: keepPreviousData,
     queryFn: () =>
@@ -102,6 +123,19 @@ function Shop() {
   });
 
   const total = data?.total ?? 0;
+
+  // Close the mobile filter sheet with Escape and lock page scroll while open.
+  useEffect(() => {
+    if (!filtersOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setFiltersOpen(false);
+    document.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [filtersOpen]);
   const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
 
   const brandIds = (brands ?? []).filter((b) => selBrands.includes(b.slug)).map((b) => b.id);
@@ -233,47 +267,51 @@ function Shop() {
         </div>
       </div>
 
-      <div>
-        <h3 className="mb-2 text-sm font-semibold">Discount</h3>
-        <div className="flex flex-wrap gap-2">
-          {[10, 20, 30].map((d) => (
-            <button
-              key={d}
-              type="button"
-              onClick={() => setSearch({ discount: search.discount === d ? undefined : d })}
-              className={cn(
-                "rounded-lg border px-3 py-1.5 text-sm",
-                search.discount === d
-                  ? "border-gold bg-gold-tint font-semibold text-gold"
-                  : "border-border",
-              )}
-            >
-              {d}%+
-            </button>
-          ))}
+      {showDiscount && (
+        <div>
+          <h3 className="mb-2 text-sm font-semibold">Discount</h3>
+          <div className="flex flex-wrap gap-2">
+            {[10, 20, 30].map((d) => (
+              <button
+                key={d}
+                type="button"
+                onClick={() => setSearch({ discount: search.discount === d ? undefined : d })}
+                className={cn(
+                  "rounded-lg border px-3 py-1.5 text-sm",
+                  search.discount === d
+                    ? "border-gold bg-gold-tint font-semibold text-gold"
+                    : "border-border",
+                )}
+              >
+                {d}%+
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
-      <div>
-        <h3 className="mb-2 text-sm font-semibold">Customer rating</h3>
-        <div className="flex flex-wrap gap-2">
-          {[4, 3].map((r) => (
-            <button
-              key={r}
-              type="button"
-              onClick={() => setSearch({ rating: search.rating === r ? undefined : r })}
-              className={cn(
-                "rounded-lg border px-3 py-1.5 text-sm",
-                search.rating === r
-                  ? "border-gold bg-gold-tint font-semibold text-gold"
-                  : "border-border",
-              )}
-            >
-              {r}★ &amp; up
-            </button>
-          ))}
+      {showRating && (
+        <div>
+          <h3 className="mb-2 text-sm font-semibold">Customer rating</h3>
+          <div className="flex flex-wrap gap-2">
+            {[4, 3].map((r) => (
+              <button
+                key={r}
+                type="button"
+                onClick={() => setSearch({ rating: search.rating === r ? undefined : r })}
+                className={cn(
+                  "rounded-lg border px-3 py-1.5 text-sm",
+                  search.rating === r
+                    ? "border-gold bg-gold-tint font-semibold text-gold"
+                    : "border-border",
+                )}
+              >
+                {r}★ &amp; up
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {activeCount > 0 && (
         <button
@@ -289,13 +327,17 @@ function Shop() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6">
-      <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
+      <div className="grid items-center gap-3 sm:grid-cols-[minmax(0,1fr)_auto]">
         <div className="min-w-0">
-          <h1 className="truncate font-display text-2xl font-bold">
+          <h1 className="font-display text-2xl font-bold sm:truncate">
             {search.q ? `Results for "${search.q}"` : "All products"}
           </h1>
-          <p className="text-sm text-muted-foreground">
-            {isLoading ? "Loading catalogue..." : `${total.toLocaleString("en-IN")} products`}
+          <p className="text-sm text-muted-foreground" aria-live="polite">
+            {isLoading
+              ? "Loading catalogue..."
+              : isError && !data
+                ? "Catalogue unavailable"
+                : `${total.toLocaleString("en-IN")} products`}
           </p>
         </div>
         <div className="flex shrink-0 items-center gap-2">
@@ -309,10 +351,14 @@ function Shop() {
           </button>
           <select
             value={search.sort ?? "new"}
+            aria-label="Sort products"
             onChange={(e) => setSearch({ sort: e.target.value })}
             className="rounded-lg border border-border bg-background px-3 py-2 text-sm"
           >
-            {SORTS.map((s) => (
+            {SORTS.filter(
+              (s) =>
+                (s.value !== "discount" || showDiscount) && (s.value !== "rating" || showRating),
+            ).map((s) => (
               <option key={s.value} value={s.value}>
                 {s.label}
               </option>
@@ -325,7 +371,9 @@ function Shop() {
         <aside className="hidden lg:block">{filterPanel}</aside>
 
         <div>
-          {isLoading ? (
+          {isError && !data ? (
+            <QueryError onRetry={() => refetch()} retrying={isFetching} />
+          ) : isLoading ? (
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4">
               {Array.from({ length: 8 }).map((_, i) => (
                 <ProductCardSkeleton key={i} />
@@ -340,7 +388,11 @@ function Shop() {
                 )}
               >
                 {data.items.map((item) => (
-                  <ProductCard key={item.id} item={item} />
+                  <ProductCard
+                    key={item.id}
+                    item={item}
+                    variantCount={data.variantCounts[item.product_id]}
+                  />
                 ))}
               </div>
               <div className="mt-8 flex items-center justify-center gap-3">
@@ -371,17 +423,35 @@ function Shop() {
             </>
           ) : (
             <div className="rounded-2xl border border-dashed border-border py-20 text-center">
-              <p className="font-display text-lg font-semibold">No products match these filters</p>
-              <p className="mt-1 text-sm text-muted-foreground">
-                Try widening your price range or clearing a filter.
+              <p className="font-display text-lg font-semibold">
+                {search.q ? `No results for "${search.q}"` : "No products match these filters"}
               </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                {search.q
+                  ? "Check the spelling, try a shorter word, or search by brand or category."
+                  : "Try widening your price range or clearing a filter."}
+              </p>
+              {activeCount > 0 && (
+                <button
+                  type="button"
+                  onClick={() => navigate({ search: { q: search.q, sort: search.sort } })}
+                  className="mt-4 rounded-xl border border-gold px-4 py-2 text-sm font-semibold text-gold"
+                >
+                  Clear all filters
+                </button>
+              )}
             </div>
           )}
         </div>
       </div>
 
       {filtersOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden">
+        <div
+          className="fixed inset-0 z-50 lg:hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Filters"
+        >
           <button
             type="button"
             aria-label="Close filters"

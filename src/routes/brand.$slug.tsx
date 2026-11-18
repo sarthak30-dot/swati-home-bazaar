@@ -3,6 +3,8 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchBrands, fetchCategories, fetchShop } from "@/lib/catalog";
 import { ProductCard, ProductCardSkeleton } from "@/components/store/ProductCard";
 import { brandClass } from "@/components/store/ProductImage";
+import { QueryError } from "@/components/store/QueryError";
+import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/brand/$slug")({
   head: ({ params }) => {
@@ -17,6 +19,7 @@ export const Route = createFileRoute("/brand/$slug")({
         { property: "og:title", content: `${name} at Swati Enterprises` },
         { property: "og:description", content: `Genuine ${name} products with brand warranty.` },
       ],
+      links: [{ rel: "canonical", href: absoluteUrl(`/brand/${params.slug}`) }],
     };
   },
   component: BrandPage,
@@ -28,9 +31,11 @@ function BrandPage() {
   const { data: categories } = useQuery({ queryKey: ["categories"], queryFn: fetchCategories });
   const brand = brands?.find((b) => b.slug === slug);
 
-  const { data, isLoading } = useQuery({
+  // "Newest" rather than "discount": every variant currently sells at MRP, so
+  // a discount sort is arbitrary.
+  const { data, isLoading, isError, isFetching, refetch } = useQuery({
     queryKey: ["brand-products", slug],
-    queryFn: () => fetchShop({ brands: [slug], sort: "discount" }),
+    queryFn: () => fetchShop({ brands: [slug], sort: "new" }),
   });
 
   if (brands && !brand) throw notFound();
@@ -79,11 +84,21 @@ function BrandPage() {
             View all
           </Link>
         </div>
-        <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4">
-          {isLoading
-            ? Array.from({ length: 8 }).map((_, i) => <ProductCardSkeleton key={i} />)
-            : data?.items.map((item) => <ProductCard key={item.id} item={item} />)}
-        </div>
+        {isError && !data ? (
+          <QueryError className="mt-4" onRetry={() => refetch()} retrying={isFetching} />
+        ) : (
+          <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4">
+            {isLoading
+              ? Array.from({ length: 8 }).map((_, i) => <ProductCardSkeleton key={i} />)
+              : data?.items.map((item) => (
+                  <ProductCard
+                    key={item.id}
+                    item={item}
+                    variantCount={data.variantCounts[item.product_id]}
+                  />
+                ))}
+          </div>
+        )}
       </section>
     </div>
   );

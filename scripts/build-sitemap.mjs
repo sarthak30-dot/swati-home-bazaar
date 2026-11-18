@@ -26,11 +26,11 @@ const env = Object.fromEntries(
     ]),
 );
 
-// No production domain is configured anywhere in this repo yet (no
-// wrangler.toml custom domain, no canonical tag). Set VITE_SITE_URL once you
-// have one — until then this falls back to a placeholder that is easy to
-// grep for and obviously wrong if it ships.
-const SITE_URL = (env.VITE_SITE_URL || "https://REPLACE-WITH-YOUR-DOMAIN.example").replace(
+// Production origin. Override with VITE_SITE_URL (env var or .env) once a
+// custom domain is attached; src/lib/site.ts uses the same default so
+// canonical links, og:image and the sitemap always agree.
+const DEFAULT_SITE_URL = "https://swati-clone.vercel.app";
+const SITE_URL = (process.env.VITE_SITE_URL || env.VITE_SITE_URL || DEFAULT_SITE_URL).replace(
   /\/$/,
   "",
 );
@@ -101,9 +101,14 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.s
 
 writeFileSync(join(root, "public/sitemap.xml"), xml);
 console.log(`Wrote public/sitemap.xml with ${urls.length} URLs (base: ${SITE_URL})`);
-if (!env.VITE_SITE_URL) {
+if (!process.env.VITE_SITE_URL && !env.VITE_SITE_URL) {
   console.warn(
-    "VITE_SITE_URL is not set in .env — sitemap URLs use a placeholder domain. " +
-      "Set VITE_SITE_URL=https://your-real-domain before deploying.",
+    `VITE_SITE_URL is not set — sitemap URLs use ${DEFAULT_SITE_URL}. ` +
+      "Set VITE_SITE_URL=https://your-real-domain before pointing a custom domain here.",
   );
 }
+
+// Keep robots.txt's Sitemap directive in step with the same origin.
+const robotsPath = join(root, "public/robots.txt");
+const robots = readFileSync(robotsPath, "utf8").replace(/\n*# Sitemap[\s\S]*$|\n*Sitemap:.*$/m, "");
+writeFileSync(robotsPath, `${robots.trimEnd()}\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);

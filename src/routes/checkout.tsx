@@ -8,6 +8,21 @@ import { useAuth } from "@/hooks/useAuth";
 import { useCart } from "@/hooks/useCart";
 import { rupees, shippingFor } from "@/lib/format";
 import { cn } from "@/lib/utils";
+import { checkServiceability, fetchServiceablePins } from "@/lib/serviceability";
+
+/**
+ * True when PostgREST says the RPC does not exist, i.e. the server-side order
+ * migration (20261118110000_server_side_orders.sql) has not been applied yet.
+ * Only then do we fall back to the legacy browser-side path below.
+ */
+function isMissingFunction(error: { code?: string; message?: string } | null): boolean {
+  return Boolean(
+    error &&
+    (error.code === "PGRST202" ||
+      error.code === "42883" ||
+      /could not find the function/i.test(error.message ?? "")),
+  );
+}
 
 export const Route = createFileRoute("/checkout")({
   head: () => ({
@@ -15,7 +30,10 @@ export const Route = createFileRoute("/checkout")({
       { title: "Checkout — Swati Enterprises" },
       { name: "description", content: "Confirm your delivery address and place your order." },
       { property: "og:title", content: "Checkout — Swati Enterprises" },
-      { property: "og:description", content: "Secure checkout with cash on delivery across Delhi NCR." },
+      {
+        property: "og:description",
+        content: "Secure checkout with cash on delivery across Delhi NCR.",
+      },
     ],
   }),
   component: Checkout,
@@ -23,12 +41,18 @@ export const Route = createFileRoute("/checkout")({
 
 const addressSchema = z.object({
   full_name: z.string().trim().min(2, "Enter your full name").max(100),
-  phone: z.string().trim().regex(/^[6-9]\d{9}$/, "Enter a valid 10-digit mobile number"),
+  phone: z
+    .string()
+    .trim()
+    .regex(/^[6-9]\d{9}$/, "Enter a valid 10-digit mobile number"),
   line1: z.string().trim().min(5, "Enter your address").max(200),
   line2: z.string().trim().max(200).optional(),
   city: z.string().trim().min(2, "Enter your city").max(80),
   state: z.string().trim().min(2, "Enter your state").max(80),
-  pincode: z.string().trim().regex(/^\d{6}$/, "Enter a valid 6-digit pincode"),
+  pincode: z
+    .string()
+    .trim()
+    .regex(/^\d{6}$/, "Enter a valid 6-digit pincode"),
 });
 
 type AddressForm = z.infer<typeof addressSchema>;
@@ -84,6 +108,23 @@ function Checkout() {
   const applyCoupon = async () => {
     const code = couponCode.trim().toUpperCase();
     if (!code) return;
+
+    // Preferred: server-side validation. The browser only ever learns the
+    // discount for the one code it typed, never the coupon table.
+    const rpc = await supabase.rpc("validate_coupon", { p_code: code, p_subtotal: subtotal });
+    if (!rpc.error && rpc.data?.[0]) {
+      const amount = Number(rpc.data[0].discount);
+      setDiscount(amount);
+      setAppliedCoupon(rpc.data[0].code);
+      toast.success(`${rpc.data[0].code} applied — you saved ${rupees(amount)}`);
+      return;
+    }
+    if (!isMissingFunction(rpc.error)) {
+      toast.error(rpc.error?.message ?? "Coupon not found");
+      return;
+    }
+
+    // Legacy fallback (pre-migration only).
     const { data, error } = await supabase
       .from("coupons")
       .select("*")
@@ -157,8 +198,41 @@ function Checkout() {
       return;
     }
 
+    // Same rule the server enforces — fail early with a useful pointer.
+    const pins = await fetchServiceablePins();
+    const reach = checkServiceability(shippingAddress.pincode, pins);
+    if (reach.status === "bulk-only") {
+      toast.error(reach.message);
+      return;
+    }
+
     setPlacing(true);
     try {
+      // Preferred path: one server-side transaction that prices the cart from
+      // the database, validates the coupon, checks and decrements stock, and
+      // writes the order and its lines atomically. The browser sends only
+      // (variant, qty) pairs and an address — never a price.
+      const placed = await supabase.rpc("place_order", {
+        p_items: items.map(({ variant, qty }) => ({ variant_id: variant.id, qty })),
+        p_address: shippingAddress,
+        p_payment_method: payment,
+        ...(appliedCoupon ? { p_coupon_code: appliedCoupon } : {}),
+        ...(addressId ? { p_address_id: addressId } : {}),
+      });
+      if (!placed.error && placed.data?.[0]) {
+        const created = placed.data[0];
+        await clear();
+        toast.success("Order placed!");
+        navigate({ to: "/order/$orderNumber", params: { orderNumber: created.order_number } });
+        return;
+      }
+      if (!isMissingFunction(placed.error)) {
+        throw new Error(placed.error?.message ?? "Could not place the order");
+      }
+
+      // Legacy fallback (pre-migration only). Prices here come from the
+      // browser, which is exactly what place_order exists to prevent — remove
+      // this block once 20261118110000/20261118120000 are applied.
       const { data: order, error } = await supabase
         .from("orders")
         .insert({
@@ -202,14 +276,19 @@ function Checkout() {
   };
 
   if (authLoading || !user) {
-    return <div className="mx-auto max-w-7xl px-4 py-16 text-sm text-muted-foreground">Loading...</div>;
+    return (
+      <div className="mx-auto max-w-7xl px-4 py-16 text-sm text-muted-foreground">Loading...</div>
+    );
   }
 
   if (!items.length) {
     return (
       <div className="mx-auto max-w-2xl px-4 py-20 text-center">
         <h1 className="font-display text-2xl font-bold">Nothing to check out</h1>
-        <Link to="/shop" className="mt-6 inline-block rounded-xl bg-gold px-6 py-3 text-sm font-semibold text-white">
+        <Link
+          to="/shop"
+          className="mt-6 inline-block rounded-xl bg-gold px-6 py-3 text-sm font-semibold text-white"
+        >
           Browse products
         </Link>
       </div>
@@ -282,7 +361,9 @@ function Checkout() {
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {field("full_name", "Full name", { maxLength: 100 })}
                 {field("phone", "Mobile number", { maxLength: 10, inputMode: "numeric" })}
-                <div className="sm:col-span-2">{field("line1", "Address line 1", { maxLength: 200 })}</div>
+                <div className="sm:col-span-2">
+                  {field("line1", "Address line 1", { maxLength: 200 })}
+                </div>
                 <div className="sm:col-span-2">
                   {field("line2", "Address line 2 (optional)", { maxLength: 200 })}
                 </div>

@@ -23,7 +23,7 @@ export function ProductCard({
   item: CatalogVariant;
   className?: string;
   /** Number of sizes on the parent product; shows a "+N sizes" hint when > 1. */
-  variantCount?: number;
+  variantCount?: number | undefined;
 }) {
   const { isWishlisted, toggle } = useWishlist();
   const out = item.stock_qty <= 0;
@@ -45,6 +45,7 @@ export function ProductCard({
             name={item.product_name}
             capacity={item.capacity_or_size}
             brandSlug={item.brand_slug}
+            categorySlug={item.category_slug}
             imageUrl={item.image_url}
             variantCode={item.variant_code}
             productSlug={item.product_slug}

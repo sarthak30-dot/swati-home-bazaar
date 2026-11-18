@@ -1,8 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useQuery } from "@tanstack/react-query";
-import { CheckCircle2 } from "lucide-react";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { toast } from "sonner";
+import { CheckCircle2, Circle, MessageCircle, XCircle } from "lucide-react";
+import { CONTACT } from "@/lib/site";
+import { cn } from "@/lib/utils";
 import { supabase } from "@/integrations/supabase/client";
-import { rupees, formatDate, ORDER_STATUS_LABELS } from "@/lib/format";
+import { rupees, formatDate, ORDER_STATUS_LABELS, ORDER_PIPELINE } from "@/lib/format";
 
 export const Route = createFileRoute("/order/$orderNumber")({
   head: ({ params }) => ({
@@ -29,6 +32,19 @@ type ShippingAddress = {
 
 function OrderConfirmation() {
   const { orderNumber } = Route.useParams();
+  const queryClient = useQueryClient();
+
+  const cancel = useMutation({
+    mutationFn: async () => {
+      const { error } = await supabase.rpc("cancel_order", { p_order_number: orderNumber });
+      if (error) throw error;
+    },
+    onSuccess: () => {
+      toast.success("Order cancelled");
+      queryClient.invalidateQueries({ queryKey: ["order", orderNumber] });
+    },
+    onError: (e: Error) => toast.error(e.message || "Could not cancel the order"),
+  });
 
   const { data, isLoading } = useQuery({
     queryKey: ["order", orderNumber],
@@ -44,7 +60,11 @@ function OrderConfirmation() {
   });
 
   if (isLoading) {
-    return <div className="mx-auto max-w-3xl px-4 py-16 text-sm text-muted-foreground">Loading order...</div>;
+    return (
+      <div className="mx-auto max-w-3xl px-4 py-16 text-sm text-muted-foreground">
+        Loading order...
+      </div>
+    );
   }
 
   if (!data) {
@@ -62,12 +82,21 @@ function OrderConfirmation() {
   }
 
   const address = (data.shipping_address ?? {}) as ShippingAddress;
+  const isCancelled = data.status === "cancelled" || data.status === "returned";
+  const canCancel = data.status === "placed" || data.status === "confirmed";
+  const stage = ORDER_PIPELINE.indexOf(data.status as (typeof ORDER_PIPELINE)[number]);
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
       <div className="rounded-2xl border border-border bg-gold-tint p-6 text-center">
-        <CheckCircle2 className="mx-auto h-10 w-10 text-success" />
-        <h1 className="mt-3 font-display text-2xl font-bold">Thank you, your order is placed</h1>
+        {isCancelled ? (
+          <XCircle className="mx-auto h-10 w-10 text-destructive" />
+        ) : (
+          <CheckCircle2 className="mx-auto h-10 w-10 text-success" />
+        )}
+        <h1 className="mt-3 font-display text-2xl font-bold">
+          {isCancelled ? "This order was cancelled" : "Thank you, your order is placed"}
+        </h1>
         <p className="mt-1 text-sm text-muted-foreground">
           Order <strong>{data.order_number}</strong> &middot; {formatDate(data.created_at)}
         </p>
@@ -75,6 +104,30 @@ function OrderConfirmation() {
           Status: {ORDER_STATUS_LABELS[data.status] ?? data.status}
         </p>
       </div>
+
+      {!isCancelled && stage >= 0 && (
+        <section className="mt-6 rounded-2xl border border-border p-5" aria-label="Order progress">
+          <ol className="grid grid-cols-6 gap-1 text-center">
+            {ORDER_PIPELINE.map((step, i) => (
+              <li key={step} className="flex flex-col items-center gap-1.5">
+                {i <= stage ? (
+                  <CheckCircle2 className="h-5 w-5 text-success" />
+                ) : (
+                  <Circle className="h-5 w-5 text-border" />
+                )}
+                <span
+                  className={cn(
+                    "text-[10px] leading-tight sm:text-xs",
+                    i <= stage ? "font-semibold text-foreground" : "text-muted-foreground",
+                  )}
+                >
+                  {ORDER_STATUS_LABELS[step]}
+                </span>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
 
       <section className="mt-6 rounded-2xl border border-border p-5">
         <h2 className="font-display text-base font-bold">Items</h2>
@@ -111,7 +164,8 @@ function OrderConfirmation() {
             <dd>{rupees(data.total)}</dd>
           </div>
           <p className="pt-1 text-xs text-muted-foreground">
-            Payment: {data.payment_method === "cod" ? "Cash on delivery" : "Online"} ({data.payment_status})
+            Payment: {data.payment_method === "cod" ? "Cash on delivery" : "Online"} (
+            {data.payment_status})
           </p>
         </dl>
       </section>
@@ -123,17 +177,45 @@ function OrderConfirmation() {
         </p>
         <p className="text-muted-foreground">
           {address.line1}
-          {address.line2 ? `, ${address.line2}` : ""}, {address.city}, {address.state} {address.pincode}
+          {address.line2 ? `, ${address.line2}` : ""}, {address.city}, {address.state}{" "}
+          {address.pincode}
         </p>
       </section>
 
       <div className="mt-6 flex flex-wrap gap-3">
-        <Link to="/account/orders" className="rounded-xl bg-gold px-5 py-3 text-sm font-semibold text-white">
+        <Link
+          to="/account/orders"
+          className="rounded-xl bg-gold px-5 py-3 text-sm font-semibold text-white"
+        >
           View all orders
         </Link>
-        <Link to="/shop" className="rounded-xl border border-border px-5 py-3 text-sm font-semibold">
+        <Link
+          to="/shop"
+          className="rounded-xl border border-border px-5 py-3 text-sm font-semibold"
+        >
           Continue shopping
         </Link>
+        {canCancel && (
+          <button
+            type="button"
+            disabled={cancel.isPending}
+            onClick={() => {
+              if (window.confirm("Cancel this order? Items go back into stock.")) cancel.mutate();
+            }}
+            className="rounded-xl border border-destructive/40 px-5 py-3 text-sm font-semibold text-destructive disabled:opacity-60"
+          >
+            {cancel.isPending ? "Cancelling..." : "Cancel order"}
+          </button>
+        )}
+        <a
+          href={`${CONTACT.whatsappHref}?text=${encodeURIComponent(`Hi, I need help with order ${data.order_number}`)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-xl border border-border px-5 py-3 text-sm font-semibold"
+        >
+          <MessageCircle className="h-4 w-4 text-success" />
+          Help on WhatsApp
+        </a>
       </div>
     </div>
   );

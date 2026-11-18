@@ -740,6 +740,31 @@ export type Database = {
       }
     }
     Functions: {
+      cancel_order: {
+        Args: { p_order_number: string }
+        Returns: undefined
+      }
+      place_order: {
+        Args: {
+          p_address: Json
+          p_address_id?: string
+          p_coupon_code?: string
+          p_items: Json
+          p_payment_method?: string
+        }
+        Returns: {
+          order_id: string
+          order_number: string
+          total: number
+        }[]
+      }
+      validate_coupon: {
+        Args: { p_code: string; p_subtotal: number }
+        Returns: {
+          code: string
+          discount: number
+        }[]
+      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]

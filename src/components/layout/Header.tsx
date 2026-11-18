@@ -68,7 +68,7 @@ export function Header() {
           <PinCheck className="hidden xl:block" />
         </div>
 
-        <form onSubmit={submitSearch} className="relative hidden min-w-0 md:block">
+        <form onSubmit={submitSearch} role="search" className="relative hidden min-w-0 md:block">
           <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <input
             value={term}
@@ -82,7 +82,7 @@ export function Header() {
         <nav className="flex shrink-0 items-center gap-1 sm:gap-2">
           <Link
             to="/account/wishlist"
-            className="hidden rounded-lg p-2 hover:bg-muted sm:block"
+            className="rounded-lg p-2 hover:bg-muted"
             aria-label="Wishlist"
           >
             <Heart className="h-5 w-5" />
@@ -104,6 +104,21 @@ export function Header() {
           </Link>
         </nav>
       </div>
+
+      {/* Search is always visible on phones — for a 900-SKU catalogue it is the
+          fastest way to find anything, and it used to hide behind the menu. */}
+      <form onSubmit={submitSearch} role="search" className="relative px-4 pb-3 md:hidden">
+        <Search className="pointer-events-none absolute left-7 top-1/2 h-4 w-4 -translate-y-[calc(50%+6px)] text-muted-foreground" />
+        <input
+          type="search"
+          value={term}
+          onChange={(e) => setTerm(e.target.value)}
+          placeholder="Search cookers, bottles, jars..."
+          aria-label="Search products"
+          enterKeyHint="search"
+          className="w-full rounded-xl border border-border bg-muted/60 py-2.5 pl-9 pr-3 text-sm outline-none focus:border-gold"
+        />
+      </form>
 
       {/* Department strip: the primary navigation. Brands are a filter, not a
           top-level destination — a shopper looks for "a water bottle", not for
@@ -140,17 +155,6 @@ export function Header() {
 
       {menuOpen && (
         <div className="space-y-3 border-t border-border px-4 py-4 lg:hidden">
-          <form onSubmit={submitSearch} className="relative">
-            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-            <input
-              value={term}
-              onChange={(e) => setTerm(e.target.value)}
-              placeholder="Search products"
-              aria-label="Search products"
-              className="w-full rounded-xl border border-border bg-muted/60 py-2 pl-9 pr-3 text-sm outline-none focus:border-gold"
-            />
-          </form>
-
           <PinCheck />
 
           <div className="grid gap-2 text-sm font-medium">

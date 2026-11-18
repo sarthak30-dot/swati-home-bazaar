@@ -82,6 +82,7 @@ export async function fetchBrands(): Promise<Brand[]> {
   const { data, error } = await supabase
     .from("brands")
     .select("id,name,slug,color_hex,light_color_hex,tagline,description")
+    .retry(false)
     .order("sort_order");
   if (error) throw error;
   return (data ?? []) as Brand[];
@@ -91,12 +92,33 @@ export async function fetchCategories(): Promise<Category[]> {
   const { data, error } = await supabase
     .from("categories")
     .select("id,name,slug,brand_id")
+    .retry(false)
     .order("name");
   if (error) throw error;
   return (data ?? []) as Category[];
 }
 
-const SELECT = "*";
+/**
+ * Column list for grid/list queries. Leaves out `description` and
+ * `specifications` (large text/JSON nobody has clicked into yet) — the product
+ * page uses "*" via `DETAIL_SELECT`.
+ */
+// Every query below opts out of postgrest-js's built-in transient-error retry
+// (3 attempts with 1s/2s/4s back-off): React Query already retries once, and
+// stacking both keeps a shopper on skeletons for ~15s when Supabase is down.
+const SELECT =
+  "id,sku_id,variant_code,capacity_or_size,color,mrp,selling_price,stock_qty,pack_or_carton_qty,image_url,created_at,discount_pct,product_id,product_name,product_slug,is_active,brand_id,brand_name,brand_slug,color_hex,light_color_hex,category_id,category_name,category_slug,rating,rating_count";
+const DETAIL_SELECT = "*";
+
+/** Escape LIKE wildcards so user input is matched literally. */
+function escapeLike(term: string): string {
+  return term.replace(/[\\%_]/g, (c) => `\\${c}`);
+}
+
+/** PostgREST `or()` uses , ( ) as syntax; strip them from user input. */
+function sanitizeToken(token: string): string {
+  return escapeLike(token.replace(/[,()"']/g, " ").trim());
+}
 
 /**
  * Variant count per category slug, for the department landing pages.
@@ -110,6 +132,7 @@ export async function fetchCategoryCounts(): Promise<Record<string, number>> {
   const { data, error } = await supabase
     .from("catalog_variants")
     .select("category_slug")
+    .retry(false)
     .eq("is_active", true);
   if (error) throw error;
 
@@ -125,6 +148,7 @@ export async function fetchShop(filters: ShopFilters) {
   let query = supabase
     .from("catalog_variants")
     .select(SELECT, { count: "exact" })
+    .retry(false)
     .eq("is_active", true);
 
   if (filters.brands?.length) query = query.in("brand_slug", filters.brands);
@@ -133,7 +157,23 @@ export async function fetchShop(filters: ShopFilters) {
   if (filters.maxPrice != null) query = query.lte("selling_price", filters.maxPrice);
   if (filters.minRating != null) query = query.gte("rating", filters.minRating);
   if (filters.minDiscount != null) query = query.gte("discount_pct", filters.minDiscount);
-  if (filters.q) query = query.ilike("product_name", `%${filters.q}%`);
+  if (filters.q) {
+    // Every word must match somewhere (name, SKU/variant code, brand or
+    // category), so "steel tiffin" finds lunch boxes whose *category* says
+    // tiffin even when the product name does not.
+    const tokens = filters.q.split(/\s+/).map(sanitizeToken).filter(Boolean).slice(0, 6);
+    for (const t of tokens) {
+      query = query.or(
+        [
+          `product_name.ilike.%${t}%`,
+          `variant_code.ilike.%${t}%`,
+          `sku_id.ilike.%${t}%`,
+          `brand_name.ilike.%${t}%`,
+          `category_name.ilike.%${t}%`,
+        ].join(","),
+      );
+    }
+  }
 
   switch (filters.sort) {
     case "price_asc":
@@ -160,13 +200,62 @@ export async function fetchShop(filters: ShopFilters) {
   const from = (page - 1) * PAGE_SIZE;
   const { data, error, count } = await query.range(from, from + PAGE_SIZE - 1);
   if (error) throw error;
-  return { items: (data ?? []) as CatalogVariant[], total: count ?? 0 };
+  const items = (data ?? []) as unknown as CatalogVariant[];
+  return { items, total: count ?? 0, variantCounts: await fetchVariantCounts(items) };
+}
+
+/**
+ * Number of active sizes/variants for each product on a page of results, so
+ * cards can show "+N more sizes". One small query per page instead of one per
+ * card.
+ */
+export async function fetchVariantCounts(items: CatalogVariant[]): Promise<Record<string, number>> {
+  const ids = [...new Set(items.map((i) => i.product_id))];
+  if (!ids.length) return {};
+  const { data, error } = await supabase
+    .from("catalog_variants")
+    .select("product_id")
+    .retry(false)
+    .in("product_id", ids)
+    .eq("is_active", true);
+  // Counts are decoration: never fail the listing because of them.
+  if (error) return {};
+  const counts: Record<string, number> = {};
+  for (const row of data ?? []) {
+    const id = (row as { product_id: string }).product_id;
+    counts[id] = (counts[id] ?? 0) + 1;
+  }
+  return counts;
+}
+
+/**
+ * Whether the discount and rating facets can ever return anything. Until real
+ * selling prices and reviews exist those chips only lead to an empty grid, so
+ * the UI hides them rather than letting a shopper conclude the shop is empty.
+ */
+export async function fetchFacetAvailability(): Promise<{ discount: boolean; rating: boolean }> {
+  const [disc, rate] = await Promise.all([
+    supabase
+      .from("catalog_variants")
+      .select("id", { count: "exact", head: true })
+      .retry(false)
+      .eq("is_active", true)
+      .gte("discount_pct", 10),
+    supabase
+      .from("catalog_variants")
+      .select("id", { count: "exact", head: true })
+      .retry(false)
+      .eq("is_active", true)
+      .gte("rating", 3),
+  ]);
+  return { discount: (disc.count ?? 0) > 0, rating: (rate.count ?? 0) > 0 };
 }
 
 export async function fetchRail(kind: "deals" | "bestsellers" | "new", limit = 12) {
   let query = supabase
     .from("catalog_variants")
     .select(SELECT)
+    .retry(false)
     .eq("is_active", true)
     .gt("stock_qty", 0);
   if (kind === "deals") query = query.order("discount_pct", { ascending: false });
@@ -174,7 +263,7 @@ export async function fetchRail(kind: "deals" | "bestsellers" | "new", limit = 1
   else query = query.order("created_at", { ascending: false });
   const { data, error } = await query.limit(limit);
   if (error) throw error;
-  return (data ?? []) as CatalogVariant[];
+  return (data ?? []) as unknown as CatalogVariant[];
 }
 
 /**
@@ -189,6 +278,7 @@ export async function fetchBrandBest(brandSlug: string, limit = 24) {
   const { data, error } = await supabase
     .from("catalog_variants")
     .select(SELECT)
+    .retry(false)
     .eq("is_active", true)
     .eq("brand_slug", brandSlug)
     .gt("stock_qty", 0)
@@ -196,14 +286,16 @@ export async function fetchBrandBest(brandSlug: string, limit = 24) {
     .order("rating_count", { ascending: false })
     .limit(limit);
   if (error) throw error;
-  return (data ?? []) as CatalogVariant[];
+  return (data ?? []) as unknown as CatalogVariant[];
 }
 
 export async function fetchProductBySku(sku: string) {
   const { data, error } = await supabase
     .from("catalog_variants")
-    .select(SELECT)
+    .select(DETAIL_SELECT)
+    .retry(false)
     .eq("sku_id", sku)
+    .eq("is_active", true)
     .maybeSingle();
   if (error) throw error;
   return data as CatalogVariant | null;
@@ -213,10 +305,12 @@ export async function fetchSiblings(productId: string) {
   const { data, error } = await supabase
     .from("catalog_variants")
     .select(SELECT)
+    .retry(false)
     .eq("product_id", productId)
+    .eq("is_active", true)
     .order("selling_price");
   if (error) throw error;
-  return (data ?? []) as CatalogVariant[];
+  return (data ?? []) as unknown as CatalogVariant[];
 }
 
 export async function fetchRelated(categorySlug: string | null, excludeProductId: string) {
@@ -224,24 +318,27 @@ export async function fetchRelated(categorySlug: string | null, excludeProductId
   const { data, error } = await supabase
     .from("catalog_variants")
     .select(SELECT)
+    .retry(false)
     .eq("category_slug", categorySlug)
+    .eq("is_active", true)
     .neq("product_id", excludeProductId)
     .limit(10);
   if (error) throw error;
-  return (data ?? []) as CatalogVariant[];
+  return (data ?? []) as unknown as CatalogVariant[];
 }
 
 export async function fetchVariantsByIds(ids: string[]) {
   if (!ids.length) return [];
   const { data, error } = await supabase.from("catalog_variants").select(SELECT).in("id", ids);
   if (error) throw error;
-  return (data ?? []) as CatalogVariant[];
+  return (data ?? []) as unknown as CatalogVariant[];
 }
 
 export async function fetchReviews(productId: string) {
   const { data, error } = await supabase
     .from("reviews")
     .select("*")
+    .retry(false)
     .eq("product_id", productId)
     .order("created_at", { ascending: false });
   if (error) throw error;
@@ -252,6 +349,7 @@ export async function fetchMyReview(productId: string, customerId: string) {
   const { data, error } = await supabase
     .from("reviews")
     .select("*")
+    .retry(false)
     .eq("product_id", productId)
     .eq("customer_id", customerId)
     .maybeSingle();
@@ -273,6 +371,7 @@ export async function fetchReviewEligibility(
   const { data, error } = await supabase
     .from("order_items")
     .select("id, orders!inner(status,customer_id), product_variants!inner(product_id)")
+    .retry(false)
     .eq("orders.customer_id", customerId)
     .eq("orders.status", "delivered")
     .eq("product_variants.product_id", productId)

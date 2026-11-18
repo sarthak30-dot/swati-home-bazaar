@@ -8,9 +8,15 @@ export const Route = createFileRoute("/cart")({
   head: () => ({
     meta: [
       { title: "Your cart — Swati Enterprises" },
-      { name: "description", content: "Review the items in your Swati Enterprises cart before checkout." },
+      {
+        name: "description",
+        content: "Review the items in your Swati Enterprises cart before checkout.",
+      },
       { property: "og:title", content: "Your cart — Swati Enterprises" },
-      { property: "og:description", content: "Review your kitchen and home essentials before checkout." },
+      {
+        property: "og:description",
+        content: "Review your kitchen and home essentials before checkout.",
+      },
     ],
   }),
   component: CartPage,
@@ -21,7 +27,11 @@ function CartPage() {
   const shipping = shippingFor(subtotal);
 
   if (loading) {
-    return <div className="mx-auto max-w-7xl px-4 py-16 text-sm text-muted-foreground">Loading cart...</div>;
+    return (
+      <div className="mx-auto max-w-7xl px-4 py-16 text-sm text-muted-foreground">
+        Loading cart...
+      </div>
+    );
   }
 
   if (!items.length) {
@@ -61,6 +71,7 @@ function CartPage() {
                   name={variant.product_name}
                   capacity={variant.capacity_or_size}
                   brandSlug={variant.brand_slug}
+                  categorySlug={variant.category_slug}
                   imageUrl={variant.image_url}
                   variantCode={variant.variant_code}
                   productSlug={variant.product_slug}
@@ -78,9 +89,11 @@ function CartPage() {
                   <span className="font-display text-base font-bold">
                     {rupees(variant.selling_price)}
                   </span>
-                  <span className="text-xs text-muted-foreground line-through">
-                    {rupees(variant.mrp)}
-                  </span>
+                  {Number(variant.mrp) > Number(variant.selling_price) && (
+                    <span className="text-xs text-muted-foreground line-through">
+                      {rupees(variant.mrp)}
+                    </span>
+                  )}
                 </div>
                 <div className="mt-3 flex items-center gap-3">
                   <div className="flex items-center rounded-lg border border-border">
@@ -132,8 +145,22 @@ function CartPage() {
             </div>
           </dl>
           {shipping > 0 && (
-            <p className="mt-2 text-xs text-muted-foreground">
-              Add {rupees(FREE_DELIVERY_THRESHOLD - subtotal)} more for free delivery.
+            <div className="mt-3">
+              <p className="text-xs text-muted-foreground">
+                Add <b className="text-foreground">{rupees(FREE_DELIVERY_THRESHOLD - subtotal)}</b>{" "}
+                more for free delivery.
+              </p>
+              <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-muted">
+                <div
+                  className="h-full rounded-full bg-gold transition-all"
+                  style={{ width: `${Math.min(100, (subtotal / FREE_DELIVERY_THRESHOLD) * 100)}%` }}
+                />
+              </div>
+            </div>
+          )}
+          {shipping === 0 && (
+            <p className="mt-3 text-xs font-medium text-success">
+              You&apos;ve unlocked free delivery.
             </p>
           )}
           <Link

@@ -3,6 +3,8 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchCategories, fetchCategoryCounts, fetchShop } from "@/lib/catalog";
 import { ProductCard, ProductCardSkeleton } from "@/components/store/ProductCard";
 import { departmentBySlug, MATERIALS } from "@/lib/departments";
+import { QueryError } from "@/components/store/QueryError";
+import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/department/$slug")({
   head: ({ params }) => {
@@ -19,6 +21,7 @@ export const Route = createFileRoute("/department/$slug")({
         },
         { property: "og:title", content: `${name} — Swati Enterprises` },
       ],
+      links: [{ rel: "canonical", href: absoluteUrl(`/department/${params.slug}`) }],
     };
   },
   component: DepartmentPage,
@@ -36,7 +39,7 @@ function DepartmentPage() {
     queryFn: fetchCategoryCounts,
   });
 
-  const { data, isLoading } = useQuery({
+  const { data, isLoading, isError, isFetching, refetch } = useQuery({
     queryKey: ["department", slug],
     queryFn: () => fetchShop({ categories: dept.categorySlugs, sort: "price_asc" }),
   });
@@ -125,11 +128,21 @@ function DepartmentPage() {
             View all with filters
           </Link>
         </div>
-        <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4">
-          {isLoading
-            ? Array.from({ length: 8 }).map((_, i) => <ProductCardSkeleton key={i} />)
-            : data?.items.map((item) => <ProductCard key={item.id} item={item} />)}
-        </div>
+        {isError && !data ? (
+          <QueryError className="mt-4" onRetry={() => refetch()} retrying={isFetching} />
+        ) : (
+          <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4">
+            {isLoading
+              ? Array.from({ length: 8 }).map((_, i) => <ProductCardSkeleton key={i} />)
+              : data?.items.map((item) => (
+                  <ProductCard
+                    key={item.id}
+                    item={item}
+                    variantCount={data.variantCounts[item.product_id]}
+                  />
+                ))}
+          </div>
+        )}
         {!isLoading && total > (data?.items.length ?? 0) && (
           <div className="mt-6 text-center">
             <Link

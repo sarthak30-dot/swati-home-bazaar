@@ -198,3 +198,61 @@ shopper **a photograph of a different product**. They are exported separately as
   reads as a point-in-time import snapshot. `supabase/migrations/` is the live source.
 - Pre-existing lint error at `src/routes/admin.tsx:37` (prettier wrap on the
   Loading div) — not from this session's changes.
+
+
+---
+
+# Session handoff — 18 Nov 2026 (audit follow-through)
+
+Work done against the 17 Nov audit. **Nothing in `supabase/migrations/2026111812*` has been applied to any
+database**, and the Supabase project (`nvrkfhjsnepwqgjhjekt`) is still `INACTIVE`/paused — see "Blocked on you".
+
+## What changed
+
+| Area | Change |
+| --- | --- |
+| Failure visibility (P0) | `QueryError` component + retry on shop, brand, department, home rail and product page. React Query now fails fast (`retry: 1`, 500 ms) and every catalogue query opts out of postgrest-js's own 1s/2s/4s retry, so a dead backend shows an error in ~1–2 s instead of skeletons forever. |
+| Order integrity (P0) | `supabase/migrations/20261118110000_server_side_orders.sql`: `place_order()` (server-priced, atomic, stock-locked, coupon-checked, PIN-gated), `validate_coupon()`, `cancel_order()`, `coupon_redemptions`, `order_status_history` + trigger (restocks on cancel). Checkout calls these; it falls back to the old browser-side insert **only** if the RPC doesn't exist yet (remove that block after migrating). |
+| Lock-down (P0) | `20261118120000_lock_client_order_writes.sql`: revokes browser INSERT on `orders`/`order_items`, removes public read of `coupons`. **Apply only after the new checkout is deployed.** |
+| Schema drift | `20261118100000_serviceable_pins.sql` (table existed in prod with no migration). |
+| Tests/CI | `supabase/tests/order-integrity.test.mjs` runs all migrations on in-memory Postgres (PGlite) and checks pricing, oversell, coupon reuse, cancel/restock, and post-lock permissions — passes. `.github/workflows/ci.yml` runs tsc, eslint (non-format rules), build and that test. |
+| Photos | See below. |
+| Mobile | Persistent search row in the header, wishlist icon on phones, 4-item bottom nav (`MobileNav`), skip-to-content link, sticky buy bar on the PDP. |
+| PDP | Loader so `<title>`, meta, og:image, canonical and JSON-LD are server-rendered; gallery + zoom (`ProductGallery`), size picker as a radiogroup that swaps state without a page reload, delivery-date estimate (`DeliveryEstimate`, promise in `DELIVERY_DAYS`), COD/returns/bulk notes, share button, stock count no longer published ("Only N left" when ≤ 5). |
+| Shop | Search matches name, SKU, variant code, brand and category (multi-word, wildcards escaped); "+N sizes" badge now works; discount/rating facets and sorts hide themselves when they can only return nothing; explicit column list instead of `SELECT *`; `is_active` enforced on PDP/siblings/related. |
+| Order page | Progress tracker, **Cancel order** (placed/confirmed only), WhatsApp help link. |
+| SEO | Sitemap/robots now point at `https://swati-clone.vercel.app` (override with `VITE_SITE_URL`; `src/lib/site.ts` shares the default), canonical tags, default `og-default.jpg`, per-product titles. |
+| Footer/trust | WhatsApp button, "Track my order", bulk link, trust strip. |
+
+## Photos — what could and could not be done
+
+This sandbox cannot reach brand sites and has no image generator, so **no new photographs were added.** What was done
+with the files already in the repo (viewed by eye, not just scripted):
+
+* `scripts/clean-catalogue-crops.py` extracts the product from supplier-catalogue crops and drops spec text, trade prices
+  ("M.R.P. Rs. 325.00 / Carton - 24"), colour bars, hairline rules and neighbour fragments, writing an 800×800 image on white.
+* **Yera:** 105 of 178 files came out as clean product shots and were rewritten in place (same file names, so DB `image_url`s still work).
+  The other 73 are raw scans/fragments and are listed in `src/lib/image-quality.ts`; the storefront shows an illustrated
+  "Photo coming soon" tile for them instead of a scan with trade pricing on it.
+* **Pigeon:** the 25 mapped catalogue crops were cleaned; 18 already-real product photos had stray rules removed. `pop-up-toaster-white.jpg` is just the Pigeon logo, so it is hidden.
+* **Dubblin:** unchanged apart from recompression (14 MB → 5.7 MB). The CSS crop that hides the wholesale header is still in `ProductImage.tsx`.
+* Product images are now shown whole (`object-contain` on white), with width/height, `decoding=async`, and an eager high-priority hero on the PDP.
+* A photo shared by many variants (e.g. one cooker shot for twelve sizes) now says "Image shows the … range — size, colour and finish may vary" on the PDP.
+* Total `public/images` 27 MB → ~17 MB. Originals are in git history.
+
+To finish the job someone has to supply real photography (or supplier asset packs) for every product still on the tile — upload through the admin panel, then delete its line from `UNUSABLE_IMAGES`.
+
+## Blocked on you
+
+1. **Restore the Supabase project** (paid tier or keep-alive), then apply migrations `…100000`, `…110000`, deploy, then `…120000`. I did not do this: it changes billing and production data. Supabase MCP is connected to this workspace if you want me to apply them.
+2. **Payments (Razorpay/PhonePe)** — needs your merchant keys and a server function for webhook verification. `place_order` currently accepts `cod` only.
+3. **Guest checkout / phone OTP / password reset** — not built; checkout still redirects to `/auth`.
+4. **Contact details & legal** — `CONTACT` in `src/lib/site.ts` still holds the placeholder phone/email/WhatsApp. Footer address (Chandni Chowk) conflicts with the registered address in the brief. GSTIN/grievance officer/GST invoices not added.
+5. **Real selling prices** — still `selling_price = mrp`, so discount UI stays hidden.
+6. **`.env` is still tracked** (only publishable keys). Left alone because Lovable manages that file.
+7. `DELIVERY_DAYS` (2–4 business days) is my assumption — confirm with ops.
+
+## Not done (from the audit)
+
+Product-grouped listing view, tsvector/trigram search, `product_images` table, courier integration, order/dispatch emails, GA4,
+lazy-loading the admin bundle, DB move to Mumbai, loaders on routes other than the PDP.
