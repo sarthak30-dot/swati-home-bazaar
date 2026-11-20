@@ -350,6 +350,15 @@ function skuPrefixFor(brandSlug: string): string {
 }
 
 /**
+ * `sku_id` must be safe to use as a filename: the admin image upload stores a
+ * SKU's photo at `${sku_id}.${ext}` in the product-images bucket, so a slash
+ * or a space would create a nested or unreachable object.
+ */
+function isFilenameSafe(value: string): boolean {
+  return /^[A-Za-z0-9._-]+$/.test(value);
+}
+
+/**
  * Highest sequence number already issued under a prefix, so generated sku_ids
  * continue the existing series instead of colliding with it.
  */
@@ -374,8 +383,9 @@ async function highestSkuSeq(prefix: string): Promise<number> {
  * not by `sku_id`, which this store mints itself and a supplier's sheet will
  * not contain. A row whose variant_code already exists is an update (price and
  * stock); anything else is an insert, creating the product and category on the
- * way if they are new. `sku_id` is generated as e.g. `PGN-00231`, continuing
- * the series already in the table.
+ * way if they are new. A new row's `sku_id` is its `variant_code` where there
+ * is one, which is what the live catalogue already does, and otherwise a
+ * generated `PGN-00231`-style id continuing that series.
  *
  * An explicit `sku_id` column, if present, overrides both the match key and
  * the generated id — that is the path for re-importing a sheet this store
@@ -523,7 +533,15 @@ export async function importInventory(text: string): Promise<ImportReport> {
         report.newProducts += 1;
       }
 
-      const skuId = explicitSku || (await nextSku(brand.slug));
+      // Prefer the supplier's own code as the sku_id, because that is what the
+      // live catalogue actually does: of the 920 seeded variants, the Pigeon
+      // and Yera rows have sku_id identical to variant_code ("19000244",
+      // "KB-0800"). Minting a "PGN-00001" series here would match the README
+      // but introduce a third convention the data has never used. Falls back to
+      // a generated id only when there is no usable code.
+      const skuId =
+        explicitSku ||
+        (variantCode && isFilenameSafe(variantCode) ? variantCode : await nextSku(brand.slug));
       await createVariant(productId, {
         skuId,
         variantCode: variantCode || null,
