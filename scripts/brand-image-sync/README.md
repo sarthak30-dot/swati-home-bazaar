@@ -16,6 +16,7 @@ Run from the repository root with `python3`. Each step writes its output into
 | 3 | `3-download.py` | Downloads the matched images and records dimensions. |
 | 4 | `4-upload.py` | Uploads to the Supabase `product-images` bucket and sets `image_url` + `image_source_url`. Needs an admin login. |
 | 5 | `5-suppress-priced-scans.sql` | Clears `image_url` on the leftover catalogue scans that have supplier pricing printed inside the image. |
+| 6 | `6-missing-images-pdf.py` | Builds `sku-images-missing.pdf`, the supplier-facing list of SKUs still without an image. Needs `reportlab`. |
 
 ## Matching is deliberately strict
 
