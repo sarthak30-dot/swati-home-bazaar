@@ -1,160 +1,921 @@
-sku_id,variant_code,product_name,brand,match_rule,source_product_title,source_page,image_url,width,height,kb,had_image_before
-10040087,10040087,Flash Mop Deluxe,pigeon,B exact-name,Flash Mop Deluxe,https://www.stovekraft.com/pigeon/category/home-solutions/floor-mops/flash-mop-deluxe,https://www.stovekraft.com/storage/products/cover/aPbI8wjeO2rDFUaXiEGPOE9AwImUeUb1EBUGc4GE.webp,600,600,29,no
-16000019,16000019,Multi Purpose Kitchen Scissor,pigeon,B exact-name,Multi Purpose Kitchen Scissor,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/multi-purpose-kitchen-scissor,https://www.stovekraft.com/storage/products/cover/s7AWL2gtw4762NzHbPONhlulIvops8kAObqogfOP.webp,600,600,11,no
-16000285,16000285,Helios Solar Lamp,pigeon,B exact-name,Helios Solar Lamp,https://www.stovekraft.com/pigeon/category/home-solutions/emergency-lamps/helios-solar-lamp,https://www.stovekraft.com/storage/products/cover/tlrKKD322Co6SQ4adMnFsKrkKoVdOxb3bNZwzVFI.webp,600,600,13,no
-16000664,16000664,Rigel Plus LED,pigeon,B exact-name,Rigel Plus Led,https://www.stovekraft.com/pigeon/category/home-solutions/emergency-lamps/rigel-plus-led,https://www.stovekraft.com/storage/products/cover/3QYCycYqsrUKJ0KglzbFnfNsWzd7GjgNU2zBUNha.webp,600,600,21,no
-16000780,16000780,6 Piece Knife Set,pigeon,B exact-name,6 Piece Knife Set,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/6-piece-knife-set,https://www.stovekraft.com/storage/products/cover/5IDWXtBWB7qoDYvAyeDp3Zy78GRpZOzt3GUWAdWn.webp,600,600,19,no
-16000790,16000790,Illume Pro,pigeon,B exact-name,Illume Pro,https://www.stovekraft.com/pigeon/category/home-solutions/emergency-lamps/illume-pro,https://www.stovekraft.com/storage/products/cover/QCZvaE2wBTmeaKkYBAi4KS3QWKYeURXHwzT93FO1.webp,600,600,22,no
-16000792,16000792,Lumino Pro,pigeon,B exact-name,Lumino Pro,https://www.stovekraft.com/pigeon/category/home-solutions/emergency-lamps/lumino-pro,https://www.stovekraft.com/storage/products/cover/65gJxkyJBJTVuntTYpk1GQhr6ELoT0F5rsn5Z1OC.webp,600,600,14,no
-16000833,16000833,TBlaze Table Lamp,pigeon,B exact-name,Tblaze Table Lamp,https://www.stovekraft.com/pigeon/category/home-solutions/emergency-lamps/tblaze-table-lamp,https://www.stovekraft.com/storage/products/cover/yrt7ItdH1UqkquKln6u2RN9lJCbrq8wtDBOrQyCV.webp,600,600,3,no
-16000840,16000840,Shears 4 PC Kitchen Tool Set,pigeon,B exact-name,Shears 4 Pc Kitchen Tool Set,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/shears-4-pc-kitchen-tool-set,https://www.stovekraft.com/storage/products/cover/SjwgfcnFtX4To2u0eXa6ct3YeCDGbJRaorP3OvZd.webp,600,600,27,no
-16002016,16002016,Idly Maker 4 Plates,pigeon,B exact-name,Idly Maker (4 Plates),https://www.stovekraft.com/pigeon/category/cooking/cookware/idly-maker-4-plates,https://www.stovekraft.com/storage/products/cover/Jso9pU4W0uV0HmZ4kLb1djg2UQEnnHS59CBOysEp.webp,600,600,23,no
-16002017,16002017,Idly Maker 6 Plates,pigeon,B exact-name,Idly Maker (6 Plates),https://www.stovekraft.com/pigeon/category/cooking/cookware/idly-maker-6-plates,https://www.stovekraft.com/storage/products/cover/VKSACMYunZj6OYrn4TzwVHsjLE0X7A9Zfk15Co0l.webp,600,600,28,no
-16002094,16002094,"Steelo Kadai 10"" 2mm",pigeon,C name+size,"Stainless Steel Steelo Kadai 10"" 2mm",https://www.stovekraft.com/pigeon/category/cooking/cookware/stainless-steel-steelo-kadai-10-2mm,https://www.stovekraft.com/storage/products/cover/3aMa6EUBb8A1KiLDv2dd6mbeR1noUCjHaGGdzqLn.webp,600,600,6,no
-16002097,16002097,"Steelo Kadai 12"" Sandwich Bottom",pigeon,C name+size,"Stainless Steel Steelo Kadai 12"" with Sandwich Bottom",https://www.stovekraft.com/pigeon/category/cooking/cookware/stainless-steel-steelo-kadai-12-with-sandwich-bottom,https://www.stovekraft.com/storage/products/cover/4VU67ztC0jay5Z3uRvNFeMzEftINChXbarySSzJD.webp,600,600,34,no
-16002102,16002102,"Steelo Sauce Pan 10"" Sandwich Bottom",pigeon,C name+size,"Stainless Steel Steelo Sauce Pan 10"" with Sandwich Bottom",https://www.stovekraft.com/pigeon/category/cooking/cookware/stainless-steel-steelo-sauce-pan-10-with-sandwich-bottom,https://www.stovekraft.com/storage/products/cover/HpBk7Hrk9uaiNHiomViNuxE14e4FaKnhFzEKPaTp.webp,600,600,14,no
-16002105,16002105,"Steelo Frypan 10"" Sandwich Bottom",pigeon,C name+size,"Stainless Steel Steelo Frypan 10"" with Sandwich Bottom",https://www.stovekraft.com/pigeon/category/cooking/cookware/stainless-steel-steelo-frypan-10-with-sandwich-bottom,https://www.stovekraft.com/storage/products/cover/Hm0Hwmi3IsqX1PdochasvNWfLgGyKX4MIIgZq4OG.webp,600,600,10,no
-16002253,16002253,Noodle Maker (Idiyappam),pigeon,B exact-name,Noodle Maker (Idiyappam),https://www.stovekraft.com/pigeon/category/kitchen-utilities/idiyappam-maker/noodle-maker-idiyappam,https://www.stovekraft.com/storage/products/cover/PCASfpAZiQAZrIPUjK00SFwlJY1gIxhfx6FVZBLN.webp,600,600,17,no
-16002270,16002270,Thermo Cup 400ml Black,pigeon,B exact-name,Thermo Cup - 400ml - Black,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/thermo-cup-400ml-black,https://www.stovekraft.com/storage/products/cover/WJorQYvT9cLIc1eyvltNbEiVrX0B3QUBMRbmE6hB.webp,600,600,22,no
-16002381,16002381,Edge 4 Pieces Knife Set,pigeon,B exact-name,Edge 4 Pieces Knife Set,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/edge-4-pieces-knife-set,https://www.stovekraft.com/storage/products/cover/KBSWK6DvtustPxN7gtxgBNjlvP8vuPNDeeNDbBPF.webp,600,600,12,no
-16002431,16002431,Idly Maker 3 Plates,pigeon,B exact-name,Idly Maker (3 Plates),https://www.stovekraft.com/pigeon/category/cooking/cookware/idly-maker-3-plates,https://www.stovekraft.com/storage/products/cover/5RW8n7xq7dC8oXP8fr4DSJagOe802boA24hQJOZ9.webp,600,600,19,no
-16002432,16002432,Idly Maker 5 Plates,pigeon,B exact-name,Idly Maker (5 Plates),https://www.stovekraft.com/pigeon/category/cooking/cookware/idly-maker-5-plates,https://www.stovekraft.com/storage/products/cover/Lts1UxJk6UVGwtpYDo8XGXhIxfwA6VOBAnNPgXiO.webp,600,600,20,no
-16002443,16002443,Chopping Board Small,pigeon,B exact-name,Chopping Board Small,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/chopping-board-small,https://www.stovekraft.com/storage/products/cover/rNceYSAaK3X8rzDaSflr1S77hsxX3Rekx9JfqjFN.webp,600,600,17,no
-16002461,16002461,Clear Glass Water Bottle 750ml Blue,pigeon,B exact-name,Clear Glass Water Bottle - 750ml Blue,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/clear-glass-water-bottle-750ml-blue,https://www.stovekraft.com/storage/products/cover/PRUSux8avpX4MW0Ud9wF5q7lddFbWdJE0II0OBFj.webp,600,600,17,no
-16002462,16002462,Clear Glass Water Bottle 750ml Grey,pigeon,B exact-name,Clear Glass Water Bottle - 750ml Grey,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/clear-glass-water-bottle-750ml-grey,https://www.stovekraft.com/storage/products/cover/DUjjyZRbXM6BTSksefrn1hfgAv6K4T3PwuEHXHk5.webp,600,600,15,no
-16002464,16002464,Clear Glass Water Bottle 750ml Red,pigeon,B exact-name,Clear Glass Water Bottle - 750ml Red,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/clear-glass-water-bottle-750ml-red,https://www.stovekraft.com/storage/products/cover/0jpo6k4luwKlRblTmY80LYl1PoAi8TSicY36lngr.webp,600,600,17,no
-19000024,19000024,Deluxe Pan,pigeon,C name+size,Deluxe Pan - 6 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/deluxe-pan-6-litre,https://www.stovekraft.com/storage/products/cover/IijaU6SmmHVwuQzdLXCoCItFAXkT1YG2YuAg97Xo.webp,600,600,21,no
-19000031,19000031,Flat Tawa 280,pigeon,B exact-name,Flat Tawa 280,https://www.stovekraft.com/pigeon/category/cooking/cookware/flat-tawa-280,https://www.stovekraft.com/storage/products/cover/fC5qvxNQXkUfsCzNCJJ2WKcWQTcynH9DDrrTEnLE.webp,1000,1000,14,no
-19000033,19000033,Concave Tawa 260,pigeon,B exact-name,Concave Tawa 260,https://www.stovekraft.com/pigeon/category/cooking/cookware/concave-tawa-260,https://www.stovekraft.com/storage/products/cover/WttHqwoDVIEF1s8AUUbOOHK9tbvWjZV4VXfYW79v.webp,1000,1000,10,no
-19000037,19000037,Kadai 300,pigeon,B exact-name,Kadai 300,https://www.stovekraft.com/pigeon/category/cooking/cookware/kadai-300,https://www.stovekraft.com/storage/products/cover/TSSCVusDVTyiJuRtDq5dljSfZnBvvBUeLXdq7cM7.webp,600,600,9,no
-19000041,19000041,Fry Pan 240,pigeon,B exact-name,Fry Pan 240,https://www.stovekraft.com/pigeon/category/cooking/cookware/fry-pan-240,https://www.stovekraft.com/storage/products/cover/UpgtP7QeGFOyJiTu8w4RBnoP4GRms1aARe8fW2ve.webp,600,600,4,no
-19000048,19000048,Deluxe Fry Pan 255,pigeon,B exact-name,Deluxe Fry Pan 255,https://www.stovekraft.com/pigeon/category/cooking/cookware/deluxe-fry-pan-255,https://www.stovekraft.com/storage/products/cover/g6x4ZD1m79qGQsXRu1d7AJh8tLyurPRkJ5cOUwoM.webp,600,600,8,no
-19000052,19000052,Tadka Pan,pigeon,B exact-name,Tadka Pan,https://www.stovekraft.com/pigeon/category/cooking/cookware/tadka-pan,https://www.stovekraft.com/storage/products/cover/j4QhF1Gs13BTKkYG3qy0Z4XeuwzOOFqgED445aCx.webp,600,600,6,no
-19000054,19000054,Pathri Tawa 320,pigeon,B exact-name,Pathri Tawa 320,https://www.stovekraft.com/pigeon/category/cooking/cookware/pathri-tawa-320,https://www.stovekraft.com/storage/products/cover/A7wQ4Tt3QH802jbR7qwcImkkvF22etLvePfKZGtm.webp,1000,1000,17,no
-19000058,19000058,Multi Tawa 310,pigeon,B exact-name,Multi Tawa 310,https://www.stovekraft.com/pigeon/category/cooking/cookware/multi-tawa-310,https://www.stovekraft.com/storage/products/cover/defeY5c8QRASgbE3kOVpDtYs3oBqYlCGZhDxnZfc.webp,1000,1000,10,no
-19000061,19000061,Biryani Pot,pigeon,C name+size,Biryani Pot - 5 Litre,https://www.stovekraft.com/pigeon/category/cooking/cookware/biryani-pot-5-litre,https://www.stovekraft.com/storage/products/cover/N7tRc95UaLo5BsFagIHzO6dxddP27ZfOu6Wn4PAj.webp,600,600,14,yes
-19000066,19000066,Gravy Pot,pigeon,C name+size,Gravy Pot - 6 Litre,https://www.stovekraft.com/pigeon/category/cooking/cookware/gravy-pot-6-litre,https://www.stovekraft.com/storage/products/cover/TfbGddHhUPbEylaZMIBuTjNLVy6QG8eir6lYEi6W.webp,1000,1000,20,no
-19000081,19000081,Wondercast Flat Tawa 280,pigeon,B exact-name,Wondercast Flat Tawa 280,https://www.stovekraft.com/pigeon/category/cooking/cookware/wondercast-flat-tawa-280,https://www.stovekraft.com/storage/products/cover/X4M2AbKeXtpHVY6f1FLsDAq2tq7vm6S02EAzzpnC.webp,1000,1000,161,no
-19000083,19000083,Wondercast Paniyarakkal 11 Rounds,pigeon,B exact-name,Wondercast Paniyarakkal 11 Rounds,https://www.stovekraft.com/pigeon/category/cooking/cookware/wondercast-paniyarakkal-11-rounds,https://www.stovekraft.com/storage/products/cover/92b0ulkLE25cVf3ez5VTImOYd0GfFNZbBI0o7V1c.webp,600,600,21,no
-19000178,19000178,Wondercast Long Handle Paniyarakkal 12 Rounds,pigeon,B exact-name,Wondercast Long Handle Paniyarakkal - 12 Rounds,https://www.stovekraft.com/pigeon/category/cooking/cookware/wondercast-long-handle-paniyarakkal-12-rounds,https://www.stovekraft.com/storage/products/cover/DWI5QAtwJFjtU0uRyD7NGwOGKS0GO3A01HjVZRQ7.webp,600,600,8,no
-19000204,19000204,Amelia Hard Anodised,pigeon,C name+size,Amelia Hard Anodised Pressure Cooker 5 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/amelia-hard-anodised-pressure-cooker-5-litre,https://www.stovekraft.com/storage/products/cover/ijfrOCK3wOVkzaZU14GUji4rweNKxXBMyNsWXZ4n.webp,600,600,14,no
-19000322,19000322,Storm Flat Tawa 280,pigeon,B exact-name,Storm Flat Tawa 280,https://www.stovekraft.com/pigeon/category/cooking/cookware/storm-flat-tawa-280,https://www.stovekraft.com/storage/products/cover/vSgpxBlfoAASTfvCrTTJSqQrSJR6ssPnoee9hVV2.webp,416,416,5,no
-19000324,19000324,Storm Fry Pan 200,pigeon,B exact-name,Storm Fry Pan 200,https://www.stovekraft.com/pigeon/category/cooking/cookware/storm-fry-pan-200,https://www.stovekraft.com/storage/products/cover/4exFxdkkn54evmoUeyLJkrc3fuKTgWDv4WgYLVwd.webp,600,600,7,no
-19000328,19000328,Storm Kadai 200,pigeon,B exact-name,Storm Kadai 200,https://www.stovekraft.com/pigeon/category/cooking/cookware/storm-kadai-200,https://www.stovekraft.com/storage/products/cover/FKminwW68zKzhR2uXU0m6avQguBNgEg1rHoXlNrd.webp,1000,1000,17,no
-19000330,19000330,Storm Flat Tawa 280 IB,pigeon,B exact-name,Storm Flat Tawa 280 IB,https://www.stovekraft.com/pigeon/category/cooking/cookware/storm-flat-tawa-280-ib,https://www.stovekraft.com/storage/products/cover/GrkoIoKiIsnOptyaA81cRo8CleYrZUJuzGkEAud3.webp,416,416,5,no
-19000331,19000331,Storm Fry Pan 240 IB,pigeon,B exact-name,Storm Fry Pan 240 IB,https://www.stovekraft.com/pigeon/category/cooking/cookware/storm-fry-pan-240-ib,https://www.stovekraft.com/storage/products/cover/3bvMHt072XWx2FJMBX7SEu5H1NWJFBm0h9hkPctk.webp,600,600,11,no
-19000338,19000338,INOX Outer Lid,pigeon,C name+size,Inox 5 Litre - Outer Lid,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/inox-5-litre-outer-lid,https://www.stovekraft.com/storage/products/cover/oKz6dKj43oAIMzKVdg8W7jsrUX5XQTtz3aulp8eh.webp,600,600,19,no
-19000400,19000400,Brio Plus 2100W,pigeon,B exact-name,Brio Plus - 2100w,https://www.stovekraft.com/pigeon/category/cooking/induction-infrared-cooktops/brio-plus-2100w,https://www.stovekraft.com/storage/products/cover/mnsuxBQKeTYk1ezwBSATqyheSAR53SwvMLI3aQWi.webp,600,600,20,no
-19000650,19000650,Rapido Sleek 2100W,pigeon,B exact-name,Rapido Sleek - 2100w,https://www.stovekraft.com/pigeon/category/cooking/induction-infrared-cooktops/rapido-sleek-2100w,https://www.stovekraft.com/storage/products/cover/x6WeAMAg1PUejCHUcFQzVXky9h83H2mSKdArKpe4.webp,600,600,30,no
-19000694,19000694,Rapido Touch DX 2100W,pigeon,B exact-name,Rapido Touch Dx - 2100w,https://www.stovekraft.com/pigeon/category/cooking/induction-infrared-cooktops/rapido-touch-dx-2100w,https://www.stovekraft.com/storage/products/cover/TkTzQ2hkLUQ8b3kd6yNOS8mPvfJVJhWVwgNtY1xu.webp,600,600,20,no
-19000697,19000697,Anti Skid 2100W,pigeon,B exact-name,Anti Skid - 2100w,https://www.stovekraft.com/pigeon/category/cooking/induction-infrared-cooktops/anti-skid-2100w,https://www.stovekraft.com/storage/products/cover/aNxovi99AEKSSizu1eeJ7nxTQrjMteX0mms3Gxc2.webp,600,600,21,no
-19000745,19000745,Nonstick 4 PC Carlo,pigeon,B exact-name,Nonstick 4 Pc- Carlo,https://www.stovekraft.com/pigeon/category/cooking/cookware/nonstick-4-pc-carlo,https://www.stovekraft.com/storage/products/cover/4t2L02iM3NaSE1SVpMl84QkJMc28nCB9ukjugAxc.webp,600,600,16,no
-19000809,19000809,Duo Pack Flat Tawa 250 + Fry Pan 220,pigeon,B exact-name,Duo Pack Flat Tawa 250 + Fry Pan 220,https://www.stovekraft.com/pigeon/category/cooking/cookware/duo-pack-flat-tawa-250-fry-pan-220,https://www.stovekraft.com/storage/products/cover/zHUaQ0Q7sRA3cpYGz3uh77Zygg5onCi2i7F638BH.webp,600,600,13,no
-19000841,19000841,Chef Delight Gift Set 7 Pcs,pigeon,B exact-name,Chef Delight Gift Set 7 Pcs,https://www.stovekraft.com/pigeon/category/cooking/cookware/chef-delight-gift-set-7-pcs,https://www.stovekraft.com/storage/products/cover/KqNm8p5Y65PYQebAsjgC1ctETV64JeAYPhMfdRbs.webp,600,600,16,no
-19000870,19000870,Favorite Duo Pack Flat Tawa 250 + Fry Pan 240,pigeon,B exact-name,Favorite Duo Pack Flat Tawa 250 + Fry Pan 240,https://www.stovekraft.com/pigeon/category/cooking/cookware/favorite-duo-pack-flat-tawa-250-fry-pan-240,https://www.stovekraft.com/storage/products/cover/EyyxJHlwAgDlPuX6AaVSnxQFEIMos7uPf2jAwXSr.webp,600,600,13,no
-19000978,19000978,Titanium Hard Anodised,pigeon,C name+size,Titanium Hard Anodised Pressure Cooker 5 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/titanium-hard-anodised-pressure-cooker-5-litre,https://www.stovekraft.com/storage/products/cover/poOB2NFNuitiTxOofv4DZFh2SiKj4oBnbmqq0Do5.webp,600,600,13,no
-19001022,19001022,Vita 4 PC Gift Set,pigeon,B exact-name,Vita 4 Pc Gift Set,https://www.stovekraft.com/pigeon/category/cooking/cookware/vita-4-pc-gift-set,https://www.stovekraft.com/storage/products/cover/YpZSmOGFTYVJ4KRLXYcDJo2EHikIHm5kYiCJNxfJ.webp,600,600,22,no
-19001023,19001023,Alba 4 PC Gift Set,pigeon,B exact-name,Alba 4 Pc Gift Set,https://www.stovekraft.com/pigeon/category/cooking/cookware/alba-4-pc-gift-set,https://www.stovekraft.com/storage/products/cover/aRglC0czUnlAXOWIXiVW0QAPUoirnhGwFDTAAcjP.webp,600,600,22,no
-19001180,19001180,Handy Chopper XL 900ml,pigeon,B exact-name,Handy Chopper Xl - 900 ML,https://www.stovekraft.com/pigeon/category/kitchen-utilities/choppers/handy-chopper-xl-900-ml,https://www.stovekraft.com/storage/products/cover/yLGXj2AZjYPf9nhI9SvAgILrQJeaA4xewxHiUtzM.webp,600,600,28,no
-19001285,19001285,Handy Chopper Pro Mini 400ml,pigeon,B exact-name,Handy Chopper Pro Mini - 400 ML,https://www.stovekraft.com/pigeon/category/kitchen-utilities/choppers/handy-chopper-pro-mini-400-ml,https://www.stovekraft.com/storage/products/cover/RNzkER4JLzme22agcCLUCyWO7yGv317vFET8ISlD.webp,600,600,17,no
-19001286,19001286,Handy Chopper Pro Litre 650ml,pigeon,B exact-name,Handy Chopper Pro Litre - 650 ML,https://www.stovekraft.com/pigeon/category/kitchen-utilities/choppers/handy-chopper-pro-litre-650-ml,https://www.stovekraft.com/storage/products/cover/wD7SkDVD8ygOVKVFag9m6zdRvzHnTko3Ui0Qr8S1.webp,600,600,22,no
-19001287,19001287,Handy Chopper Pro XL 900ml,pigeon,B exact-name,Handy Chopper Pro XL- 900 ML,https://www.stovekraft.com/pigeon/category/kitchen-utilities/choppers/handy-chopper-pro-xl-900-ml,https://www.stovekraft.com/storage/products/cover/HDNcsPu7NzP46zAzUVbSwG6EAYf0ZO5Ke4Ld14WM.webp,600,600,22,no
-19001302,19001302,Modern Cucina Coffee Maker,pigeon,B exact-name,Modern Cucina Coffee Maker,https://www.stovekraft.com/pigeon/category/food-preparation/coffee-maker/modern-cucina-coffee-maker,https://www.stovekraft.com/storage/products/cover/TAkwoq1j9rPAW4zsJ9VH7pzewb2EeRbaLTVxRvYw.webp,600,600,25,no
-19001338,19001338,Casserole with Glass Lid 200,pigeon,B exact-name,Casserole with Glass Lid - 200,https://www.stovekraft.com/pigeon/category/cooking/cookware/casserole-with-glass-lid-200,https://www.stovekraft.com/storage/products/cover/oyfD5xBHirHlvTlJ1khcBDbvI9j1cvbmb3uUsA48.webp,1080,1080,30,no
-19001345,19001345,Sleek 3 Burner,pigeon,B exact-name,Sleek 3 Burner,https://www.stovekraft.com/pigeon/category/cooking/cooktops/sleek-3-burner,https://www.stovekraft.com/storage/products/cover/zmbDV7gQc8roLk4HiztaRe2RQjgSmdwj1xxqLi0X.webp,600,600,18,no
-19001352,19001352,Tornado Turbo Food Processor,pigeon,B exact-name,Tornado Turbo Food Processor,https://www.stovekraft.com/pigeon/category/kitchen-utilities/choppers/tornado-turbo-food-processor,https://www.stovekraft.com/storage/products/cover/epmRjdbeUV1CGrxWMPsytE7kqCjwk3Ecn5cNjAAO.webp,600,600,26,no
-19001433,19001433,Sleek 2 Burner,pigeon,B exact-name,Sleek 2 Burner,https://www.stovekraft.com/pigeon/category/cooking/cooktops/sleek-2-burner,https://www.stovekraft.com/storage/products/cover/XyQ9OQCDl308PuhtHydRgyrQCGGjcWmlVUstjGl1.webp,600,600,21,no
-19001435,19001435,Sleek 4 Burner,pigeon,B exact-name,Sleek 4 Burner,https://www.stovekraft.com/pigeon/category/cooking/cooktops/sleek-4-burner,https://www.stovekraft.com/storage/products/cover/kiVpdfBWPsdqBomNhgPHyLXwtncFJ6bV1SzLakt2.webp,600,600,25,no
-19001487,19001487,Wondercast Paniyarakkal 12 Rounds,pigeon,B exact-name,Wondercast Paniyarakkal 12 Rounds,https://www.stovekraft.com/pigeon/category/cooking/cookware/wondercast-paniyarakkal-12-rounds,https://www.stovekraft.com/storage/products/cover/kNrDOLohwgJhUR4a4WHjmfe0TcA0lmZIaFle312L.webp,1000,1000,22,no
-19001488,19001488,Multi Kadai — Red,pigeon,B exact-name,Multi Kadai - Red,https://www.stovekraft.com/pigeon/category/cooking/cookware/multi-kadai-red,https://www.stovekraft.com/storage/products/cover/su1cXtJOYunAlTg1W41eY4LGQDohZWPWWDfPDGXt.webp,600,600,22,no
-19001520,19001520,Multi Kadai — Grey,pigeon,B exact-name,Multi Kadai - Grey,https://www.stovekraft.com/pigeon/category/cooking/cookware/multi-kadai-grey,https://www.stovekraft.com/storage/products/cover/0Q84PNSbiIW5Kae5Qk3QE6laAVGFK15WTFacGmvs.webp,600,600,22,no
-19003238,19003238,Heavy Weight Iron Gale,pigeon,B exact-name,Heavy Weight Iron - Gale,https://www.stovekraft.com/pigeon/category/home-solutions/garment-care/heavy-weight-iron-gale,https://www.stovekraft.com/storage/products/cover/Q9HfQ5l4Xlr8ApKcdojmFRxqgtHwPOs5TathFxC9.webp,600,600,18,no
-19003244,19003244,X-Cord 1 Flex Box Red,pigeon,B exact-name,X-cord 1 Flex Box - Red,https://www.stovekraft.com/pigeon/category/home-solutions/extension-chord/x-cord-1-flex-box-red,https://www.stovekraft.com/storage/products/cover/dHFERhHwg3qDUgTIOlUCOONIhbRTM2ceeJ8CtLtN.webp,600,600,22,no
-19003280,19003280,INOX Pro Inner Lid,pigeon,C name+size,Inox Pro 5 Litre Inner Lid,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/inox-pro-5-litre-inner-lid,https://www.stovekraft.com/storage/products/cover/0VPNX3Rpx8vyoaNH9HAMszoTWw5QdKM6HKLLPI1t.webp,760,760,37,no
-19003365,19003365,X-Cord 1 Flex Box Grey,pigeon,B exact-name,X-cord 1 Flex Box - Grey,https://www.stovekraft.com/pigeon/category/home-solutions/extension-chord/x-cord-1-flex-box-grey,https://www.stovekraft.com/storage/products/cover/YB4skhfI4td3Wr4n0oJvvBI3qU4M5D7dsiYGXMhO.webp,600,600,18,no
-19003446,19003446,Prime 1800W,pigeon,B exact-name,Prime - 1800w,https://www.stovekraft.com/pigeon/category/cooking/induction-infrared-cooktops/prime-1800w,https://www.stovekraft.com/storage/products/cover/lMZwzz9H5Nxl3qWllAIha49qu41hKlyacnjNPJyP.webp,600,600,27,no
-19003587,19003587,Titanium Easy Cook Combi 3L,pigeon,C name+size,Titanium Easy Cook Combi 3L Idli Steamer,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/titanium-easy-cook-combi-3l-idli-steamer,https://www.stovekraft.com/storage/products/cover/VTT1Q1kIefdBC9w4OVguwjTHXwNOAxU64YhwIpWv.webp,600,600,16,no
-19003619,19003619,Healthifry Manual Air Fryer,pigeon,B exact-name,Healthifry - Manual Air Fryer,https://www.stovekraft.com/pigeon/category/food-preparation/airfryer/healthifry-manual-air-fryer,https://www.stovekraft.com/storage/products/cover/L8qVk4tx6sgOEN3KWfWWpjfBaiH2LAcKZ6JPsPQF.webp,600,600,18,no
-19003621,19003621,Panini Sandwich Griller Black,pigeon,B exact-name,Panini Sandwich Griller Black,https://www.stovekraft.com/pigeon/category/food-preparation/sandwich-maker/panini-sandwich-griller-black,https://www.stovekraft.com/storage/products/cover/rTwTeR94uIKJoHx1eVRHvu4zrWQiLGVHIaVXU1nc.webp,600,600,33,no
-19003623,19003623,INOX Sigma,pigeon,C name+size,Inox Sigma 5 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/inox-sigma-5-litre,https://www.stovekraft.com/storage/products/cover/6740NeL4LdyvZt6IuQa5v8jAjj3pXwGmQs328R7q.webp,600,600,20,no
-19003652,19003652,6 Pcs Casserole Set,pigeon,B exact-name,6 Pcs Casserole Set,https://www.stovekraft.com/pigeon/category/cooking/cookware/6-pcs-casserole-set,https://www.stovekraft.com/storage/products/cover/fCRp1fgadWP8DgR62DSFnoB3Wt05PWAfY7vYSbbJ.webp,600,600,15,no
-19003653,19003653,Jumbo 2 Burner,pigeon,B exact-name,Jumbo- 2 Burner,https://www.stovekraft.com/pigeon/category/cooking/cooktops/jumbo-2-burner-s,https://www.stovekraft.com/storage/products/cover/0rM2ETCUVsTXgAPXAH4jXjuklNW25F8QlAZPggZj.webp,600,600,17,no
-19003793,19003793,Ultra Fast Electric Chopper,pigeon,B exact-name,Ultra Fast Electric Chopper,https://www.stovekraft.com/pigeon/category/kitchen-utilities/choppers/ultra-fast-electric-chopper,https://www.stovekraft.com/storage/products/cover/glIG6y4GpYUIo0h9ooeIoT2lVe6DA3zaVUXqn67Q.webp,600,600,15,no
-19003813,19003813,Pop Up Toaster Black,pigeon,B exact-name,Pop Up Toaster Black,https://www.stovekraft.com/pigeon/category/food-preparation/pop-up-toaster/pop-up-toaster-black,https://www.stovekraft.com/storage/products/cover/PqZXy4ccym4qAnLsrshE7plBGQ4k6JNmPwJwOiRq.webp,600,600,29,no
-19003814,19003814,Pop Up Toaster White,pigeon,B exact-name,Pop Up Toaster White,https://www.stovekraft.com/pigeon/category/food-preparation/pop-up-toaster/pop-up-toaster-white,https://www.stovekraft.com/storage/products/cover/7Ptz2KZIOv89GyZszJNtryfUu1T7jk7neqU9SADo.webp,600,600,25,no
-19003863,19003863,Sandwich Toaster Black,pigeon,B exact-name,Sandwich Toaster Black,https://www.stovekraft.com/pigeon/category/food-preparation/sandwich-maker/sandwich-toaster-black,https://www.stovekraft.com/storage/products/cover/UQWXBxtGylxNsR4ZvYsjjdMYWALWXE15SUDYGkq5.webp,600,600,31,no
-19003884,19003884,Charm Women Trimmer 4-in-1,pigeon,B exact-name,Charm Women Trimmer 4 In 1,https://www.stovekraft.com/pigeon/category/personal-care/trimmer/charm-women-trimmer-4-in-1,https://www.stovekraft.com/storage/products/cover/Sus5spwSYn8xvUUlWDkamdUYSSZ71H3aNPhh4zhl.webp,600,600,19,no
-19003885,19003885,Fair Beard Trimmer,pigeon,B exact-name,Fair Beard Trimmer,https://www.stovekraft.com/pigeon/category/personal-care/trimmer/fair-beard-trimmer,https://www.stovekraft.com/storage/products/cover/YUJqExAZpJ9iERhw2k0dH0DZIcrHA2YKe2pkn3KA.webp,600,600,12,no
-19003886,19003886,Strike Beard Trimmer,pigeon,B exact-name,Strike Beard Trimmer,https://www.stovekraft.com/pigeon/category/personal-care/trimmer/strike-beard-trimmer,https://www.stovekraft.com/storage/products/cover/uXts5XIahBNHKRj9EuXzMWLNRyMdnaqiyrU9adU4.webp,600,600,23,no
-19003917,19003917,Pretti Volumizer,pigeon,B exact-name,Pretti Volumizer,https://www.stovekraft.com/pigeon/category/personal-care/hair-dryer/pretti-volumizer,https://www.stovekraft.com/storage/products/cover/oJO90TYBNIvVcl0CbI0BR85ioqVnUIbqnKrjj8wW.webp,600,600,8,no
-19003942,19003942,Celebration 5 Pcs Gift Set,pigeon,B exact-name,Celebration 5 Pcs Gift Set,https://www.stovekraft.com/pigeon/category/cooking/cookware/celebration-5-pcs-gift-set,https://www.stovekraft.com/storage/products/cover/1cB9gVGk7u628IjPUbbCK28eZvyKd8Pdxr8wwPGj.webp,600,600,26,no
-19004010,19004010,Shine Mop Deluxe,pigeon,B exact-name,Shine Mop Deluxe,https://www.stovekraft.com/pigeon/category/home-solutions/floor-mops/shine-mop-deluxe,https://www.stovekraft.com/storage/products/cover/bZ2E3cT0XC2Ri1TW4sYLEtzVcfT7WnkPJattle5X.webp,600,600,32,no
-19004012,19004012,Sparkle Mop Deluxe,pigeon,B exact-name,Sparkle Mop Deluxe,https://www.stovekraft.com/pigeon/category/home-solutions/floor-mops/sparkle-mop-deluxe,https://www.stovekraft.com/storage/products/cover/sENLjvI0fKK1srPuDffcwf46Kz2Oi1qU1tqY8pzs.webp,600,600,29,no
-19004025,19004025,Fry Pan 240,pigeon,B exact-name,Fry Pan 240,https://www.stovekraft.com/pigeon/category/cooking/cookware/fry-pan-240,https://www.stovekraft.com/storage/products/cover/UpgtP7QeGFOyJiTu8w4RBnoP4GRms1aARe8fW2ve.webp,600,600,4,no
-19004029,19004029,Bullet SDX 1000ml Red,pigeon,B exact-name,Bullet Sdx - 1000ml - Red,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/bullet-sdx-1000ml-red,https://www.stovekraft.com/storage/products/cover/vfKf156t7oVE0oUXLysH8GBwXId5w7Pa5ZMX9BzF.webp,600,600,15,no
-19004064,19004064,SS Vacuum Aqua 1000ml Silver,pigeon,C name+size,SS Vacuum Bottle Aqua - 1000ml - Silver,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/ss-vacuum-bottle-aqua-1000ml-silver,https://www.stovekraft.com/storage/products/cover/KFcEUnh2CBV8I2X0vLhvWxhJqfDPKUhezPmgarfJ.webp,600,600,27,no
-19004190,19004190,Grill Sandwich Maker Jumbo,pigeon,B exact-name,Grill Sandwich Maker - Jumbo,https://www.stovekraft.com/pigeon/category/food-preparation/sandwich-maker/grill-sandwich-maker-jumbo,https://www.stovekraft.com/storage/products/cover/tAkKPaUNxDS8u6EwdJ9ZJJ6f9kn5vhIvxFAPtwhs.webp,600,600,36,no
-19004214,19004214,Sandwich Griller Black,pigeon,B exact-name,Sandwich Griller Black,https://www.stovekraft.com/pigeon/category/food-preparation/sandwich-maker/sandwich-griller-black,https://www.stovekraft.com/storage/products/cover/uLOCTrQNhhJtdw7V9FSjKqBKqFA1BIGP2QasSOMq.webp,600,600,32,no
-19004250,19004250,Titan Heavy Weight Iron 1100W,pigeon,B exact-name,Titan Heavy Weight Iron 1100w,https://www.stovekraft.com/pigeon/category/home-solutions/garment-care/titan-heavy-weight-iron-1100w,https://www.stovekraft.com/storage/products/cover/0yHMJqTNiZvzx4xpVB3rFc7CkA1pDXGBkL6FN4qh.webp,600,600,20,no
-19004265,19004265,Stella 1800W,pigeon,B exact-name,Stella - 1800w,https://www.stovekraft.com/pigeon/category/cooking/induction-infrared-cooktops/stella-1800w,https://www.stovekraft.com/storage/products/cover/WXoboAKvh6r3GRwo8CgCkZBdd7vjlCGYzMs2V187.webp,600,600,32,no
-19004266,19004266,INOX Hydra Duo 900ml,pigeon,B exact-name,Inox Hydra Duo - 900ml,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/inox-hydra-duo-900ml,https://www.stovekraft.com/storage/products/cover/qSXsQAyhiib7pCP7Akqlmg2QgfrvJ2cHU9CNYXUG.webp,600,600,10,no
-19004267,19004267,Air Turbo Vacuum Cleaner 600W,pigeon,B exact-name,Air Turbo Vacuum Cleaner 600w,https://www.stovekraft.com/pigeon/category/home-solutions/vaccuum-cleaner/air-turbo-vacuum-cleaner-600w,https://www.stovekraft.com/storage/products/cover/IA7PMme0upyQBPBruZvTSVo3As1xwqo32VvXo9zw.webp,600,600,15,no
-19004302,19004302,Mabel Ceramic Cooker,pigeon,C name+size,Mabel Ceramic Cooker 2 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/mabel-ceramic-cooker-2-litre,https://www.stovekraft.com/storage/products/cover/i5wWG1ROuqTUVOwSLB8q4BYDN5JKPsjNRglU7FKE.webp,600,600,25,yes
-19004303,19004303,Mabel Ceramic Cooker,pigeon,C name+size,Mabel Ceramic Cooker 3 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/mabel-ceramic-cooker-3-litre,https://www.stovekraft.com/storage/products/cover/USMfPT4rkRzGMfTkmn3gGH4LYNI4OkirmtV7v4y2.webp,600,600,26,yes
-19004304,19004304,Mabel Ceramic Cooker,pigeon,C name+size,Mabel Ceramic Cooker 5 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/mabel-ceramic-cooker-5-litre,https://www.stovekraft.com/storage/products/cover/QEPka3lnhym4t0UWanye9BDULkAAcrQqfCq3wucM.webp,600,600,28,yes
-19004316,19004316,All in 1 Grooming Kit 3-in-1,pigeon,B exact-name,All In 1 Grooming Kit 3 In 1,https://www.stovekraft.com/pigeon/category/personal-care/trimmer/all-in-1-grooming-kit-3-in-1,https://www.stovekraft.com/storage/products/cover/jpYxtgPImgoh9tvroIlgxuXThFEnP9RJESEZQMqb.webp,600,600,28,no
-19004317,19004317,All in 1 Grooming Kit 5-in-1,pigeon,B exact-name,All In 1 Grooming Kit 5 In 1,https://www.stovekraft.com/pigeon/category/personal-care/trimmer/all-in-1-grooming-kit-5-in-1,https://www.stovekraft.com/storage/products/cover/uvS39JFwo5OZMsAg3FrBtsjyJYCPGZTK5GevxjMy.webp,600,600,17,no
-19004318,19004318,Multi Purpose Body Trimmer,pigeon,B exact-name,Multi Purpose Body Trimmer,https://www.stovekraft.com/pigeon/category/personal-care/trimmer/multi-purpose-body-trimmer,https://www.stovekraft.com/storage/products/cover/OCb0ctcbNtYNbtYq4mICsc25k31bgmsRL0jhfWWl.webp,600,600,24,no
-19004321,19004321,Therminox Aqua Plus 1000ml Black,pigeon,B exact-name,Therminox Aqua Plus - 1000ml - Black,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/therminox-aqua-plus-1000ml-black,https://www.stovekraft.com/storage/products/cover/Wbus0TBMwL4pCpDXTLj4uJcw6clwsWos4Hh8c4U7.webp,600,600,24,no
-19004337,19004337,Glo 1800W,pigeon,B exact-name,Glo - 1800w,https://www.stovekraft.com/pigeon/category/cooking/induction-infrared-cooktops/glo-1800w,https://www.stovekraft.com/storage/products/cover/l5Ktcx40D5wh5dXDmBJVPBABclFFAhiKuXQRWvwP.webp,600,600,35,no
-19004339,19004339,Healthifry+ 6.5L Orbitron,pigeon,C name+size,Healthifry+ 6.5L Orbitron Airfryer,https://www.stovekraft.com/pigeon/category/food-preparation/airfryer/healthifry-65l-orbitron-airfryer,https://www.stovekraft.com/storage/products/cover/AvnMzO6ppoBowd4XiIAT7iZO0LyLnzfgnxbNWwJG.webp,600,600,22,no
-19004374,19004374,Laze 4-in-1 Electric Body Massager,pigeon,B exact-name,Laze 4 In 1 Electric Body Massager,https://www.stovekraft.com/pigeon/category/personal-care/massagers/laze-4-in-1-electric-body-massager,https://www.stovekraft.com/storage/products/cover/vuOyHKZcPvDNkC3ri34MF56ujQcSLLrOE9eQUaWr.webp,600,600,18,no
-19004375,19004375,Ease 8-in-1 Electric Body Massager,pigeon,B exact-name,Ease 8 In 1 Electric Body Massager,https://www.stovekraft.com/pigeon/category/personal-care/massagers/ease-8-in-1-electric-body-massager,https://www.stovekraft.com/storage/products/cover/ACm305LyUYoHIfsgeSinb41Zn2tqynrYKb2XOeJ5.webp,600,600,23,no
-19004376,19004376,Neura Leg & Calf Massager,pigeon,B exact-name,Neura Leg & Calf Massager,https://www.stovekraft.com/pigeon/category/personal-care/massagers/neura-leg-calf-massager,https://www.stovekraft.com/storage/products/cover/Vad8ZW219C24NY9lphEyglNoTCEAbVQnWLAzsiLH.webp,600,600,26,no
-19004378,19004378,Vibe Gun Massager,pigeon,B exact-name,Vibe Gun Massager,https://www.stovekraft.com/pigeon/category/personal-care/massagers/vibe-gun-massager,https://www.stovekraft.com/storage/products/cover/wI12UGKIymyXLeCe7QmK29OgPl0PlSrmCBgbG66J.webp,600,600,15,no
-19004379,19004379,Nexa Gun Massager,pigeon,B exact-name,Nexa Gun Massager,https://www.stovekraft.com/pigeon/category/personal-care/massagers/nexa-gun-massager,https://www.stovekraft.com/storage/products/cover/eQI8HahcDHZ9zHaCKEi0POz1NWg2FqDdBt05PJar.webp,600,600,17,no
-19004380,19004380,Pulse Massager,pigeon,B exact-name,Pulse Massager,https://www.stovekraft.com/pigeon/category/personal-care/massagers/pulse-massager,https://www.stovekraft.com/storage/products/cover/gSUlaSlFT3OhBN5OZhEsYvJigwTZC3MQ4gzX6Mjn.webp,600,600,15,no
-19004410,19004410,Flat Tawa 280,pigeon,B exact-name,Flat Tawa 280,https://www.stovekraft.com/pigeon/category/cooking/cookware/flat-tawa-280,https://www.stovekraft.com/storage/products/cover/fC5qvxNQXkUfsCzNCJJ2WKcWQTcynH9DDrrTEnLE.webp,1000,1000,14,no
-19004449,19004449,Nebula DX 60cm,pigeon,B exact-name,Nebula Dx 60 CM,https://www.stovekraft.com/pigeon/category/cooking/chimneys/nebula-dx-60-cm,https://www.stovekraft.com/storage/products/cover/10WwJlF2TINz4kJe7AGC3ZzSYf972M7vAB9wdXPu.webp,600,600,15,no
-19004461,19004461,Therminox Aqua Plus 1000ml Green,pigeon,B exact-name,Therminox Aqua Plus - 1000ml - Green,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/therminox-aqua-plus-1000ml-green,https://www.stovekraft.com/storage/products/cover/EMeDosJYKWygvyFYSp52MlPA1mEtL9pIzh1tXwDW.webp,600,600,25,no
-19004464,19004464,Electra Smart Cook EPC,pigeon,C name+size,Electra - Smart Cook Epc 6 Litre,https://www.stovekraft.com/pigeon/category/food-preparation/rice-cooker/electra-smart-cook-epc-6-litre,https://www.stovekraft.com/storage/products/cover/uttzSVzysxlNEa07bZskibCopyh8uzo1A9nJJZyd.webp,600,600,23,no
-19004480,19004480,Blitz Water Bottle 975ml Blue,pigeon,B exact-name,Blitz Water Bottle 975ml - Blue,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/blitz-water-bottle-975ml-blue,https://www.stovekraft.com/storage/products/cover/Clyc3emRyF12JIDn6cUNzjDbTi8p3SRQ1AdK3HsO.webp,600,600,18,no
-19004493,19004493,Pure Slow Juicer 250W,pigeon,B exact-name,Pure Slow Juicer - 250 W,https://www.stovekraft.com/pigeon/category/food-preparation/cold-press-juicer/pure-slow-juicer-250-w,https://www.stovekraft.com/storage/products/cover/YnL5yTLlyMvcq90TuEsSPOsE6JpZ790ulkEmvoog.webp,416,392,5,no
-19004503,19004503,Relax Scalp Massager,pigeon,B exact-name,Relax Scalp Massager,https://www.stovekraft.com/pigeon/category/personal-care/massagers/relax-scalp-massager,https://www.stovekraft.com/storage/products/cover/Hg8mBrNfzblYXursXfsBclOTZ26b1m99swHxcZjo.webp,600,600,23,no
-19004521,19004521,Healthifry+ Digital Air Fryer 3.3L,pigeon,C name+size,Healthifry + Digital Airfryer Air Fryer 3.3L,https://www.stovekraft.com/pigeon/category/food-preparation/airfryer/healthifry-digital-airfryer-air-fryer-33l,https://www.stovekraft.com/storage/products/cover/RDj2x6Br6VTYaBSZ0qrxWetsgRN8uXo2yXrYM8xb.webp,600,600,23,no
-19004546,19004546,Sharp 5 Inch Knife,pigeon,B exact-name,Sharp 5 Inch Knife,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/sharp-5-inch-knife,https://www.stovekraft.com/storage/products/cover/XudHGjl9QOFWJZIznHiYzQ7sf2RKTucvrawWG4zE.webp,600,600,9,no
-19004560,19004560,INOX Pro with Steamer 1L DX Yellow,pigeon,B exact-name,Inox Pro with Steamer 1 Ldx Yellow,https://www.stovekraft.com/pigeon/category/food-preparation/rice-cooker/inox-pro-with-steamer-1-ldx-yellow,https://www.stovekraft.com/storage/products/cover/jRKCOegOyKkCbN91N0aWDnHWVQp3wBQgpv9Ouoa7.webp,600,600,26,no
-19004561,19004561,INOX Pro with Steamer 1L DX Pink,pigeon,B exact-name,Inox Pro with Steamer 1 Ldx Pink,https://www.stovekraft.com/pigeon/category/food-preparation/rice-cooker/inox-pro-with-steamer-1-ldx-pink,https://www.stovekraft.com/storage/products/cover/M6mfIjqwFYoUWlPHD9cCyGfa4DIW9hIOWUaAHPMC.webp,600,600,24,no
-19004562,19004562,INOX Pro with Steamer 1L DX Grey,pigeon,B exact-name,Inox Pro with Steamer 1 Ldx Grey,https://www.stovekraft.com/pigeon/category/food-preparation/rice-cooker/inox-pro-with-steamer-1-ldx-grey,https://www.stovekraft.com/storage/products/cover/f4d5E2G6wyP0FWsVivImGUOQlzp25JP4Kj7fxpBS.webp,600,600,25,no
-19004591,19004591,Inner Lid Triply,pigeon,C name+size,Inner Lid Triply 5 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/inner-lid-triply-5-litre,https://www.stovekraft.com/storage/products/cover/F4gbXLTuEb1dpc5HcqFxPd2OU8WII3fje3FlXk3S.webp,600,600,15,no
-1900645,1900645,Handy Chopper Mini 400ml,pigeon,B exact-name,Handy Chopper Mini - 400 ML,https://www.stovekraft.com/pigeon/category/kitchen-utilities/choppers/handy-chopper-mini-400-ml,https://www.stovekraft.com/storage/products/cover/QA4kY0H9aFceoKtWITcIcZZVSnhXMVB94pPd0VBx.webp,600,600,25,no
-B16FL,B16FL,Polo Bowl,yera,A code-token,"YERA Polo Glass Bowl B16FL, 435ml, 1/2/4 pcs Pack",https://www.yera.com/products/yera-polo-glass-bowl-b16fl-435ml-1-2-4-pcs-pack-2,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/B16FL_main1.jpg?v=1773651313,3000,3000,195,yes
-B35FL,B35FL,Polo Bowl,yera,A code-token,"YERA Polo Glass Bowl B35FL, 990ml, 1 pc Pack",https://www.yera.com/products/yera-polo-glass-bowl-b35fl-990ml-1-pc-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/B55FL_main1_c1c86b07-1316-4f5e-917f-a653c53b269d.jpg?v=1773651398,3000,3000,243,yes
-B35SB,B35SB,Venus Serving Bowl,yera,A code-token,"YERA Venus Glass Bowl B35SB, 975ml, 1 pc Pack",https://www.yera.com/products/yera-venus-glass-bowl-b35sb-975ml-1-pc-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/B35SB_main1.jpg?v=1773651091,3000,3000,202,yes
-B55FL,B55FL,Polo Bowl,yera,A code-token,"YERA Polo Glass Bowl B55FL, 1580ml, 1 pc Pack",https://www.yera.com/products/yera-polo-glass-bowl-b55fl-1580ml-1-pc-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/B55FL_main1.jpg?v=1774000762,3000,3000,243,yes
-B7PC,B7PC,Pacifica Bowl – 220ml,yera,A code-token,YERA Pacifica Glass Bowl B7PC – Elegant Serving & Dessert Bowls,https://www.yera.com/products/yera-pacifica-glass-bowl-b7pc-elegant-serving-dessert-bowls,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/B7PC_4.jpg?v=1772012697,3000,3000,231,yes
-BS801,BS801,Freezowarm Bowl,yera,A code-token,"YERA Freezowarm Bowl BS801, 785ml, 1 pc Pack",https://www.yera.com/products/yera-brooklyn-glass-bs801-785ml-1-pc-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/BS801_1_6a61aa34-2b50-418b-8068-f9d402f19f62.jpg?v=1771924846,3000,3000,155,yes
-BS802,BS802,Freezowarm Bowl,yera,A code-token,"YERA Freezowarm Large Bowl BS802, 1340ml, 1 pc Pack",https://www.yera.com/products/yera-brooklyn-large-glass-bs802-1340ml-1-pc-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/BS802_4_5b03a65d-cf41-4ed0-a79a-1f84d2d96efd.jpg?v=1774000568,3000,3000,154,yes
-GS1700,GS1700,Volga Jug – 1700ml,yera,A code-token,"YERA Volga Glass Jug GS1700, 1700ml – Water & Juice Serving Jug",https://www.yera.com/products/yera-volga-glass-jug-gs1700-210ml-water-juice-serving-jug,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/GS1700_2.jpg?v=1773741377,3000,3000,166,yes
-IC4IF,IC4IF,Antartic Ice Cream Bowl – 125ml,yera,A code-token,YERA Antarctic Glass Ice Cream Bowl IC4IF – Dessert & Ice Cream Serving Bowl,https://www.yera.com/products/yera-antarctic-glass-ice-cream-bowl-ic4if-dessert-ice-cream-serving-bowl,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/IC4IF_4.jpg?v=1772098422,3000,3000,213,yes
-ICV7-M23,ICV7-M23,Iceberg Ice Cream Bowl – 100ml,yera,A code-token,YERA Iceberg Glass Ice Cream Bowl ICV7-M23 – Multipurpose Dessert Bowl,https://www.yera.com/products/yera-iceberg-glass-ice-cream-bowl-icv7-m23-multipurpose-dessert-bowl,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/ICV7-M23_1.jpg?v=1771506924,3000,3000,173,yes
-JR-1.5,JR-1.5,Aahar Jar,yera,A code-token,"YERA Aahar Glass Storage Jars JR-1.5, 1830ml",https://www.yera.com/products/yera-aahar-glass-storage-jars-jr-15-1830ml-12-pcs-bulk-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/JR-1.5_main1.jpg?v=1773639092,3000,3000,302,yes
-JR-120,JR-120,Deluxe Aahar Jar – 3.36L,yera,A code-token,"YERA Deluxe Aahar Glass Jars JR-120, 3360ml",https://www.yera.com/products/yera-deluxe-aahar-glass-jars-jr-120-3360ml-6-pcs-bulk-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/JR-120_main1.jpg?v=1773639353,3000,3000,150,yes
-JR-150,JR-150,Aahar Jar,yera,A code-token,"YERA Aahar Glass Storage Jars JR-150, 140ml",https://www.yera.com/products/yera-aahar-glass-storage-jars-jr-150-140ml,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/JR-150_main1.jpg?v=1773639400,3000,3000,168,yes
-JR-250,JR-250,Zaika Jar,yera,A code-token,"YERA Zaika Glass Storage Jars JR-250, 300ml",https://www.yera.com/products/yera-zaika-glass-storage-jars-jr-250-300ml-60-pcs-bulk-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/JR-250_main1.jpg?v=1773639450,3000,3000,144,yes
-JR-500,JR-500,Zaika Jar,yera,A code-token,"YERA Zaika Glass Storage Jars JR-500, 565ml",https://www.yera.com/products/yera-zaika-glass-storage-jars-jr-500-565ml-24-pcs-bulk-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/JR-500_main1.jpg?v=1773639484,3000,3000,282,yes
-JR-5ST,JR-5ST,Steelex Jar,yera,A code-token,"YERA Steelex Glass Jar JR5ST, 5650ml, 1 pc Pack",https://www.yera.com/products/yera-steelex-glass-jar-jr-5st-5650ml-1-pc-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/JR-5STLS_b121c96b-ab93-41a6-a564-80eab20d8034.jpg?v=1773377319,3000,3000,182,yes
-JR-750,JR-750,Zaika Jar,yera,A code-token,"YERA Zaika Glass Storage Jars JR-750, 860ml",https://www.yera.com/products/yera-zaika-glass-storage-jars-jr-750-860ml-24-pcs-bulk-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/JR-750_main1.jpg?v=1773639516,3000,3000,325,yes
-KR-3000,KR-3000,KR Round Jar,yera,A code-token,"YERA Glass Jars KR-3000, 3000ml, 1 pc Pack",https://www.yera.com/products/yera-glass-jars-kr-3000-3000ml-1-pc-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/KR-3000_2.jpg?v=1771922404,3000,3000,147,no
-KRM-0800,KRM-0800,KRM Round Jar,yera,A code-token,"YERA KRM Series Glass Jars KRM-0800, 900ml, 1 pc Pack",https://www.yera.com/products/yera-krm-series-glass-jars-krm-1000-1100ml-1-pc-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/KRM-0800_2.jpg?v=1772020438,3000,3000,199,yes
-KRM-1000,KRM-1000,KRM Round Jar,yera,A code-token,"YERA KRM Series Glass Jars KRM-1000, 1100ml, 1 pc Pack",https://www.yera.com/products/yera-krm-series-glass-jars-krm-1000-1100ml-1pc-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/KRM-1000_2.jpg?v=1772020478,3000,3000,298,yes
-KSM-0800,KSM-0800,KSM Jar,yera,A code-token,"YERA KSM Woodies Series Glass Storage Jars KSM-0800, 835ml, 1 Pc Pack – Glass Pantry Jar",https://www.yera.com/products/yera-ksm-series-glass-storage-jars-ksm-0800-835ml-1-pc-pack-glass-pantry-jar,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/KSM-0800_2.jpg?v=1771918740,3000,3000,227,yes
-KSM-1000,KSM-1000,KSM Jar,yera,A code-token,"YERA KSM Woodies Series Glass Storage Jars KSM-1000, 1000ml, 1 Pc Pack – Glass Kitchen Jar",https://www.yera.com/products/yera-ksm-series-glass-storage-jars-ksm-1000-1000ml-1-pc-pack-glass-kitchen-jar,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/KSM-1000_2.jpg?v=1771918796,3000,3000,282,yes
-KSM-1800,KSM-1800,KSM Jar,yera,A code-token,"YERA KSM Woodies Series Glass Storage Jars KSM-1800, 1810ml, 1 Pc Pack",https://www.yera.com/products/yera-ksm-series-glass-jars-ksm-1800-1810ml-1-pc-pack-copy,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/KSM-1000_2_70b9b56a-50b5-47da-9ab2-f9c73e62a586.jpg?v=1771918859,3000,3000,229,yes
-KSM-2250,KSM-2250,KSM Jar,yera,A code-token,"YERA KSM X-Series Glass Jars KSM-2250, 2250ml, 1 pc Pack",https://www.yera.com/products/yera-ksm-series-glass-jars-ksm-2250-2250ml-1-pc-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/KSM-2250_2.jpg?v=1773999179,3000,3000,214,yes
-KSM-3000,KSM-3000,KSM Jar,yera,A code-token,"YERA KSM Woodies Series Glass Storage Jars KSM-3000, 3000ml, 1 Pc Pack – Airtight Storage Jar",https://www.yera.com/products/yera-ksm-series-glass-storage-jars-ksm-3000-3000ml-1-pc-pack-airtight-storage-jar,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/BSL_8999.jpg?v=1771918929,2930,2930,384,yes
-KSM-4000,KSM-4000,KSM Jar,yera,A code-token,"YERA Aquafresh Glass Jar (tap/stand) KSM-4000, 4000ml, 1 pc Pack",https://www.yera.com/products/yera-aquafresh-glass-jar-tap-stand-ksm-4000-4000ml-1-pc-pack,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/KSM4000_-_Lifestyle_img_jpg.jpg?v=1784192996,4500,4500,2096,yes
-PJS-1000,PJS-1000,Pantry Jar,yera,A code-token,"YERA Pantry Wood Series Glass Storage Jar PJS-1000, 1000ml – Airtight Pantry Jar with Wooden Lid",https://www.yera.com/products/yera-pantry-wood-series-glass-storage-jar-pjs-1000-1000ml-airtight-pantry-jar-with-wooden-lid,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/PJS1000_2.jpg?v=1771929524,3000,3000,302,yes
-PJS-1500,PJS-1500,Pantry Jar,yera,A code-token,"YERA Pantry Glass Storage Jar, PJS-1500, Pink, 1500ml, 1 Pc Pack – Glass Kitchen Storage Jar",https://www.yera.com/products/yera-pantry-glass-storage-jar-pjs-1500-1500ml-1-pc-pack-glass-kitchen-storage-jar-1,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/PJS1500_2_9d35a198-0a75-4ff1-a398-57606673c7bd.jpg?v=1779865129,3000,3000,254,yes
-PJS-2000,PJS-2000,Pantry Jar,yera,A code-token,"YERA Pantry Wood Series Glass Storage Jar PJS-2000, 2000ml – Airtight Glass Jar with Wooden Lid",https://www.yera.com/products/yera-pantry-wood-series-glass-storage-jar-pjs-2000-2000ml-airtight-glass-jar-with-wooden-lid,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/PJS2000_2.jpg?v=1771929671,3000,3000,307,yes
-PJS-550,PJS-550,Pantry Jar,yera,A code-token,"YERA Pantry Wood Series Glass Storage Jar PJS-550, 550ml – Airtight Glass Jar with Wooden Lid",https://www.yera.com/products/yera-pantry-wood-series-glass-storage-jar-pjs-550-550ml-airtight-glass-jar-with-wooden-lid,https://cdn.shopify.com/s/files/1/0733/7967/6327/files/PJS550_2_ae030484-dd7d-4b2c-b5a4-6f49c10465c5.jpg?v=1773385833,3000,3000,253,yes
+sku_id,variant_code,product_name,brand,state,match_rule,source_product_title,source_page,image_url
+dubblin-banjo-450,,Banjo,dubblin,catalogue scan,,,,/images/products/dubblin/banjo.jpg
+dubblin-belly-230,,Belly,dubblin,catalogue scan,,,,/images/products/dubblin/belly.jpg
+dubblin-belly-300,,Belly,dubblin,catalogue scan,,,,/images/products/dubblin/belly.jpg
+dubblin-bento,,Bento,dubblin,catalogue scan,,,,/images/products/dubblin/bento.jpg
+dubblin-bento-2,,Bento 2,dubblin,catalogue scan,,,,/images/products/dubblin/bento-2.jpg
+dubblin-bold-1200,,Bold,dubblin,no image,,,,
+dubblin-bold-900,,Bold,dubblin,no image,,,,
+dubblin-buffet,,Buffet,dubblin,catalogue scan,,,,/images/products/dubblin/buffet.jpg
+dubblin-casa-270,,Casa,dubblin,catalogue scan,,,,/images/products/dubblin/casa.jpg
+dubblin-chess-300,,Chess,dubblin,catalogue scan,,,,/images/products/dubblin/chess.jpg
+dubblin-club-750,,Club,dubblin,catalogue scan,,,,/images/products/dubblin/club.jpg
+dubblin-craze-550,,Craze,dubblin,no image,,,,
+dubblin-craze-800,,Craze,dubblin,no image,,,,
+dubblin-crest-600,,Crest,dubblin,catalogue scan,,,,/images/products/dubblin/crest.jpg
+dubblin-crest-900,,Crest,dubblin,catalogue scan,,,,/images/products/dubblin/crest.jpg
+dubblin-crunch,,Crunch,dubblin,catalogue scan,,,,/images/products/dubblin/crunch.jpg
+dubblin-dolphin-1000,,Dolphin,dubblin,catalogue scan,,,,/images/products/dubblin/dolphin.jpg
+dubblin-dolphin-550,,Dolphin,dubblin,catalogue scan,,,,/images/products/dubblin/dolphin.jpg
+dubblin-dolphin-750,,Dolphin,dubblin,catalogue scan,,,,/images/products/dubblin/dolphin.jpg
+dubblin-drum-1050,,Drum,dubblin,catalogue scan,,,,/images/products/dubblin/drum.jpg
+dubblin-drum-1400,,Drum,dubblin,catalogue scan,,,,/images/products/dubblin/drum.jpg
+dubblin-euro-500,,Euro,dubblin,catalogue scan,,,,/images/products/dubblin/euro.jpg
+dubblin-fancy-500,,Fancy,dubblin,catalogue scan,,,,/images/products/dubblin/fancy.jpg
+dubblin-fancy-750,,Fancy,dubblin,catalogue scan,,,,/images/products/dubblin/fancy.jpg
+dubblin-fancy-950,,Fancy,dubblin,catalogue scan,,,,/images/products/dubblin/fancy.jpg
+dubblin-fresher-1000,,Fresher,dubblin,catalogue scan,,,,/images/products/dubblin/fresher.jpg
+dubblin-fresher-1250,,Fresher,dubblin,catalogue scan,,,,/images/products/dubblin/fresher.jpg
+dubblin-fresher-1500,,Fresher,dubblin,catalogue scan,,,,/images/products/dubblin/fresher.jpg
+dubblin-fresher-2000,,Fresher,dubblin,catalogue scan,,,,/images/products/dubblin/fresher.jpg
+dubblin-fresher-2400,,Fresher,dubblin,catalogue scan,,,,/images/products/dubblin/fresher.jpg
+dubblin-fresher-500,,Fresher,dubblin,catalogue scan,,,,/images/products/dubblin/fresher.jpg
+dubblin-fresher-750,,Fresher,dubblin,catalogue scan,,,,/images/products/dubblin/fresher.jpg
+dubblin-goofy,,Goofy,dubblin,catalogue scan,,,,/images/products/dubblin/goofy.jpg
+dubblin-hiker-1000,,Hiker,dubblin,catalogue scan,,,,/images/products/dubblin/hiker.jpg
+dubblin-hiker-550,,Hiker,dubblin,catalogue scan,,,,/images/products/dubblin/hiker.jpg
+dubblin-hiker-750,,Hiker,dubblin,catalogue scan,,,,/images/products/dubblin/hiker.jpg
+dubblin-ice-cube-1000,,Ice Cube,dubblin,catalogue scan,,,,/images/products/dubblin/ice-cube.jpg
+dubblin-ice-cube-1150,,Ice Cube,dubblin,catalogue scan,,,,/images/products/dubblin/ice-cube.jpg
+dubblin-ice-cube-1500,,Ice Cube,dubblin,catalogue scan,,,,/images/products/dubblin/ice-cube.jpg
+dubblin-ice-cube-750,,Ice Cube,dubblin,catalogue scan,,,,/images/products/dubblin/ice-cube.jpg
+dubblin-jack-n-jill-200,,Jack N Jill,dubblin,catalogue scan,,,,/images/products/dubblin/jack-n-jill.jpg
+dubblin-jack-n-jill-300,,Jack N Jill,dubblin,catalogue scan,,,,/images/products/dubblin/jack-n-jill.jpg
+dubblin-jumbo-1400,,Jumbo,dubblin,catalogue scan,,,,/images/products/dubblin/jumbo.jpg
+dubblin-jumbo-1800,,Jumbo,dubblin,catalogue scan,,,,/images/products/dubblin/jumbo.jpg
+dubblin-kiwi-500,,Kiwi,dubblin,catalogue scan,,,,/images/products/dubblin/kiwi.jpg
+dubblin-kiwi-700,,Kiwi,dubblin,catalogue scan,,,,/images/products/dubblin/kiwi.jpg
+dubblin-little-200,,Little,dubblin,catalogue scan,,,,/images/products/dubblin/little.jpg
+dubblin-micky,,Micky,dubblin,catalogue scan,,,,/images/products/dubblin/micky.jpg
+dubblin-micky-3,,Micky 3,dubblin,catalogue scan,,,,/images/products/dubblin/micky-3.jpg
+dubblin-milk-cookies-350,,Milk & Cookies,dubblin,catalogue scan,,,,/images/products/dubblin/milk-cookies.jpg
+dubblin-modern-1000,,Modern,dubblin,catalogue scan,,,,/images/products/dubblin/modern.jpg
+dubblin-modern-600,,Modern,dubblin,catalogue scan,,,,/images/products/dubblin/modern.jpg
+dubblin-modern-750,,Modern,dubblin,catalogue scan,,,,/images/products/dubblin/modern.jpg
+dubblin-mountain-1000,,Mountain,dubblin,catalogue scan,,,,/images/products/dubblin/mountain.jpg
+dubblin-mountain-1150,,Mountain,dubblin,catalogue scan,,,,/images/products/dubblin/mountain.jpg
+dubblin-mountain-500,,Mountain,dubblin,catalogue scan,,,,/images/products/dubblin/mountain.jpg
+dubblin-mountain-750,,Mountain,dubblin,catalogue scan,,,,/images/products/dubblin/mountain.jpg
+dubblin-munch,,Munch,dubblin,catalogue scan,,,,/images/products/dubblin/munch.jpg
+dubblin-passion-350,,Passion,dubblin,catalogue scan,,,,/images/products/dubblin/passion.jpg
+dubblin-polo-220,,Polo,dubblin,catalogue scan,,,,/images/products/dubblin/polo.jpg
+dubblin-polo-270,,Polo,dubblin,catalogue scan,,,,/images/products/dubblin/polo.jpg
+dubblin-rage-1200,,Rage,dubblin,no image,,,,
+dubblin-rage-550,,Rage,dubblin,no image,,,,
+dubblin-rage-800,,Rage,dubblin,no image,,,,
+dubblin-refresh-350,,Refresh,dubblin,catalogue scan,,,,/images/products/dubblin/refresh.jpg
+dubblin-ricky,,Ricky,dubblin,catalogue scan,,,,/images/products/dubblin/ricky.jpg
+dubblin-ricky-3,,Ricky 3,dubblin,catalogue scan,,,,/images/products/dubblin/ricky-3.jpg
+dubblin-robot-300,,Robot,dubblin,catalogue scan,,,,/images/products/dubblin/robot.jpg
+dubblin-robot-500,,Robot,dubblin,catalogue scan,,,,/images/products/dubblin/robot.jpg
+dubblin-rock-1200,,Rock,dubblin,no image,,,,
+dubblin-rock-900,,Rock,dubblin,no image,,,,
+dubblin-ruff-tuff-1000,,Ruff & Tuff,dubblin,catalogue scan,,,,/images/products/dubblin/ruff-tuff.jpg
+dubblin-ruff-tuff-550,,Ruff & Tuff,dubblin,catalogue scan,,,,/images/products/dubblin/ruff-tuff.jpg
+dubblin-ruff-tuff-750,,Ruff & Tuff,dubblin,catalogue scan,,,,/images/products/dubblin/ruff-tuff.jpg
+dubblin-rugby-270,,Rugby,dubblin,catalogue scan,,,,/images/products/dubblin/rugby.jpg
+dubblin-shade-500,,Shade,dubblin,catalogue scan,,,,/images/products/dubblin/shade.jpg
+dubblin-shade-750,,Shade,dubblin,catalogue scan,,,,/images/products/dubblin/shade.jpg
+dubblin-slim,,Slim,dubblin,catalogue scan,,,,/images/products/dubblin/slim.jpg
+dubblin-slim-senior,,Slim Senior,dubblin,no image,,,,
+dubblin-smartlock-flat-2000,,Smartlock Flat,dubblin,no image,,,,
+dubblin-smartlock-flat-800,,Smartlock Flat,dubblin,no image,,,,
+dubblin-smartlock-rectangular-1000,,Smartlock Rectangular,dubblin,catalogue scan,,,,/images/products/dubblin/smartlock-rect.jpg
+dubblin-smartlock-rectangular-1700,,Smartlock Rectangular,dubblin,catalogue scan,,,,/images/products/dubblin/smartlock-rect.jpg
+dubblin-smartlock-rectangular-2300,,Smartlock Rectangular,dubblin,catalogue scan,,,,/images/products/dubblin/smartlock-rect.jpg
+dubblin-smartlock-rectangular-380,,Smartlock Rectangular,dubblin,catalogue scan,,,,/images/products/dubblin/smartlock-rect.jpg
+dubblin-smartlock-round-1000,,Smartlock Round,dubblin,catalogue scan,,,,/images/products/dubblin/smartlock-round.jpg
+dubblin-smartlock-round-1500,,Smartlock Round,dubblin,catalogue scan,,,,/images/products/dubblin/smartlock-round.jpg
+dubblin-smartlock-round-2000,,Smartlock Round,dubblin,catalogue scan,,,,/images/products/dubblin/smartlock-round.jpg
+dubblin-smartlock-round-350,,Smartlock Round,dubblin,catalogue scan,,,,/images/products/dubblin/smartlock-round.jpg
+dubblin-snoofy,,Snoofy,dubblin,catalogue scan,,,,/images/products/dubblin/snoofy.jpg
+dubblin-soccer-270,,Soccer,dubblin,catalogue scan,,,,/images/products/dubblin/soccer.jpg
+dubblin-soccer-350,,Soccer,dubblin,catalogue scan,,,,/images/products/dubblin/soccer.jpg
+dubblin-stunning-800,,Stunning,dubblin,catalogue scan,,,,/images/products/dubblin/stunning.jpg
+dubblin-swing-350,,Swing,dubblin,catalogue scan,,,,/images/products/dubblin/swing.jpg
+dubblin-swing-500,,Swing,dubblin,catalogue scan,,,,/images/products/dubblin/swing.jpg
+dubblin-tango-1000,,Tango,dubblin,catalogue scan,,,,/images/products/dubblin/tango.jpg
+dubblin-tango-550,,Tango,dubblin,catalogue scan,,,,/images/products/dubblin/tango.jpg
+dubblin-tango-700,,Tango,dubblin,catalogue scan,,,,/images/products/dubblin/tango.jpg
+dubblin-treat,,Treat,dubblin,catalogue scan,,,,/images/products/dubblin/treat.jpg
+dubblin-trump-1000,,Trump,dubblin,catalogue scan,,,,/images/products/dubblin/trump.jpg
+dubblin-trump-750,,Trump,dubblin,catalogue scan,,,,/images/products/dubblin/trump.jpg
+dubblin-zoom-1000,,Zoom,dubblin,catalogue scan,,,,/images/products/dubblin/zoom.jpg
+dubblin-zoom-1200,,Zoom,dubblin,catalogue scan,,,,/images/products/dubblin/zoom.jpg
+dubblin-zoom-550,,Zoom,dubblin,catalogue scan,,,,/images/products/dubblin/zoom.jpg
+dubblin-zoom-750,,Zoom,dubblin,catalogue scan,,,,/images/products/dubblin/zoom.jpg
+10040087,10040087,Flash Mop Deluxe,pigeon,brand-sourced,B exact-name,Flash Mop Deluxe,https://www.stovekraft.com/pigeon/category/home-solutions/floor-mops/flash-mop-deluxe,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/10040087.webp
+1190010931,1190010931,INOX Plus Outer Lid,pigeon,no image,,,,
+16000019,16000019,Multi Purpose Kitchen Scissor,pigeon,brand-sourced,B exact-name,Multi Purpose Kitchen Scissor,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/multi-purpose-kitchen-scissor,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16000019.webp
+16000022,16000022,Shears Knife Set 3PC Black,pigeon,no image,,,,
+16000204,16000204,Lumino Emergency Lamp,pigeon,no image,,,,
+16000205,16000205,Illume Emergency Lamp,pigeon,no image,,,,
+16000251,16000251,Gleam Emergency Lamp,pigeon,no image,,,,
+16000252,16000252,Egnite Emergency Lamp,pigeon,no image,,,,
+16000283,16000283,Theia Emergency Lamp,pigeon,no image,,,,
+16000285,16000285,Helios Solar Lamp,pigeon,brand-sourced,B exact-name,Helios Solar Lamp,https://www.stovekraft.com/pigeon/category/home-solutions/emergency-lamps/helios-solar-lamp,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16000285.webp
+16000377,16000377,Vega Emergency Lamp,pigeon,no image,,,,
+16000605,16000605,Shine Desk Lamp,pigeon,no image,,,,
+16000663,16000663,Rigel Emergency Lamp,pigeon,no image,,,,
+16000664,16000664,Rigel Plus LED,pigeon,brand-sourced,B exact-name,Rigel Plus Led,https://www.stovekraft.com/pigeon/category/home-solutions/emergency-lamps/rigel-plus-led,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16000664.webp
+16000665,16000665,Capella Emergency Lamp,pigeon,no image,,,,
+16000666,16000666,Sirius Emergency Lamp,pigeon,no image,,,,
+16000780,16000780,6 Piece Knife Set,pigeon,brand-sourced,B exact-name,6 Piece Knife Set,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/6-piece-knife-set,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16000780.webp
+16000790,16000790,Illume Pro,pigeon,brand-sourced,B exact-name,Illume Pro,https://www.stovekraft.com/pigeon/category/home-solutions/emergency-lamps/illume-pro,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16000790.webp
+16000792,16000792,Lumino Pro,pigeon,brand-sourced,B exact-name,Lumino Pro,https://www.stovekraft.com/pigeon/category/home-solutions/emergency-lamps/lumino-pro,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16000792.webp
+16000816,16000816,SPL SS 3 Pcs Set (Kadai+Frypan+Sauce Pan),pigeon,no image,,,,
+16000830,16000830,Halo Desk / Study Lamp,pigeon,no image,,,,
+16000832,16000832,Pixo Desk Lamp,pigeon,no image,,,,
+16000833,16000833,TBlaze Table Lamp,pigeon,brand-sourced,B exact-name,Tblaze Table Lamp,https://www.stovekraft.com/pigeon/category/home-solutions/emergency-lamps/tblaze-table-lamp,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16000833.webp
+16000834,16000834,Bubble Desk Lamp,pigeon,no image,,,,
+16000840,16000840,Shears 4 PC Kitchen Tool Set,pigeon,brand-sourced,B exact-name,Shears 4 Pc Kitchen Tool Set,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/shears-4-pc-kitchen-tool-set,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16000840.webp
+16000841,16000841,Chopping Board (Basic),pigeon,no image,,,,
+16001957,16001957,Croma Therminox Galaxy 600ml Black,pigeon,no image,,,,
+16001958,16001958,Croma Therminox Galaxy 800ml Black,pigeon,no image,,,,
+16001959,16001959,Croma Therminox Olive 600ml Green,pigeon,no image,,,,
+16001968,16001968,Shears 3 PC Knife Set Elite,pigeon,no image,,,,
+16001990,16001990,Croma Therminox Olive 800ml Green,pigeon,no image,,,,
+16001991,16001991,Croma Therminox Navy 600ml Blue,pigeon,no image,,,,
+16001992,16001992,Croma Therminox Navy 800ml Blue,pigeon,no image,,,,
+16001993,16001993,Croma Therminox Coral 600ml Orange,pigeon,no image,,,,
+16001994,16001994,Croma Therminox Coral 800ml Orange,pigeon,no image,,,,
+16001995,16001995,Croma Therminox Azure 600ml Teal,pigeon,no image,,,,
+16001996,16001996,Croma Therminox Azure 800ml Teal,pigeon,no image,,,,
+16002016,16002016,Idly Maker 4 Plates,pigeon,brand-sourced,B exact-name,Idly Maker (4 Plates),https://www.stovekraft.com/pigeon/category/cooking/cookware/idly-maker-4-plates,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002016.webp
+16002017,16002017,Idly Maker 6 Plates,pigeon,brand-sourced,B exact-name,Idly Maker (6 Plates),https://www.stovekraft.com/pigeon/category/cooking/cookware/idly-maker-6-plates,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002017.webp
+16002018,16002018,Hue Insulated SS 500ml Purple,pigeon,no image,,,,
+16002019,16002019,Hue Insulated SS 750ml Purple,pigeon,no image,,,,
+16002040,16002040,Hue Insulated SS 500ml Yellow,pigeon,no image,,,,
+16002041,16002041,Hue Insulated SS 750ml Yellow,pigeon,no image,,,,
+16002042,16002042,Hue Insulated SS 500ml Blue,pigeon,no image,,,,
+16002043,16002043,Hue Insulated SS 750ml Blue,pigeon,no image,,,,
+16002044,16002044,Radiant Insulated SS 600ml Pink,pigeon,no image,,,,
+16002045,16002045,Radiant Insulated SS 800ml Pink,pigeon,no image,,,,
+16002046,16002046,Radiant Insulated SS 600ml Blue,pigeon,no image,,,,
+16002047,16002047,Radiant Insulated SS 800ml Blue,pigeon,no image,,,,
+16002048,16002048,Radiant Insulated SS 600ml Yellow,pigeon,no image,,,,
+16002049,16002049,Radiant Insulated SS 800ml Yellow,pigeon,no image,,,,
+16002088,16002088,Enora 500W 3 Jar,pigeon,no image,,,,
+16002092,16002092,Steelo Multi Kadai 3L,pigeon,no image,,,,
+16002094,16002094,"Steelo Kadai 10"" 2mm",pigeon,brand-sourced,C name+size,"Stainless Steel Steelo Kadai 10"" 2mm",https://www.stovekraft.com/pigeon/category/cooking/cookware/stainless-steel-steelo-kadai-10-2mm,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002094.webp
+16002095,16002095,"Steelo Kadai 12"" 2mm",pigeon,no image,,,,
+16002096,16002096,"Steelo Kadai 13"" 2mm",pigeon,no image,,,,
+16002097,16002097,"Steelo Kadai 12"" Sandwich Bottom",pigeon,brand-sourced,C name+size,"Stainless Steel Steelo Kadai 12"" with Sandwich Bottom",https://www.stovekraft.com/pigeon/category/cooking/cookware/stainless-steel-steelo-kadai-12-with-sandwich-bottom,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002097.webp
+16002098,16002098,"Steelo Kadai 13"" Sandwich Bottom",pigeon,no image,,,,
+16002099,16002099,"Steelo Kadai 14"" Sandwich Bottom",pigeon,no image,,,,
+16002100,16002100,"Steelo Kadai 15"" Sandwich Bottom",pigeon,no image,,,,
+16002101,16002101,"Steelo Kadai 16"" Sandwich Bottom",pigeon,no image,,,,
+16002102,16002102,"Steelo Sauce Pan 10"" Sandwich Bottom",pigeon,brand-sourced,C name+size,"Stainless Steel Steelo Sauce Pan 10"" with Sandwich Bottom",https://www.stovekraft.com/pigeon/category/cooking/cookware/stainless-steel-steelo-sauce-pan-10-with-sandwich-bottom,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002102.webp
+16002103,16002103,"Steelo Sauce Pan 11"" Sandwich Bottom",pigeon,no image,,,,
+16002104,16002104,"Steelo Sauce Pan 12"" Sandwich Bottom",pigeon,no image,,,,
+16002105,16002105,"Steelo Frypan 10"" Sandwich Bottom",pigeon,brand-sourced,C name+size,"Stainless Steel Steelo Frypan 10"" with Sandwich Bottom",https://www.stovekraft.com/pigeon/category/cooking/cookware/stainless-steel-steelo-frypan-10-with-sandwich-bottom,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002105.webp
+16002106,16002106,"Steelo Frypan 12"" Sandwich Bottom",pigeon,no image,,,,
+16002107,16002107,"Steelo Frypan 13"" Sandwich Bottom",pigeon,no image,,,,
+16002109,16002109,"Steelo Tope Set 10"" to 14""",pigeon,no image,,,,
+16002110,16002110,Steelo Steamer 20cm,pigeon,no image,,,,
+16002249,16002249,Thermo Cup 350ml Black,pigeon,no image,,,,
+16002253,16002253,Noodle Maker (Idiyappam),pigeon,brand-sourced,B exact-name,Noodle Maker (Idiyappam),https://www.stovekraft.com/pigeon/category/kitchen-utilities/idiyappam-maker/noodle-maker-idiyappam,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002253.webp
+16002255,16002255,Hand Steamer 1200W Blue,pigeon,no image,,,,
+16002256,16002256,Hand Steamer 1200W Pink,pigeon,no image,,,,
+16002259,16002259,Edge Flora SS Knife 5 inch,pigeon,brand-sourced,C name+size,SS Edge Flora  Knife Set 3 Pcs - 5 Inch,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/ss-edge-flora-knife-set-3-pcs-5-inch,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002259.webp
+16002260,16002260,Edge Flora SS Knife 6 inch,pigeon,brand-sourced,C name+size,SS Edge Flora Knife Set - 6 Inch,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/ss-edge-flora-knife-set-6-inch,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002260.webp
+16002261,16002261,Edge Carbon Knife Set 6 PC,pigeon,no image,,,,
+16002262,16002262,Thermo Cup 350ml White,pigeon,no image,,,,
+16002263,16002263,Thermo Cup 400ml White,pigeon,no image,,,,
+16002269,16002269,Hob 3 Burner Linea,pigeon,no image,,,,
+16002270,16002270,Thermo Cup 400ml Black,pigeon,brand-sourced,B exact-name,Thermo Cup - 400ml - Black,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/thermo-cup-400ml-black,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002270.webp
+16002273,16002273,Chopping Board Large,pigeon,no image,,,,
+16002280,16002280,Edge Ceramic Knife 4 inch,pigeon,no image,,,,
+16002281,16002281,Edge Ceramic Knife 5 inch,pigeon,no image,,,,
+16002282,16002282,Edge Ceramic Knife 6 inch,pigeon,brand-sourced,C name+size,Edge Ceramic Knife Set - 6 Inch,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/edge-ceramic-knife-set-6-inch,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002282.webp
+16002295,16002295,Edge Flora SS Knife Set 3PC 5 inch,pigeon,no image,,,,
+16002300,16002300,Hob 4 Burner Linea,pigeon,no image,,,,
+16002301,16002301,Hob 4 Burner XL Linea,pigeon,no image,,,,
+16002344,16002344,Therminox Luxe 500ml Brown-Red,pigeon,no image,,,,
+16002345,16002345,Therminox Luxe 750ml Brown-Red,pigeon,no image,,,,
+16002350,16002350,Therminox Luxe 500ml Blue-Green,pigeon,no image,,,,
+16002351,16002351,Therminox Luxe 750ml Blue-Green,pigeon,no image,,,,
+16002352,16002352,Therminox Luxe 500ml Black,pigeon,no image,,,,
+16002353,16002353,Therminox Luxe 750ml Black,pigeon,no image,,,,
+16002368,16002368,Silicone Kitchen Tool Set 12 PC,pigeon,no image,,,,
+16002372,16002372,Chopping Board Medium,pigeon,no image,,,,
+16002381,16002381,Edge 4 Pieces Knife Set,pigeon,brand-sourced,B exact-name,Edge 4 Pieces Knife Set,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/edge-4-pieces-knife-set,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002381.webp
+16002387,16002387,Nutri Master 400W 2 Jar,pigeon,no image,,,,
+16002388,16002388,Nutri Master 400W 3 Jar,pigeon,no image,,,,
+16002416,16002416,Aura,pigeon,no image,,,,
+16002417,16002417,Aura,pigeon,no image,,,,
+16002418,16002418,Aura,pigeon,no image,,,,
+16002431,16002431,Idly Maker 3 Plates,pigeon,brand-sourced,B exact-name,Idly Maker (3 Plates),https://www.stovekraft.com/pigeon/category/cooking/cookware/idly-maker-3-plates,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002431.webp
+16002432,16002432,Idly Maker 5 Plates,pigeon,brand-sourced,B exact-name,Idly Maker (5 Plates),https://www.stovekraft.com/pigeon/category/cooking/cookware/idly-maker-5-plates,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002432.webp
+16002441,16002441,Wooden Chopping Board Medium,pigeon,no image,,,,
+16002442,16002442,Wooden Chopping Board Large,pigeon,no image,,,,
+16002443,16002443,Chopping Board Small,pigeon,brand-sourced,B exact-name,Chopping Board Small,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/chopping-board-small,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002443.webp
+16002461,16002461,Clear Glass Water Bottle 750ml Blue,pigeon,brand-sourced,B exact-name,Clear Glass Water Bottle - 750ml Blue,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/clear-glass-water-bottle-750ml-blue,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002461.webp
+16002462,16002462,Clear Glass Water Bottle 750ml Grey,pigeon,brand-sourced,B exact-name,Clear Glass Water Bottle - 750ml Grey,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/clear-glass-water-bottle-750ml-grey,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002462.webp
+16002463,16002463,Clear Glass Water Bottle 750ml Yellow,pigeon,no image,,,,
+16002464,16002464,Clear Glass Water Bottle 750ml Red,pigeon,brand-sourced,B exact-name,Clear Glass Water Bottle - 750ml Red,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/clear-glass-water-bottle-750ml-red,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/16002464.webp
+16002469,16002469,Atom 500W 3 Jar,pigeon,no image,,,,
+16002480,16002480,Nyro 550W 4 Jar,pigeon,no image,,,,
+16002501,16002501,Hob 3 Burner TwinSpark,pigeon,no image,,,,
+16002540,16002540,Hob 3 Burner Slender LuxeSteel,pigeon,no image,,,,
+16002541,16002541,Hob 4 Burner XL Slender LuxeSteel,pigeon,no image,,,,
+16002551,16002551,Wet Grinder 2L Nutrova,pigeon,no image,,,,
+19000002,19000002,Duo 2 Burner SS,pigeon,no image,,,,
+19000003,19000003,Jumbo 2 Burner SS,pigeon,no image,,,,
+19000004,19000004,Trio 3 Burner SS,pigeon,no image,,,,
+19000005,19000005,123 — 3 Burner SS,pigeon,no image,,,,
+19000006,19000006,HOB 4 Burner SS,pigeon,no image,,,,
+19000012,19000012,Maxima Cute Auto 2 Burner SS,pigeon,no image,,,,
+19000013,19000013,Duo 2 Burner SS Auto,pigeon,no image,,,,
+19000014,19000014,Trio 3 Burner SS Auto,pigeon,no image,,,,
+19000015,19000015,Starter Kit 3.5L+5L+Fry Pan+Tawa+Kadai,pigeon,no image,,,,
+19000017,19000017,Deluxe Aluminium,pigeon,no image,,,,
+19000018,19000018,Deluxe Aluminium,pigeon,no image,,,,
+19000019,19000019,Deluxe Aluminium,pigeon,no image,,,,
+19000020,19000020,Deluxe Aluminium,pigeon,no image,,,,
+19000021,19000021,Deluxe Aluminium,pigeon,no image,,,,
+19000022,19000022,Deluxe Aluminium,pigeon,no image,,,,
+19000023,19000023,Deluxe Pan,pigeon,no image,,,,
+19000024,19000024,Deluxe Pan,pigeon,brand-sourced,C name+size,Deluxe Pan - 6 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/deluxe-pan-6-litre,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000024.webp
+19000025,19000025,Deluxe Calida 3L,pigeon,no image,,,,
+19000026,19000026,Deluxe Calida 5L IB,pigeon,no image,,,,
+19000029,19000029,Classic Aluminium,pigeon,no image,,,,
+19000030,19000030,Flat Tawa 250,pigeon,no image,,,,
+19000031,19000031,Flat Tawa 280,pigeon,brand-sourced,B exact-name,Flat Tawa 280,https://www.stovekraft.com/pigeon/category/cooking/cookware/flat-tawa-280,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000031.webp
+19000032,19000032,Flat Tawa 310,pigeon,no image,,,,
+19000033,19000033,Concave Tawa 260,pigeon,brand-sourced,B exact-name,Concave Tawa 260,https://www.stovekraft.com/pigeon/category/cooking/cookware/concave-tawa-260,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000033.webp
+19000034,19000034,Concave Tawa 280,pigeon,no image,,,,
+19000035,19000035,Kadai 150,pigeon,no image,,,,
+19000036,19000036,Kadai 200,pigeon,no image,,,,
+19000037,19000037,Kadai 300,pigeon,brand-sourced,B exact-name,Kadai 300,https://www.stovekraft.com/pigeon/category/cooking/cookware/kadai-300,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000037.webp
+19000039,19000039,Fry Pan 200,pigeon,no image,,,,
+19000040,19000040,Fry Pan 220,pigeon,no image,,,,
+19000041,19000041,Fry Pan 240,pigeon,brand-sourced,B exact-name,Fry Pan 240,https://www.stovekraft.com/pigeon/category/cooking/cookware/fry-pan-240,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000041.webp
+19000042,19000042,Fry Pan 260,pigeon,no image,,,,
+19000043,19000043,Fry Pan 280,pigeon,no image,,,,
+19000047,19000047,Deluxe Fry Pan 235,pigeon,no image,,,,
+19000048,19000048,Deluxe Fry Pan 255,pigeon,brand-sourced,B exact-name,Deluxe Fry Pan 255,https://www.stovekraft.com/pigeon/category/cooking/cookware/deluxe-fry-pan-255,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000048.webp
+19000049,19000049,Deluxe Fry Pan 275,pigeon,no image,,,,
+19000051,19000051,Appachetty with Lid,pigeon,no image,,,,
+19000052,19000052,Tadka Pan,pigeon,brand-sourced,B exact-name,Tadka Pan,https://www.stovekraft.com/pigeon/category/cooking/cookware/tadka-pan,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000052.webp
+19000054,19000054,Pathri Tawa 320,pigeon,brand-sourced,B exact-name,Pathri Tawa 320,https://www.stovekraft.com/pigeon/category/cooking/cookware/pathri-tawa-320,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000054.webp
+19000058,19000058,Multi Tawa 310,pigeon,brand-sourced,B exact-name,Multi Tawa 310,https://www.stovekraft.com/pigeon/category/cooking/cookware/multi-tawa-310,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000058.webp
+19000059,19000059,Biryani Pot,pigeon,catalogue scan,,,,/images/products/pigeon/biryani-pot.jpg
+19000060,19000060,Biryani Pot,pigeon,catalogue scan,,,,/images/products/pigeon/biryani-pot.jpg
+19000061,19000061,Biryani Pot,pigeon,brand-sourced,C name+size,Biryani Pot - 5 Litre,https://www.stovekraft.com/pigeon/category/cooking/cookware/biryani-pot-5-litre,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000061.webp
+19000062,19000062,Biryani Pot,pigeon,catalogue scan,,,,/images/products/pigeon/biryani-pot.jpg
+19000064,19000064,Biryani Pot,pigeon,catalogue scan,,,,/images/products/pigeon/biryani-pot.jpg
+19000065,19000065,Gravy Pot,pigeon,no image,,,,
+19000066,19000066,Gravy Pot,pigeon,brand-sourced,C name+size,Gravy Pot - 6 Litre,https://www.stovekraft.com/pigeon/category/cooking/cookware/gravy-pot-6-litre,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000066.webp
+19000067,19000067,Gravy Pot,pigeon,no image,,,,
+19000068,19000068,Gravy Pot,pigeon,no image,,,,
+19000081,19000081,Wondercast Flat Tawa 280,pigeon,brand-sourced,B exact-name,Wondercast Flat Tawa 280,https://www.stovekraft.com/pigeon/category/cooking/cookware/wondercast-flat-tawa-280,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000081.webp
+19000082,19000082,Wondercast Paniyarakkal 7 Rounds,pigeon,no image,,,,
+19000083,19000083,Wondercast Paniyarakkal 11 Rounds,pigeon,brand-sourced,B exact-name,Wondercast Paniyarakkal 11 Rounds,https://www.stovekraft.com/pigeon/category/cooking/cookware/wondercast-paniyarakkal-11-rounds,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000083.webp
+19000084,19000084,Wondercast Flat Tawa 280 IB,pigeon,no image,,,,
+19000092,19000092,Smart 3 Burner,pigeon,no image,,,,
+19000132,19000132,Smart 4 Burner,pigeon,no image,,,,
+19000150,19000150,Egnite 750W 3 Jar,pigeon,no image,,,,
+19000173,19000173,Titanium 3L Hard Anodised,pigeon,no image,,,,
+19000174,19000174,Titanium 5L Hard Anodised,pigeon,no image,,,,
+19000175,19000175,HA Multi Kadai 280,pigeon,no image,,,,
+19000178,19000178,Wondercast Long Handle Paniyarakkal 12 Rounds,pigeon,brand-sourced,B exact-name,Wondercast Long Handle Paniyarakkal - 12 Rounds,https://www.stovekraft.com/pigeon/category/cooking/cookware/wondercast-long-handle-paniyarakkal-12-rounds,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000178.webp
+19000181,19000181,Compact 2 Burner SS,pigeon,no image,,,,
+19000182,19000182,Maxima 2 Burner SS,pigeon,no image,,,,
+19000183,19000183,Carbon 2 Burner,pigeon,no image,,,,
+19000184,19000184,Carbon 3 Burner,pigeon,no image,,,,
+19000204,19000204,Amelia Hard Anodised,pigeon,brand-sourced,C name+size,Amelia Hard Anodised Pressure Cooker 5 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/amelia-hard-anodised-pressure-cooker-5-litre,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000204.webp
+19000244,19000244,Mini Combo 2L+3L Aluminium,pigeon,no image,,,,
+19000245,19000245,Splendour 750W 4 Jar,pigeon,no image,,,,
+19000246,19000246,Infinity 2 Burner SABAF,pigeon,no image,,,,
+19000248,19000248,Infinity 3 Burner SABAF,pigeon,no image,,,,
+19000250,19000250,Titanium Handi 2L Hard Anodised,pigeon,no image,,,,
+19000251,19000251,Titanium Handi 3L Hard Anodised,pigeon,no image,,,,
+19000252,19000252,Titanium Handi 5L Hard Anodised,pigeon,no image,,,,
+19000254,19000254,Storm IB 3L Aluminium,pigeon,no image,,,,
+19000256,19000256,Storm IB 5L Aluminium,pigeon,no image,,,,
+19000256-2,19000256,Steelo Multi Kadai 280 Sandwich Bottom,pigeon,no image,,,,
+19000257,19000257,Black Pearl MX7 750W 3 Jar,pigeon,no image,,,,
+19000315,19000315,Classic Lite 550W 2 Jar,pigeon,no image,,,,
+19000321,19000321,Storm Flat Tawa 250,pigeon,no image,,,,
+19000322,19000322,Storm Flat Tawa 280,pigeon,brand-sourced,B exact-name,Storm Flat Tawa 280,https://www.stovekraft.com/pigeon/category/cooking/cookware/storm-flat-tawa-280,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000322.webp
+19000323,19000323,Storm Fry Pan 175,pigeon,no image,,,,
+19000324,19000324,Storm Fry Pan 200,pigeon,brand-sourced,B exact-name,Storm Fry Pan 200,https://www.stovekraft.com/pigeon/category/cooking/cookware/storm-fry-pan-200,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000324.webp
+19000325,19000325,Storm Fry Pan 220,pigeon,no image,,,,
+19000326,19000326,Storm Fry Pan 240,pigeon,no image,,,,
+19000327,19000327,Storm Fry Pan 260,pigeon,no image,,,,
+19000328,19000328,Storm Kadai 200,pigeon,brand-sourced,B exact-name,Storm Kadai 200,https://www.stovekraft.com/pigeon/category/cooking/cookware/storm-kadai-200,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000328.webp
+19000329,19000329,Storm Flat Tawa 250 IB,pigeon,no image,,,,
+19000330,19000330,Storm Flat Tawa 280 IB,pigeon,brand-sourced,B exact-name,Storm Flat Tawa 280 IB,https://www.stovekraft.com/pigeon/category/cooking/cookware/storm-flat-tawa-280-ib,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000330.webp
+19000331,19000331,Storm Fry Pan 240 IB,pigeon,brand-sourced,B exact-name,Storm Fry Pan 240 IB,https://www.stovekraft.com/pigeon/category/cooking/cookware/storm-fry-pan-240-ib,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000331.webp
+19000332,19000332,Storm Fry Pan 260 IB,pigeon,no image,,,,
+19000333,19000333,Storm Kadai 200 IB,pigeon,no image,,,,
+19000334,19000334,Storm Kadai 300 IB,pigeon,no image,,,,
+19000336,19000336,INOX Outer Lid,pigeon,no image,,,,
+19000338,19000338,INOX Outer Lid,pigeon,brand-sourced,C name+size,Inox 5 Litre - Outer Lid,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/inox-5-litre-outer-lid,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000338.webp
+19000345,19000345,Infinity 4 Burner SABAF,pigeon,no image,,,,
+19000346,19000346,Especial 750W 3 Jar Grey,pigeon,no image,,,,
+19000400,19000400,Brio Plus 2100W,pigeon,brand-sourced,B exact-name,Brio Plus - 2100w,https://www.stovekraft.com/pigeon/category/cooking/induction-infrared-cooktops/brio-plus-2100w,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000400.webp
+19000425,19000425,Ayush 3 Burner,pigeon,no image,,,,
+19000450,19000450,Infinity 2 Burner SABAF Auto,pigeon,no image,,,,
+19000451,19000451,Infinity 3 Burner SABAF Auto,pigeon,no image,,,,
+19000452,19000452,Infinity 4 Burner SABAF Auto,pigeon,no image,,,,
+19000457,19000457,Ayush 2 Burner,pigeon,no image,,,,
+19000477,19000477,Glory 550W 3 Jar,pigeon,no image,,,,
+19000650,19000650,Rapido Sleek 2100W,pigeon,brand-sourced,B exact-name,Rapido Sleek - 2100w,https://www.stovekraft.com/pigeon/category/cooking/induction-infrared-cooktops/rapido-sleek-2100w,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000650.webp
+19000687,19000687,All-In-One Super Cooker 3L Hard Anodised,pigeon,no image,,,,
+19000689,19000689,All-In-One Super Cooker 5L Hard Anodised,pigeon,no image,,,,
+19000691,19000691,Super Cooker Value Pack 5L Hard Anodised,pigeon,no image,,,,
+19000694,19000694,Rapido Touch DX 2100W,pigeon,brand-sourced,B exact-name,Rapido Touch Dx - 2100w,https://www.stovekraft.com/pigeon/category/cooking/induction-infrared-cooktops/rapido-touch-dx-2100w,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000694.webp
+19000697,19000697,Anti Skid 2100W,pigeon,brand-sourced,B exact-name,Anti Skid - 2100w,https://www.stovekraft.com/pigeon/category/cooking/induction-infrared-cooktops/anti-skid-2100w,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000697.webp
+19000700,19000700,Smart 2 Burner,pigeon,no image,,,,
+19000745,19000745,Nonstick 4 PC Carlo,pigeon,brand-sourced,B exact-name,Nonstick 4 Pc- Carlo,https://www.stovekraft.com/pigeon/category/cooking/cookware/nonstick-4-pc-carlo,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000745.webp
+19000809,19000809,Duo Pack Flat Tawa 250 + Fry Pan 220,pigeon,brand-sourced,B exact-name,Duo Pack Flat Tawa 250 + Fry Pan 220,https://www.stovekraft.com/pigeon/category/cooking/cookware/duo-pack-flat-tawa-250-fry-pan-220,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000809.webp
+19000818,19000818,Duo Pack Flat Tawa + Fry Pan 200,pigeon,no image,,,,
+19000841,19000841,Chef Delight Gift Set 7 Pcs,pigeon,brand-sourced,B exact-name,Chef Delight Gift Set 7 Pcs,https://www.stovekraft.com/pigeon/category/cooking/cookware/chef-delight-gift-set-7-pcs,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000841.webp
+19000870,19000870,Favorite Duo Pack Flat Tawa 250 + Fry Pan 240,pigeon,brand-sourced,B exact-name,Favorite Duo Pack Flat Tawa 250 + Fry Pan 240,https://www.stovekraft.com/pigeon/category/cooking/cookware/favorite-duo-pack-flat-tawa-250-fry-pan-240,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000870.webp
+19000885,19000885,Classic Aluminium 5L IB,pigeon,no image,,,,
+19000909,19000909,Titanium Hard Anodised,pigeon,no image,,,,
+19000953,19000953,HA Titanium Concave Tawa 260,pigeon,no image,,,,
+19000978,19000978,Titanium Hard Anodised,pigeon,brand-sourced,C name+size,Titanium Hard Anodised Pressure Cooker 5 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/titanium-hard-anodised-pressure-cooker-5-litre,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19000978.webp
+19001022,19001022,Vita 4 PC Gift Set,pigeon,brand-sourced,B exact-name,Vita 4 Pc Gift Set,https://www.stovekraft.com/pigeon/category/cooking/cookware/vita-4-pc-gift-set,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001022.webp
+19001023,19001023,Alba 4 PC Gift Set,pigeon,brand-sourced,B exact-name,Alba 4 Pc Gift Set,https://www.stovekraft.com/pigeon/category/cooking/cookware/alba-4-pc-gift-set,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001023.webp
+19001069,19001069,Appachetty SP (without Lid),pigeon,no image,,,,
+19001080,19001080,Amelia Hard Anodised,pigeon,no image,,,,
+19001080-2,19001080,Mila 2L Aluminium,pigeon,no image,,,,
+19001081,19001081,Amelia Hard Anodised,pigeon,no image,,,,
+19001081-2,19001081,Mila 3L Aluminium,pigeon,no image,,,,
+19001082,19001082,Mila 5L Aluminium,pigeon,no image,,,,
+19001094,19001094,INOX Plus Outer Lid,pigeon,no image,,,,
+19001100,19001100,INOX SS Inner Lid,pigeon,no image,,,,
+19001101,19001101,INOX SS Inner Lid,pigeon,no image,,,,
+19001178,19001178,Hot Kettle 1.5L,pigeon,no image,,,,
+19001180,19001180,Handy Chopper XL 900ml,pigeon,brand-sourced,B exact-name,Handy Chopper Xl - 900 ML,https://www.stovekraft.com/pigeon/category/kitchen-utilities/choppers/handy-chopper-xl-900-ml,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001180.webp
+19001181,19001181,Handy Chopper Litre 650ml,pigeon,no image,,,,
+19001243,19001243,Ultimate 3 Burner SABAF,pigeon,no image,,,,
+19001285,19001285,Handy Chopper Pro Mini 400ml,pigeon,brand-sourced,B exact-name,Handy Chopper Pro Mini - 400 ML,https://www.stovekraft.com/pigeon/category/kitchen-utilities/choppers/handy-chopper-pro-mini-400-ml,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001285.webp
+19001286,19001286,Handy Chopper Pro Litre 650ml,pigeon,brand-sourced,B exact-name,Handy Chopper Pro Litre - 650 ML,https://www.stovekraft.com/pigeon/category/kitchen-utilities/choppers/handy-chopper-pro-litre-650-ml,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001286.webp
+19001287,19001287,Handy Chopper Pro XL 900ml,pigeon,brand-sourced,B exact-name,Handy Chopper Pro XL- 900 ML,https://www.stovekraft.com/pigeon/category/kitchen-utilities/choppers/handy-chopper-pro-xl-900-ml,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001287.webp
+19001296,19001296,Chopper Valve Pack Mini + XL,pigeon,no image,,,,
+19001302,19001302,Modern Cucina Coffee Maker,pigeon,brand-sourced,B exact-name,Modern Cucina Coffee Maker,https://www.stovekraft.com/pigeon/category/food-preparation/coffee-maker/modern-cucina-coffee-maker,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001302.webp
+19001327,19001327,INOX Outer Lid,pigeon,no image,,,,
+19001337,19001337,Casserole with Glass Lid 180,pigeon,no image,,,,
+19001338,19001338,Casserole with Glass Lid 200,pigeon,brand-sourced,B exact-name,Casserole with Glass Lid - 200,https://www.stovekraft.com/pigeon/category/cooking/cookware/casserole-with-glass-lid-200,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001338.webp
+19001339,19001339,Casserole with Glass Lid 220,pigeon,no image,,,,
+19001341,19001341,Radiant Infrared Cooktop 2200W,pigeon,no image,,,,
+19001345,19001345,Sleek 3 Burner,pigeon,brand-sourced,B exact-name,Sleek 3 Burner,https://www.stovekraft.com/pigeon/category/cooking/cooktops/sleek-3-burner,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001345.webp
+19001350,19001350,Casserole with Glass Lid 240,pigeon,no image,,,,
+19001352,19001352,Tornado Turbo Food Processor,pigeon,brand-sourced,B exact-name,Tornado Turbo Food Processor,https://www.stovekraft.com/pigeon/category/kitchen-utilities/choppers/tornado-turbo-food-processor,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001352.webp
+19001392,19001392,Venus 3 Burner (Jumbo),pigeon,no image,,,,
+19001418,19001418,INOX SS Inner Lid,pigeon,no image,,,,
+19001433,19001433,Sleek 2 Burner,pigeon,brand-sourced,B exact-name,Sleek 2 Burner,https://www.stovekraft.com/pigeon/category/cooking/cooktops/sleek-2-burner,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001433.webp
+19001435,19001435,Sleek 4 Burner,pigeon,brand-sourced,B exact-name,Sleek 4 Burner,https://www.stovekraft.com/pigeon/category/cooking/cooktops/sleek-4-burner,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001435.webp
+19001487,19001487,Wondercast Paniyarakkal 12 Rounds,pigeon,brand-sourced,B exact-name,Wondercast Paniyarakkal 12 Rounds,https://www.stovekraft.com/pigeon/category/cooking/cookware/wondercast-paniyarakkal-12-rounds,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001487.webp
+19001488,19001488,Multi Kadai — Red,pigeon,brand-sourced,B exact-name,Multi Kadai - Red,https://www.stovekraft.com/pigeon/category/cooking/cookware/multi-kadai-red,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001488.webp
+19001489,19001489,Multi Kadai — Yellow,pigeon,no image,,,,
+19001507,19001507,Joy Unlimited 1.8L DX Single Pot,pigeon,no image,,,,
+19001508,19001508,Joy Unlimited 1L DX Single Pot,pigeon,no image,,,,
+19001509,19001509,Joy Unlimited 1L Double Pot,pigeon,no image,,,,
+19001510,19001510,Joy Unlimited 2.8L DX Single Pot,pigeon,no image,,,,
+19001511,19001511,Joy Unlimited 1.8L Double Pot,pigeon,no image,,,,
+19001520,19001520,Multi Kadai — Grey,pigeon,brand-sourced,B exact-name,Multi Kadai - Grey,https://www.stovekraft.com/pigeon/category/cooking/cookware/multi-kadai-grey,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19001520.webp
+19001659,19001659,Ayush BLK 2 Burner,pigeon,no image,,,,
+19001663,19001663,Multi-Purpose Kessel 1.2L,pigeon,no image,,,,
+19001714,19001714,Femme 750W Blue 3 Jar,pigeon,no image,,,,
+19001766,19001766,Ruby 1.8L DX Single Pot,pigeon,no image,,,,
+19001767,19001767,Ruby 1L Double Pot,pigeon,no image,,,,
+19001889,19001889,Rio 3L Aluminium,pigeon,no image,,,,
+19001899,19001899,INOX Pro Outer Lid,pigeon,no image,,,,
+19001901,19001901,Especial 750W 3 Jar Red,pigeon,no image,,,,
+19001902,19001902,Elite Shine Tri-Ply SS,pigeon,no image,,,,
+19001903,19001903,Elite Shine Tri-Ply SS,pigeon,no image,,,,
+19001905,19001905,Elite Shine Tri-Ply SS,pigeon,no image,,,,
+19001910,19001910,INOX Pro Outer Lid,pigeon,no image,,,,
+19001920,19001920,Femme 750W Black 3 Jar,pigeon,no image,,,,
+19001922,19001922,Femme 750W Red 3 Jar,pigeon,no image,,,,
+19001932,19001932,Twin Pack Flat Tawa + Fry Pan 200 Mint Green,pigeon,no image,,,,
+19001933,19001933,Twin Pack Yellow,pigeon,no image,,,,
+19001934,19001934,Twin Pack Pink,pigeon,no image,,,,
+19001935,19001935,Twin Pack Blue,pigeon,no image,,,,
+19001936,19001936,Classic Aluminium,pigeon,no image,,,,
+19001937,19001937,Classic Aluminium,pigeon,no image,,,,
+19001951,19001951,Classic Aluminium,pigeon,no image,,,,
+19002174,19002174,Dosa Tawa 300,pigeon,no image,,,,
+19002176,19002176,Flat Tawa 250,pigeon,no image,,,,
+19002210,19002210,Essential 7 Pcs Gift Set,pigeon,no image,,,,
+19002212,19002212,Flash Mop,pigeon,no image,,,,
+19002686,19002686,INOX Hydra,pigeon,no image,,,,
+19002687,19002687,INOX Hydra Plus,pigeon,no image,,,,
+19002688,19002688,INOX Hydra,pigeon,no image,,,,
+19002689,19002689,INOX Hydra Plus,pigeon,no image,,,,
+19002696,19002696,Elite Tri-Ply Casserole,pigeon,no image,,,,
+19002697,19002697,Elite Tri-Ply Casserole,pigeon,no image,,,,
+19002698,19002698,Elite Tri-Ply Casserole,pigeon,no image,,,,
+19002699,19002699,Elite Tri-Ply Fry Pan,pigeon,no image,,,,
+19002700,19002700,Elite Tri-Ply Fry Pan,pigeon,no image,,,,
+19002701,19002701,Elite Tri-Ply Fry Pan,pigeon,no image,,,,
+19002702,19002702,Elite Tri-Ply Kadai,pigeon,no image,,,,
+19002703,19002703,Elite Tri-Ply Kadai,pigeon,no image,,,,
+19002704,19002704,Elite Tri-Ply Kadai,pigeon,no image,,,,
+19002705,19002705,Elite Tri-Ply Kadai,pigeon,no image,,,,
+19002706,19002706,Elite Tri-Ply Sauce Pan,pigeon,no image,,,,
+19002707,19002707,Elite Tri-Ply Sauce Pan,pigeon,no image,,,,
+19002708,19002708,Elite Tri-Ply Sauce Pan,pigeon,no image,,,,
+19002709,19002709,Elite Tri-Ply Tope,pigeon,no image,,,,
+19002710,19002710,Elite Tri-Ply Tope,pigeon,no image,,,,
+19002711,19002711,Elite Tri-Ply Tope,pigeon,no image,,,,
+19002712,19002712,Elite Tri-Ply Tope,pigeon,no image,,,,
+19002713,19002713,Elite Tri-Ply Tope,pigeon,no image,,,,
+19002717,19002717,Amelia Hard Anodised,pigeon,no image,,,,
+19002717-2,19002717,Mila 7L Aluminium,pigeon,no image,,,,
+19002863,19002863,Elite Shine Tri-Ply SS 2L+3L Combo,pigeon,no image,,,,
+19003043,19003043,Wondercast Flat Tawa 300,pigeon,no image,,,,
+19003050,19003050,Ayush 2 Burner Auto Ignition,pigeon,no image,,,,
+19003051,19003051,Ayush 3 Burner Auto Ignition,pigeon,no image,,,,
+19003055,19003055,Orb 750W 3 Jar,pigeon,no image,,,,
+19003057,19003057,Spark Double Walled Kettle 1.2L,pigeon,no image,,,,
+19003233,19003233,Comfy Dry Iron 1000W Grey,pigeon,no image,,,,
+19003238,19003238,Heavy Weight Iron Gale,pigeon,brand-sourced,B exact-name,Heavy Weight Iron - Gale,https://www.stovekraft.com/pigeon/category/home-solutions/garment-care/heavy-weight-iron-gale,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003238.webp
+19003244,19003244,X-Cord 1 Flex Box Red,pigeon,brand-sourced,B exact-name,X-cord 1 Flex Box - Red,https://www.stovekraft.com/pigeon/category/home-solutions/extension-chord/x-cord-1-flex-box-red,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003244.webp
+19003278,19003278,Eva Infrared Cooktop 2000W,pigeon,no image,,,,
+19003279,19003279,INOX Pro Inner Lid,pigeon,no image,,,,
+19003280,19003280,INOX Pro Inner Lid,pigeon,brand-sourced,C name+size,Inox Pro 5 Litre Inner Lid,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/inox-pro-5-litre-inner-lid,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003280.webp
+19003315,19003315,Heat N Treat SS Lunch Box 4 PC Black,pigeon,no image,,,,
+19003319,19003319,Zoom Chopper,pigeon,no image,,,,
+19003327,19003327,Chopper Utility Combo,pigeon,no image,,,,
+19003328,19003328,HA Titanium Concave Tawa 230 4mm,pigeon,no image,,,,
+19003329,19003329,HA Titanium Concave Tawa 260,pigeon,no image,,,,
+19003330,19003330,Zoom Chopper,pigeon,no image,,,,
+19003340,19003340,HA Titanium Concave Tawa 260,pigeon,no image,,,,
+19003365,19003365,X-Cord 1 Flex Box Grey,pigeon,brand-sourced,B exact-name,X-cord 1 Flex Box - Grey,https://www.stovekraft.com/pigeon/category/home-solutions/extension-chord/x-cord-1-flex-box-grey,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003365.webp
+19003390,19003390,Ayush 4 Burner,pigeon,no image,,,,
+19003408,19003408,HA Titanium Flat Kadai 250 IB SS Lid,pigeon,no image,,,,
+19003409,19003409,HA Titanium Flat Kadai 350 IB SS Lid,pigeon,no image,,,,
+19003410,19003410,HA Titanium Deep Kadai 150 SS Lid,pigeon,no image,,,,
+19003411,19003411,HA Titanium Deep Kadai 250 SS Lid,pigeon,no image,,,,
+19003412,19003412,HA Titanium Deep Kadai 350 SS Lid,pigeon,no image,,,,
+19003416,19003416,Healthy Fresh Glass Lunch Box 3 PC,pigeon,no image,,,,
+19003421,19003421,Elite Shine Tri-Ply SS 2L+3L+5L Combo,pigeon,no image,,,,
+19003446,19003446,Prime 1800W,pigeon,brand-sourced,B exact-name,Prime - 1800w,https://www.stovekraft.com/pigeon/category/cooking/induction-infrared-cooktops/prime-1800w,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003446.webp
+19003587,19003587,Titanium Easy Cook Combi 3L,pigeon,brand-sourced,C name+size,Titanium Easy Cook Combi 3L Idli Steamer,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/titanium-easy-cook-combi-3l-idli-steamer,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003587.webp
+19003595,19003595,Comfy Dry Iron 1000W Blue,pigeon,no image,,,,
+19003596,19003596,Comfy Dry Iron 1000W Pink,pigeon,no image,,,,
+19003597,19003597,Comfy Dry Iron 1000W Red,pigeon,no image,,,,
+19003615,19003615,INOX Sigma,pigeon,no image,,,,
+19003619,19003619,Healthifry Manual Air Fryer,pigeon,brand-sourced,B exact-name,Healthifry - Manual Air Fryer,https://www.stovekraft.com/pigeon/category/food-preparation/airfryer/healthifry-manual-air-fryer,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003619.webp
+19003620,19003620,3-in-1 Snack Maker Black (Toast+Grill+Waffle),pigeon,no image,,,,
+19003621,19003621,Panini Sandwich Griller Black,pigeon,brand-sourced,B exact-name,Panini Sandwich Griller Black,https://www.stovekraft.com/pigeon/category/food-preparation/sandwich-maker/panini-sandwich-griller-black,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003621.webp
+19003623,19003623,INOX Sigma,pigeon,brand-sourced,C name+size,Inox Sigma 5 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/inox-sigma-5-litre,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003623.webp
+19003629,19003629,Multi-Purpose Kessel 1.5L Blue,pigeon,no image,,,,
+19003634,19003634,Steam Iron 1600W Blue,pigeon,no image,,,,
+19003635,19003635,Steam Iron 1600W Pink,pigeon,no image,,,,
+19003636,19003636,Steam Iron 1600W Red,pigeon,no image,,,,
+19003637,19003637,Steam Iron 1600W Green,pigeon,no image,,,,
+19003638,19003638,Satin Steam Iron 2400W Black,pigeon,no image,,,,
+19003639,19003639,Satin Steam Iron 2400W Purple,pigeon,no image,,,,
+19003640,19003640,Satin Steam Iron 2400W Blue,pigeon,no image,,,,
+19003652,19003652,6 Pcs Casserole Set,pigeon,brand-sourced,B exact-name,6 Pcs Casserole Set,https://www.stovekraft.com/pigeon/category/cooking/cookware/6-pcs-casserole-set,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003652.webp
+19003653,19003653,Jumbo 2 Burner,pigeon,brand-sourced,B exact-name,Jumbo- 2 Burner,https://www.stovekraft.com/pigeon/category/cooking/cooktops/jumbo-2-burner-s,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003653.webp
+19003654,19003654,Jumbo 3 Burner,pigeon,no image,,,,
+19003655,19003655,Jumbo 4 Burner,pigeon,no image,,,,
+19003793,19003793,Ultra Fast Electric Chopper,pigeon,brand-sourced,B exact-name,Ultra Fast Electric Chopper,https://www.stovekraft.com/pigeon/category/kitchen-utilities/choppers/ultra-fast-electric-chopper,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003793.webp
+19003813,19003813,Pop Up Toaster Black,pigeon,brand-sourced,B exact-name,Pop Up Toaster Black,https://www.stovekraft.com/pigeon/category/food-preparation/pop-up-toaster/pop-up-toaster-black,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003813.webp
+19003814,19003814,Pop Up Toaster White,pigeon,brand-sourced,B exact-name,Pop Up Toaster White,https://www.stovekraft.com/pigeon/category/food-preparation/pop-up-toaster/pop-up-toaster-white,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003814.webp
+19003825,19003825,Excella 550W 3 Jar,pigeon,no image,,,,
+19003827,19003827,Hob 3 Burner Slender,pigeon,no image,,,,
+19003828,19003828,Hob 4 Burner Slender,pigeon,no image,,,,
+19003829,19003829,Hob 4 Burner XL Slender,pigeon,no image,,,,
+19003846,19003846,OTG with Rotisserie 20L,pigeon,no image,,,,
+19003848,19003848,OTG 25L with Rotisserie,pigeon,no image,,,,
+19003851,19003851,Treat SS Lunch Box 5 PC Black,pigeon,no image,,,,
+19003853,19003853,INOX Outer Lid,pigeon,no image,,,,
+19003854,19003854,INOX Outer Lid,pigeon,no image,,,,
+19003855,19003855,INOX Outer Lid,pigeon,no image,,,,
+19003856,19003856,INOX Outer Lid,pigeon,no image,,,,
+19003863,19003863,Sandwich Toaster Black,pigeon,brand-sourced,B exact-name,Sandwich Toaster Black,https://www.stovekraft.com/pigeon/category/food-preparation/sandwich-maker/sandwich-toaster-black,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003863.webp
+19003864,19003864,Sandwich Toaster White,pigeon,no image,,,,
+19003878,19003878,Elite Shine Tri-Ply SS,pigeon,no image,,,,
+19003882,19003882,Elegant BLDC Hair Dryer 2-in-1 1200W,pigeon,no image,,,,
+19003883,19003883,Elegant BLDC Hair Dryer 5-in-1 1600W,pigeon,no image,,,,
+19003884,19003884,Charm Women Trimmer 4-in-1,pigeon,brand-sourced,B exact-name,Charm Women Trimmer 4 In 1,https://www.stovekraft.com/pigeon/category/personal-care/trimmer/charm-women-trimmer-4-in-1,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003884.webp
+19003885,19003885,Fair Beard Trimmer,pigeon,brand-sourced,B exact-name,Fair Beard Trimmer,https://www.stovekraft.com/pigeon/category/personal-care/trimmer/fair-beard-trimmer,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003885.webp
+19003886,19003886,Strike Beard Trimmer,pigeon,brand-sourced,B exact-name,Strike Beard Trimmer,https://www.stovekraft.com/pigeon/category/personal-care/trimmer/strike-beard-trimmer,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003886.webp
+19003912,19003912,Grace Hair Dryer 1200W Blue,pigeon,no image,,,,
+19003913,19003913,Grace Hair Dryer 1200W Pink,pigeon,no image,,,,
+19003914,19003914,Glam Hair Dryer 1400W Blue,pigeon,no image,,,,
+19003915,19003915,Glam Hair Dryer 1400W Pink,pigeon,no image,,,,
+19003916,19003916,Glam Hair Dryer 1400W Purple,pigeon,no image,,,,
+19003917,19003917,Pretti Volumizer,pigeon,brand-sourced,B exact-name,Pretti Volumizer,https://www.stovekraft.com/pigeon/category/personal-care/hair-dryer/pretti-volumizer,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003917.webp
+19003918,19003918,Pigeon Magni 2-in-1 Volumizer,pigeon,no image,,,,
+19003942,19003942,Celebration 5 Pcs Gift Set,pigeon,brand-sourced,B exact-name,Celebration 5 Pcs Gift Set,https://www.stovekraft.com/pigeon/category/cooking/cookware/celebration-5-pcs-gift-set,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19003942.webp
+19003955,19003955,Crystal Glass Kettle 1.8L,pigeon,no image,,,,
+19003956,19003956,Swift Multi-Cook Kettle 1.5L Black,pigeon,no image,,,,
+19003957,19003957,Swift Plus Multi-Cook 1.5L Pink,pigeon,no image,,,,
+19003958,19003958,Swift Plus Multi-Cook 1.5L Blue,pigeon,no image,,,,
+19003959,19003959,Porta Travel Kettle 0.5L,pigeon,no image,,,,
+19003964,19003964,Healthifry+ Digital Air Fryer 4.2L,pigeon,no image,,,,
+19003969,19003969,Electric Oven 9L with Tray & Grill,pigeon,no image,,,,
+19003984,19003984,Hot Kettle Plus 1.5L Green,pigeon,no image,,,,
+19003985,19003985,Hot Kettle Plus 1.5L Blue,pigeon,no image,,,,
+19003987,19003987,Appachetty 220,pigeon,no image,,,,
+19003988,19003988,Curved Tawa 260,pigeon,no image,,,,
+19003989,19003989,Curved Tawa 280,pigeon,no image,,,,
+19004009,19004009,Shine Mop,pigeon,no image,,,,
+19004010,19004010,Shine Mop Deluxe,pigeon,brand-sourced,B exact-name,Shine Mop Deluxe,https://www.stovekraft.com/pigeon/category/home-solutions/floor-mops/shine-mop-deluxe,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004010.webp
+19004011,19004011,Sparkle Mop,pigeon,no image,,,,
+19004012,19004012,Sparkle Mop Deluxe,pigeon,brand-sourced,B exact-name,Sparkle Mop Deluxe,https://www.stovekraft.com/pigeon/category/home-solutions/floor-mops/sparkle-mop-deluxe,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004012.webp
+19004013,19004013,Flat Mop (Type 1),pigeon,no image,,,,
+19004014,19004014,Flat Mop (Type 2),pigeon,no image,,,,
+19004020,19004020,Kadai with Lid 200,pigeon,no image,,,,
+19004021,19004021,Kadai with Lid 240,pigeon,no image,,,,
+19004022,19004022,Kadai with Lid 260,pigeon,no image,,,,
+19004023,19004023,Fry Pan 200,pigeon,no image,,,,
+19004024,19004024,Fry Pan 220,pigeon,no image,,,,
+19004025,19004025,Fry Pan 240,pigeon,brand-sourced,B exact-name,Fry Pan 240,https://www.stovekraft.com/pigeon/category/cooking/cookware/fry-pan-240,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004025.webp
+19004026,19004026,Grill Pan 250,pigeon,no image,,,,
+19004027,19004027,Paniyarakkal 9 Round,pigeon,no image,,,,
+19004028,19004028,Double Side Tawa 310,pigeon,no image,,,,
+19004029,19004029,Bullet SDX 1000ml Red,pigeon,brand-sourced,B exact-name,Bullet Sdx - 1000ml - Red,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/bullet-sdx-1000ml-red,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004029.webp
+19004033,19004033,Casserole 220 with Lid Enamelled,pigeon,no image,,,,
+19004034,19004034,Casserole 240 with Lid Enamelled,pigeon,no image,,,,
+19004035,19004035,Fry Pan 200 Enamelled,pigeon,no image,,,,
+19004036,19004036,Fry Pan 220 Enamelled,pigeon,no image,,,,
+19004037,19004037,Fry Pan 250 Enamelled,pigeon,no image,,,,
+19004038,19004038,Grill Pan 250 Enamelled,pigeon,no image,,,,
+19004039,19004039,Kadai 200 with Lid Enamelled,pigeon,no image,,,,
+19004050,19004050,Cosmic 2 Burner (SABAF),pigeon,no image,,,,
+19004051,19004051,Cosmic 3 Burner (SABAF),pigeon,no image,,,,
+19004052,19004052,Cosmic 4 Burner (SABAF),pigeon,no image,,,,
+19004053,19004053,Elegance 3 Burner SS,pigeon,no image,,,,
+19004054,19004054,Elegance 4 Burner SS,pigeon,no image,,,,
+19004060,19004060,Kadai 240 with Lid Enamelled,pigeon,no image,,,,
+19004061,19004061,Kadai 260 with Lid Enamelled,pigeon,no image,,,,
+19004064,19004064,SS Vacuum Aqua 1000ml Silver,pigeon,brand-sourced,C name+size,SS Vacuum Bottle Aqua - 1000ml - Silver,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/ss-vacuum-bottle-aqua-1000ml-silver,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004064.webp
+19004089,19004089,Neo Portable Blender Blue,pigeon,no image,,,,
+19004180,19004180,Neo Portable Blender Green,pigeon,no image,,,,
+19004181,19004181,Neo Portable Blender Orange,pigeon,no image,,,,
+19004190,19004190,Grill Sandwich Maker Jumbo,pigeon,brand-sourced,B exact-name,Grill Sandwich Maker - Jumbo,https://www.stovekraft.com/pigeon/category/food-preparation/sandwich-maker/grill-sandwich-maker-jumbo,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004190.webp
+19004210,19004210,Ayush BLK 3 Burner,pigeon,no image,,,,
+19004211,19004211,Ayush XL 3 Burner,pigeon,no image,,,,
+19004214,19004214,Sandwich Griller Black,pigeon,brand-sourced,B exact-name,Sandwich Griller Black,https://www.stovekraft.com/pigeon/category/food-preparation/sandwich-maker/sandwich-griller-black,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004214.webp
+19004215,19004215,Sandwich Griller White,pigeon,no image,,,,
+19004230,19004230,Orb Alpine Green 750W 3 Jar,pigeon,no image,,,,
+19004231,19004231,Orb Royal Purple 750W 4 Jar,pigeon,no image,,,,
+19004246,19004246,Radiance Red M Emergency Lamp,pigeon,no image,,,,
+19004247,19004247,Radiance Orange M Emergency Lamp,pigeon,no image,,,,
+19004248,19004248,Radiance Green M Emergency Lamp,pigeon,no image,,,,
+19004249,19004249,Radiance Blue M Emergency Lamp,pigeon,no image,,,,
+19004250,19004250,Titan Heavy Weight Iron 1100W,pigeon,brand-sourced,B exact-name,Titan Heavy Weight Iron 1100w,https://www.stovekraft.com/pigeon/category/home-solutions/garment-care/titan-heavy-weight-iron-1100w,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004250.webp
+19004262,19004262,Astratouch 750W 3 Jar,pigeon,no image,,,,
+19004263,19004263,Mega Mixi 750W 3 Jar,pigeon,no image,,,,
+19004264,19004264,12L Air Fusion+ Air Fryer Oven,pigeon,no image,,,,
+19004265,19004265,Stella 1800W,pigeon,brand-sourced,B exact-name,Stella - 1800w,https://www.stovekraft.com/pigeon/category/cooking/induction-infrared-cooktops/stella-1800w,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004265.webp
+19004266,19004266,INOX Hydra Duo 900ml,pigeon,brand-sourced,B exact-name,Inox Hydra Duo - 900ml,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/inox-hydra-duo-900ml,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004266.webp
+19004267,19004267,Air Turbo Vacuum Cleaner 600W,pigeon,brand-sourced,B exact-name,Air Turbo Vacuum Cleaner 600w,https://www.stovekraft.com/pigeon/category/home-solutions/vaccuum-cleaner/air-turbo-vacuum-cleaner-600w,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004267.webp
+19004281,19004281,Nano Wave Solo Microwave 20L,pigeon,no image,,,,
+19004290,19004290,Stellar Bladeless Digital 5.5L,pigeon,no image,,,,
+19004291,19004291,INOX Pro Inner Lid,pigeon,no image,,,,
+19004292,19004292,INOX 1L SDX (Double Pot),pigeon,no image,,,,
+19004293,19004293,INOX 1.8L SDX (Double Pot),pigeon,no image,,,,
+19004302,19004302,Mabel Ceramic Cooker,pigeon,brand-sourced,C name+size,Mabel Ceramic Cooker 2 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/mabel-ceramic-cooker-2-litre,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004302.webp
+19004303,19004303,Mabel Ceramic Cooker,pigeon,brand-sourced,C name+size,Mabel Ceramic Cooker 3 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/mabel-ceramic-cooker-3-litre,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004303.webp
+19004304,19004304,Mabel Ceramic Cooker,pigeon,brand-sourced,C name+size,Mabel Ceramic Cooker 5 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/mabel-ceramic-cooker-5-litre,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004304.webp
+19004309,19004309,Travel Kettle 0.8L,pigeon,no image,,,,
+19004310,19004310,Multi Cooker 2.5L with Steamer,pigeon,no image,,,,
+19004316,19004316,All in 1 Grooming Kit 3-in-1,pigeon,brand-sourced,B exact-name,All In 1 Grooming Kit 3 In 1,https://www.stovekraft.com/pigeon/category/personal-care/trimmer/all-in-1-grooming-kit-3-in-1,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004316.webp
+19004317,19004317,All in 1 Grooming Kit 5-in-1,pigeon,brand-sourced,B exact-name,All In 1 Grooming Kit 5 In 1,https://www.stovekraft.com/pigeon/category/personal-care/trimmer/all-in-1-grooming-kit-5-in-1,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004317.webp
+19004318,19004318,Multi Purpose Body Trimmer,pigeon,brand-sourced,B exact-name,Multi Purpose Body Trimmer,https://www.stovekraft.com/pigeon/category/personal-care/trimmer/multi-purpose-body-trimmer,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004318.webp
+19004319,19004319,Elite Shine Tri-Ply SS,pigeon,no image,,,,
+19004320,19004320,Elite Shine Tri-Ply SS,pigeon,no image,,,,
+19004321,19004321,Therminox Aqua Plus 1000ml Black,pigeon,brand-sourced,B exact-name,Therminox Aqua Plus - 1000ml - Black,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/therminox-aqua-plus-1000ml-black,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004321.webp
+19004325,19004325,Infinity Gold 2 Burner SABAF,pigeon,no image,,,,
+19004326,19004326,Infinity Gold 3 Burner SABAF,pigeon,no image,,,,
+19004327,19004327,Infinity Gold 4 Burner SABAF,pigeon,no image,,,,
+19004337,19004337,Glo 1800W,pigeon,brand-sourced,B exact-name,Glo - 1800w,https://www.stovekraft.com/pigeon/category/cooking/induction-infrared-cooktops/glo-1800w,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004337.webp
+19004339,19004339,Healthifry+ 6.5L Orbitron,pigeon,brand-sourced,C name+size,Healthifry+ 6.5L Orbitron Airfryer,https://www.stovekraft.com/pigeon/category/food-preparation/airfryer/healthifry-65l-orbitron-airfryer,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004339.webp
+19004340,19004340,Joy Unlimited 0.6L Double Pot,pigeon,no image,,,,
+19004341,19004341,Joy Unlimited 4.2L DX Single Pot,pigeon,no image,,,,
+19004362,19004362,Air Turbo Vacuum Cleaner Pro 600W,pigeon,no image,,,,
+19004365,19004365,Electric Oven 14L with Tray & Grill,pigeon,no image,,,,
+19004367,19004367,INOX 1L DX,pigeon,no image,,,,
+19004368,19004368,INOX 1.8L DX,pigeon,no image,,,,
+19004374,19004374,Laze 4-in-1 Electric Body Massager,pigeon,brand-sourced,B exact-name,Laze 4 In 1 Electric Body Massager,https://www.stovekraft.com/pigeon/category/personal-care/massagers/laze-4-in-1-electric-body-massager,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004374.webp
+19004375,19004375,Ease 8-in-1 Electric Body Massager,pigeon,brand-sourced,B exact-name,Ease 8 In 1 Electric Body Massager,https://www.stovekraft.com/pigeon/category/personal-care/massagers/ease-8-in-1-electric-body-massager,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004375.webp
+19004376,19004376,Neura Leg & Calf Massager,pigeon,brand-sourced,B exact-name,Neura Leg & Calf Massager,https://www.stovekraft.com/pigeon/category/personal-care/massagers/neura-leg-calf-massager,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004376.webp
+19004377,19004377,Syna Leg Massager,pigeon,no image,,,,
+19004378,19004378,Vibe Gun Massager,pigeon,brand-sourced,B exact-name,Vibe Gun Massager,https://www.stovekraft.com/pigeon/category/personal-care/massagers/vibe-gun-massager,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004378.webp
+19004379,19004379,Nexa Gun Massager,pigeon,brand-sourced,B exact-name,Nexa Gun Massager,https://www.stovekraft.com/pigeon/category/personal-care/massagers/nexa-gun-massager,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004379.webp
+19004380,19004380,Pulse Massager,pigeon,brand-sourced,B exact-name,Pulse Massager,https://www.stovekraft.com/pigeon/category/personal-care/massagers/pulse-massager,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004380.webp
+19004384,19004384,Therminox Rush Sports Flask 750ml Pink,pigeon,no image,,,,
+19004385,19004385,Therminox Rush Sports Flask 1000ml Pink,pigeon,no image,,,,
+19004386,19004386,Therminox Rush Sports Flask 750ml Blue,pigeon,no image,,,,
+19004387,19004387,Therminox Rush Sports Flask 1000ml Blue,pigeon,no image,,,,
+19004388,19004388,Therminox Rush Sports Flask 750ml Green,pigeon,no image,,,,
+19004389,19004389,Therminox Rush Sports Flask 1000ml Green,pigeon,no image,,,,
+19004404,19004404,Joy Unlimited 0.6L DX Single Pot,pigeon,no image,,,,
+19004405,19004405,Theros Kettle 1.7L,pigeon,no image,,,,
+19004406,19004406,Evoke Kettle 1.8L White,pigeon,no image,,,,
+19004407,19004407,Evoke Kettle 1.8L Blue,pigeon,no image,,,,
+19004408,19004408,Evoke Kettle 1.8L Red,pigeon,no image,,,,
+19004409,19004409,Evoke Kettle 1.8L Yellow,pigeon,no image,,,,
+19004410,19004410,Flat Tawa 280,pigeon,brand-sourced,B exact-name,Flat Tawa 280,https://www.stovekraft.com/pigeon/category/cooking/cookware/flat-tawa-280,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004410.webp
+19004423,19004423,OTG 30L with Rotisserie,pigeon,no image,,,,
+19004424,19004424,Oven Toaster 40L with Rotisserie,pigeon,no image,,,,
+19004449,19004449,Nebula DX 60cm,pigeon,brand-sourced,B exact-name,Nebula Dx 60 CM,https://www.stovekraft.com/pigeon/category/cooking/chimneys/nebula-dx-60-cm,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004449.webp
+19004461,19004461,Therminox Aqua Plus 1000ml Green,pigeon,brand-sourced,B exact-name,Therminox Aqua Plus - 1000ml - Green,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/therminox-aqua-plus-1000ml-green,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004461.webp
+19004463,19004463,Electra Smart Cook EPC,pigeon,no image,,,,
+19004464,19004464,Electra Smart Cook EPC,pigeon,brand-sourced,C name+size,Electra - Smart Cook Epc 6 Litre,https://www.stovekraft.com/pigeon/category/food-preparation/rice-cooker/electra-smart-cook-epc-6-litre,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004464.webp
+19004480,19004480,Blitz Water Bottle 975ml Blue,pigeon,brand-sourced,B exact-name,Blitz Water Bottle 975ml - Blue,https://www.stovekraft.com/pigeon/category/kitchen-utilities/water-bottles/blitz-water-bottle-975ml-blue,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004480.webp
+19004482,19004482,Blitz Water Bottle 975ml Black,pigeon,no image,,,,
+19004489,19004489,Stark Plus Olive Green 1000ml,pigeon,no image,,,,
+19004490,19004490,Stark Plus Navy 1000ml Blue,pigeon,no image,,,,
+19004493,19004493,Pure Slow Juicer 250W,pigeon,brand-sourced,B exact-name,Pure Slow Juicer - 250 W,https://www.stovekraft.com/pigeon/category/food-preparation/cold-press-juicer/pure-slow-juicer-250-w,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004493.webp
+19004499,19004499,Bloom Hair Dryer 1000W Blue,pigeon,no image,,,,
+19004500,19004500,Bloom Hair Dryer 1000W Pink,pigeon,no image,,,,
+19004503,19004503,Relax Scalp Massager,pigeon,brand-sourced,B exact-name,Relax Scalp Massager,https://www.stovekraft.com/pigeon/category/personal-care/massagers/relax-scalp-massager,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004503.webp
+19004505,19004505,Quick Electric Chopper 300W,pigeon,no image,,,,
+19004506,19004506,Rapid Electric Chopper 500W,pigeon,no image,,,,
+19004506-2,19004506,Sharp Electric Chopper 600W 4-Speed,pigeon,no image,,,,
+19004513,19004513,OTG Air Fryer 25L with Rotisserie,pigeon,no image,,,,
+19004516,19004516,Mini Combi OL IB SS 3.5L+5L,pigeon,no image,,,,
+19004521,19004521,Healthifry+ Digital Air Fryer 3.3L,pigeon,brand-sourced,C name+size,Healthifry + Digital Airfryer Air Fryer 3.3L,https://www.stovekraft.com/pigeon/category/food-preparation/airfryer/healthifry-digital-airfryer-air-fryer-33l,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004521.webp
+19004546,19004546,Sharp 5 Inch Knife,pigeon,brand-sourced,B exact-name,Sharp 5 Inch Knife,https://www.stovekraft.com/pigeon/category/kitchen-utilities/kitchen-tools/sharp-5-inch-knife,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004546.webp
+19004547,19004547,Edge Cutesy 5 Inch Knife,pigeon,no image,,,,
+19004550,19004550,Flexi 9-in-1 Electric Scrubber,pigeon,no image,,,,
+19004560,19004560,INOX Pro with Steamer 1L DX Yellow,pigeon,brand-sourced,B exact-name,Inox Pro with Steamer 1 Ldx Yellow,https://www.stovekraft.com/pigeon/category/food-preparation/rice-cooker/inox-pro-with-steamer-1-ldx-yellow,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004560.webp
+19004561,19004561,INOX Pro with Steamer 1L DX Pink,pigeon,brand-sourced,B exact-name,Inox Pro with Steamer 1 Ldx Pink,https://www.stovekraft.com/pigeon/category/food-preparation/rice-cooker/inox-pro-with-steamer-1-ldx-pink,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004561.webp
+19004562,19004562,INOX Pro with Steamer 1L DX Grey,pigeon,brand-sourced,B exact-name,Inox Pro with Steamer 1 Ldx Grey,https://www.stovekraft.com/pigeon/category/food-preparation/rice-cooker/inox-pro-with-steamer-1-ldx-grey,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004562.webp
+19004563,19004563,INOX Pro with Steamer 1.8L Double Pot Yellow,pigeon,no image,,,,
+19004564,19004564,INOX Pro with Steamer 1.8L Double Pot Pink,pigeon,no image,,,,
+19004565,19004565,INOX Pro with Steamer 1.8L Double Pot Grey,pigeon,no image,,,,
+19004590,19004590,Inner Lid Triply,pigeon,no image,,,,
+19004591,19004591,Inner Lid Triply,pigeon,brand-sourced,C name+size,Inner Lid Triply 5 Litre,https://www.stovekraft.com/pigeon/category/cooking/pressure-cookers/inner-lid-triply-5-litre,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/19004591.webp
+19004598,19004598,Black Diamond,pigeon,no image,,,,
+19004599,19004599,Black Diamond,pigeon,no image,,,,
+19004600,19004600,Atmos,pigeon,no image,,,,
+19004601,19004601,Atmos,pigeon,no image,,,,
+19004602,19004602,Atmos,pigeon,no image,,,,
+19004603,19004603,Xtreme DLX,pigeon,no image,,,,
+19004604,19004604,Xtreme DLX,pigeon,no image,,,,
+19004605,19004605,Xtreme DLX,pigeon,no image,,,,
+19004621,19004621,Nutri Blender 600W 2 Jar,pigeon,no image,,,,
+19004645,19004645,AllClad Tri-Ply,pigeon,no image,,,,
+19004646,19004646,AllClad Tri-Ply,pigeon,no image,,,,
+19004647,19004647,AllClad Tri-Ply,pigeon,no image,,,,
+19004648,19004648,AllClad Tri-Ply,pigeon,no image,,,,
+19004649,19004649,AllClad Tri-Ply,pigeon,no image,,,,
+19004650,19004650,AllClad Tri-Ply,pigeon,no image,,,,
+19004651,19004651,AllClad Tri-Ply,pigeon,no image,,,,
+19004657,19004657,Glacier,pigeon,no image,,,,
+19004858,19004858,Glacier,pigeon,no image,,,,
+1900645,1900645,Handy Chopper Mini 400ml,pigeon,brand-sourced,B exact-name,Handy Chopper Mini - 400 ML,https://www.stovekraft.com/pigeon/category/kitchen-utilities/choppers/handy-chopper-mini-400-ml,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/1900645.webp
+B12SB,B12SB,Venus Serving Bowl,yera,brand-sourced,A code-token,"YERA Venus Glass Bowl B12SB, 350ml, Set of 6 Pack",https://www.yera.com/products/yera-venus-glass-bowl-b12sb-350ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/B12SB.jpg
+B14FH(2)+B7FH(3),B14FH(2)+B7FH(3),Indiana Steel Handi Combo – 5pcs,yera,no image,,,,
+B14FH(2)+B7FH(4),B14FH(2)+B7FH(4),Felixa Handi Combination – 6pcs,yera,no image,,,,
+B16FL,B16FL,Polo Bowl,yera,brand-sourced,A code-token,"YERA Polo Glass Bowl B16FL, 435ml, 1/2/4 pcs Pack",https://www.yera.com/products/yera-polo-glass-bowl-b16fl-435ml-1-2-4-pcs-pack-2,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/B16FL.jpg
+B16FL(2)+BM120(4),B16FL(2)+BM120(4),Celebration Party Set – 4pcs,yera,no image,,,,
+B16FL+B35FL+B55FL,B16FL+B35FL+B55FL,Polo Combo – 3 Bowl Nested Set,yera,no image,,,,
+B35FL,B35FL,Polo Bowl,yera,brand-sourced,A code-token,"YERA Polo Glass Bowl B35FL, 990ml, 1 pc Pack",https://www.yera.com/products/yera-polo-glass-bowl-b35fl-990ml-1-pc-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/B35FL.jpg
+B35PC+B7PC,B35PC+B7PC,Delicia Set – 7pcs,yera,no image,,,,
+B35SB,B35SB,Venus Serving Bowl,yera,brand-sourced,A code-token,"YERA Venus Glass Bowl B35SB, 975ml, 1 pc Pack",https://www.yera.com/products/yera-venus-glass-bowl-b35sb-975ml-1-pc-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/B35SB.jpg
+B55FL,B55FL,Polo Bowl,yera,brand-sourced,A code-token,"YERA Polo Glass Bowl B55FL, 1580ml, 1 pc Pack",https://www.yera.com/products/yera-polo-glass-bowl-b55fl-1580ml-1-pc-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/B55FL.jpg
+B6FL,B6FL,Lumino Bowl – 170ml,yera,catalogue scan,,,,/images/products/yera/B6FL.jpg
+B7FH,B7FH,Jina Jar – 195ml (Steel Lid),yera,brand-sourced,A code-token,"YERA Felixa Glass Storage Jar B7FH, 195ml, Set of 2/3 Pack – Airtight Glass Spice & Storage Jar",https://www.yera.com/products/yera-felixa-glass-storage-jar-b7fh-195ml-set-of-2-3-pack-airtight-glass-spice-storage-jar,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/B7FH.jpg
+B7FH-PC,B7FH-PC,Felixa Jar – 195ml (Plastic Lid),yera,no image,,,,
+B7PC,B7PC,Pacifica Bowl – 220ml,yera,brand-sourced,A code-token,YERA Pacifica Glass Bowl B7PC – Elegant Serving & Dessert Bowls,https://www.yera.com/products/yera-pacifica-glass-bowl-b7pc-elegant-serving-dessert-bowls,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/B7PC.jpg
+B7SB,B7SB,Venus Serving Bowl,yera,brand-sourced,A code-token,"YERA Venus Glass Bowl B7SB, 195ml, Set of 6 Pack",https://www.yera.com/products/yera-venus-glass-bowl-b7sb-195ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/B7SB.jpg
+B9FL(2)+CT6(6),B9FL(2)+CT6(6),Harmony Tea Party Set – 8pcs,yera,no image,,,,
+B9FL-LID,B9FL-LID,Polo Bowl w/Lid – 265ml,yera,no image,,,,
+B9OFL-C,B9OFL-C,Alpine Crystal Bowl – 195ml,yera,no image,,,,
+BC08-M11,BC08-M11,Drona Mixing Bowl – 230ml,yera,suppressed (priced scan),,,,
+BM10PD,BM10PD,Fructose Beer Mug – 290ml,yera,brand-sourced,A code-token,"YERA Fructose Beer/Juice Mug BM10PD, 290ml, Set of 6 Pack",https://www.yera.com/products/yera-fructose-beer-juice-mug-bm10pd-290ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/BM10PD.jpg
+BM120,BM120,Auburn Lake Mug – 375ml,yera,brand-sourced,A code-token,"YERA Auburn Beer/Juice Glass BM120, 375ml, Set of 2/6 Pack",https://www.yera.com/products/yera-auburn-beer-juice-glass-bm120-375ml-set-of-2-6-pack-1,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/BM120.jpg
+BM12A,BM12A,Auburn Lake Mug A – 325ml,yera,brand-sourced,A code-token,"YERA Auburn Lake Mug BM12A, 325ml, Set of 6 Pack",https://www.yera.com/products/yera-auburn-lake-mug-bm12a-325ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/BM12A.jpg
+BM335,BM335,Stylo Mug – 335ml (LSR),yera,brand-sourced,A code-token,"YERA Stylo Glass Mug BM335, 335ml, Set of 6 Pack",https://www.yera.com/products/yera-stylo-glass-mug-bm335-335ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/BM335.jpg
+BM345,BM345,Bistro Beer Mug – 345ml,yera,brand-sourced,A code-token,"YERA Bistro Glass Mug BM345, 345ml, Set of 6 Pack",https://www.yera.com/products/yera-bistro-glass-mug-bm345-345ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/BM345.jpg
+BM350,BM350,Stylo Mug,yera,brand-sourced,A code-token,"YERA Stylo Glass Mug BM350, 350ml, Set of 2/6 Pack",https://www.yera.com/products/yera-stylo-glass-mug-bm350-350ml-set-of-2-6-pack-1,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/BM350.jpg
+BM355,BM355,Stylo Mug,yera,brand-sourced,A code-token,"YERA Stylo Glass Mug BM355, 355ml, Set of 6 Pack",https://www.yera.com/products/yera-stylo-glass-mug-bm355-355ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/BM355.jpg
+BM355-M32,BM355-M32,Stylo Mug M32 – 355ml,yera,brand-sourced,A code-token,"YERA Stylo Glass Mug BM355 M32, 355ml, Set of 2 Pack",https://www.yera.com/products/yera-stylo-glass-mug-bm355-m32-355ml-set-of-2-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/BM355-M32.jpg
+BM360,BM360,Bistro Mug – 360ml,yera,brand-sourced,A code-token,"YERA Bistro Glass Mug BM360, 360ml, Set of 2/6 Pack",https://www.yera.com/products/yera-bistro-glass-mug-bm360-360ml-set-of-2-6-pack-1,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/BM360.jpg
+BP08-M25,BP08-M25,Galaxy Serving Bowl – 230ml,yera,suppressed (priced scan),,,,
+BS401,BS401,Freezowarm Bowl,yera,no image,,,,
+BS801,BS801,Freezowarm Bowl,yera,brand-sourced,A code-token,"YERA Freezowarm Bowl BS801, 785ml, 1 pc Pack",https://www.yera.com/products/yera-brooklyn-glass-bs801-785ml-1-pc-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/BS801.jpg
+BS802,BS802,Freezowarm Bowl,yera,brand-sourced,A code-token,"YERA Freezowarm Large Bowl BS802, 1340ml, 1 pc Pack",https://www.yera.com/products/yera-brooklyn-large-glass-bs802-1340ml-1-pc-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/BS802.jpg
+CM225,CM225,Irish Coffee Mug – 225ml,yera,brand-sourced,A code-token,"YERA Irish Glass Mug CM225, 225ml, Set of 6 Pack",https://www.yera.com/products/yera-irish-glass-mug-cm225-225ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/CM225.jpg
+CS4.CSFD/DD,CS4.CSFD/DD,Comfort Mug/Cup,yera,no image,,,,
+CS6FD,CS6FD,Comfort Mug/Cup,yera,no image,,,,
+CS6MO-Plain,CS6MO-Plain,Comfort Plain Mug/Cup,yera,suppressed (priced scan),,,,
+CT4.5U,CT4.5U,Cosmos Mug/Cup,yera,brand-sourced,A code-token,"YERA Cosmos Glass Tea Cup CT4.5U, 125ml, Set of 6 Pack",https://www.yera.com/products/yera-cosmos-glass-tea-cup-ct45u-125ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/CT4.5U.jpg
+CT4.5U(6)+B6FL(6),CT4.5U(6)+B6FL(6),Cafetina Mini Tea Party Set – 12pcs,yera,no image,,,,
+CT4FS,CT4FS,Comfort Mug/Cup,yera,brand-sourced,A code-token,"YERA Comfort Glass Cup CT4FS, 120ml, Set of 6 Pack",https://www.yera.com/products/yera-comfort-glass-cup-ct4fs-120ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/CT4FS.jpg
+CT4FS-plain,CT4FS-plain,Comfort Plain Mug/Cup,yera,brand-sourced,A code-token,"YERA Comfort Glass Tea CT4FS - Plain, 110ml, Set of 6 Pack",https://www.yera.com/products/yera-comfort-glass-tea-ct4fs-plain-225ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/CT4FS-plain.jpg
+CT6,CT6,Cosmos Mug/Cup,yera,suppressed (priced scan),,,,
+CT8B,CT8B,Mocha Mug/Cup – 225ml,yera,brand-sourced,A code-token,"YERA Mocha Glass Tea/Coffee Mug CT8B, 225ml, Set of 6 Pack",https://www.yera.com/products/yera-mocha-glass-tea-coffee-mug-ct8b-225ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/CT8B.jpg
+CT9,CT9,Cosmos Mug/Cup,yera,suppressed (priced scan),,,,
+CT9(6)+B9OFL(4),CT9(6)+B9OFL(4),Morning Mist Tea Snax Set – 10pcs,yera,no image,,,,
+CT9-D1,CT9-D1,Cosmos Design 1 Mug/Cup – 250ml,yera,brand-sourced,A code-token,"YERA Cosmos Glass Cup CT9-D1, 250ml, Set of 6 Pack",https://www.yera.com/products/yera-cosmos-glass-cup-ct9-d1-250ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/CT9-D1.jpg
+CT9-D2,CT9-D2,Cosmos Design 2 Mug/Cup – 250ml,yera,brand-sourced,A code-token,"YERA Cosmos Glass Cup CT9-D2, 250ml, Set of 6 Pack",https://www.yera.com/products/yera-cosmos-glass-cup-ct9-d2-250ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/CT9-D2.jpg
+G330-G,G330-G,Goblet Wine Glass – 330ml (2pcs GP),yera,no image,,,,
+G330-L,G330-L,Goblet Wine Glass – 330ml (6pcs LSR),yera,no image,,,,
+GS1700,GS1700,Volga Jug – 1700ml,yera,brand-sourced,A code-token,"YERA Volga Glass Jug GS1700, 1700ml – Water & Juice Serving Jug",https://www.yera.com/products/yera-volga-glass-jug-gs1700-210ml-water-juice-serving-jug,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/GS1700.jpg
+GS1700+TS8PO,GS1700+TS8PO,Tulip Lemon Set – 7pcs,yera,no image,,,,
+IBR-0850-360,IBR-0850-360,Eva Jar 850ml,yera,no image,,,,
+IBR-0850-360-1,IBR-0850-360-1,Eva Jar 850ml,yera,no image,,,,
+IBR-0880-360,IBR-0880-360,Olivia Jar 880ml,yera,no image,,,,
+IC4IF,IC4IF,Antartic Ice Cream Bowl – 125ml,yera,brand-sourced,A code-token,YERA Antarctic Glass Ice Cream Bowl IC4IF – Dessert & Ice Cream Serving Bowl,https://www.yera.com/products/yera-antarctic-glass-ice-cream-bowl-ic4if-dessert-ice-cream-serving-bowl,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/IC4IF.jpg
+ICF-320-215,ICF-320-215,Shell Jar – 320ml,yera,brand-sourced,A code-token,"YERA Shell Glass Storage Jar ICF 320-215, 320ml, Set of 2 Pack – Airtight Kitchen Storage Jar",https://www.yera.com/products/yera-shell-glass-storage-jar-icf-320-215-320ml-set-of-2-pack-airtight-kitchen-storage-jar,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/ICF-320-215.jpg
+ICR-0775-0415,ICR-0775-0415,Diana Jar 750ml,yera,no image,,,,
+ICV7-M23,ICV7-M23,Iceberg Ice Cream Bowl – 100ml,yera,brand-sourced,A code-token,YERA Iceberg Glass Ice Cream Bowl ICV7-M23 – Multipurpose Dessert Bowl,https://www.yera.com/products/yera-iceberg-glass-ice-cream-bowl-icv7-m23-multipurpose-dessert-bowl,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/ICV7-M23.jpg
+IJR-0760-0440-B,IJR-0760-0440-B,Viviana Jar 760ml – Blue,yera,no image,,,,
+IJR-0760-0440-G,IJR-0760-0440-G,Gracia Jar 760ml,yera,no image,,,,
+IJR-0760-0440-O,IJR-0760-0440-O,Viviana Jar 760ml – Peach,yera,no image,,,,
+IJR-0760-0440-P,IJR-0760-0440-P,Viviana 1pc 760ml,yera,no image,,,,
+IJR-0760-0440-W,IJR-0760-0440-W,Viviana Jar 760ml – White,yera,no image,,,,
+IPR-880-360,IPR-880-360,Olivia Jar 880ml,yera,no image,,,,
+ISR-790-415,ISR-790-415,Sierra Jar 780ml,yera,no image,,,,
+ISS-0495-0380,ISS-0495-0380,Magnus Mason Jar – 440ml,yera,brand-sourced,A code-token,"YERA Magnus Red Mason Jar ISS-0495-0380, 440ml, Set of 1 Pack",https://www.yera.com/products/yera-magnus-red-mason-jar-iss-0495-0380-440ml-set-of-1-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/ISS-0495-0380.jpg
+JC-250,JC-250,Spice Jar – 285ml,yera,brand-sourced,A code-token,"YERA Spice Jar JC-250, 285ml, Set of 2 Pack - Masala & Kitchen Storage Jars",https://www.yera.com/products/yera-spice-jar-jc-250-285ml-set-of-2-pack-masala-kitchen-storage-jars,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JC-250.jpg
+JH500,JH500,Storage Jar,yera,no image,,,,
+JH750,JH750,Storage Jar,yera,no image,,,,
+JM10A,JM10A,Fructose Hexagon Mug – 260ml,yera,brand-sourced,A code-token,"YERA Fructose Juice Mug JM10A, 260ml, Set of 6 Pack",https://www.yera.com/products/yera-fructose-juice-mug-jm10a-260ml-set-of-6-pack-1,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JM10A.jpg
+JM10M20,JM10M20,Fructose M20 Mug – 300ml,yera,no image,,,,
+JM10M21,JM10M21,Fructose M21 Mug – 300ml,yera,no image,,,,
+JR-1,JR-1,Aahar Jar,yera,catalogue scan,,,,/images/products/yera/JR-1.jpg
+JR-1.5,JR-1.5,Aahar Jar,yera,brand-sourced,A code-token,"YERA Aahar Glass Storage Jars JR-1.5, 1830ml",https://www.yera.com/products/yera-aahar-glass-storage-jars-jr-15-1830ml-12-pcs-bulk-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JR-1.5.jpg
+JR-120,JR-120,Deluxe Aahar Jar – 3.36L,yera,brand-sourced,A code-token,"YERA Deluxe Aahar Glass Jars JR-120, 3360ml",https://www.yera.com/products/yera-deluxe-aahar-glass-jars-jr-120-3360ml-6-pcs-bulk-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JR-120.jpg
+JR-150,JR-150,Aahar Jar,yera,brand-sourced,A code-token,"YERA Aahar Glass Storage Jars JR-150, 140ml",https://www.yera.com/products/yera-aahar-glass-storage-jars-jr-150-140ml,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JR-150.jpg
+JR-1ST,JR-1ST,Steelex Jar,yera,brand-sourced,A code-token,"YERA Steelex Glass Jar JR-1ST, 1220ml, Set of 2 Pack",https://www.yera.com/products/yera-steelex-glass-jar-jr-1st-1220ml-set-of-2-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JR-1ST.jpg
+JR-2,JR-2,Aahar Jar,yera,suppressed (priced scan),,,,
+JR-250,JR-250,Zaika Jar,yera,brand-sourced,A code-token,"YERA Zaika Glass Storage Jars JR-250, 300ml",https://www.yera.com/products/yera-zaika-glass-storage-jars-jr-250-300ml-60-pcs-bulk-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JR-250.jpg
+JR-275-PF,JR-275-PF,Pop Fruit Spice Jar – 275ml,yera,no image,,,,
+JR-275-SP,JR-275-SP,Sweet Pepper Spice Jar – 275ml,yera,no image,,,,
+JR-2ST,JR-2ST,Steelex Jar,yera,brand-sourced,A code-token,"YERA Steelex Glass Jar JR-2ST, 2425ml, Set of 2 Pack",https://www.yera.com/products/yera-steelex-glass-jar-jr-2st-2425ml-set-of-2-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JR-2ST.jpg
+JR-3,JR-3,Aahar Jar,yera,suppressed (priced scan),,,,
+JR-325,JR-325,Micra Jar,yera,no image,,,,
+JR-3ST,JR-3ST,Steelex Jar,yera,brand-sourced,A code-token,"YERA Steelex Glass Jar JR-3ST, 3660ml, Set of 2 Pack",https://www.yera.com/products/yera-steelex-glass-jar-jr-3st-3660ml-set-of-2-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JR-3ST.jpg
+JR-4,JR-4,Aahar Jar,yera,catalogue scan,,,,/images/products/yera/JR-4.jpg
+JR-5,JR-5,Aahar Jar,yera,suppressed (priced scan),,,,
+JR-500,JR-500,Zaika Jar,yera,brand-sourced,A code-token,"YERA Zaika Glass Storage Jars JR-500, 565ml",https://www.yera.com/products/yera-zaika-glass-storage-jars-jr-500-565ml-24-pcs-bulk-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JR-500.jpg
+JR-5ST,JR-5ST,Steelex Jar,yera,brand-sourced,A code-token,"YERA Steelex Glass Jar JR5ST, 5650ml, 1 pc Pack",https://www.yera.com/products/yera-steelex-glass-jar-jr-5st-5650ml-1-pc-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JR-5ST.jpg
+JR-715,JR-715,Micra Jar,yera,no image,,,,
+JR-750,JR-750,Zaika Jar,yera,brand-sourced,A code-token,"YERA Zaika Glass Storage Jars JR-750, 860ml",https://www.yera.com/products/yera-zaika-glass-storage-jars-jr-750-860ml-24-pcs-bulk-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JR-750.jpg
+JR200-L,JR200-L,Lucia Snack Jar,yera,no image,,,,
+JR200-LI,JR200-LI,Lisa Snack Jar – 200ml,yera,no image,,,,
+JR245-L,JR245-L,Lucia Snack Jar,yera,no image,,,,
+JR250ST,JR250ST,Steelex Jar,yera,brand-sourced,A code-token,"YERA Steelex Glass Jar JR250ST, 300ml, Set of 3 Pack",https://www.yera.com/products/yera-steelex-glass-jar-jr250st-300ml-set-of-3-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JR250ST.jpg
+JR375-L,JR375-L,Lucia Snack Jar,yera,no image,,,,
+JR500ST,JR500ST,Steelex Jar,yera,brand-sourced,A code-token,"YERA Steelex Glass Jar JR500ST, 565ml, Set of 2 Pack",https://www.yera.com/products/yera-steelex-glass-jar-jr500st-565ml-set-of-2-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JR500ST.jpg
+JR550-P,JR550-P,Oasis Sipper Bottle – Palms 550ml,yera,no image,,,,
+JR550-S,JR550-S,Oasis Sipper Bottle – Stars 550ml,yera,no image,,,,
+JR750ST,JR750ST,Steelex Jar,yera,brand-sourced,A code-token,"YERA Steelex Glass Jar JR750ST, 860ml, Set of 2 Pack",https://www.yera.com/products/yera-steelex-glass-jar-jr750st-860ml-set-of-2-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/JR750ST.jpg
+JS-1.5,JS-1.5,Aahar Square Jar,yera,catalogue scan,,,,/images/products/yera/JS-1.5.jpg
+JS-2,JS-2,Aahar Square Jar,yera,suppressed (priced scan),,,,
+JS-3,JS-3,Aahar Square Jar,yera,suppressed (priced scan),,,,
+JS-4,JS-4,Aahar Square Jar,yera,suppressed (priced scan),,,,
+JS-6,JS-6,Aahar Square Jar,yera,catalogue scan,,,,/images/products/yera/JS-6.jpg
+JS-8,JS-8,Aahar Square Jar,yera,suppressed (priced scan),,,,
+KB-0300,KB-0300,KB Barrel Jar,yera,no image,,,,
+KB-0600,KB-0600,KB Barrel Jar,yera,no image,,,,
+KB-0800,KB-0800,KB Barrel Jar,yera,no image,,,,
+KB-1000,KB-1000,KB Barrel Jar,yera,no image,,,,
+KB-1800,KB-1800,KB Barrel Jar,yera,no image,,,,
+KB-3000,KB-3000,KB Barrel Jar,yera,no image,,,,
+KBM-0300,KBM-0300,KBM Barrel Jar,yera,no image,,,,
+KBM-0600,KBM-0600,KBM Barrel Jar,yera,no image,,,,
+KBM-0800,KBM-0800,KBM Barrel Jar,yera,no image,,,,
+KBM-1000,KBM-1000,KBM Barrel Jar,yera,no image,,,,
+KP-0300,KP-0300,KP Pillar Jar,yera,no image,,,,
+KP-0600,KP-0600,KP Pillar Jar,yera,no image,,,,
+KP-0800,KP-0800,KP Pillar Jar,yera,no image,,,,
+KP-1000,KP-1000,KP Pillar Jar,yera,no image,,,,
+KP-1800,KP-1800,KP Pillar Jar,yera,no image,,,,
+KP-3000,KP-3000,KP Pillar Jar,yera,no image,,,,
+KPM-1000,KPM-1000,KPM Pillar Jar,yera,no image,,,,
+KPM-300,KPM-300,KPM Pillar Jar,yera,no image,,,,
+KPM-600,KPM-600,KPM Pillar Jar,yera,no image,,,,
+KPM-800,KPM-800,KPM Pillar Jar,yera,no image,,,,
+KR-0300,KR-0300,KR Round Jar,yera,brand-sourced,A code-token,"YERA KR-0300 Glass Jars, 325ml, Set of 4 Pack",https://www.yera.com/products/yera-kr-0300-glass-jars-325ml-set-of-4-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KR-0300.jpg
+KR-0600,KR-0600,KR Round Jar,yera,brand-sourced,A code-token,"YERA KR-0600 Glass Jars, 580ml, Set of 4 Pack",https://www.yera.com/products/yera-kr-0600-glass-jars-580ml-set-of-4-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KR-0600.jpg
+KR-0800,KR-0800,KR Round Jar,yera,brand-sourced,A code-token,"YERA KR-0800 Glass Jars, 900ml, Set of 2 Pack",https://www.yera.com/products/yera-kr-0800-glass-jars-900ml-set-of-2-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KR-0800.jpg
+KR-1000,KR-1000,KR Round Jar,yera,brand-sourced,A code-token,"YERA Glass Jars KR-1000, 1100ml, Set of 2 Pack",https://www.yera.com/products/yera-glass-jars-kr-1000-1100ml-set-of-2-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KR-1000.jpg
+KR-1800,KR-1800,KR Round Jar,yera,brand-sourced,A code-token,"YERA Glass Jars KR-1800, 1810ml, Set of 2 Pack",https://www.yera.com/products/yera-glass-jars-kr-1800-1810ml-set-of-2-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KR-1800.jpg
+KR-3000,KR-3000,KR Round Jar,yera,brand-sourced,A code-token,"YERA Glass Jars KR-3000, 3000ml, 1 pc Pack",https://www.yera.com/products/yera-glass-jars-kr-3000-3000ml-1-pc-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KR-3000.jpg
+KR600,KR600,Omega Stackable Jar – 580ml,yera,brand-sourced,A code-token,"YERA Omega Stackable Glass Jars KR600, 580ml, Set of 2 Pack",https://www.yera.com/products/yera-omega-stackable-glass-jars-kr600-580ml-set-of-2-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KR600.jpg
+KRM-0300,KRM-0300,KRM Round Jar,yera,brand-sourced,A code-token,"YERA KRM Series Glass Jars KRM-0300, 325ml, Set of 3 Pack",https://www.yera.com/products/yera-krm-series-glass-jars-krm-0300-325ml-set-of-3-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KRM-0300.jpg
+KRM-0600,KRM-0600,KRM Round Jar,yera,brand-sourced,A code-token,"YERA KRM Series Glass Jars KRM-0600, 580ml, Set of 2 Pack",https://www.yera.com/products/yera-krm-series-glass-jars-krm-0800-900ml-1-pc-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KRM-0600.jpg
+KRM-0800,KRM-0800,KRM Round Jar,yera,brand-sourced,A code-token,"YERA KRM Series Glass Jars KRM-0800, 900ml, 1 pc Pack",https://www.yera.com/products/yera-krm-series-glass-jars-krm-1000-1100ml-1-pc-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KRM-0800.jpg
+KRM-1000,KRM-1000,KRM Round Jar,yera,brand-sourced,A code-token,"YERA KRM Series Glass Jars KRM-1000, 1100ml, 1 pc Pack",https://www.yera.com/products/yera-krm-series-glass-jars-krm-1000-1100ml-1pc-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KRM-1000.jpg
+KS-0300,KS-0300,KS Square Jar,yera,no image,,,,
+KS-0600,KS-0600,KS Square Jar,yera,no image,,,,
+KS-0800,KS-0800,KS Square Jar,yera,no image,,,,
+KS-1000,KS-1000,KS Square Jar,yera,no image,,,,
+KS-1800,KS-1800,KS Square Jar,yera,no image,,,,
+KS-3000,KS-3000,KS Square Jar,yera,no image,,,,
+KSM-0300,KSM-0300,KSM Jar,yera,brand-sourced,A code-token,"YERA KSM Woodies Series Glass Storage Jars KSM-0300, 320ml, With Tray, Set of 3 Pack – Airtight Kitchen Storage Jars",https://www.yera.com/products/yera-series-glass-storage-jars-ksm-4000-1-pc-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KSM-0300.jpg
+KSM-0600,KSM-0600,KSM Jar,yera,brand-sourced,A code-token,"YERA KSM Woodies Series Glass Storage Jars KSM-0600, 595ml, Set of 2 Pack – Airtight Storage Jars",https://www.yera.com/products/yera-ksm-series-glass-storage-jars-ksm-0600-595ml-set-of-2-pack-airtight-storage-jars,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KSM-0600.jpg
+KSM-0800,KSM-0800,KSM Jar,yera,brand-sourced,A code-token,"YERA KSM Woodies Series Glass Storage Jars KSM-0800, 835ml, 1 Pc Pack – Glass Pantry Jar",https://www.yera.com/products/yera-ksm-series-glass-storage-jars-ksm-0800-835ml-1-pc-pack-glass-pantry-jar,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KSM-0800.jpg
+KSM-1000,KSM-1000,KSM Jar,yera,brand-sourced,A code-token,"YERA KSM Woodies Series Glass Storage Jars KSM-1000, 1000ml, 1 Pc Pack – Glass Kitchen Jar",https://www.yera.com/products/yera-ksm-series-glass-storage-jars-ksm-1000-1000ml-1-pc-pack-glass-kitchen-jar,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KSM-1000.jpg
+KSM-1800,KSM-1800,KSM Jar,yera,brand-sourced,A code-token,"YERA KSM Woodies Series Glass Storage Jars KSM-1800, 1810ml, 1 Pc Pack",https://www.yera.com/products/yera-ksm-series-glass-jars-ksm-1800-1810ml-1-pc-pack-copy,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KSM-1800.jpg
+KSM-2250,KSM-2250,KSM Jar,yera,brand-sourced,A code-token,"YERA KSM X-Series Glass Jars KSM-2250, 2250ml, 1 pc Pack",https://www.yera.com/products/yera-ksm-series-glass-jars-ksm-2250-2250ml-1-pc-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KSM-2250.jpg
+KSM-235,KSM-235,KSM Jar,yera,brand-sourced,A code-token,"YERA KSM Woodies Series Glass Storage Jars KSM-235, 240ml, Set of 6 Pack – Airtight Kitchen Storage Jars",https://www.yera.com/products/yera-ksm-series-glass-storage-jars-ksm-235-240ml-set-of-6-pack-airtight-kitchen-storage-jars,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KSM-235.jpg
+KSM-300,KSM-300,KSM Jar Set with Tray – 300ml,yera,catalogue scan,,,,/images/products/yera/KSM-300.jpg
+KSM-3000,KSM-3000,KSM Jar,yera,brand-sourced,A code-token,"YERA KSM Woodies Series Glass Storage Jars KSM-3000, 3000ml, 1 Pc Pack – Airtight Storage Jar",https://www.yera.com/products/yera-ksm-series-glass-storage-jars-ksm-3000-3000ml-1-pc-pack-airtight-storage-jar,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KSM-3000.jpg
+KSM-4000,KSM-4000,KSM Jar,yera,brand-sourced,A code-token,"YERA Aquafresh Glass Jar (tap/stand) KSM-4000, 4000ml, 1 pc Pack",https://www.yera.com/products/yera-aquafresh-glass-jar-tap-stand-ksm-4000-4000ml-1-pc-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/KSM-4000.jpg
+KSM-4000A,KSM-4000A,KSM Aquafresh + Tap & Stand,yera,no image,,,,
+KSM-800-C,KSM-800-C,Claret Jar Set 835ml with Tray,yera,no image,,,,
+NPR-0202,NPR-0202,Fiona Jar 675ml,yera,brand-sourced,A code-token,"YERA Fiona Glassware NPR-0202, 675ml, Set of 2 Pack",https://www.yera.com/products/yera-fiona-glassware-npr-0202-675ml-set-of-2-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/NPR-0202.jpg
+PJS-1000,PJS-1000,Pantry Jar,yera,brand-sourced,A code-token,"YERA Pantry Wood Series Glass Storage Jar PJS-1000, 1000ml – Airtight Pantry Jar with Wooden Lid",https://www.yera.com/products/yera-pantry-wood-series-glass-storage-jar-pjs-1000-1000ml-airtight-pantry-jar-with-wooden-lid,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/PJS-1000.jpg
+PJS-1500,PJS-1500,Pantry Jar,yera,brand-sourced,A code-token,"YERA Pantry Glass Storage Jar, PJS-1500, Pink, 1500ml, 1 Pc Pack – Glass Kitchen Storage Jar",https://www.yera.com/products/yera-pantry-glass-storage-jar-pjs-1500-1500ml-1-pc-pack-glass-kitchen-storage-jar-1,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/PJS-1500.jpg
+PJS-2000,PJS-2000,Pantry Jar,yera,brand-sourced,A code-token,"YERA Pantry Wood Series Glass Storage Jar PJS-2000, 2000ml – Airtight Glass Jar with Wooden Lid",https://www.yera.com/products/yera-pantry-wood-series-glass-storage-jar-pjs-2000-2000ml-airtight-glass-jar-with-wooden-lid,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/PJS-2000.jpg
+PJS-550,PJS-550,Pantry Jar,yera,brand-sourced,A code-token,"YERA Pantry Wood Series Glass Storage Jar PJS-550, 550ml – Airtight Glass Jar with Wooden Lid",https://www.yera.com/products/yera-pantry-wood-series-glass-storage-jar-pjs-550-550ml-airtight-glass-jar-with-wooden-lid,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/PJS-550.jpg
+PSR-0810-0640,PSR-0810-0640,Florida Jar 820ml,yera,catalogue scan,,,,/images/products/yera/PSR-0810-0640.jpg
+PSR-550-425-1,PSR-550-425-1,Miami Jar 540ml – 1pc,yera,no image,,,,
+PSR-550-425-S,PSR-550-425-S,Miami Set 540ml 2+3pc with Tray,yera,no image,,,,
+PSS-0210-240,PSS-0210-240,Stella Jars with Tray – 210ml,yera,no image,,,,
+PSS-210-240,PSS-210-240,Stella Jar Set 210ml with Tray,yera,no image,,,,
+PSS-300-400,PSS-300-400,Vegas Jar Set 300ml with Tray,yera,no image,,,,
+ST300,ST300,Wine Glass – Stem 300,yera,no image,,,,
+T-160 TH,T-160 TH,Stylo Design Tumbler,yera,catalogue scan,,,,/images/products/yera/T-160TH.jpg
+T-185 ST,T-185 ST,Stylo Design Tumbler,yera,no image,,,,
+T-205 TH,T-205 TH,Stylo Design Tumbler,yera,brand-sourced,A code-token,"YERA Stylo Glass Tumbler T-205 TH, 205ml, Set of 6 Pack",https://www.yera.com/products/yera-stylo-glass-tumbler-t-205-th-205ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T-205%20TH.jpg
+T-245 TH,T-245 TH,Stylo Design Tumbler,yera,no image,,,,
+T-260 TH,T-260 TH,Stylo Design Tumbler,yera,brand-sourced,A code-token,"YERA Stylo Glass Tumbler T-260 TH, 260ml, Set of 6 Pack",https://www.yera.com/products/yera-stylo-glass-tumbler-t-260-th-260ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T-260%20TH.jpg
+T-265 HS,T-265 HS,Stylo Design Tumbler,yera,brand-sourced,A code-token,"YERA Stylo Glass Tumbler T-265 HS, Set of 6 Pack",https://www.yera.com/products/yera-stylo-glass-tumbler-t-265-th-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T-265%20HS.jpg
+T-270 TH,T-270 TH,Stylo Design Tumbler,yera,brand-sourced,A code-token,"YERA Stylo Glass Tumbler T-270 TH, 270ml, Set of 6 Pack",https://www.yera.com/products/yera-stylo-glass-tumbler-t-270-th-270ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T-270%20TH.jpg
+T-375 TH,T-375 TH,Stylo Design Tumbler,yera,brand-sourced,A code-token,"YERA Stylo Glass Tumbler T-375 TH, 375ml, Set of 6 Pack",https://www.yera.com/products/yera-stylo-glass-tumbler-t-375-th-375ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T-375%20TH.jpg
+T10BD,T10BD,Classic Tumbler T10BD – 285ml,yera,brand-sourced,A code-token,"YERA Classic Glass Tumbler T10BD, 285ml, Set of 6 Pack",https://www.yera.com/products/yera-classic-glass-tumbler-t10bd-285ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T10BD.jpg
+T10FB,T10FB,Classic Tumbler T10FB – 285ml,yera,brand-sourced,A code-token,"YERA Classic Glass Tumbler T10FB, 285ml, Set of 6 Pack",https://www.yera.com/products/yera-classic-glass-tumbler-t10fb-285ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T10FB.jpg
+T10PS,T10PS,Auburn Lake Tumbler,yera,no image,,,,
+T10SQ,T10SQ,Desire,yera,brand-sourced,A code-token,"YERA Desire Glass Tumbler T10SQ, 285ml, Set of 6 Pack",https://www.yera.com/products/yera-desire-glass-tumbler-t10sq-285ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T10SQ.jpg
+T11FC,T11FC,Classic Tumbler T11FC – 360ml,yera,brand-sourced,A code-token,"YERA Classic Glass Tumbler T11FC, 360ml, Set of 6 Pack",https://www.yera.com/products/yera-classic-glass-tumbler-t11fc-360ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T11FC.jpg
+T11SQ,T11SQ,Desire,yera,no image,,,,
+T12PS,T12PS,Auburn Lake Tumbler,yera,no image,,,,
+T14PS,T14PS,Auburn Lake Tumbler,yera,no image,,,,
+T2PL,T2PL,Stylo Straight Tumbler,yera,brand-sourced,A code-token,"YERA Target Glass Tumbler T2PL, 65ml, Set of 6 Pack",https://www.yera.com/products/yera-target-glass-tumbler-t2pl-65ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T2PL.jpg
+T7B,T7B,Classic Tumbler T7B – 210ml,yera,brand-sourced,C name+size,"YERA Classic Glass Tumbler T7B, 210ml, Set of 6 Pack",https://www.yera.com/products/yera-classic-glass-tumbler-t7b-210ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T7B.jpg
+T7BD,T7BD,Classic Tumbler T7BD – 220ml,yera,brand-sourced,A code-token,"YERA Classic Glass Tumbler T7BD, 220ml, Set of 6 Pack",https://www.yera.com/products/yera-classic-glass-tumbler-t7bd-220ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T7BD.jpg
+T7PS,T7PS,Auburn Lake Tumbler,yera,no image,,,,
+T7SQ-L,T7SQ-L,Desire Long – 210ml,yera,no image,,,,
+T7SQ-S,T7SQ-S,Desire Short – 200ml,yera,no image,,,,
+T8RSQ,T8RSQ,Desire,yera,brand-sourced,A code-token,"YERA Desire Glass Tumbler T8RSQ, 225ml, Set of 6 Pack",https://www.yera.com/products/yera-desire-glass-tumbler-t8rsq-225ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T8RSQ.jpg
+T9AHB,T9AHB,Classic Tumbler T9AHB – 250ml,yera,suppressed (priced scan),,,,
+T9C,T9C,Classic Tumbler T9C – 270ml,yera,brand-sourced,C name+size,"YERA Classic Glass Tumbler T9C, 270ml, Set of 6 Pack",https://www.yera.com/products/yera-classic-glass-tumbler-t9c-270ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T9C.jpg
+T9FC,T9FC,Classic Tumbler T9FC – 255ml,yera,brand-sourced,A code-token,"YERA Classic Glass Tumbler T9FC, 255ml, Set of 6 Pack",https://www.yera.com/products/yera-classic-glass-tumbler-t9fc-255ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/T9FC.jpg
+TB10,TB10,Tumbler – Barrel 260,yera,no image,,,,
+TB12,TB12,Tumbler – Barrel 335,yera,no image,,,,
+TB12RIB,TB12RIB,Tumbler – Ribbed Barrel,yera,no image,,,,
+TB8,TB8,Tumbler – Barrel 210,yera,no image,,,,
+TB8-C,TB8-C,Tumbler Barrel 210 (Coated),yera,no image,,,,
+TC-155,TC-155,Stylo Conical Tumbler,yera,brand-sourced,A code-token,"YERA Stylo Glass Tumbler TC-155, 155ml, Set of 6 Pack – Drinking Water Glasses",https://www.yera.com/products/yera-stylo-glass-tumbler-tc-155-155ml-set-of-6-pack-drinking-water-glasses,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TC-155.jpg
+TC-215,TC-215,Stylo Conical Tumbler,yera,suppressed (priced scan),,,,
+TC-340,TC-340,Stylo Conical Tumbler,yera,brand-sourced,A code-token,"YERA Stylo Glass Tumbler TC-340, 340ml, Set of 6 Pack – Glass Tumblers for Water & Juice",https://www.yera.com/products/yera-stylo-glass-tumbler-tc-340-340ml-set-of-6-pack-glass-tumblers-for-water-juice,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TC-340.jpg
+TC-435,TC-435,Stylo Conical Tumbler,yera,suppressed (priced scan),,,,
+TD11,TD11,Tumbler – Diamond Tall,yera,no image,,,,
+TH10ALG,TH10ALG,Tumbler – Alegra,yera,no image,,,,
+TH10ALG-C,TH10ALG-C,Tumbler Alegra (Coated),yera,no image,,,,
+TH10CB,TH10CB,Tumbler – Cube,yera,no image,,,,
+TH10FL,TH10FL,Tumbler – Flute Tall,yera,no image,,,,
+TH10OD,TH10OD,Tumbler – Diamond,yera,no image,,,,
+TH10SQ,TH10SQ,Tumbler – Square,yera,no image,,,,
+TH10THD,TH10THD,Tumbler – Thread,yera,no image,,,,
+TH12PL,TH12PL,Tumbler – Pilsner,yera,no image,,,,
+TH7HG,TH7HG,Tumbler – Hour Glass,yera,no image,,,,
+TH8,TH8,Tumbler – Classic,yera,no image,,,,
+TH8AL,TH8AL,Tumbler – Alegra Short,yera,no image,,,,
+TH8CB,TH8CB,Tumbler – Cube Short,yera,no image,,,,
+TH8CB-C,TH8CB-C,Tumbler Cube Short (Coated),yera,no image,,,,
+TH8FL,TH8FL,Tumbler – Flute Short,yera,no image,,,,
+TH8OCT,TH8OCT,Tumbler – Octagonal,yera,no image,,,,
+TH8ST,TH8ST,Tumbler – Stem,yera,no image,,,,
+TH8ST-C,TH8ST-C,Tumbler Stem (Coated),yera,no image,,,,
+TH8STK,TH8STK,Tumbler – Stack,yera,no image,,,,
+TH9ALG,TH9ALG,Tumbler – Alegra Tall,yera,no image,,,,
+TH9STR,TH9STR,Tumbler – Stripes,yera,no image,,,,
+TH9THD,TH9THD,Tumbler – Thread Short,yera,no image,,,,
+TP07-P0,TP07-P0,Epitome Tumbler P/B,yera,catalogue scan,,,,/images/products/yera/TP7-P0.jpg
+TP08-P0,TP08-P0,Epitome Tumbler P/B,yera,suppressed (priced scan),,,,
+TP09-P0,TP09-P0,Epitome Tumbler P/B,yera,no image,,,,
+TP10-P0,TP10-P0,Epitome Tumbler P/B,yera,brand-sourced,A code-token,"YERA Epitome Glass Tumbler TP10-P0, 240ml, Set of 6 Pack",https://www.yera.com/products/yera-epitome-glass-tumbler-tp10-p0-240ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TP10-P0.jpg
+TP260,TP260,Stylo Parabolic Tumbler,yera,brand-sourced,A code-token,"YERA Stylo Glass Tumbler TP-260, 260ml, Set of 6 Pack – Glass Water Tumblers",https://www.yera.com/products/yera-stylo-glass-tumbler-tp-260-260ml-set-of-6-pack-glass-water-tumblers,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TP260.jpg
+TP345,TP345,Stylo Parabolic Tumbler,yera,brand-sourced,A code-token,"YERA Stylo Glass Tumbler TP-345, 345ml, Set of 6 Pack – Bar & Banquet Glass Tumblers",https://www.yera.com/products/yera-stylo-glass-tumbler-tp-345-345ml-set-of-6-pack-bar-banquet-glass-tumblers,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TP345.jpg
+TQ060,TQ060,Stylo Straight Tumbler,yera,brand-sourced,A code-token,"YERA Target Glass Tumbler TQ060, 60ml, Set of 6 Pack",https://www.yera.com/products/yera-target-glass-tumbler-tq060-60ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TQ060.jpg
+TS-065,TS-065,Stylo Straight Tumbler,yera,brand-sourced,A code-token,"YERA Target Glass Tumbler TS-065, 65ml, Set of 6 Pack",https://www.yera.com/products/yera-target-glass-tumbler-ts-065-65ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TS-065.jpg
+TS-145,TS-145,Stylo Straight Tumbler,yera,suppressed (priced scan),,,,
+TS-175,TS-175,Stylo Straight Tumbler,yera,suppressed (priced scan),,,,
+TS-220,TS-220,Stylo Straight Tumbler,yera,brand-sourced,A code-token,"YERA Stylo Glass Tumbler TS-220, 220ml, Set of 6 Pack",https://www.yera.com/products/yera-stylo-glass-tumbler-ts-220-220ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TS-220.jpg
+TS-245,TS-245,Stylo Straight Tumbler,yera,brand-sourced,A code-token,"YERA Stylo Glass Tumbler TS-245, 245ml, Set of 6 Pack",https://www.yera.com/products/yera-stylo-glass-tumbler-ts-245-245ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TS-245.jpg
+TS-265,TS-265,Stylo Straight Tumbler,yera,suppressed (priced scan),,,,
+TS-280,TS-280,Stylo Straight Tumbler,yera,brand-sourced,A code-token,"YERA Stylo Glass Tumbler TS-280, 280ml, Set of 6 Pack",https://www.yera.com/products/yera-stylo-glass-tumbler-ts-280-280ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TS-280.jpg
+TS-290,TS-290,Stylo Straight Tumbler,yera,suppressed (priced scan),,,,
+TS-340,TS-340,Stylo Straight Tumbler,yera,suppressed (priced scan),,,,
+TS-385,TS-385,Stylo Straight Tumbler,yera,brand-sourced,A code-token,"YERA Stylo Glass Tumbler TS-385, 385ml, Set of 6 Pack",https://www.yera.com/products/yera-stylo-glass-tumbler-ts-385-385ml-set-of-6-pack,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TS-385.jpg
+TS010-P0,TS010-P0,Epitome Tumbler S,yera,suppressed (priced scan),,,,
+TS011-P0,TS011-P0,Epitome Tumbler S,yera,suppressed (priced scan),,,,
+TS012-P0,TS012-P0,Epitome Tumbler S,yera,suppressed (priced scan),,,,
+TS06HB-P0,TS06HB-P0,Classic Tumbler – 180ml,yera,brand-sourced,C name+size,"YERA Classic Glass Tumbler TS6HB-P0, 180ml, Set of 6 Pack – Everyday Drinking Glasses",https://www.yera.com/products/yera-classic-glass-tumbler-ts6hb-p0-180ml-set-of-6-pack-everyday-drinking-glasses,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TS06HB-P0.jpg
+TS07-P0,TS07-P0,Epitome Tumbler S,yera,suppressed (priced scan),,,,
+TS08-P0,TS08-P0,Epitome Tumbler S,yera,suppressed (priced scan),,,,
+TS09-P0,TS09-P0,Epitome Tumbler S,yera,catalogue scan,,,,/images/products/yera/TS9-P0.jpg
+TS12HB,TS12HB,Mellow Gold Plain Tumbler – 325ml,yera,brand-sourced,A code-token,"YERA Epitome Glass Tumbler TS12HB, 325ml, Set of 6 Pack – Drinking Glass Set",https://www.yera.com/products/yera-epitome-glass-tumbler-ts12hb-325ml-set-of-6-pack-drinking-glass-set,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TS12HB.jpg
+TS7P0,TS7P0,Mellow Gold Tumbler,yera,brand-sourced,A code-token,"YERA Epitome Glass Tumbler TS7-P0, 195ml, Set of 6 Pack – Premium Water Glass Set",https://www.yera.com/products/yera-epitome-glass-tumbler-ts7-p0-195ml-set-of-6-pack-premium-water-glass-set,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TS7P0.jpg
+TS8P0,TS8P0,Mellow Gold Tumbler,yera,brand-sourced,A code-token,"YERA Epitome Glass Tumbler TS8-P0, 210ml, Set of 6 Pack – Glass Tumblers for Daily Use",https://www.yera.com/products/yera-epitome-glass-tumbler-ts8-p0-210ml-set-of-6-pack-glass-tumblers-for-daily-use,https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced/TS8P0.jpg

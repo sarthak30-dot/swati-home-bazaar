@@ -15,6 +15,7 @@ Run from the repository root with `python3`. Each step writes its output into
 | 2 | `2-match.py` | Matches harvested products to the 920 SKUs. **Strict** — see below. |
 | 3 | `3-download.py` | Downloads the matched images and records dimensions. |
 | 4 | `4-upload.py` | Uploads to the Supabase `product-images` bucket and sets `image_url` + `image_source_url`. Needs an admin login. |
+| 5 | `5-suppress-priced-scans.sql` | Clears `image_url` on the leftover catalogue scans that have supplier pricing printed inside the image. |
 
 ## Matching is deliberately strict
 
@@ -42,6 +43,22 @@ Two guards apply to all three:
   each of the three Polo bowls took the photo of the 3-bowl set.
 
 Everything else is left unmatched on purpose. `2-match.py` prints the tally.
+
+## Scans with pricing printed in them
+
+The images under `public/images/products/` are crops of wholesale catalogue
+pages, and most carry header text: bulk and carton quantities, trade prices,
+and often a neighbouring product's code and price. Reading all 40 remaining
+local scans with `tesseract` found **26 containing pricing** — several
+contradicting the retail price on the same card.
+
+Step 5 clears those so the card falls back to its coloured tile. A tile is
+better than a photo quoting a price that is not ours. To re-check after adding
+photography:
+
+```sh
+tesseract public/images/products/yera/<sku>.jpg stdout --psm 6
+```
 
 ## Dubblin
 
