@@ -33,3 +33,8 @@ dist-ssr
 .import-work/
 .env.bak-old-project
 .claude/
+
+# brand image sync working files
+.image-sync/
+__pycache__/
+*.pyc
