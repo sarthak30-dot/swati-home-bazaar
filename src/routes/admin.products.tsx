@@ -71,6 +71,11 @@ function AdminProducts() {
       "admin-products",
       "admin-low-stock-count",
       "admin-stats",
+      // A CSV import can create categories (and a future brand import,
+      // brands), so the filter dropdowns and the new-product dialog have to
+      // re-read these or the new category is invisible until a page reload.
+      "categories",
+      "brands",
       "shop",
       "rail",
       "product",

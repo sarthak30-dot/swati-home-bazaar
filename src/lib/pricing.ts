@@ -6,6 +6,30 @@
  * Supabase round trip.
  */
 
+/**
+ * Reads a money value out of a spreadsheet cell.
+ *
+ * Indian price columns arrive as "Rs. 1,749", "₹1234", "1,234.50" or plain
+ * "1749". Stripping every character outside [0-9.-] is NOT enough: the full
+ * stop in "Rs." survives and becomes a decimal point, so "Rs. 1,749" parses as
+ * 0.1749 — seventeen paise instead of one thousand seven hundred and forty
+ * nine rupees. Thousands separators and spaces are removed first, then the
+ * first number that actually begins with a digit is taken.
+ */
+export function parseMoney(raw: string): number | null {
+  const cleaned = raw.replace(/[,\s]/g, "");
+  const match = cleaned.match(/-?\d+(?:\.\d+)?/);
+  if (!match) return null;
+  const n = Number(match[0]);
+  return Number.isFinite(n) ? n : null;
+}
+
+/** As `parseMoney`, rounded to a whole number for quantity columns. */
+export function parseCount(raw: string): number | null {
+  const n = parseMoney(raw);
+  return n == null ? null : Math.round(n);
+}
+
 export type BulkPriceMode =
   /** selling_price = mrp - pct% */
   | "discount_off_mrp"

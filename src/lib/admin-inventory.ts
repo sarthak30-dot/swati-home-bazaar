@@ -2,7 +2,7 @@ import { supabase } from "@/integrations/supabase/client";
 import type { CatalogVariant } from "@/lib/catalog";
 import { readTable } from "@/lib/csv";
 import { LOW_STOCK_THRESHOLD } from "@/lib/format";
-import { nextSellingPrice, type BulkPriceMode } from "@/lib/pricing";
+import { nextSellingPrice, parseCount, parseMoney, type BulkPriceMode } from "@/lib/pricing";
 
 export const ADMIN_PAGE_SIZE = 24;
 
@@ -326,19 +326,6 @@ export type ImportReport = {
   failed: { line: number; reason: string }[];
 };
 
-/** "Rs. 1,234.50" / "₹1234" / "1,234" -> 1234.5; "" and junk -> null. */
-function parseMoney(raw: string): number | null {
-  const cleaned = raw.replace(/[^0-9.-]/g, "");
-  if (!cleaned) return null;
-  const n = Number(cleaned);
-  return Number.isFinite(n) ? n : null;
-}
-
-function parseCount(raw: string): number | null {
-  const n = parseMoney(raw);
-  return n == null ? null : Math.round(n);
-}
-
 const SKU_PREFIX: Record<string, string> = {
   pigeon: "PGN",
   dubblin: "DUB",
@@ -495,6 +482,17 @@ export async function importInventory(text: string): Promise<ImportReport> {
       }
       if (mrp == null || mrp <= 0) {
         report.failed.push({ line, reason: "a new SKU needs a valid mrp" });
+        continue;
+      }
+      // MRP is the legal maximum price in India, so selling above it is always
+      // a data error — and it would render as a negative discount with a
+      // struck-through price below the price being charged. Reject the row
+      // rather than publish it.
+      if (selling != null && selling > mrp) {
+        report.failed.push({
+          line,
+          reason: `selling_price ${selling} is above mrp ${mrp}`,
+        });
         continue;
       }
 
