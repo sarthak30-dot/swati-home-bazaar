@@ -11,6 +11,12 @@ export function discountPct(mrp: number, selling: number): number {
 export const FREE_DELIVERY_THRESHOLD = 999;
 export const SHIPPING_FEE = 79;
 
+/**
+ * Units at or below which a SKU counts as low stock in the admin panel —
+ * highlighted in the inventory table and the subject of its own filtered view.
+ */
+export const LOW_STOCK_THRESHOLD = 10;
+
 export function shippingFor(subtotal: number): number {
   return subtotal >= FREE_DELIVERY_THRESHOLD || subtotal === 0 ? 0 : SHIPPING_FEE;
 }
