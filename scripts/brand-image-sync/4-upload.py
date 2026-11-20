@@ -39,6 +39,8 @@ PASSWORD = os.environ.get("SWATI_ADMIN_PASSWORD")
 if not EMAIL or not PASSWORD:
     raise SystemExit("set SWATI_ADMIN_EMAIL and SWATI_ADMIN_PASSWORD first")
 
+BUCKET = "product-images"
+
 CONTENT_TYPE = {
     "webp": "image/webp",
     "jpg": "image/jpeg",
@@ -75,13 +77,19 @@ def upload(row):
     # "<sku>.<ext>" at the bucket root, can never be silently overwritten.
     key = f"brand-sourced/{row['sku_id'].replace('/', '_')}.{ext}"
     try:
+        # The bucket name is part of the path. Omitting it makes Storage read
+        # the first path segment as the bucket and return "Bucket not found".
         call(
             "POST",
-            f"/storage/v1/object/{key}",
+            f"/storage/v1/object/{BUCKET}/{urllib.parse.quote(key)}",
             open(row["file"], "rb").read(),
             {**AUTH, "Content-Type": CONTENT_TYPE.get(ext, "image/jpeg"), "x-upsert": "true"},
         )
-        return {**row, "key": key, "public": f"{URL}/storage/v1/object/public/{key}"}
+        return {
+            **row,
+            "key": key,
+            "public": f"{URL}/storage/v1/object/public/{BUCKET}/{urllib.parse.quote(key)}",
+        }
     except urllib.error.HTTPError as exc:
         return {**row, "key": None, "err": f"{exc.code} {exc.read()[:120].decode()}"}
 
