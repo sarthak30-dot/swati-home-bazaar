@@ -73,6 +73,7 @@ function ProductPage() {
   if (!item) throw notFound();
 
   const out = item.stock_qty <= 0;
+  const hasDescription = Boolean(item.description?.trim());
   const specs = item.specifications ?? {};
 
   return (
@@ -253,11 +254,19 @@ function ProductPage() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-2">
-          <section>
-            <h2 className="font-display text-lg font-bold">Product description</h2>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
-          </section>
+        {/* No product in the catalogue carries a description yet, so the
+            heading would otherwise sit above empty space and read as broken.
+            Hidden until there is copy, and the grid collapses to one column
+            so Specifications does not leave half the row blank. */}
+        <div className={cn("mt-10 grid gap-8", hasDescription && "lg:grid-cols-2")}>
+          {hasDescription && (
+            <section>
+              <h2 className="font-display text-lg font-bold">Product description</h2>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {item.description}
+              </p>
+            </section>
+          )}
           <section>
             <h2 className="font-display text-lg font-bold">Specifications</h2>
             <dl className="mt-2 divide-y divide-border rounded-2xl border border-border">
