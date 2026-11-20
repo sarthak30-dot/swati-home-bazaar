@@ -8,7 +8,7 @@ import { ProductImage, brandClass } from "@/components/store/ProductImage";
 import { ProductCard } from "@/components/store/ProductCard";
 import { RatingChip } from "@/components/store/RatingChip";
 import { ReviewSection } from "@/components/store/ReviewSection";
-import { rupees } from "@/lib/format";
+import { rupees, formatCapacity } from "@/lib/format";
 import { useCart } from "@/hooks/useCart";
 import { useWishlist } from "@/hooks/useWishlist";
 import { cn } from "@/lib/utils";
@@ -163,7 +163,10 @@ function ProductPage() {
                           : "border-border",
                       )}
                     >
-                      {v.capacity_or_size ?? v.color ?? v.variant_code ?? v.sku_id}
+                      {formatCapacity(v.capacity_or_size, v.brand_slug) ??
+                        v.color ??
+                        v.variant_code ??
+                        v.sku_id}
                     </button>
                   ))}
                 </div>
@@ -265,7 +268,9 @@ function ProductPage() {
               {item.capacity_or_size && (
                 <div className="grid grid-cols-2 gap-2 px-4 py-2.5 text-sm">
                   <dt className="text-muted-foreground">Capacity / size</dt>
-                  <dd className="font-medium">{item.capacity_or_size}</dd>
+                  <dd className="font-medium">
+                    {formatCapacity(item.capacity_or_size, item.brand_slug)}
+                  </dd>
                 </div>
               )}
               {item.color && (

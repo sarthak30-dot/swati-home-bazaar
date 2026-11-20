@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { rupees } from "@/lib/format";
+import { formatCapacity, isRetailPack, rupees } from "@/lib/format";
 import type { CatalogVariant } from "@/lib/catalog";
 import { ProductImage, brandClass } from "@/components/store/ProductImage";
 import { RatingChip } from "@/components/store/RatingChip";
@@ -31,7 +31,9 @@ export function ProductCard({
 
   // capacity_or_size is present on 651/920 variants and is the single most
   // useful disambiguator between two otherwise identically-named products.
-  const subtitle = item.capacity_or_size ?? item.category_name;
+  // Formatted, because Yera and Dubblin store it as a bare number that reads
+  // as a price or a code on its own ("Venus Serving Bowl / 350").
+  const subtitle = formatCapacity(item.capacity_or_size, item.brand_slug) ?? item.category_name;
 
   return (
     <div className={cn(brandClass(item.brand_slug), "group relative", className)}>
@@ -89,7 +91,7 @@ export function ProductCard({
                 </>
               )}
             </div>
-            {item.pack_or_carton_qty != null && item.pack_or_carton_qty > 1 && (
+            {isRetailPack(item.pack_or_carton_qty) && (
               <p className="mt-0.5 text-[11px] text-muted-foreground">
                 Pack of {item.pack_or_carton_qty}
               </p>
