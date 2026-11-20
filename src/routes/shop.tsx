@@ -7,6 +7,7 @@ import { ProductCard, ProductCardSkeleton } from "@/components/store/ProductCard
 import { rupees } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import { DEPARTMENTS } from "@/lib/departments";
+import { PRODUCT_GRID } from "@/lib/layout";
 
 type ShopSearch = {
   brands?: string | undefined;
@@ -326,19 +327,14 @@ function Shop() {
 
         <div>
           {isLoading ? (
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4">
+            <div className={PRODUCT_GRID}>
               {Array.from({ length: 8 }).map((_, i) => (
                 <ProductCardSkeleton key={i} />
               ))}
             </div>
           ) : data && data.items.length ? (
             <>
-              <div
-                className={cn(
-                  "grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4",
-                  isFetching && "opacity-60",
-                )}
-              >
+              <div className={cn(PRODUCT_GRID, isFetching && "opacity-60")}>
                 {data.items.map((item) => (
                   <ProductCard key={item.id} item={item} />
                 ))}

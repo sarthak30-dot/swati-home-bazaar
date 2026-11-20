@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useWishlist } from "@/hooks/useWishlist";
 import { fetchVariantsByIds } from "@/lib/catalog";
 import { ProductCard, ProductCardSkeleton } from "@/components/store/ProductCard";
+import { PRODUCT_GRID_WIDE } from "@/lib/layout";
 
 export const Route = createFileRoute("/account/wishlist")({
   component: Wishlist,
@@ -19,7 +20,7 @@ function Wishlist() {
 
   if (loading || (ids.length > 0 && isLoading)) {
     return (
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4">
+      <div className={PRODUCT_GRID_WIDE}>
         {Array.from({ length: 4 }).map((_, i) => (
           <ProductCardSkeleton key={i} />
         ))}
@@ -42,7 +43,7 @@ function Wishlist() {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4">
+    <div className={PRODUCT_GRID_WIDE}>
       {(data ?? []).map((item) => (
         <ProductCard key={item.id} item={item} />
       ))}

@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchBrands, fetchCategories, fetchShop } from "@/lib/catalog";
 import { ProductCard, ProductCardSkeleton } from "@/components/store/ProductCard";
 import { brandClass } from "@/components/store/ProductImage";
+import { PRODUCT_GRID_WIDE } from "@/lib/layout";
 
 export const Route = createFileRoute("/brand/$slug")({
   head: ({ params }) => {
@@ -79,7 +80,7 @@ function BrandPage() {
             View all
           </Link>
         </div>
-        <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4">
+        <div className={`mt-4 ${PRODUCT_GRID_WIDE}`}>
           {isLoading
             ? Array.from({ length: 8 }).map((_, i) => <ProductCardSkeleton key={i} />)
             : data?.items.map((item) => <ProductCard key={item.id} item={item} />)}
