@@ -1,3 +1,4 @@
+import { Package } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { IMAGE_BY_VARIANT, IMAGE_BY_SLUG } from "@/lib/product-images.generated";
 
@@ -71,18 +72,35 @@ export function ProductImage({
       />
     );
   }
+  // 554 SKUs still have no photograph, 429 of them Pigeon, so this tile is
+  // the dominant visual on much of the catalogue rather than a rare fallback.
+  // A flat tinted rectangle reads as a missing image; a framed card with the
+  // brand mark, a soft wash and the product name reads as a deliberate
+  // placeholder until real photography arrives.
   return (
     <div
       className={cn(
         brandClass(brandSlug),
-        "flex h-full w-full flex-col items-center justify-center gap-1 bg-brand-tint px-3 text-center",
+        "relative flex h-full w-full flex-col items-center justify-center gap-1.5 overflow-hidden bg-brand-tint px-3 text-center",
         className,
       )}
     >
-      <span className="line-clamp-3 font-display text-[13px] font-semibold leading-tight text-brand sm:text-sm">
+      {/* Soft radial wash so the tile has depth instead of reading as a
+          solid swatch. Decorative only. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.75),transparent_70%)]"
+      />
+      <span
+        aria-hidden="true"
+        className="relative grid h-9 w-9 place-items-center rounded-full bg-brand/10 ring-1 ring-brand/20"
+      >
+        <Package className="h-4 w-4 text-brand" />
+      </span>
+      <span className="relative line-clamp-3 font-display text-[13px] font-semibold leading-tight text-brand sm:text-sm">
         {name}
       </span>
-      {capacity && <span className="text-[11px] font-medium text-brand">{capacity}</span>}
+      {capacity && <span className="relative text-[11px] font-medium text-brand">{capacity}</span>}
     </div>
   );
 }

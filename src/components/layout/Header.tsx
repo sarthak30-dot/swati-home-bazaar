@@ -49,12 +49,14 @@ export function Header() {
             type="button"
             aria-label="Menu"
             aria-expanded={menuOpen}
-            className="shrink-0 lg:hidden"
+            /* 20x20 before: under the 24x24 AA minimum, let alone comfortable
+               on a phone. -ml-2 keeps the icon optically where it was. */
+            className="-ml-2 grid h-11 w-11 shrink-0 place-items-center rounded-lg hover:bg-muted lg:hidden"
             onClick={() => setMenuOpen((v) => !v)}
           >
             {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
-          <Link to="/" className="flex min-w-0 items-center gap-2">
+          <Link to="/" className="flex min-h-11 min-w-0 items-center gap-2">
             <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-gold font-display text-sm font-bold text-white">
               SE
             </span>
@@ -82,19 +84,23 @@ export function Header() {
         <nav aria-label="Account and cart" className="flex shrink-0 items-center gap-1 sm:gap-2">
           <Link
             to="/account/wishlist"
-            className="hidden rounded-lg p-2 hover:bg-muted sm:block"
+            className="hidden h-11 w-11 place-items-center rounded-lg hover:bg-muted sm:grid"
             aria-label="Wishlist"
           >
             <Heart className="h-5 w-5" />
           </Link>
           <Link
             to={user ? "/account" : "/auth"}
-            className="rounded-lg p-2 hover:bg-muted"
+            className="grid h-11 w-11 place-items-center rounded-lg hover:bg-muted"
             aria-label="Account"
           >
             <User className="h-5 w-5" />
           </Link>
-          <Link to="/cart" className="relative rounded-lg p-2 hover:bg-muted" aria-label="Cart">
+          <Link
+            to="/cart"
+            className="relative grid h-11 w-11 place-items-center rounded-lg hover:bg-muted"
+            aria-label="Cart"
+          >
             <ShoppingCart className="h-5 w-5" />
             {count > 0 && (
               <span className="absolute -right-0.5 -top-0.5 grid h-4 min-w-4 place-items-center rounded-full bg-gold px-1 text-[10px] font-bold text-white">

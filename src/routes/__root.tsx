@@ -138,8 +138,18 @@ function RootComponent() {
       <AuthProvider>
         <CartProvider>
           <div className="flex min-h-screen flex-col">
+            {/* Without this a keyboard user tabs through the announcement
+                bar, logo, PIN selector, search, three icon links and seven
+                nav items — about fifteen stops — before reaching a product,
+                on every page. Visible only once focused. */}
+            <a
+              href="#main-content"
+              className="sr-only rounded-xl bg-gold px-4 py-2 text-sm font-semibold text-white focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50"
+            >
+              Skip to content
+            </a>
             <Header />
-            <main className="flex-1">
+            <main id="main-content" tabIndex={-1} className="flex-1">
               {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
               <Outlet />
             </main>

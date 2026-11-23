@@ -71,6 +71,18 @@ export function ProductCard({
             {item.product_name}
           </h3>
           {subtitle && <p className="truncate text-[11px] text-muted-foreground">{subtitle}</p>}
+          {/* 505 products now carry the manufacturer's own copy, which was
+              written to the catalogue but shown nowhere outside the product
+              page. One clamped line tells a shopper what the thing is while
+              they scan. Hidden when empty so cards without copy keep their
+              existing height rather than reserving a blank row. No opacity
+              on the text: /90 drops muted-foreground to 4.46:1 on white and
+              fails AA by four hundredths. */}
+          {item.description && (
+            <p className="mt-1 line-clamp-2 text-[11px] leading-snug text-muted-foreground">
+              {item.description}
+            </p>
+          )}
           {item.rating != null && item.rating_count > 0 && (
             <RatingChip rating={item.rating} count={item.rating_count} className="w-fit" />
           )}
