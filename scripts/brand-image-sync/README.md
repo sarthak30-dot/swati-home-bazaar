@@ -17,6 +17,9 @@ Run from the repository root with `python3`. Each step writes its output into
 | 4 | `4-upload.py` | Uploads to the Supabase `product-images` bucket and sets `image_url` + `image_source_url`. Needs an admin login. |
 | 5 | `5-suppress-priced-scans.sql` | Clears `image_url` on the leftover catalogue scans that have supplier pricing printed inside the image. |
 | 6 | `6-missing-images-pdf.py` | Builds `sku-images-missing.pdf`, the supplier-facing list of SKUs still without an image. Needs `reportlab`. |
+| 7 | `7-apply-discounts.sql` | Sets selling_price to MRP minus 10-30%, which the brief specifies but which had never been applied. |
+| 8 | `8-harvest-product-details.py` | Harvests Pigeon descriptions, feature bullets, codes and MRPs. Yera's come from its Shopify feed and need no scraping. |
+| 9 | `9-match-product-details.py` | Matches that detail to products and writes `product-details-sourced.csv` for review. Writes nothing to the database. |
 
 ## Matching is deliberately strict
 
@@ -44,6 +47,13 @@ Two guards apply to all three:
   each of the three Polo bowls took the photo of the 3-bowl set.
 
 Everything else is left unmatched on purpose. `2-match.py` prints the tally.
+
+## Product detail
+
+Descriptions match far better than images do, because Pigeon's pages print
+`Product Code: 19004602` — the `variant_code` — so the join is exact rather
+than by name and size. 505 of 682 products (74%) have sourced copy: Pigeon
+448 of 491, Yera 57 of 137, Dubblin none. 439 also carry feature bullets.
 
 ## Scans with pricing printed in them
 
