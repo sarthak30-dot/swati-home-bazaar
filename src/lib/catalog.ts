@@ -17,7 +17,9 @@ export type CatalogVariant = {
   product_name: string;
   product_slug: string;
   description: string | null;
-  specifications: Record<string, string> | null;
+  /** Scalar spec values, plus a `features` array of bullet points sourced
+   *  from the manufacturer's page. */
+  specifications: Record<string, string | string[]> | null;
   is_active: boolean;
   brand_id: string;
   brand_name: string;

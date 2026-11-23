@@ -144,7 +144,7 @@ function BulkOrders() {
     <div>
       <section className="border-b border-border bg-gold-tint">
         <div className="mx-auto max-w-7xl px-4 py-12">
-          <span className="inline-block rounded-full bg-gold/15 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-gold">
+          <span className="inline-block rounded-full bg-gold-tint px-3 py-1 text-xs font-semibold uppercase tracking-wide text-gold">
             Available across India
           </span>
           <h1 className="mt-4 max-w-3xl font-display text-3xl font-bold leading-tight sm:text-4xl">

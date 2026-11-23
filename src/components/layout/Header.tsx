@@ -75,11 +75,11 @@ export function Header() {
             onChange={(e) => setTerm(e.target.value)}
             placeholder="Search pressure cookers, bottles, jars or a product code"
             aria-label="Search products"
-            className="w-full rounded-xl border border-border bg-muted/60 py-2 pl-9 pr-3 text-sm outline-none focus:border-gold"
+            className="w-full rounded-xl border border-border bg-muted/60 py-2 pl-9 pr-3 text-sm focus-visible:border-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
           />
         </form>
 
-        <nav className="flex shrink-0 items-center gap-1 sm:gap-2">
+        <nav aria-label="Account and cart" className="flex shrink-0 items-center gap-1 sm:gap-2">
           <Link
             to="/account/wishlist"
             className="hidden rounded-lg p-2 hover:bg-muted sm:block"
@@ -147,7 +147,7 @@ export function Header() {
               onChange={(e) => setTerm(e.target.value)}
               placeholder="Search products"
               aria-label="Search products"
-              className="w-full rounded-xl border border-border bg-muted/60 py-2 pl-9 pr-3 text-sm outline-none focus:border-gold"
+              className="w-full rounded-xl border border-border bg-muted/60 py-2 pl-9 pr-3 text-sm focus-visible:border-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             />
           </form>
 

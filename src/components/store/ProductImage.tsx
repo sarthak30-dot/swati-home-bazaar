@@ -82,7 +82,7 @@ export function ProductImage({
       <span className="line-clamp-3 font-display text-[13px] font-semibold leading-tight text-brand sm:text-sm">
         {name}
       </span>
-      {capacity && <span className="text-[11px] font-medium text-brand/70">{capacity}</span>}
+      {capacity && <span className="text-[11px] font-medium text-brand">{capacity}</span>}
     </div>
   );
 }

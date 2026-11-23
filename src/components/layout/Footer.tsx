@@ -18,7 +18,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold">Shop</h3>
+          <h2 className="text-sm font-semibold">Shop</h2>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
             <li>
               <Link to="/shop" className="hover:text-gold">
@@ -44,7 +44,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold">Help</h3>
+          <h2 className="text-sm font-semibold">Help</h2>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
             <li>
               <Link to="/contact" className="hover:text-gold">
@@ -75,7 +75,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold">Visit us</h3>
+          <h2 className="text-sm font-semibold">Visit us</h2>
           <address className="mt-3 space-y-1 text-sm not-italic text-muted-foreground">
             <p>Swati Enterprises</p>
             <p>Chandni Chowk, Delhi 110006</p>

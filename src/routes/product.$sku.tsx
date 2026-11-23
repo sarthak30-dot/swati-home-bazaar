@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound, useNavigate } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useRef, useState } from "react";
-import { Heart, Minus, Plus, ShieldCheck, Truck, RotateCcw } from "lucide-react";
+import { Check, Heart, Minus, Plus, ShieldCheck, Truck, RotateCcw } from "lucide-react";
 import { toast } from "sonner";
 import { fetchProductBySku, fetchRelated, fetchSiblings, type CatalogVariant } from "@/lib/catalog";
 import { ProductImage, brandClass } from "@/components/store/ProductImage";
@@ -74,7 +74,14 @@ function ProductPage() {
 
   const out = item.stock_qty <= 0;
   const hasDescription = Boolean(item.description?.trim());
-  const specs = item.specifications ?? {};
+  // `features` is an array of bullets, everything else is a scalar row, so
+  // the two are rendered differently: a comma-joined array in a <dd> reads as
+  // one unbroken blob.
+  const allSpecs = item.specifications ?? {};
+  const features = Array.isArray(allSpecs["features"]) ? allSpecs["features"] : [];
+  const specs = Object.fromEntries(
+    Object.entries(allSpecs).filter(([k, v]) => k !== "features" && !Array.isArray(v)),
+  ) as Record<string, string>;
 
   return (
     <div className={brandClass(item.brand_slug)}>
@@ -290,11 +297,25 @@ function ProductPage() {
               )}
               {Object.entries(specs).map(([k, v]) => (
                 <div key={k} className="grid grid-cols-2 gap-2 px-4 py-2.5 text-sm">
-                  <dt className="text-muted-foreground">{k}</dt>
+                  <dt className="capitalize text-muted-foreground">{k}</dt>
                   <dd className="font-medium">{String(v)}</dd>
                 </div>
               ))}
             </dl>
+
+            {features.length > 0 && (
+              <>
+                <h3 className="mt-6 font-display text-base font-bold">Key features</h3>
+                <ul className="mt-2 space-y-1.5">
+                  {features.map((f) => (
+                    <li key={f} className="flex gap-2 text-sm text-muted-foreground">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" aria-hidden="true" />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
           </section>
         </div>
 

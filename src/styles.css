@@ -76,17 +76,28 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.218 0 89.9);
 
-  /* Shell accent: warm mustard gold. */
-  --gold: oklch(0.66 0.128 77.4);
+  /* Shell accent: warm gold. Lightness is pinned at the level where the
+     colour clears 4.5:1 against white, because it is used BOTH as small text
+     on white (header links) and as a fill behind white small text (the
+     announcement bar, the logo badge, primary buttons). Contrast is
+     symmetric, so one value serves both. At the previous 0.66 it measured
+     3.16:1 and failed every one of those uses. Pinned low enough to clear
+     4.5:1 against --gold-tint too, since gold text also sits on gold washes. */
+  --gold: oklch(0.54 0.128 77.4);
   --gold-tint: oklch(0.963 0.032 87);
-  --success: oklch(0.565 0.136 148.3);
+  /* Discount text sits on white at 12px, so it needs the full 4.5:1; the
+     previous 0.565 measured 4.29 and failed by a hair on every product card. */
+  --success: oklch(0.548 0.136 148.3);
   --success-foreground: oklch(1 0 0);
 
   /* Pigeon price list: signature red with navy product panels. */
   --pigeon: oklch(0.545 0.221 27.5);
   --pigeon-tint: oklch(0.958 0.022 22);
-  /* Dubblin catalogue: pastel sky / teal with red logo. */
-  --dubblin: oklch(0.596 0.108 219.6);
+  /* Dubblin catalogue: sky / teal with red logo. Darkened from 0.596, which
+     measured 3.89:1 behind the white 10px brand pill on every Dubblin card,
+     and far enough to clear 4.5:1 on its own tint as well -- Pigeon and Yera
+     already did, this teal was the only one that did not. */
+  --dubblin: oklch(0.52 0.108 219.6);
   --dubblin-tint: oklch(0.955 0.026 213);
   /* Yera catalogue: crimson serif headings on white. */
   --yera: oklch(0.532 0.208 25.3);
@@ -97,8 +108,7 @@
   --brand-tint: var(--gold-tint);
   --brand-foreground: oklch(1 0 0);
 
-
-  --primary: oklch(0.66 0.128 77.4);
+  --primary: var(--gold);
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.963 0.032 87);
   --secondary-foreground: oklch(0.218 0 89.9);
@@ -110,22 +120,20 @@
   --destructive-foreground: oklch(1 0 0);
   --border: oklch(0.912 0.01 85);
   --input: oklch(0.912 0.01 85);
-  --ring: oklch(0.66 0.128 77.4);
-  --chart-1: oklch(0.66 0.128 77.4);
+  --ring: var(--gold);
+  --chart-1: var(--gold);
   --chart-2: oklch(0.596 0.108 219.6);
   --chart-3: oklch(0.351 0.095 257.1);
   --chart-4: oklch(0.532 0.208 25.3);
   --chart-5: oklch(0.565 0.136 148.3);
   --sidebar: oklch(0.98 0.006 85);
   --sidebar-foreground: oklch(0.218 0 89.9);
-  --sidebar-primary: oklch(0.66 0.128 77.4);
+  --sidebar-primary: var(--gold);
   --sidebar-primary-foreground: oklch(1 0 0);
   --sidebar-accent: oklch(0.963 0.032 87);
   --sidebar-accent-foreground: oklch(0.218 0 89.9);
   --sidebar-border: oklch(0.912 0.01 85);
-  --sidebar-ring: oklch(0.66 0.128 77.4);
-
-
+  --sidebar-ring: var(--gold);
 }
 
 .brand-pigeon {

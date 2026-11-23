@@ -134,7 +134,7 @@ function Shop() {
   const filterPanel = (
     <div className="space-y-6">
       <div>
-        <h3 className="mb-2 text-sm font-semibold">Brand</h3>
+        <h2 className="mb-2 text-sm font-semibold">Brand</h2>
         <div className="space-y-1.5">
           {(brands ?? []).map((b) => (
             <label key={b.id} className="flex cursor-pointer items-center gap-2 text-sm">
@@ -151,7 +151,7 @@ function Shop() {
       </div>
 
       <div>
-        <h3 className="mb-2 text-sm font-semibold">Department</h3>
+        <h2 className="mb-2 text-sm font-semibold">Department</h2>
         <div className="space-y-1">
           {DEPARTMENTS.map((d) => {
             const active =
@@ -177,7 +177,7 @@ function Shop() {
       </div>
 
       <div>
-        <h3 className="mb-2 text-sm font-semibold">Category</h3>
+        <h2 className="mb-2 text-sm font-semibold">Category</h2>
         {/* 51 categories is past the point where a plain list is scannable, so
             the facet gets its own search box. */}
         <div className="relative mb-2">
@@ -209,7 +209,7 @@ function Shop() {
       </div>
 
       <div>
-        <h3 className="mb-2 text-sm font-semibold">Price</h3>
+        <h2 className="mb-2 text-sm font-semibold">Price</h2>
         <div className="space-y-1.5">
           {PRICE_BANDS.map((band) => {
             const active = search.min === band.min && search.max === band.max;
@@ -235,7 +235,7 @@ function Shop() {
       </div>
 
       <div>
-        <h3 className="mb-2 text-sm font-semibold">Discount</h3>
+        <h2 className="mb-2 text-sm font-semibold">Discount</h2>
         <div className="flex flex-wrap gap-2">
           {[10, 20, 30].map((d) => (
             <button
@@ -256,7 +256,7 @@ function Shop() {
       </div>
 
       <div>
-        <h3 className="mb-2 text-sm font-semibold">Customer rating</h3>
+        <h2 className="mb-2 text-sm font-semibold">Customer rating</h2>
         <div className="flex flex-wrap gap-2">
           {[4, 3].map((r) => (
             <button
@@ -311,6 +311,7 @@ function Shop() {
           <select
             value={search.sort ?? "new"}
             onChange={(e) => setSearch({ sort: e.target.value })}
+            aria-label="Sort products"
             className="rounded-lg border border-border bg-background px-3 py-2 text-sm"
           >
             {SORTS.map((s) => (
