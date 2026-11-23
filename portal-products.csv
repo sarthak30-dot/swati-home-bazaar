@@ -1,506 +1,560 @@
-brand,category,product,skus,skus_with_image,image_status,codes
-Pigeon,Air Fryers,12L Air Fusion+ Air Fryer Oven,1,0,none,19004264
-Pigeon,Air Fryers,Healthifry Manual Air Fryer,1,1,all,19003619
-Pigeon,Air Fryers,Healthifry+ 6.5L Orbitron,1,1,all,19004339
-Pigeon,Air Fryers,Healthifry+ Digital Air Fryer 3.3L,1,1,all,19004521
-Pigeon,Air Fryers,Healthifry+ Digital Air Fryer 4.2L,1,0,none,19003964
-Pigeon,Air Fryers,Stellar Bladeless Digital 5.5L,1,0,none,19004290
-Pigeon,Cast Iron Cookware (Imperi Luxe),Casserole 220 with Lid Enamelled,1,0,none,19004033
-Pigeon,Cast Iron Cookware (Imperi Luxe),Casserole 240 with Lid Enamelled,1,0,none,19004034
-Pigeon,Cast Iron Cookware (Imperi Luxe),Fry Pan 200 Enamelled,1,0,none,19004035
-Pigeon,Cast Iron Cookware (Imperi Luxe),Fry Pan 220 Enamelled,1,0,none,19004036
-Pigeon,Cast Iron Cookware (Imperi Luxe),Fry Pan 250 Enamelled,1,0,none,19004037
-Pigeon,Cast Iron Cookware (Imperi Luxe),Grill Pan 250 Enamelled,1,0,none,19004038
-Pigeon,Cast Iron Cookware (Imperi Luxe),Kadai 200 with Lid Enamelled,1,0,none,19004039
-Pigeon,Cast Iron Cookware (Imperi Luxe),Kadai 240 with Lid Enamelled,1,0,none,19004060
-Pigeon,Cast Iron Cookware (Imperi Luxe),Kadai 260 with Lid Enamelled,1,0,none,19004061
-Pigeon,Cast Iron Cookware (Imperi),Appachetty 220,1,0,none,19003987
-Pigeon,Cast Iron Cookware (Imperi),Curved Tawa 260,1,0,none,19003988
-Pigeon,Cast Iron Cookware (Imperi),Curved Tawa 280,1,0,none,19003989
-Pigeon,Cast Iron Cookware (Imperi),Dosa Tawa 300,1,0,none,19002174
-Pigeon,Cast Iron Cookware (Imperi),Double Side Tawa 310,1,0,none,19004028
-Pigeon,Cast Iron Cookware (Imperi),Flat Tawa 250,1,0,none,19002176
-Pigeon,Cast Iron Cookware (Imperi),Flat Tawa 280,1,1,all,19004410
-Pigeon,Cast Iron Cookware (Imperi),Fry Pan 220,1,0,none,19004024
-Pigeon,Cast Iron Cookware (Imperi),Fry Pan 240,1,1,all,19004025
-Pigeon,Cast Iron Cookware (Imperi),Grill Pan 250,1,0,none,19004026
-Pigeon,Cast Iron Cookware (Imperi),Kadai with Lid 240,1,0,none,19004021
-Pigeon,Cast Iron Cookware (Imperi),Paniyarakkal 9 Round,1,0,none,19004027
-Pigeon,Chimneys,Atmos,3,0,none,"19004600, 19004601, 19004602"
-Pigeon,Chimneys,Aura,3,0,none,"16002416, 16002417, 16002418"
-Pigeon,Chimneys,Black Diamond,2,0,none,"19004598, 19004599"
-Pigeon,Chimneys,Nebula DX 60cm,1,1,all,19004449
-Pigeon,Chimneys,Xtreme DLX,3,0,none,"19004603, 19004604, 19004605"
-Pigeon,Die-Cast Cookware,Wondercast Flat Tawa 280,1,1,all,19000081
-Pigeon,Die-Cast Cookware,Wondercast Flat Tawa 280 IB,1,0,none,19000084
-Pigeon,Die-Cast Cookware,Wondercast Flat Tawa 300,1,0,none,19003043
-Pigeon,Die-Cast Cookware,Wondercast Long Handle Paniyarakkal 12 Rounds,1,1,all,19000178
-Pigeon,Die-Cast Cookware,Wondercast Paniyarakkal 11 Rounds,1,1,all,19000083
-Pigeon,Die-Cast Cookware,Wondercast Paniyarakkal 12 Rounds,1,1,all,19001487
-Pigeon,Die-Cast Cookware,Wondercast Paniyarakkal 7 Rounds,1,0,none,19000082
-Pigeon,Electric Ovens & OTGs,Electric Oven 14L with Tray & Grill,1,0,none,19004365
-Pigeon,Electric Ovens & OTGs,Electric Oven 9L with Tray & Grill,1,0,none,19003969
-Pigeon,Electric Ovens & OTGs,Nano Wave Solo Microwave 20L,1,0,none,19004281
-Pigeon,Electric Ovens & OTGs,OTG 25L with Rotisserie,1,0,none,19003848
-Pigeon,Electric Ovens & OTGs,OTG 30L with Rotisserie,1,0,none,19004423
-Pigeon,Electric Ovens & OTGs,OTG Air Fryer 25L with Rotisserie,1,0,none,19004513
-Pigeon,Electric Ovens & OTGs,OTG with Rotisserie 20L,1,0,none,19003846
-Pigeon,Electric Ovens & OTGs,Oven Toaster 40L with Rotisserie,1,0,none,19004424
-Pigeon,Garment Care,Comfy Dry Iron 1000W Blue,1,0,none,19003595
-Pigeon,Garment Care,Comfy Dry Iron 1000W Grey,1,0,none,19003233
-Pigeon,Garment Care,Comfy Dry Iron 1000W Pink,1,0,none,19003596
-Pigeon,Garment Care,Comfy Dry Iron 1000W Red,1,0,none,19003597
-Pigeon,Garment Care,Hand Steamer 1200W Blue,1,0,none,16002255
-Pigeon,Garment Care,Hand Steamer 1200W Pink,1,0,none,16002256
-Pigeon,Garment Care,Heavy Weight Iron Gale,1,1,all,19003238
-Pigeon,Garment Care,Satin Steam Iron 2400W Black,1,0,none,19003638
-Pigeon,Garment Care,Satin Steam Iron 2400W Blue,1,0,none,19003640
-Pigeon,Garment Care,Satin Steam Iron 2400W Purple,1,0,none,19003639
-Pigeon,Garment Care,Steam Iron 1600W Blue,1,0,none,19003634
-Pigeon,Garment Care,Steam Iron 1600W Green,1,0,none,19003637
-Pigeon,Garment Care,Steam Iron 1600W Pink,1,0,none,19003635
-Pigeon,Garment Care,Steam Iron 1600W Red,1,0,none,19003636
-Pigeon,Garment Care,Titan Heavy Weight Iron 1100W,1,1,all,19004250
-Pigeon,Gas Cooktops,Ayush 2 Burner,1,0,none,19000457
-Pigeon,Gas Cooktops,Ayush 2 Burner Auto Ignition,1,0,none,19003050
-Pigeon,Gas Cooktops,Ayush 3 Burner,1,0,none,19000425
-Pigeon,Gas Cooktops,Ayush 3 Burner Auto Ignition,1,0,none,19003051
-Pigeon,Gas Cooktops,Ayush 4 Burner,1,0,none,19003390
-Pigeon,Gas Cooktops,Ayush BLK 2 Burner,1,0,none,19001659
-Pigeon,Gas Cooktops,Ayush BLK 3 Burner,1,0,none,19004210
-Pigeon,Gas Cooktops,Ayush XL 3 Burner,1,0,none,19004211
-Pigeon,Gas Cooktops,Cosmic 2 Burner (SABAF),1,0,none,19004050
-Pigeon,Gas Cooktops,Cosmic 3 Burner (SABAF),1,0,none,19004051
-Pigeon,Gas Cooktops,Cosmic 4 Burner (SABAF),1,0,none,19004052
-Pigeon,Gas Cooktops,Infinity 2 Burner SABAF,1,0,none,19000246
-Pigeon,Gas Cooktops,Infinity 2 Burner SABAF Auto,1,0,none,19000450
-Pigeon,Gas Cooktops,Infinity 3 Burner SABAF,1,0,none,19000248
-Pigeon,Gas Cooktops,Infinity 3 Burner SABAF Auto,1,0,none,19000451
-Pigeon,Gas Cooktops,Infinity 4 Burner SABAF,1,0,none,19000345
-Pigeon,Gas Cooktops,Infinity 4 Burner SABAF Auto,1,0,none,19000452
-Pigeon,Gas Cooktops,Infinity Gold 2 Burner SABAF,1,0,none,19004325
-Pigeon,Gas Cooktops,Infinity Gold 3 Burner SABAF,1,0,none,19004326
-Pigeon,Gas Cooktops,Infinity Gold 4 Burner SABAF,1,0,none,19004327
-Pigeon,Gas Cooktops,Jumbo 2 Burner,1,1,all,19003653
-Pigeon,Gas Cooktops,Jumbo 3 Burner,1,0,none,19003654
-Pigeon,Gas Cooktops,Jumbo 4 Burner,1,0,none,19003655
-Pigeon,Gas Cooktops,Sleek 2 Burner,1,1,all,19001433
-Pigeon,Gas Cooktops,Sleek 3 Burner,1,1,all,19001345
-Pigeon,Gas Cooktops,Sleek 4 Burner,1,1,all,19001435
-Pigeon,Gas Cooktops (SS),123 — 3 Burner SS,1,0,none,19000005
-Pigeon,Gas Cooktops (SS),Compact 2 Burner SS,1,0,none,19000181
-Pigeon,Gas Cooktops (SS),Duo 2 Burner SS,1,0,none,19000002
-Pigeon,Gas Cooktops (SS),Duo 2 Burner SS Auto,1,0,none,19000013
-Pigeon,Gas Cooktops (SS),Elegance 3 Burner SS,1,0,none,19004053
-Pigeon,Gas Cooktops (SS),Elegance 4 Burner SS,1,0,none,19004054
-Pigeon,Gas Cooktops (SS),HOB 4 Burner SS,1,0,none,19000006
-Pigeon,Gas Cooktops (SS),Jumbo 2 Burner SS,1,0,none,19000003
-Pigeon,Gas Cooktops (SS),Maxima 2 Burner SS,1,0,none,19000182
-Pigeon,Gas Cooktops (SS),Maxima Cute Auto 2 Burner SS,1,0,none,19000012
-Pigeon,Gas Cooktops (SS),Trio 3 Burner SS,1,0,none,19000004
-Pigeon,Gas Cooktops (SS),Trio 3 Burner SS Auto,1,0,none,19000014
-Pigeon,Hard Anodised Cookware,HA Multi Kadai 280,1,0,none,19000175
-Pigeon,Hard Anodised Cookware,HA Titanium Concave Tawa 230 4mm,1,0,none,19003328
-Pigeon,Hard Anodised Cookware,HA Titanium Concave Tawa 260,3,0,none,"19000953, 19003329, 19003340"
-Pigeon,Hard Anodised Cookware,HA Titanium Deep Kadai 150 SS Lid,1,0,none,19003410
-Pigeon,Hard Anodised Cookware,HA Titanium Deep Kadai 250 SS Lid,1,0,none,19003411
-Pigeon,Hard Anodised Cookware,HA Titanium Deep Kadai 350 SS Lid,1,0,none,19003412
-Pigeon,Hard Anodised Cookware,HA Titanium Flat Kadai 250 IB SS Lid,1,0,none,19003408
-Pigeon,Hard Anodised Cookware,HA Titanium Flat Kadai 350 IB SS Lid,1,0,none,19003409
-Pigeon,Hobs,Hob 3 Burner Linea,1,0,none,16002269
-Pigeon,Hobs,Hob 3 Burner Slender,1,0,none,19003827
-Pigeon,Hobs,Hob 3 Burner Slender LuxeSteel,1,0,none,16002540
-Pigeon,Hobs,Hob 3 Burner TwinSpark,1,0,none,16002501
-Pigeon,Hobs,Hob 4 Burner Linea,1,0,none,16002300
-Pigeon,Hobs,Hob 4 Burner Slender,1,0,none,19003828
-Pigeon,Hobs,Hob 4 Burner XL Linea,1,0,none,16002301
-Pigeon,Hobs,Hob 4 Burner XL Slender,1,0,none,19003829
-Pigeon,Hobs,Hob 4 Burner XL Slender LuxeSteel,1,0,none,16002541
-Pigeon,Home Solutions,Air Turbo Vacuum Cleaner 600W,1,1,all,19004267
-Pigeon,Home Solutions,Air Turbo Vacuum Cleaner Pro 600W,1,0,none,19004362
-Pigeon,Home Solutions,Flash Mop Deluxe,1,1,all,10040087
-Pigeon,Home Solutions,Flat Mop (Type 1),1,0,none,19004013
-Pigeon,Home Solutions,Flat Mop (Type 2),1,0,none,19004014
-Pigeon,Home Solutions,Flexi 9-in-1 Electric Scrubber,1,0,none,19004550
-Pigeon,Home Solutions,Shine Mop,1,0,none,19004009
-Pigeon,Home Solutions,Shine Mop Deluxe,1,1,all,19004010
-Pigeon,Home Solutions,Sparkle Mop,1,0,none,19004011
-Pigeon,Home Solutions,Sparkle Mop Deluxe,1,1,all,19004012
-Pigeon,Induction Cooktops,Anti Skid 2100W,1,1,all,19000697
-Pigeon,Induction Cooktops,Brio Plus 2100W,1,1,all,19000400
-Pigeon,Induction Cooktops,Glo 1800W,1,1,all,19004337
-Pigeon,Induction Cooktops,Prime 1800W,1,1,all,19003446
-Pigeon,Induction Cooktops,Rapido Sleek 2100W,1,1,all,19000650
-Pigeon,Induction Cooktops,Rapido Touch DX 2100W,1,1,all,19000694
-Pigeon,Induction Cooktops,Stella 1800W,1,1,all,19004265
-Pigeon,Infrared Cooktops,Eva Infrared Cooktop 2000W,1,0,none,19003278
-Pigeon,Infrared Cooktops,Radiant Infrared Cooktop 2200W,1,0,none,19001341
-Pigeon,Kettles & Kessels,Crystal Glass Kettle 1.8L,1,0,none,19003955
-Pigeon,Kettles & Kessels,Evoke Kettle 1.8L Blue,1,0,none,19004407
-Pigeon,Kettles & Kessels,Evoke Kettle 1.8L Red,1,0,none,19004408
-Pigeon,Kettles & Kessels,Evoke Kettle 1.8L White,1,0,none,19004406
-Pigeon,Kettles & Kessels,Evoke Kettle 1.8L Yellow,1,0,none,19004409
-Pigeon,Kettles & Kessels,Hot Kettle 1.5L,1,0,none,19001178
-Pigeon,Kettles & Kessels,Hot Kettle Plus 1.5L Blue,1,0,none,19003985
-Pigeon,Kettles & Kessels,Hot Kettle Plus 1.5L Green,1,0,none,19003984
-Pigeon,Kettles & Kessels,Multi Cooker 2.5L with Steamer,1,0,none,19004310
-Pigeon,Kettles & Kessels,Multi-Purpose Kessel 1.2L,1,0,none,19001663
-Pigeon,Kettles & Kessels,Multi-Purpose Kessel 1.5L Blue,1,0,none,19003629
-Pigeon,Kettles & Kessels,Porta Travel Kettle 0.5L,1,0,none,19003959
-Pigeon,Kettles & Kessels,Spark Double Walled Kettle 1.2L,1,0,none,19003057
-Pigeon,Kettles & Kessels,Swift Multi-Cook Kettle 1.5L Black,1,0,none,19003956
-Pigeon,Kettles & Kessels,Swift Plus Multi-Cook 1.5L Blue,1,0,none,19003958
-Pigeon,Kettles & Kessels,Swift Plus Multi-Cook 1.5L Pink,1,0,none,19003957
-Pigeon,Kettles & Kessels,Theros Kettle 1.7L,1,0,none,19004405
-Pigeon,Kettles & Kessels,Travel Kettle 0.8L,1,0,none,19004309
-Pigeon,Kitchen Utilities,6 Piece Knife Set,1,1,all,16000780
-Pigeon,Kitchen Utilities,Chopper Utility Combo,1,0,none,19003327
-Pigeon,Kitchen Utilities,Chopper Valve Pack Mini + XL,1,0,none,19001296
-Pigeon,Kitchen Utilities,Chopping Board (Basic),1,0,none,16000841
-Pigeon,Kitchen Utilities,Chopping Board Large,1,0,none,16002273
-Pigeon,Kitchen Utilities,Chopping Board Medium,1,0,none,16002372
-Pigeon,Kitchen Utilities,Chopping Board Small,1,1,all,16002443
-Pigeon,Kitchen Utilities,Edge 4 Pieces Knife Set,1,1,all,16002381
-Pigeon,Kitchen Utilities,Edge Carbon Knife Set 6 PC,1,0,none,16002261
-Pigeon,Kitchen Utilities,Edge Ceramic Knife 4 inch,1,0,none,16002280
-Pigeon,Kitchen Utilities,Edge Ceramic Knife 5 inch,1,0,none,16002281
-Pigeon,Kitchen Utilities,Edge Ceramic Knife 6 inch,1,1,all,16002282
-Pigeon,Kitchen Utilities,Edge Cutesy 5 Inch Knife,1,0,none,19004547
-Pigeon,Kitchen Utilities,Edge Flora SS Knife 5 inch,1,1,all,16002259
-Pigeon,Kitchen Utilities,Edge Flora SS Knife 6 inch,1,1,all,16002260
-Pigeon,Kitchen Utilities,Edge Flora SS Knife Set 3PC 5 inch,1,0,none,16002295
-Pigeon,Kitchen Utilities,Handy Chopper Litre 650ml,1,0,none,19001181
-Pigeon,Kitchen Utilities,Handy Chopper Mini 400ml,1,1,all,1900645
-Pigeon,Kitchen Utilities,Handy Chopper Pro Litre 650ml,1,1,all,19001286
-Pigeon,Kitchen Utilities,Handy Chopper Pro Mini 400ml,1,1,all,19001285
-Pigeon,Kitchen Utilities,Handy Chopper Pro XL 900ml,1,1,all,19001287
-Pigeon,Kitchen Utilities,Handy Chopper XL 900ml,1,1,all,19001180
-Pigeon,Kitchen Utilities,Multi Purpose Kitchen Scissor,1,1,all,16000019
-Pigeon,Kitchen Utilities,Noodle Maker (Idiyappam),1,1,all,16002253
-Pigeon,Kitchen Utilities,Quick Electric Chopper 300W,1,0,none,19004505
-Pigeon,Kitchen Utilities,Rapid Electric Chopper 500W,1,0,none,19004506
-Pigeon,Kitchen Utilities,Sharp 5 Inch Knife,1,1,all,19004546
-Pigeon,Kitchen Utilities,Sharp Electric Chopper 600W 4-Speed,1,0,none,19004506
-Pigeon,Kitchen Utilities,Shears 3 PC Knife Set Elite,1,0,none,16001968
-Pigeon,Kitchen Utilities,Shears 4 PC Kitchen Tool Set,1,1,all,16000840
-Pigeon,Kitchen Utilities,Shears Knife Set 3PC Black,1,0,none,16000022
-Pigeon,Kitchen Utilities,Silicone Kitchen Tool Set 12 PC,1,0,none,16002368
-Pigeon,Kitchen Utilities,Tornado Turbo Food Processor,1,1,all,19001352
-Pigeon,Kitchen Utilities,Ultra Fast Electric Chopper,1,1,all,19003793
-Pigeon,Kitchen Utilities,Wooden Chopping Board Large,1,0,none,16002442
-Pigeon,Kitchen Utilities,Wooden Chopping Board Medium,1,0,none,16002441
-Pigeon,Kitchen Utilities,Zoom Chopper,2,0,none,"19003319, 19003330"
-Pigeon,LED Lights & Emergency Lamps,Bubble Desk Lamp,1,0,none,16000834
-Pigeon,LED Lights & Emergency Lamps,Capella Emergency Lamp,1,0,none,16000665
-Pigeon,LED Lights & Emergency Lamps,Egnite Emergency Lamp,1,0,none,16000252
-Pigeon,LED Lights & Emergency Lamps,Gleam Emergency Lamp,1,0,none,16000251
-Pigeon,LED Lights & Emergency Lamps,Halo Desk / Study Lamp,1,0,none,16000830
-Pigeon,LED Lights & Emergency Lamps,Helios Solar Lamp,1,1,all,16000285
-Pigeon,LED Lights & Emergency Lamps,Illume Emergency Lamp,1,0,none,16000205
-Pigeon,LED Lights & Emergency Lamps,Illume Pro,1,1,all,16000790
-Pigeon,LED Lights & Emergency Lamps,Lumino Emergency Lamp,1,0,none,16000204
-Pigeon,LED Lights & Emergency Lamps,Lumino Pro,1,1,all,16000792
-Pigeon,LED Lights & Emergency Lamps,Pixo Desk Lamp,1,0,none,16000832
-Pigeon,LED Lights & Emergency Lamps,Radiance Blue M Emergency Lamp,1,0,none,19004249
-Pigeon,LED Lights & Emergency Lamps,Radiance Green M Emergency Lamp,1,0,none,19004248
-Pigeon,LED Lights & Emergency Lamps,Radiance Orange M Emergency Lamp,1,0,none,19004247
-Pigeon,LED Lights & Emergency Lamps,Radiance Red M Emergency Lamp,1,0,none,19004246
-Pigeon,LED Lights & Emergency Lamps,Rigel Emergency Lamp,1,0,none,16000663
-Pigeon,LED Lights & Emergency Lamps,Rigel Plus LED,1,1,all,16000664
-Pigeon,LED Lights & Emergency Lamps,Shine Desk Lamp,1,0,none,16000605
-Pigeon,LED Lights & Emergency Lamps,Sirius Emergency Lamp,1,0,none,16000666
-Pigeon,LED Lights & Emergency Lamps,TBlaze Table Lamp,1,1,all,16000833
-Pigeon,LED Lights & Emergency Lamps,Theia Emergency Lamp,1,0,none,16000283
-Pigeon,LED Lights & Emergency Lamps,Vega Emergency Lamp,1,0,none,16000377
-Pigeon,LED Lights & Emergency Lamps,X-Cord 1 Flex Box Grey,1,1,all,19003365
-Pigeon,LED Lights & Emergency Lamps,X-Cord 1 Flex Box Red,1,1,all,19003244
-Pigeon,Lunch Boxes,Healthy Fresh Glass Lunch Box 3 PC,1,0,none,19003416
-Pigeon,Lunch Boxes,Heat N Treat SS Lunch Box 4 PC Black,1,0,none,19003315
-Pigeon,Lunch Boxes,Treat SS Lunch Box 5 PC Black,1,0,none,19003851
-Pigeon,Mixer Grinders & Juicers,Atom 500W 3 Jar,1,0,none,16002469
-Pigeon,Mixer Grinders & Juicers,Black Pearl MX7 750W 3 Jar,1,0,none,19000257
-Pigeon,Mixer Grinders & Juicers,Classic Lite 550W 2 Jar,1,0,none,19000315
-Pigeon,Mixer Grinders & Juicers,Enora 500W 3 Jar,1,0,none,16002088
-Pigeon,Mixer Grinders & Juicers,Excella 550W 3 Jar,1,0,none,19003825
-Pigeon,Mixer Grinders & Juicers,Femme 750W Black 3 Jar,1,0,none,19001920
-Pigeon,Mixer Grinders & Juicers,Femme 750W Blue 3 Jar,1,0,none,19001714
-Pigeon,Mixer Grinders & Juicers,Femme 750W Red 3 Jar,1,0,none,19001922
-Pigeon,Mixer Grinders & Juicers,Glory 550W 3 Jar,1,0,none,19000477
-Pigeon,Mixer Grinders & Juicers,Mega Mixi 750W 3 Jar,1,0,none,19004263
-Pigeon,Mixer Grinders & Juicers,Nutri Blender 600W 2 Jar,1,0,none,19004621
-Pigeon,Mixer Grinders & Juicers,Nutri Master 400W 2 Jar,1,0,none,16002387
-Pigeon,Mixer Grinders & Juicers,Nutri Master 400W 3 Jar,1,0,none,16002388
-Pigeon,Mixer Grinders & Juicers,Nyro 550W 4 Jar,1,0,none,16002480
-Pigeon,Mixer Grinders & Juicers,Orb 750W 3 Jar,1,0,none,19003055
-Pigeon,Mixer Grinders & Juicers,Orb Alpine Green 750W 3 Jar,1,0,none,19004230
-Pigeon,Mixer Grinders & Juicers,Orb Royal Purple 750W 4 Jar,1,0,none,19004231
-Pigeon,Mixer Grinders & Juicers,Pure Slow Juicer 250W,1,1,all,19004493
-Pigeon,Mixer Grinders & Juicers,Wet Grinder 2L Nutrova,1,0,none,16002551
-Pigeon,Non-Stick Cookware,6 Pcs Casserole Set,1,1,all,19003652
-Pigeon,Non-Stick Cookware,Appachetty SP (without Lid),1,0,none,19001069
-Pigeon,Non-Stick Cookware,Appachetty with Lid,1,0,none,19000051
-Pigeon,Non-Stick Cookware,Biryani Pot,5,5,all,"19000059, 19000060, 19000061, 19000062, 19000064"
-Pigeon,Non-Stick Cookware,Casserole with Glass Lid 180,1,0,none,19001337
-Pigeon,Non-Stick Cookware,Casserole with Glass Lid 200,1,1,all,19001338
-Pigeon,Non-Stick Cookware,Casserole with Glass Lid 220,1,0,none,19001339
-Pigeon,Non-Stick Cookware,Casserole with Glass Lid 240,1,0,none,19001350
-Pigeon,Non-Stick Cookware,Concave Tawa 260,1,1,all,19000033
-Pigeon,Non-Stick Cookware,Concave Tawa 280,1,0,none,19000034
-Pigeon,Non-Stick Cookware,Deluxe Fry Pan 235,1,0,none,19000047
-Pigeon,Non-Stick Cookware,Deluxe Fry Pan 255,1,1,all,19000048
-Pigeon,Non-Stick Cookware,Deluxe Fry Pan 275,1,0,none,19000049
-Pigeon,Non-Stick Cookware,Flat Tawa 250,1,0,none,19000030
-Pigeon,Non-Stick Cookware,Flat Tawa 280,1,1,all,19000031
-Pigeon,Non-Stick Cookware,Flat Tawa 310,1,0,none,19000032
-Pigeon,Non-Stick Cookware,Fry Pan 200,1,0,none,19000039
-Pigeon,Non-Stick Cookware,Fry Pan 220,1,0,none,19000040
-Pigeon,Non-Stick Cookware,Fry Pan 240,1,1,all,19000041
-Pigeon,Non-Stick Cookware,Fry Pan 260,1,0,none,19000042
-Pigeon,Non-Stick Cookware,Fry Pan 280,1,0,none,19000043
-Pigeon,Non-Stick Cookware,Gravy Pot,4,1,some,"19000065, 19000066, 19000067, 19000068"
-Pigeon,Non-Stick Cookware,Kadai 150,1,0,none,19000035
-Pigeon,Non-Stick Cookware,Kadai 200,1,0,none,19000036
-Pigeon,Non-Stick Cookware,Kadai 300,1,1,all,19000037
-Pigeon,Non-Stick Cookware,Multi Kadai — Grey,1,1,all,19001520
-Pigeon,Non-Stick Cookware,Multi Kadai — Red,1,1,all,19001488
-Pigeon,Non-Stick Cookware,Multi Kadai — Yellow,1,0,none,19001489
-Pigeon,Non-Stick Cookware,Multi Tawa 310,1,1,all,19000058
-Pigeon,Non-Stick Cookware,Pathri Tawa 320,1,1,all,19000054
-Pigeon,Non-Stick Cookware,Tadka Pan,1,1,all,19000052
-Pigeon,Non-Stick Cookware (Storm),Storm Flat Tawa 250,1,0,none,19000321
-Pigeon,Non-Stick Cookware (Storm),Storm Flat Tawa 250 IB,1,0,none,19000329
-Pigeon,Non-Stick Cookware (Storm),Storm Flat Tawa 280,1,1,all,19000322
-Pigeon,Non-Stick Cookware (Storm),Storm Flat Tawa 280 IB,1,1,all,19000330
-Pigeon,Non-Stick Cookware (Storm),Storm Fry Pan 175,1,0,none,19000323
-Pigeon,Non-Stick Cookware (Storm),Storm Fry Pan 200,1,1,all,19000324
-Pigeon,Non-Stick Cookware (Storm),Storm Fry Pan 220,1,0,none,19000325
-Pigeon,Non-Stick Cookware (Storm),Storm Fry Pan 240,1,0,none,19000326
-Pigeon,Non-Stick Cookware (Storm),Storm Fry Pan 240 IB,1,1,all,19000331
-Pigeon,Non-Stick Cookware (Storm),Storm Fry Pan 260,1,0,none,19000327
-Pigeon,Non-Stick Cookware (Storm),Storm Fry Pan 260 IB,1,0,none,19000332
-Pigeon,Non-Stick Cookware (Storm),Storm Kadai 200,1,1,all,19000328
-Pigeon,Non-Stick Cookware (Storm),Storm Kadai 200 IB,1,0,none,19000333
-Pigeon,Non-Stick Cookware (Storm),Storm Kadai 300 IB,1,0,none,19000334
-Pigeon,Non-Stick Gift Sets,Alba 4 PC Gift Set,1,1,all,19001023
-Pigeon,Non-Stick Gift Sets,Celebration 5 Pcs Gift Set,1,1,all,19003942
-Pigeon,Non-Stick Gift Sets,Chef Delight Gift Set 7 Pcs,1,1,all,19000841
-Pigeon,Non-Stick Gift Sets,Duo Pack Flat Tawa + Fry Pan 200,1,0,none,19000818
-Pigeon,Non-Stick Gift Sets,Duo Pack Flat Tawa 250 + Fry Pan 220,1,1,all,19000809
-Pigeon,Non-Stick Gift Sets,Favorite Duo Pack Flat Tawa 250 + Fry Pan 240,1,1,all,19000870
-Pigeon,Non-Stick Gift Sets,Nonstick 4 PC Carlo,1,1,all,19000745
-Pigeon,Non-Stick Gift Sets,Twin Pack Blue,1,0,none,19001935
-Pigeon,Non-Stick Gift Sets,Twin Pack Flat Tawa + Fry Pan 200 Mint Green,1,0,none,19001932
-Pigeon,Non-Stick Gift Sets,Twin Pack Pink,1,0,none,19001934
-Pigeon,Non-Stick Gift Sets,Twin Pack Yellow,1,0,none,19001933
-Pigeon,Non-Stick Gift Sets,Vita 4 PC Gift Set,1,1,all,19001022
-Pigeon,Personal Care,All in 1 Grooming Kit 3-in-1,1,1,all,19004316
-Pigeon,Personal Care,All in 1 Grooming Kit 5-in-1,1,1,all,19004317
-Pigeon,Personal Care,Bloom Hair Dryer 1000W Blue,1,0,none,19004499
-Pigeon,Personal Care,Bloom Hair Dryer 1000W Pink,1,0,none,19004500
-Pigeon,Personal Care,Charm Women Trimmer 4-in-1,1,1,all,19003884
-Pigeon,Personal Care,Ease 8-in-1 Electric Body Massager,1,1,all,19004375
-Pigeon,Personal Care,Elegant BLDC Hair Dryer 2-in-1 1200W,1,0,none,19003882
-Pigeon,Personal Care,Elegant BLDC Hair Dryer 5-in-1 1600W,1,0,none,19003883
-Pigeon,Personal Care,Fair Beard Trimmer,1,1,all,19003885
-Pigeon,Personal Care,Glam Hair Dryer 1400W Blue,1,0,none,19003914
-Pigeon,Personal Care,Glam Hair Dryer 1400W Pink,1,0,none,19003915
-Pigeon,Personal Care,Glam Hair Dryer 1400W Purple,1,0,none,19003916
-Pigeon,Personal Care,Grace Hair Dryer 1200W Blue,1,0,none,19003912
-Pigeon,Personal Care,Grace Hair Dryer 1200W Pink,1,0,none,19003913
-Pigeon,Personal Care,Laze 4-in-1 Electric Body Massager,1,1,all,19004374
-Pigeon,Personal Care,Multi Purpose Body Trimmer,1,1,all,19004318
-Pigeon,Personal Care,Neura Leg & Calf Massager,1,1,all,19004376
-Pigeon,Personal Care,Nexa Gun Massager,1,1,all,19004379
-Pigeon,Personal Care,Pigeon Magni 2-in-1 Volumizer,1,0,none,19003918
-Pigeon,Personal Care,Pretti Volumizer,1,1,all,19003917
-Pigeon,Personal Care,Pulse Massager,1,1,all,19004380
-Pigeon,Personal Care,Relax Scalp Massager,1,1,all,19004503
-Pigeon,Personal Care,Strike Beard Trimmer,1,1,all,19003886
-Pigeon,Personal Care,Syna Leg Massager,1,0,none,19004377
-Pigeon,Personal Care,Vibe Gun Massager,1,1,all,19004378
-Pigeon,Pressure Cookers,All-In-One Super Cooker 3L Hard Anodised,1,0,none,19000687
-Pigeon,Pressure Cookers,All-In-One Super Cooker 5L Hard Anodised,1,0,none,19000689
-Pigeon,Pressure Cookers,Amelia Hard Anodised,4,1,some,"19000204, 19001080, 19001081, 19002717"
-Pigeon,Pressure Cookers,Classic Aluminium,4,0,none,"19000029, 19001936, 19001937, 19001951"
-Pigeon,Pressure Cookers,Classic Aluminium 5L IB,1,0,none,19000885
-Pigeon,Pressure Cookers,Deluxe Aluminium,6,0,none,"19000017, 19000018, 19000019, 19000020, 19000021, 19000022"
-Pigeon,Pressure Cookers,Deluxe Calida 3L,1,0,none,19000025
-Pigeon,Pressure Cookers,Deluxe Calida 5L IB,1,0,none,19000026
-Pigeon,Pressure Cookers,Deluxe Pan,2,1,some,"19000023, 19000024"
-Pigeon,Pressure Cookers,Elite Shine Tri-Ply SS,6,0,none,"19001902, 19001903, 19001905, 19003878, 19004319, 19004320"
-Pigeon,Pressure Cookers,Elite Shine Tri-Ply SS 2L+3L Combo,1,0,none,19002863
-Pigeon,Pressure Cookers,Elite Shine Tri-Ply SS 2L+3L+5L Combo,1,0,none,19003421
-Pigeon,Pressure Cookers,INOX Outer Lid,7,1,some,"19000336, 19000338, 19001327, 19003853, 19003854, 19003855, 19003856"
-Pigeon,Pressure Cookers,INOX Plus Outer Lid,2,0,none,"1190010931, 19001094"
-Pigeon,Pressure Cookers,INOX Pro Inner Lid,3,1,some,"19003279, 19003280, 19004291"
-Pigeon,Pressure Cookers,INOX Pro Outer Lid,2,0,none,"19001899, 19001910"
-Pigeon,Pressure Cookers,INOX SS Inner Lid,3,0,none,"19001100, 19001101, 19001418"
-Pigeon,Pressure Cookers,INOX Sigma,2,1,some,"19003615, 19003623"
-Pigeon,Pressure Cookers,Inner Lid Triply,2,1,some,"19004590, 19004591"
-Pigeon,Pressure Cookers,Mabel Ceramic Cooker,3,3,all,"19004302, 19004303, 19004304"
-Pigeon,Pressure Cookers,Mila 2L Aluminium,1,0,none,19001080
-Pigeon,Pressure Cookers,Mila 3L Aluminium,1,0,none,19001081
-Pigeon,Pressure Cookers,Mila 5L Aluminium,1,0,none,19001082
-Pigeon,Pressure Cookers,Mila 7L Aluminium,1,0,none,19002717
-Pigeon,Pressure Cookers,Mini Combi OL IB SS 3.5L+5L,1,0,none,19004516
-Pigeon,Pressure Cookers,Mini Combo 2L+3L Aluminium,1,0,none,19000244
-Pigeon,Pressure Cookers,Rio 3L Aluminium,1,0,none,19001889
-Pigeon,Pressure Cookers,Starter Kit 3.5L+5L+Fry Pan+Tawa+Kadai,1,0,none,19000015
-Pigeon,Pressure Cookers,Storm IB 3L Aluminium,1,0,none,19000254
-Pigeon,Pressure Cookers,Storm IB 5L Aluminium,1,0,none,19000256
-Pigeon,Pressure Cookers,Super Cooker Value Pack 5L Hard Anodised,1,0,none,19000691
-Pigeon,Pressure Cookers,Titanium 3L Hard Anodised,1,0,none,19000173
-Pigeon,Pressure Cookers,Titanium 5L Hard Anodised,1,0,none,19000174
-Pigeon,Pressure Cookers,Titanium Easy Cook Combi 3L,1,1,all,19003587
-Pigeon,Pressure Cookers,Titanium Handi 2L Hard Anodised,1,0,none,19000250
-Pigeon,Pressure Cookers,Titanium Handi 3L Hard Anodised,1,0,none,19000251
-Pigeon,Pressure Cookers,Titanium Handi 5L Hard Anodised,1,0,none,19000252
-Pigeon,Pressure Cookers,Titanium Hard Anodised,2,1,some,"19000909, 19000978"
-Pigeon,Rice Cookers,Electra Smart Cook EPC,2,1,some,"19004463, 19004464"
-Pigeon,Rice Cookers,INOX 1.8L DX,1,0,none,19004368
-Pigeon,Rice Cookers,INOX 1.8L SDX (Double Pot),1,0,none,19004293
-Pigeon,Rice Cookers,INOX 1L DX,1,0,none,19004367
-Pigeon,Rice Cookers,INOX 1L SDX (Double Pot),1,0,none,19004292
-Pigeon,Rice Cookers,INOX Pro with Steamer 1.8L Double Pot Grey,1,0,none,19004565
-Pigeon,Rice Cookers,INOX Pro with Steamer 1.8L Double Pot Yellow,1,0,none,19004563
-Pigeon,Rice Cookers,INOX Pro with Steamer 1L DX Grey,1,1,all,19004562
-Pigeon,Rice Cookers,INOX Pro with Steamer 1L DX Pink,1,1,all,19004561
-Pigeon,Rice Cookers,INOX Pro with Steamer 1L DX Yellow,1,1,all,19004560
-Pigeon,Rice Cookers,Joy Unlimited 0.6L DX Single Pot,1,0,none,19004404
-Pigeon,Rice Cookers,Joy Unlimited 0.6L Double Pot,1,0,none,19004340
-Pigeon,Rice Cookers,Joy Unlimited 1.8L DX Single Pot,1,0,none,19001507
-Pigeon,Rice Cookers,Joy Unlimited 1.8L Double Pot,1,0,none,19001511
-Pigeon,Rice Cookers,Joy Unlimited 1L DX Single Pot,1,0,none,19001508
-Pigeon,Rice Cookers,Joy Unlimited 1L Double Pot,1,0,none,19001509
-Pigeon,Rice Cookers,Joy Unlimited 2.8L DX Single Pot,1,0,none,19001510
-Pigeon,Rice Cookers,Joy Unlimited 4.2L DX Single Pot,1,0,none,19004341
-Pigeon,Rice Cookers,Ruby 1.8L DX Single Pot,1,0,none,19001766
-Pigeon,Rice Cookers,Ruby 1L Double Pot,1,0,none,19001767
-Pigeon,Small Appliances,3-in-1 Snack Maker Black (Toast+Grill+Waffle),1,0,none,19003620
-Pigeon,Small Appliances,Grill Sandwich Maker Jumbo,1,1,all,19004190
-Pigeon,Small Appliances,Modern Cucina Coffee Maker,1,1,all,19001302
-Pigeon,Small Appliances,Panini Sandwich Griller Black,1,1,all,19003621
-Pigeon,Small Appliances,Pop Up Toaster Black,1,1,all,19003813
-Pigeon,Small Appliances,Pop Up Toaster White,1,1,all,19003814
-Pigeon,Small Appliances,Sandwich Griller Black,1,1,all,19004214
-Pigeon,Small Appliances,Sandwich Griller White,1,0,none,19004215
-Pigeon,Small Appliances,Sandwich Toaster Black,1,1,all,19003863
-Pigeon,Small Appliances,Sandwich Toaster White,1,0,none,19003864
-Pigeon,Stainless Steel Cookware,Essential 7 Pcs Gift Set,1,0,none,19002210
-Pigeon,Stainless Steel Cookware,Idly Maker 3 Plates,1,1,all,16002431
-Pigeon,Stainless Steel Cookware,Idly Maker 4 Plates,1,1,all,16002016
-Pigeon,Stainless Steel Cookware,Idly Maker 5 Plates,1,1,all,16002432
-Pigeon,Stainless Steel Cookware,Idly Maker 6 Plates,1,1,all,16002017
-Pigeon,Stainless Steel Cookware,SPL SS 3 Pcs Set (Kadai+Frypan+Sauce Pan),1,0,none,16000816
-Pigeon,Stainless Steel Cookware,"Steelo Frypan 10"" Sandwich Bottom",1,1,all,16002105
-Pigeon,Stainless Steel Cookware,"Steelo Frypan 12"" Sandwich Bottom",1,0,none,16002106
-Pigeon,Stainless Steel Cookware,"Steelo Frypan 13"" Sandwich Bottom",1,0,none,16002107
-Pigeon,Stainless Steel Cookware,"Steelo Kadai 10"" 2mm",1,1,all,16002094
-Pigeon,Stainless Steel Cookware,"Steelo Kadai 12"" 2mm",1,0,none,16002095
-Pigeon,Stainless Steel Cookware,"Steelo Kadai 12"" Sandwich Bottom",1,1,all,16002097
-Pigeon,Stainless Steel Cookware,"Steelo Kadai 13"" 2mm",1,0,none,16002096
-Pigeon,Stainless Steel Cookware,"Steelo Kadai 13"" Sandwich Bottom",1,0,none,16002098
-Pigeon,Stainless Steel Cookware,"Steelo Kadai 14"" Sandwich Bottom",1,0,none,16002099
-Pigeon,Stainless Steel Cookware,"Steelo Kadai 15"" Sandwich Bottom",1,0,none,16002100
-Pigeon,Stainless Steel Cookware,"Steelo Kadai 16"" Sandwich Bottom",1,0,none,16002101
-Pigeon,Stainless Steel Cookware,Steelo Multi Kadai 280 Sandwich Bottom,1,0,none,19000256
-Pigeon,Stainless Steel Cookware,Steelo Multi Kadai 3L,1,0,none,16002092
-Pigeon,Stainless Steel Cookware,"Steelo Sauce Pan 10"" Sandwich Bottom",1,1,all,16002102
-Pigeon,Stainless Steel Cookware,"Steelo Sauce Pan 11"" Sandwich Bottom",1,0,none,16002103
-Pigeon,Stainless Steel Cookware,"Steelo Sauce Pan 12"" Sandwich Bottom",1,0,none,16002104
-Pigeon,Stainless Steel Cookware,Steelo Steamer 20cm,1,0,none,16002110
-Pigeon,Stainless Steel Cookware,"Steelo Tope Set 10"" to 14""",1,0,none,16002109
-Pigeon,Tri-Ply Cookware,Elite Tri-Ply Casserole,3,0,none,"19002696, 19002697, 19002698"
-Pigeon,Tri-Ply Cookware,Elite Tri-Ply Fry Pan,3,0,none,"19002699, 19002700, 19002701"
-Pigeon,Tri-Ply Cookware,Elite Tri-Ply Kadai,4,0,none,"19002702, 19002703, 19002704, 19002705"
-Pigeon,Tri-Ply Cookware,Elite Tri-Ply Sauce Pan,3,0,none,"19002706, 19002707, 19002708"
-Pigeon,Tri-Ply Cookware,Elite Tri-Ply Tope,5,0,none,"19002709, 19002710, 19002711, 19002712, 19002713"
-Pigeon,Water Bottles (Clear Glass),Clear Glass Water Bottle 750ml Blue,1,1,all,16002461
-Pigeon,Water Bottles (Clear Glass),Clear Glass Water Bottle 750ml Grey,1,1,all,16002462
-Pigeon,Water Bottles (Clear Glass),Clear Glass Water Bottle 750ml Red,1,1,all,16002464
-Pigeon,Water Bottles (Clear Glass),Clear Glass Water Bottle 750ml Yellow,1,0,none,16002463
-Pigeon,Water Bottles (PU Insulated),Hue Insulated SS 500ml Blue,1,0,none,16002042
-Pigeon,Water Bottles (PU Insulated),Hue Insulated SS 500ml Purple,1,0,none,16002018
-Pigeon,Water Bottles (PU Insulated),Hue Insulated SS 500ml Yellow,1,0,none,16002040
-Pigeon,Water Bottles (PU Insulated),Hue Insulated SS 750ml Blue,1,0,none,16002043
-Pigeon,Water Bottles (PU Insulated),Hue Insulated SS 750ml Purple,1,0,none,16002019
-Pigeon,Water Bottles (PU Insulated),Hue Insulated SS 750ml Yellow,1,0,none,16002041
-Pigeon,Water Bottles (PU Insulated),Radiant Insulated SS 600ml Blue,1,0,none,16002046
-Pigeon,Water Bottles (PU Insulated),Radiant Insulated SS 600ml Pink,1,0,none,16002044
-Pigeon,Water Bottles (PU Insulated),Radiant Insulated SS 600ml Yellow,1,0,none,16002048
-Pigeon,Water Bottles (PU Insulated),Radiant Insulated SS 800ml Blue,1,0,none,16002047
-Pigeon,Water Bottles (PU Insulated),Radiant Insulated SS 800ml Pink,1,0,none,16002045
-Pigeon,Water Bottles (PU Insulated),Radiant Insulated SS 800ml Yellow,1,0,none,16002049
-Pigeon,Water Bottles (Single Wall),Blitz Water Bottle 975ml Black,1,0,none,19004482
-Pigeon,Water Bottles (Single Wall),Blitz Water Bottle 975ml Blue,1,1,all,19004480
-Pigeon,Water Bottles (Single Wall),INOX Hydra,2,0,none,"19002686, 19002688"
-Pigeon,Water Bottles (Single Wall),INOX Hydra Duo 900ml,1,1,all,19004266
-Pigeon,Water Bottles (Single Wall),INOX Hydra Plus,2,0,none,"19002687, 19002689"
-Pigeon,Water Bottles (Thermo Cup),Thermo Cup 350ml Black,1,0,none,16002249
-Pigeon,Water Bottles (Thermo Cup),Thermo Cup 350ml White,1,0,none,16002262
-Pigeon,Water Bottles (Thermo Cup),Thermo Cup 400ml Black,1,1,all,16002270
-Pigeon,Water Bottles (Thermo Cup),Thermo Cup 400ml White,1,0,none,16002263
-Pigeon,Water Bottles (Vacuum SS),Bullet SDX 1000ml Red,1,1,all,19004029
-Pigeon,Water Bottles (Vacuum SS),Glacier,2,0,none,"19004657, 19004858"
-Pigeon,Water Bottles (Vacuum SS),SS Vacuum Aqua 1000ml Silver,1,1,all,19004064
-Pigeon,Water Bottles (Vacuum SS),Stark Plus Navy 1000ml Blue,1,0,none,19004490
-Pigeon,Water Bottles (Vacuum SS),Stark Plus Olive Green 1000ml,1,0,none,19004489
-Pigeon,Water Bottles (Vacuum SS),Therminox Aqua Plus 1000ml Black,1,1,all,19004321
-Pigeon,Water Bottles (Vacuum SS),Therminox Aqua Plus 1000ml Green,1,1,all,19004461
-Yera,Beer/Juice Mugs,Auburn Lake Mug A – 325ml,1,1,all,BM12A
-Yera,Beer/Juice Mugs,Auburn Lake Mug – 375ml,1,1,all,BM120
-Yera,Beer/Juice Mugs,Bistro Beer Mug – 345ml,1,1,all,BM345
-Yera,Beer/Juice Mugs,Bistro Mug – 360ml,1,1,all,BM360
-Yera,Beer/Juice Mugs,Fructose Beer Mug – 290ml,1,1,all,BM10PD
-Yera,Beer/Juice Mugs,Fructose Hexagon Mug – 260ml,1,1,all,JM10A
-Yera,Beer/Juice Mugs,Irish Coffee Mug – 225ml,1,1,all,CM225
-Yera,Beer/Juice Mugs,Stylo Mug,2,2,all,"BM350, BM355"
-Yera,Beer/Juice Mugs,Stylo Mug M32 – 355ml,1,1,all,BM355-M32
-Yera,Beer/Juice Mugs,Stylo Mug – 335ml (LSR),1,1,all,BM335
-Yera,Bowls,Freezowarm Bowl,3,2,some,"BS401, BS801, BS802"
-Yera,Bowls,Lumino Bowl – 170ml,1,1,all,B6FL
-Yera,Bowls,Pacifica Bowl – 220ml,1,1,all,B7PC
-Yera,Bowls,Polo Bowl,3,3,all,"B16FL, B35FL, B55FL"
-Yera,Bowls,Venus Serving Bowl,3,3,all,"B12SB, B35SB, B7SB"
-Yera,Cups & Mugs,Comfort Mug/Cup,3,1,some,"CS4.CSFD/DD, CS6FD, CT4FS"
-Yera,Cups & Mugs,Comfort Plain Mug/Cup,2,1,some,"CS6MO-Plain, CT4FS-plain"
-Yera,Cups & Mugs,Cosmos Design 1 Mug/Cup – 250ml,1,1,all,CT9-D1
-Yera,Cups & Mugs,Cosmos Design 2 Mug/Cup – 250ml,1,1,all,CT9-D2
-Yera,Cups & Mugs,Cosmos Mug/Cup,3,1,some,"CT4.5U, CT6, CT9"
-Yera,Cups & Mugs,Mocha Mug/Cup – 225ml,1,1,all,CT8B
-Yera,Ice Cream Bowls,Antartic Ice Cream Bowl – 125ml,1,1,all,IC4IF
-Yera,Ice Cream Bowls,Iceberg Ice Cream Bowl – 100ml,1,1,all,ICV7-M23
-Yera,Int'l Series,Fiona Jar 675ml,1,1,all,NPR-0202
-Yera,Jars,Aahar Jar,7,4,some,"JR-1, JR-1.5, JR-150, JR-2, JR-3, JR-4, JR-5"
-Yera,Jars,Aahar Square Jar,6,2,some,"JS-1.5, JS-2, JS-3, JS-4, JS-6, JS-8"
-Yera,Jars,Deluxe Aahar Jar – 3.36L,1,1,all,JR-120
-Yera,Jars,Jina Jar – 195ml (Steel Lid),1,1,all,B7FH
-Yera,Jars,KR Round Jar,6,6,all,"KR-0300, KR-0600, KR-0800, KR-1000, KR-1800, KR-3000"
-Yera,Jars,KRM Round Jar,4,4,all,"KRM-0300, KRM-0600, KRM-0800, KRM-1000"
-Yera,Jars,KSM Jar,9,9,all,"KSM-0300, KSM-0600, KSM-0800, KSM-1000, KSM-1800, KSM-2250, KSM-235, KSM-3000, KSM-4000"
-Yera,Jars,Omega Stackable Jar – 580ml,1,1,all,KR600
-Yera,Jars,Pantry Jar,4,4,all,"PJS-1000, PJS-1500, PJS-2000, PJS-550"
-Yera,Jars,Shell Jar – 320ml,1,1,all,ICF-320-215
-Yera,Jars,Spice Jar – 285ml,1,1,all,JC-250
-Yera,Jars,Steelex Jar,7,7,all,"JR-1ST, JR-2ST, JR-3ST, JR-5ST, JR250ST, JR500ST, JR750ST"
-Yera,Jars,Zaika Jar,3,3,all,"JR-250, JR-500, JR-750"
-Yera,Lemon Set / Jug,Volga Jug – 1700ml,1,1,all,GS1700
-Yera,Sipper Bottles,Magnus Mason Jar – 440ml,1,1,all,ISS-0495-0380
-Yera,Tumblers,Classic Tumbler T10BD – 285ml,1,1,all,T10BD
-Yera,Tumblers,Classic Tumbler T10FB – 285ml,1,1,all,T10FB
-Yera,Tumblers,Classic Tumbler T11FC – 360ml,1,1,all,T11FC
-Yera,Tumblers,Classic Tumbler T7B – 210ml,1,1,all,T7B
-Yera,Tumblers,Classic Tumbler T7BD – 220ml,1,1,all,T7BD
-Yera,Tumblers,Classic Tumbler T9AHB – 250ml,1,0,none,T9AHB
-Yera,Tumblers,Classic Tumbler T9C – 270ml,1,1,all,T9C
-Yera,Tumblers,Classic Tumbler T9FC – 255ml,1,1,all,T9FC
-Yera,Tumblers,Classic Tumbler – 180ml,1,1,all,TS06HB-P0
-Yera,Tumblers,Desire,3,2,some,"T10SQ, T11SQ, T8RSQ"
-Yera,Tumblers,Epitome Tumbler P/B,4,2,some,"TP07-P0, TP08-P0, TP09-P0, TP10-P0"
-Yera,Tumblers,Mellow Gold Plain Tumbler – 325ml,1,1,all,TS12HB
-Yera,Tumblers,Mellow Gold Tumbler,2,2,all,"TS7P0, TS8P0"
-Yera,Tumblers,Stylo Conical Tumbler,4,2,some,"TC-155, TC-215, TC-340, TC-435"
-Yera,Tumblers,Stylo Design Tumbler,8,6,some,"T-160 TH, T-185 ST, T-205 TH, T-245 TH, T-260 TH, T-265 HS, T-270 TH, T-375 TH"
-Yera,Tumblers,Stylo Parabolic Tumbler,2,2,all,"TP260, TP345"
-Yera,Tumblers,Stylo Straight Tumbler,12,7,some,"T2PL, TQ060, TS-065, TS-145, TS-175, TS-220, TS-245, TS-265, TS-280, TS-290, TS-340, TS-385"
-Yera,Tumblers,Tumbler – Barrel 260,1,0,none,TB10
+brand,category,product,skus,skus_with_image,image_status,has_description,codes
+Dubblin,SS & PU Insulated Lunch Boxes,Bento,1,1,all,no,dubblin-bento
+Dubblin,SS & PU Insulated Lunch Boxes,Bento 2,1,1,all,no,dubblin-bento-2
+Dubblin,SS & PU Insulated Lunch Boxes,Buffet,1,1,all,no,dubblin-buffet
+Dubblin,SS & PU Insulated Lunch Boxes,Crunch,1,1,all,no,dubblin-crunch
+Dubblin,SS & PU Insulated Lunch Boxes,Goofy,1,1,all,no,dubblin-goofy
+Dubblin,SS & PU Insulated Lunch Boxes,Micky,1,1,all,no,dubblin-micky
+Dubblin,SS & PU Insulated Lunch Boxes,Micky 3,1,1,all,no,dubblin-micky-3
+Dubblin,SS & PU Insulated Lunch Boxes,Munch,1,1,all,no,dubblin-munch
+Dubblin,SS & PU Insulated Lunch Boxes,Ricky,1,1,all,no,dubblin-ricky
+Dubblin,SS & PU Insulated Lunch Boxes,Ricky 3,1,1,all,no,dubblin-ricky-3
+Dubblin,SS & PU Insulated Lunch Boxes,Slim,1,1,all,no,dubblin-slim
+Dubblin,SS & PU Insulated Lunch Boxes,Slim Senior,1,0,none,no,dubblin-slim-senior
+Dubblin,SS & PU Insulated Lunch Boxes,Snoofy,1,1,all,no,dubblin-snoofy
+Dubblin,SS & PU Insulated Lunch Boxes,Treat,1,1,all,no,dubblin-treat
+Dubblin,SS Containers,Fresher,7,7,all,no,"dubblin-fresher-1000, dubblin-fresher-1250, dubblin-fresher-1500, dubblin-fresher-2000, dubblin-fresher-2400, dubblin-fresher-500, dubblin-fresher-750"
+Dubblin,SS Containers,Smartlock Flat,2,0,none,no,"dubblin-smartlock-flat-2000, dubblin-smartlock-flat-800"
+Dubblin,SS Containers,Smartlock Rectangular,4,4,all,no,"dubblin-smartlock-rectangular-1000, dubblin-smartlock-rectangular-1700, dubblin-smartlock-rectangular-2300, dubblin-smartlock-rectangular-380"
+Dubblin,SS Containers,Smartlock Round,4,4,all,no,"dubblin-smartlock-round-1000, dubblin-smartlock-round-1500, dubblin-smartlock-round-2000, dubblin-smartlock-round-350"
+Dubblin,SS Double Wall Mugs,Casa,1,1,all,no,dubblin-casa-270
+Dubblin,SS Double Wall Mugs,Chess,1,1,all,no,dubblin-chess-300
+Dubblin,SS Double Wall Mugs,Milk & Cookies,1,1,all,no,dubblin-milk-cookies-350
+Dubblin,SS Double Wall Mugs,Polo,2,2,all,no,"dubblin-polo-220, dubblin-polo-270"
+Dubblin,SS Double Wall Mugs,Refresh,1,1,all,no,dubblin-refresh-350
+Dubblin,SS Double Wall Mugs,Rugby,1,1,all,no,dubblin-rugby-270
+Dubblin,SS Double Wall Mugs,Soccer,2,2,all,no,"dubblin-soccer-270, dubblin-soccer-350"
+Dubblin,SS Single Wall Bottles,Ice Cube,4,4,all,no,"dubblin-ice-cube-1000, dubblin-ice-cube-1150, dubblin-ice-cube-1500, dubblin-ice-cube-750"
+Dubblin,SS Single Wall Bottles,Mountain,4,4,all,no,"dubblin-mountain-1000, dubblin-mountain-1150, dubblin-mountain-500, dubblin-mountain-750"
+Dubblin,SS Single Wall Bottles,Stunning,1,1,all,no,dubblin-stunning-800
+Dubblin,SS Vacuum Bottles,Banjo,1,1,all,no,dubblin-banjo-450
+Dubblin,SS Vacuum Bottles,Belly,2,2,all,no,"dubblin-belly-230, dubblin-belly-300"
+Dubblin,SS Vacuum Bottles,Club,1,1,all,no,dubblin-club-750
+Dubblin,SS Vacuum Bottles,Crest,2,2,all,no,"dubblin-crest-600, dubblin-crest-900"
+Dubblin,SS Vacuum Bottles,Dolphin,3,3,all,no,"dubblin-dolphin-1000, dubblin-dolphin-550, dubblin-dolphin-750"
+Dubblin,SS Vacuum Bottles,Drum,2,2,all,no,"dubblin-drum-1050, dubblin-drum-1400"
+Dubblin,SS Vacuum Bottles,Fancy,3,3,all,no,"dubblin-fancy-500, dubblin-fancy-750, dubblin-fancy-950"
+Dubblin,SS Vacuum Bottles,Hiker,3,3,all,no,"dubblin-hiker-1000, dubblin-hiker-550, dubblin-hiker-750"
+Dubblin,SS Vacuum Bottles,Jack N Jill,2,2,all,no,"dubblin-jack-n-jill-200, dubblin-jack-n-jill-300"
+Dubblin,SS Vacuum Bottles,Jumbo,2,2,all,no,"dubblin-jumbo-1400, dubblin-jumbo-1800"
+Dubblin,SS Vacuum Bottles,Kiwi,2,2,all,no,"dubblin-kiwi-500, dubblin-kiwi-700"
+Dubblin,SS Vacuum Bottles,Little,1,1,all,no,dubblin-little-200
+Dubblin,SS Vacuum Bottles,Modern,3,3,all,no,"dubblin-modern-1000, dubblin-modern-600, dubblin-modern-750"
+Dubblin,SS Vacuum Bottles,Robot,2,2,all,no,"dubblin-robot-300, dubblin-robot-500"
+Dubblin,SS Vacuum Bottles,Ruff & Tuff,3,3,all,no,"dubblin-ruff-tuff-1000, dubblin-ruff-tuff-550, dubblin-ruff-tuff-750"
+Dubblin,SS Vacuum Bottles,Shade,2,2,all,no,"dubblin-shade-500, dubblin-shade-750"
+Dubblin,SS Vacuum Bottles,Tango,3,3,all,no,"dubblin-tango-1000, dubblin-tango-550, dubblin-tango-700"
+Dubblin,SS Vacuum Bottles,Trump,2,2,all,no,"dubblin-trump-1000, dubblin-trump-750"
+Dubblin,SS Vacuum Bottles,Zoom,4,4,all,no,"dubblin-zoom-1000, dubblin-zoom-1200, dubblin-zoom-550, dubblin-zoom-750"
+Dubblin,SS Vacuum Mugs,Bold,2,0,none,no,"dubblin-bold-1200, dubblin-bold-900"
+Dubblin,SS Vacuum Mugs,Craze,2,0,none,no,"dubblin-craze-550, dubblin-craze-800"
+Dubblin,SS Vacuum Mugs,Euro,1,1,all,no,dubblin-euro-500
+Dubblin,SS Vacuum Mugs,Passion,1,1,all,no,dubblin-passion-350
+Dubblin,SS Vacuum Mugs,Rage,3,0,none,no,"dubblin-rage-1200, dubblin-rage-550, dubblin-rage-800"
+Dubblin,SS Vacuum Mugs,Rock,2,0,none,no,"dubblin-rock-1200, dubblin-rock-900"
+Dubblin,SS Vacuum Mugs,Swing,2,2,all,no,"dubblin-swing-350, dubblin-swing-500"
+Pigeon,Air Fryers,12L Air Fusion+ Air Fryer Oven,1,0,none,yes,19004264
+Pigeon,Air Fryers,Healthifry Manual Air Fryer,1,1,all,yes,19003619
+Pigeon,Air Fryers,Healthifry+ 6.5L Orbitron,1,1,all,yes,19004339
+Pigeon,Air Fryers,Healthifry+ Digital Air Fryer 3.3L,1,1,all,yes,19004521
+Pigeon,Air Fryers,Healthifry+ Digital Air Fryer 4.2L,1,0,none,yes,19003964
+Pigeon,Air Fryers,Stellar Bladeless Digital 5.5L,1,0,none,yes,19004290
+Pigeon,Cast Iron Cookware (Imperi Luxe),Casserole 220 with Lid Enamelled,1,0,none,yes,19004033
+Pigeon,Cast Iron Cookware (Imperi Luxe),Casserole 240 with Lid Enamelled,1,0,none,yes,19004034
+Pigeon,Cast Iron Cookware (Imperi Luxe),Fry Pan 200 Enamelled,1,0,none,yes,19004035
+Pigeon,Cast Iron Cookware (Imperi Luxe),Fry Pan 220 Enamelled,1,0,none,yes,19004036
+Pigeon,Cast Iron Cookware (Imperi Luxe),Fry Pan 250 Enamelled,1,0,none,yes,19004037
+Pigeon,Cast Iron Cookware (Imperi Luxe),Grill Pan 250 Enamelled,1,0,none,yes,19004038
+Pigeon,Cast Iron Cookware (Imperi Luxe),Kadai 200 with Lid Enamelled,1,0,none,yes,19004039
+Pigeon,Cast Iron Cookware (Imperi Luxe),Kadai 240 with Lid Enamelled,1,0,none,yes,19004060
+Pigeon,Cast Iron Cookware (Imperi Luxe),Kadai 260 with Lid Enamelled,1,0,none,yes,19004061
+Pigeon,Cast Iron Cookware (Imperi),Appachetty 220,1,0,none,yes,19003987
+Pigeon,Cast Iron Cookware (Imperi),Curved Tawa 260,1,0,none,yes,19003988
+Pigeon,Cast Iron Cookware (Imperi),Curved Tawa 280,1,0,none,yes,19003989
+Pigeon,Cast Iron Cookware (Imperi),Dosa Tawa 300,1,0,none,yes,19002174
+Pigeon,Cast Iron Cookware (Imperi),Double Side Tawa 310,1,0,none,yes,19004028
+Pigeon,Cast Iron Cookware (Imperi),Flat Tawa 250,1,0,none,yes,19002176
+Pigeon,Cast Iron Cookware (Imperi),Flat Tawa 280,1,1,all,yes,19004410
+Pigeon,Cast Iron Cookware (Imperi),Fry Pan 220,1,0,none,yes,19004024
+Pigeon,Cast Iron Cookware (Imperi),Fry Pan 240,1,1,all,yes,19004025
+Pigeon,Cast Iron Cookware (Imperi),Grill Pan 250,1,0,none,yes,19004026
+Pigeon,Cast Iron Cookware (Imperi),Kadai with Lid 240,1,0,none,yes,19004021
+Pigeon,Cast Iron Cookware (Imperi),Paniyarakkal 9 Round,1,0,none,yes,19004027
+Pigeon,Chimneys,Atmos,3,0,none,yes,"19004600, 19004601, 19004602"
+Pigeon,Chimneys,Aura,3,0,none,yes,"16002416, 16002417, 16002418"
+Pigeon,Chimneys,Black Diamond,2,0,none,yes,"19004598, 19004599"
+Pigeon,Chimneys,Nebula DX 60cm,1,1,all,yes,19004449
+Pigeon,Chimneys,Xtreme DLX,3,0,none,yes,"19004603, 19004604, 19004605"
+Pigeon,Die-Cast Cookware,Wondercast Flat Tawa 280,1,1,all,yes,19000081
+Pigeon,Die-Cast Cookware,Wondercast Flat Tawa 280 IB,1,0,none,yes,19000084
+Pigeon,Die-Cast Cookware,Wondercast Flat Tawa 300,1,0,none,yes,19003043
+Pigeon,Die-Cast Cookware,Wondercast Long Handle Paniyarakkal 12 Rounds,1,1,all,yes,19000178
+Pigeon,Die-Cast Cookware,Wondercast Paniyarakkal 11 Rounds,1,1,all,yes,19000083
+Pigeon,Die-Cast Cookware,Wondercast Paniyarakkal 12 Rounds,1,1,all,yes,19001487
+Pigeon,Die-Cast Cookware,Wondercast Paniyarakkal 7 Rounds,1,0,none,yes,19000082
+Pigeon,Electric Ovens & OTGs,Electric Oven 14L with Tray & Grill,1,0,none,yes,19004365
+Pigeon,Electric Ovens & OTGs,Electric Oven 9L with Tray & Grill,1,0,none,yes,19003969
+Pigeon,Electric Ovens & OTGs,Nano Wave Solo Microwave 20L,1,0,none,yes,19004281
+Pigeon,Electric Ovens & OTGs,OTG 25L with Rotisserie,1,0,none,yes,19003848
+Pigeon,Electric Ovens & OTGs,OTG 30L with Rotisserie,1,0,none,yes,19004423
+Pigeon,Electric Ovens & OTGs,OTG Air Fryer 25L with Rotisserie,1,0,none,yes,19004513
+Pigeon,Electric Ovens & OTGs,OTG with Rotisserie 20L,1,0,none,yes,19003846
+Pigeon,Electric Ovens & OTGs,Oven Toaster 40L with Rotisserie,1,0,none,yes,19004424
+Pigeon,Garment Care,Comfy Dry Iron 1000W Blue,1,0,none,yes,19003595
+Pigeon,Garment Care,Comfy Dry Iron 1000W Grey,1,0,none,yes,19003233
+Pigeon,Garment Care,Comfy Dry Iron 1000W Pink,1,0,none,yes,19003596
+Pigeon,Garment Care,Comfy Dry Iron 1000W Red,1,0,none,yes,19003597
+Pigeon,Garment Care,Hand Steamer 1200W Blue,1,0,none,yes,16002255
+Pigeon,Garment Care,Hand Steamer 1200W Pink,1,0,none,yes,16002256
+Pigeon,Garment Care,Heavy Weight Iron Gale,1,1,all,yes,19003238
+Pigeon,Garment Care,Satin Steam Iron 2400W Black,1,0,none,yes,19003638
+Pigeon,Garment Care,Satin Steam Iron 2400W Blue,1,0,none,yes,19003640
+Pigeon,Garment Care,Satin Steam Iron 2400W Purple,1,0,none,yes,19003639
+Pigeon,Garment Care,Steam Iron 1600W Blue,1,0,none,yes,19003634
+Pigeon,Garment Care,Steam Iron 1600W Green,1,0,none,yes,19003637
+Pigeon,Garment Care,Steam Iron 1600W Pink,1,0,none,yes,19003635
+Pigeon,Garment Care,Steam Iron 1600W Red,1,0,none,yes,19003636
+Pigeon,Garment Care,Titan Heavy Weight Iron 1100W,1,1,all,yes,19004250
+Pigeon,Gas Cooktops,Ayush 2 Burner,1,0,none,yes,19000457
+Pigeon,Gas Cooktops,Ayush 2 Burner Auto Ignition,1,0,none,yes,19003050
+Pigeon,Gas Cooktops,Ayush 3 Burner,1,0,none,yes,19000425
+Pigeon,Gas Cooktops,Ayush 3 Burner Auto Ignition,1,0,none,yes,19003051
+Pigeon,Gas Cooktops,Ayush 4 Burner,1,0,none,yes,19003390
+Pigeon,Gas Cooktops,Ayush BLK 2 Burner,1,0,none,yes,19001659
+Pigeon,Gas Cooktops,Ayush BLK 3 Burner,1,0,none,yes,19004210
+Pigeon,Gas Cooktops,Ayush XL 3 Burner,1,0,none,yes,19004211
+Pigeon,Gas Cooktops,Cosmic 2 Burner (SABAF),1,0,none,yes,19004050
+Pigeon,Gas Cooktops,Cosmic 3 Burner (SABAF),1,0,none,yes,19004051
+Pigeon,Gas Cooktops,Cosmic 4 Burner (SABAF),1,0,none,yes,19004052
+Pigeon,Gas Cooktops,Infinity 2 Burner SABAF,1,0,none,yes,19000246
+Pigeon,Gas Cooktops,Infinity 2 Burner SABAF Auto,1,0,none,yes,19000450
+Pigeon,Gas Cooktops,Infinity 3 Burner SABAF,1,0,none,yes,19000248
+Pigeon,Gas Cooktops,Infinity 3 Burner SABAF Auto,1,0,none,yes,19000451
+Pigeon,Gas Cooktops,Infinity 4 Burner SABAF,1,0,none,yes,19000345
+Pigeon,Gas Cooktops,Infinity 4 Burner SABAF Auto,1,0,none,yes,19000452
+Pigeon,Gas Cooktops,Infinity Gold 2 Burner SABAF,1,0,none,yes,19004325
+Pigeon,Gas Cooktops,Infinity Gold 3 Burner SABAF,1,0,none,yes,19004326
+Pigeon,Gas Cooktops,Infinity Gold 4 Burner SABAF,1,0,none,yes,19004327
+Pigeon,Gas Cooktops,Jumbo 2 Burner,1,1,all,yes,19003653
+Pigeon,Gas Cooktops,Jumbo 3 Burner,1,0,none,yes,19003654
+Pigeon,Gas Cooktops,Jumbo 4 Burner,1,0,none,yes,19003655
+Pigeon,Gas Cooktops,Sleek 2 Burner,1,1,all,yes,19001433
+Pigeon,Gas Cooktops,Sleek 3 Burner,1,1,all,yes,19001345
+Pigeon,Gas Cooktops,Sleek 4 Burner,1,1,all,yes,19001435
+Pigeon,Gas Cooktops (SS),123 — 3 Burner SS,1,0,none,yes,19000005
+Pigeon,Gas Cooktops (SS),Compact 2 Burner SS,1,0,none,yes,19000181
+Pigeon,Gas Cooktops (SS),Duo 2 Burner SS,1,0,none,yes,19000002
+Pigeon,Gas Cooktops (SS),Duo 2 Burner SS Auto,1,0,none,yes,19000013
+Pigeon,Gas Cooktops (SS),Elegance 3 Burner SS,1,0,none,yes,19004053
+Pigeon,Gas Cooktops (SS),Elegance 4 Burner SS,1,0,none,yes,19004054
+Pigeon,Gas Cooktops (SS),HOB 4 Burner SS,1,0,none,yes,19000006
+Pigeon,Gas Cooktops (SS),Jumbo 2 Burner SS,1,0,none,yes,19000003
+Pigeon,Gas Cooktops (SS),Maxima 2 Burner SS,1,0,none,yes,19000182
+Pigeon,Gas Cooktops (SS),Maxima Cute Auto 2 Burner SS,1,0,none,yes,19000012
+Pigeon,Gas Cooktops (SS),Trio 3 Burner SS,1,0,none,yes,19000004
+Pigeon,Gas Cooktops (SS),Trio 3 Burner SS Auto,1,0,none,yes,19000014
+Pigeon,Hard Anodised Cookware,HA Multi Kadai 280,1,0,none,yes,19000175
+Pigeon,Hard Anodised Cookware,HA Titanium Concave Tawa 230 4mm,1,0,none,yes,19003328
+Pigeon,Hard Anodised Cookware,HA Titanium Concave Tawa 260,3,0,none,yes,"19000953, 19003329, 19003340"
+Pigeon,Hard Anodised Cookware,HA Titanium Deep Kadai 150 SS Lid,1,0,none,yes,19003410
+Pigeon,Hard Anodised Cookware,HA Titanium Deep Kadai 250 SS Lid,1,0,none,yes,19003411
+Pigeon,Hard Anodised Cookware,HA Titanium Deep Kadai 350 SS Lid,1,0,none,yes,19003412
+Pigeon,Hard Anodised Cookware,HA Titanium Flat Kadai 250 IB SS Lid,1,0,none,yes,19003408
+Pigeon,Hard Anodised Cookware,HA Titanium Flat Kadai 350 IB SS Lid,1,0,none,yes,19003409
+Pigeon,Hobs,Hob 3 Burner Linea,1,0,none,yes,16002269
+Pigeon,Hobs,Hob 3 Burner Slender,1,0,none,yes,19003827
+Pigeon,Hobs,Hob 3 Burner Slender LuxeSteel,1,0,none,yes,16002540
+Pigeon,Hobs,Hob 3 Burner TwinSpark,1,0,none,yes,16002501
+Pigeon,Hobs,Hob 4 Burner Linea,1,0,none,yes,16002300
+Pigeon,Hobs,Hob 4 Burner Slender,1,0,none,yes,19003828
+Pigeon,Hobs,Hob 4 Burner XL Linea,1,0,none,yes,16002301
+Pigeon,Hobs,Hob 4 Burner XL Slender,1,0,none,yes,19003829
+Pigeon,Hobs,Hob 4 Burner XL Slender LuxeSteel,1,0,none,yes,16002541
+Pigeon,Home Solutions,Air Turbo Vacuum Cleaner 600W,1,1,all,yes,19004267
+Pigeon,Home Solutions,Air Turbo Vacuum Cleaner Pro 600W,1,0,none,yes,19004362
+Pigeon,Home Solutions,Flash Mop Deluxe,1,1,all,yes,10040087
+Pigeon,Home Solutions,Flat Mop (Type 1),1,0,none,yes,19004013
+Pigeon,Home Solutions,Flat Mop (Type 2),1,0,none,yes,19004014
+Pigeon,Home Solutions,Flexi 9-in-1 Electric Scrubber,1,0,none,yes,19004550
+Pigeon,Home Solutions,Shine Mop,1,0,none,yes,19004009
+Pigeon,Home Solutions,Shine Mop Deluxe,1,1,all,yes,19004010
+Pigeon,Home Solutions,Sparkle Mop,1,0,none,yes,19004011
+Pigeon,Home Solutions,Sparkle Mop Deluxe,1,1,all,yes,19004012
+Pigeon,Induction Cooktops,Anti Skid 2100W,1,1,all,yes,19000697
+Pigeon,Induction Cooktops,Brio Plus 2100W,1,1,all,yes,19000400
+Pigeon,Induction Cooktops,Glo 1800W,1,1,all,yes,19004337
+Pigeon,Induction Cooktops,Prime 1800W,1,1,all,yes,19003446
+Pigeon,Induction Cooktops,Rapido Sleek 2100W,1,1,all,yes,19000650
+Pigeon,Induction Cooktops,Rapido Touch DX 2100W,1,1,all,yes,19000694
+Pigeon,Induction Cooktops,Stella 1800W,1,1,all,yes,19004265
+Pigeon,Infrared Cooktops,Eva Infrared Cooktop 2000W,1,0,none,yes,19003278
+Pigeon,Infrared Cooktops,Radiant Infrared Cooktop 2200W,1,0,none,yes,19001341
+Pigeon,Kettles & Kessels,Crystal Glass Kettle 1.8L,1,0,none,yes,19003955
+Pigeon,Kettles & Kessels,Evoke Kettle 1.8L Blue,1,0,none,yes,19004407
+Pigeon,Kettles & Kessels,Evoke Kettle 1.8L Red,1,0,none,yes,19004408
+Pigeon,Kettles & Kessels,Evoke Kettle 1.8L White,1,0,none,yes,19004406
+Pigeon,Kettles & Kessels,Evoke Kettle 1.8L Yellow,1,0,none,yes,19004409
+Pigeon,Kettles & Kessels,Hot Kettle 1.5L,1,0,none,yes,19001178
+Pigeon,Kettles & Kessels,Hot Kettle Plus 1.5L Blue,1,0,none,yes,19003985
+Pigeon,Kettles & Kessels,Hot Kettle Plus 1.5L Green,1,0,none,yes,19003984
+Pigeon,Kettles & Kessels,Multi Cooker 2.5L with Steamer,1,0,none,yes,19004310
+Pigeon,Kettles & Kessels,Multi-Purpose Kessel 1.2L,1,0,none,yes,19001663
+Pigeon,Kettles & Kessels,Multi-Purpose Kessel 1.5L Blue,1,0,none,yes,19003629
+Pigeon,Kettles & Kessels,Porta Travel Kettle 0.5L,1,0,none,yes,19003959
+Pigeon,Kettles & Kessels,Spark Double Walled Kettle 1.2L,1,0,none,yes,19003057
+Pigeon,Kettles & Kessels,Swift Multi-Cook Kettle 1.5L Black,1,0,none,yes,19003956
+Pigeon,Kettles & Kessels,Swift Plus Multi-Cook 1.5L Blue,1,0,none,yes,19003958
+Pigeon,Kettles & Kessels,Swift Plus Multi-Cook 1.5L Pink,1,0,none,yes,19003957
+Pigeon,Kettles & Kessels,Theros Kettle 1.7L,1,0,none,yes,19004405
+Pigeon,Kettles & Kessels,Travel Kettle 0.8L,1,0,none,yes,19004309
+Pigeon,Kitchen Utilities,6 Piece Knife Set,1,1,all,yes,16000780
+Pigeon,Kitchen Utilities,Chopper Utility Combo,1,0,none,yes,19003327
+Pigeon,Kitchen Utilities,Chopper Valve Pack Mini + XL,1,0,none,yes,19001296
+Pigeon,Kitchen Utilities,Chopping Board (Basic),1,0,none,yes,16000841
+Pigeon,Kitchen Utilities,Chopping Board Large,1,0,none,yes,16002273
+Pigeon,Kitchen Utilities,Chopping Board Medium,1,0,none,yes,16002372
+Pigeon,Kitchen Utilities,Chopping Board Small,1,1,all,yes,16002443
+Pigeon,Kitchen Utilities,Edge 4 Pieces Knife Set,1,1,all,yes,16002381
+Pigeon,Kitchen Utilities,Edge Carbon Knife Set 6 PC,1,0,none,yes,16002261
+Pigeon,Kitchen Utilities,Edge Ceramic Knife 4 inch,1,0,none,yes,16002280
+Pigeon,Kitchen Utilities,Edge Ceramic Knife 5 inch,1,0,none,yes,16002281
+Pigeon,Kitchen Utilities,Edge Ceramic Knife 6 inch,1,1,all,yes,16002282
+Pigeon,Kitchen Utilities,Edge Cutesy 5 Inch Knife,1,0,none,yes,19004547
+Pigeon,Kitchen Utilities,Edge Flora SS Knife 5 inch,1,1,all,yes,16002259
+Pigeon,Kitchen Utilities,Edge Flora SS Knife 6 inch,1,1,all,yes,16002260
+Pigeon,Kitchen Utilities,Edge Flora SS Knife Set 3PC 5 inch,1,0,none,yes,16002295
+Pigeon,Kitchen Utilities,Handy Chopper Litre 650ml,1,0,none,yes,19001181
+Pigeon,Kitchen Utilities,Handy Chopper Mini 400ml,1,1,all,yes,1900645
+Pigeon,Kitchen Utilities,Handy Chopper Pro Litre 650ml,1,1,all,yes,19001286
+Pigeon,Kitchen Utilities,Handy Chopper Pro Mini 400ml,1,1,all,yes,19001285
+Pigeon,Kitchen Utilities,Handy Chopper Pro XL 900ml,1,1,all,yes,19001287
+Pigeon,Kitchen Utilities,Handy Chopper XL 900ml,1,1,all,yes,19001180
+Pigeon,Kitchen Utilities,Multi Purpose Kitchen Scissor,1,1,all,yes,16000019
+Pigeon,Kitchen Utilities,Noodle Maker (Idiyappam),1,1,all,yes,16002253
+Pigeon,Kitchen Utilities,Quick Electric Chopper 300W,1,0,none,yes,19004505
+Pigeon,Kitchen Utilities,Rapid Electric Chopper 500W,1,0,none,yes,19004506
+Pigeon,Kitchen Utilities,Sharp 5 Inch Knife,1,1,all,yes,19004546
+Pigeon,Kitchen Utilities,Sharp Electric Chopper 600W 4-Speed,1,0,none,yes,19004506
+Pigeon,Kitchen Utilities,Shears 3 PC Knife Set Elite,1,0,none,yes,16001968
+Pigeon,Kitchen Utilities,Shears 4 PC Kitchen Tool Set,1,1,all,yes,16000840
+Pigeon,Kitchen Utilities,Shears Knife Set 3PC Black,1,0,none,yes,16000022
+Pigeon,Kitchen Utilities,Silicone Kitchen Tool Set 12 PC,1,0,none,yes,16002368
+Pigeon,Kitchen Utilities,Tornado Turbo Food Processor,1,1,all,yes,19001352
+Pigeon,Kitchen Utilities,Ultra Fast Electric Chopper,1,1,all,yes,19003793
+Pigeon,Kitchen Utilities,Wooden Chopping Board Large,1,0,none,yes,16002442
+Pigeon,Kitchen Utilities,Wooden Chopping Board Medium,1,0,none,yes,16002441
+Pigeon,Kitchen Utilities,Zoom Chopper,2,0,none,yes,"19003319, 19003330"
+Pigeon,LED Lights & Emergency Lamps,Bubble Desk Lamp,1,0,none,yes,16000834
+Pigeon,LED Lights & Emergency Lamps,Capella Emergency Lamp,1,0,none,yes,16000665
+Pigeon,LED Lights & Emergency Lamps,Egnite Emergency Lamp,1,0,none,yes,16000252
+Pigeon,LED Lights & Emergency Lamps,Gleam Emergency Lamp,1,0,none,yes,16000251
+Pigeon,LED Lights & Emergency Lamps,Halo Desk / Study Lamp,1,0,none,yes,16000830
+Pigeon,LED Lights & Emergency Lamps,Helios Solar Lamp,1,1,all,yes,16000285
+Pigeon,LED Lights & Emergency Lamps,Illume Emergency Lamp,1,0,none,yes,16000205
+Pigeon,LED Lights & Emergency Lamps,Illume Pro,1,1,all,yes,16000790
+Pigeon,LED Lights & Emergency Lamps,Lumino Emergency Lamp,1,0,none,yes,16000204
+Pigeon,LED Lights & Emergency Lamps,Lumino Pro,1,1,all,yes,16000792
+Pigeon,LED Lights & Emergency Lamps,Pixo Desk Lamp,1,0,none,yes,16000832
+Pigeon,LED Lights & Emergency Lamps,Radiance Blue M Emergency Lamp,1,0,none,yes,19004249
+Pigeon,LED Lights & Emergency Lamps,Radiance Green M Emergency Lamp,1,0,none,yes,19004248
+Pigeon,LED Lights & Emergency Lamps,Radiance Orange M Emergency Lamp,1,0,none,yes,19004247
+Pigeon,LED Lights & Emergency Lamps,Radiance Red M Emergency Lamp,1,0,none,yes,19004246
+Pigeon,LED Lights & Emergency Lamps,Rigel Emergency Lamp,1,0,none,yes,16000663
+Pigeon,LED Lights & Emergency Lamps,Rigel Plus LED,1,1,all,yes,16000664
+Pigeon,LED Lights & Emergency Lamps,Shine Desk Lamp,1,0,none,yes,16000605
+Pigeon,LED Lights & Emergency Lamps,Sirius Emergency Lamp,1,0,none,yes,16000666
+Pigeon,LED Lights & Emergency Lamps,TBlaze Table Lamp,1,1,all,yes,16000833
+Pigeon,LED Lights & Emergency Lamps,Theia Emergency Lamp,1,0,none,yes,16000283
+Pigeon,LED Lights & Emergency Lamps,Vega Emergency Lamp,1,0,none,yes,16000377
+Pigeon,LED Lights & Emergency Lamps,X-Cord 1 Flex Box Grey,1,1,all,yes,19003365
+Pigeon,LED Lights & Emergency Lamps,X-Cord 1 Flex Box Red,1,1,all,yes,19003244
+Pigeon,Lunch Boxes,Healthy Fresh Glass Lunch Box 3 PC,1,0,none,yes,19003416
+Pigeon,Lunch Boxes,Heat N Treat SS Lunch Box 4 PC Black,1,0,none,yes,19003315
+Pigeon,Lunch Boxes,Treat SS Lunch Box 5 PC Black,1,0,none,yes,19003851
+Pigeon,Mixer Grinders & Juicers,Atom 500W 3 Jar,1,0,none,yes,16002469
+Pigeon,Mixer Grinders & Juicers,Black Pearl MX7 750W 3 Jar,1,0,none,yes,19000257
+Pigeon,Mixer Grinders & Juicers,Classic Lite 550W 2 Jar,1,0,none,yes,19000315
+Pigeon,Mixer Grinders & Juicers,Enora 500W 3 Jar,1,0,none,yes,16002088
+Pigeon,Mixer Grinders & Juicers,Excella 550W 3 Jar,1,0,none,yes,19003825
+Pigeon,Mixer Grinders & Juicers,Femme 750W Black 3 Jar,1,0,none,yes,19001920
+Pigeon,Mixer Grinders & Juicers,Femme 750W Blue 3 Jar,1,0,none,yes,19001714
+Pigeon,Mixer Grinders & Juicers,Femme 750W Red 3 Jar,1,0,none,yes,19001922
+Pigeon,Mixer Grinders & Juicers,Glory 550W 3 Jar,1,0,none,yes,19000477
+Pigeon,Mixer Grinders & Juicers,Mega Mixi 750W 3 Jar,1,0,none,yes,19004263
+Pigeon,Mixer Grinders & Juicers,Nutri Blender 600W 2 Jar,1,0,none,yes,19004621
+Pigeon,Mixer Grinders & Juicers,Nutri Master 400W 2 Jar,1,0,none,yes,16002387
+Pigeon,Mixer Grinders & Juicers,Nutri Master 400W 3 Jar,1,0,none,yes,16002388
+Pigeon,Mixer Grinders & Juicers,Nyro 550W 4 Jar,1,0,none,yes,16002480
+Pigeon,Mixer Grinders & Juicers,Orb 750W 3 Jar,1,0,none,yes,19003055
+Pigeon,Mixer Grinders & Juicers,Orb Alpine Green 750W 3 Jar,1,0,none,yes,19004230
+Pigeon,Mixer Grinders & Juicers,Orb Royal Purple 750W 4 Jar,1,0,none,yes,19004231
+Pigeon,Mixer Grinders & Juicers,Pure Slow Juicer 250W,1,1,all,yes,19004493
+Pigeon,Mixer Grinders & Juicers,Wet Grinder 2L Nutrova,1,0,none,yes,16002551
+Pigeon,Non-Stick Cookware,6 Pcs Casserole Set,1,1,all,yes,19003652
+Pigeon,Non-Stick Cookware,Appachetty SP (without Lid),1,0,none,yes,19001069
+Pigeon,Non-Stick Cookware,Appachetty with Lid,1,0,none,yes,19000051
+Pigeon,Non-Stick Cookware,Biryani Pot,5,5,all,yes,"19000059, 19000060, 19000061, 19000062, 19000064"
+Pigeon,Non-Stick Cookware,Casserole with Glass Lid 180,1,0,none,yes,19001337
+Pigeon,Non-Stick Cookware,Casserole with Glass Lid 200,1,1,all,yes,19001338
+Pigeon,Non-Stick Cookware,Casserole with Glass Lid 220,1,0,none,yes,19001339
+Pigeon,Non-Stick Cookware,Casserole with Glass Lid 240,1,0,none,yes,19001350
+Pigeon,Non-Stick Cookware,Concave Tawa 260,1,1,all,yes,19000033
+Pigeon,Non-Stick Cookware,Concave Tawa 280,1,0,none,yes,19000034
+Pigeon,Non-Stick Cookware,Deluxe Fry Pan 235,1,0,none,yes,19000047
+Pigeon,Non-Stick Cookware,Deluxe Fry Pan 255,1,1,all,yes,19000048
+Pigeon,Non-Stick Cookware,Deluxe Fry Pan 275,1,0,none,yes,19000049
+Pigeon,Non-Stick Cookware,Flat Tawa 250,1,0,none,yes,19000030
+Pigeon,Non-Stick Cookware,Flat Tawa 280,1,1,all,yes,19000031
+Pigeon,Non-Stick Cookware,Flat Tawa 310,1,0,none,yes,19000032
+Pigeon,Non-Stick Cookware,Fry Pan 200,1,0,none,yes,19000039
+Pigeon,Non-Stick Cookware,Fry Pan 220,1,0,none,yes,19000040
+Pigeon,Non-Stick Cookware,Fry Pan 240,1,1,all,yes,19000041
+Pigeon,Non-Stick Cookware,Fry Pan 260,1,0,none,yes,19000042
+Pigeon,Non-Stick Cookware,Fry Pan 280,1,0,none,yes,19000043
+Pigeon,Non-Stick Cookware,Gravy Pot,4,1,some,yes,"19000065, 19000066, 19000067, 19000068"
+Pigeon,Non-Stick Cookware,Kadai 150,1,0,none,yes,19000035
+Pigeon,Non-Stick Cookware,Kadai 200,1,0,none,yes,19000036
+Pigeon,Non-Stick Cookware,Kadai 300,1,1,all,yes,19000037
+Pigeon,Non-Stick Cookware,Multi Kadai — Grey,1,1,all,yes,19001520
+Pigeon,Non-Stick Cookware,Multi Kadai — Red,1,1,all,yes,19001488
+Pigeon,Non-Stick Cookware,Multi Kadai — Yellow,1,0,none,yes,19001489
+Pigeon,Non-Stick Cookware,Multi Tawa 310,1,1,all,yes,19000058
+Pigeon,Non-Stick Cookware,Pathri Tawa 320,1,1,all,yes,19000054
+Pigeon,Non-Stick Cookware,Tadka Pan,1,1,all,yes,19000052
+Pigeon,Non-Stick Cookware (Storm),Storm Flat Tawa 250,1,0,none,yes,19000321
+Pigeon,Non-Stick Cookware (Storm),Storm Flat Tawa 250 IB,1,0,none,yes,19000329
+Pigeon,Non-Stick Cookware (Storm),Storm Flat Tawa 280,1,1,all,yes,19000322
+Pigeon,Non-Stick Cookware (Storm),Storm Flat Tawa 280 IB,1,1,all,yes,19000330
+Pigeon,Non-Stick Cookware (Storm),Storm Fry Pan 175,1,0,none,yes,19000323
+Pigeon,Non-Stick Cookware (Storm),Storm Fry Pan 200,1,1,all,yes,19000324
+Pigeon,Non-Stick Cookware (Storm),Storm Fry Pan 220,1,0,none,yes,19000325
+Pigeon,Non-Stick Cookware (Storm),Storm Fry Pan 240,1,0,none,yes,19000326
+Pigeon,Non-Stick Cookware (Storm),Storm Fry Pan 240 IB,1,1,all,yes,19000331
+Pigeon,Non-Stick Cookware (Storm),Storm Fry Pan 260,1,0,none,yes,19000327
+Pigeon,Non-Stick Cookware (Storm),Storm Fry Pan 260 IB,1,0,none,yes,19000332
+Pigeon,Non-Stick Cookware (Storm),Storm Kadai 200,1,1,all,yes,19000328
+Pigeon,Non-Stick Cookware (Storm),Storm Kadai 200 IB,1,0,none,yes,19000333
+Pigeon,Non-Stick Cookware (Storm),Storm Kadai 300 IB,1,0,none,yes,19000334
+Pigeon,Non-Stick Gift Sets,Alba 4 PC Gift Set,1,1,all,yes,19001023
+Pigeon,Non-Stick Gift Sets,Celebration 5 Pcs Gift Set,1,1,all,yes,19003942
+Pigeon,Non-Stick Gift Sets,Chef Delight Gift Set 7 Pcs,1,1,all,yes,19000841
+Pigeon,Non-Stick Gift Sets,Duo Pack Flat Tawa + Fry Pan 200,1,0,none,yes,19000818
+Pigeon,Non-Stick Gift Sets,Duo Pack Flat Tawa 250 + Fry Pan 220,1,1,all,yes,19000809
+Pigeon,Non-Stick Gift Sets,Favorite Duo Pack Flat Tawa 250 + Fry Pan 240,1,1,all,yes,19000870
+Pigeon,Non-Stick Gift Sets,Nonstick 4 PC Carlo,1,1,all,yes,19000745
+Pigeon,Non-Stick Gift Sets,Twin Pack Blue,1,0,none,yes,19001935
+Pigeon,Non-Stick Gift Sets,Twin Pack Flat Tawa + Fry Pan 200 Mint Green,1,0,none,yes,19001932
+Pigeon,Non-Stick Gift Sets,Twin Pack Pink,1,0,none,yes,19001934
+Pigeon,Non-Stick Gift Sets,Twin Pack Yellow,1,0,none,yes,19001933
+Pigeon,Non-Stick Gift Sets,Vita 4 PC Gift Set,1,1,all,yes,19001022
+Pigeon,Personal Care,All in 1 Grooming Kit 3-in-1,1,1,all,yes,19004316
+Pigeon,Personal Care,All in 1 Grooming Kit 5-in-1,1,1,all,yes,19004317
+Pigeon,Personal Care,Bloom Hair Dryer 1000W Blue,1,0,none,yes,19004499
+Pigeon,Personal Care,Bloom Hair Dryer 1000W Pink,1,0,none,yes,19004500
+Pigeon,Personal Care,Charm Women Trimmer 4-in-1,1,1,all,yes,19003884
+Pigeon,Personal Care,Ease 8-in-1 Electric Body Massager,1,1,all,yes,19004375
+Pigeon,Personal Care,Elegant BLDC Hair Dryer 2-in-1 1200W,1,0,none,yes,19003882
+Pigeon,Personal Care,Elegant BLDC Hair Dryer 5-in-1 1600W,1,0,none,yes,19003883
+Pigeon,Personal Care,Fair Beard Trimmer,1,1,all,yes,19003885
+Pigeon,Personal Care,Glam Hair Dryer 1400W Blue,1,0,none,yes,19003914
+Pigeon,Personal Care,Glam Hair Dryer 1400W Pink,1,0,none,yes,19003915
+Pigeon,Personal Care,Glam Hair Dryer 1400W Purple,1,0,none,yes,19003916
+Pigeon,Personal Care,Grace Hair Dryer 1200W Blue,1,0,none,yes,19003912
+Pigeon,Personal Care,Grace Hair Dryer 1200W Pink,1,0,none,yes,19003913
+Pigeon,Personal Care,Laze 4-in-1 Electric Body Massager,1,1,all,yes,19004374
+Pigeon,Personal Care,Multi Purpose Body Trimmer,1,1,all,yes,19004318
+Pigeon,Personal Care,Neura Leg & Calf Massager,1,1,all,yes,19004376
+Pigeon,Personal Care,Nexa Gun Massager,1,1,all,yes,19004379
+Pigeon,Personal Care,Pigeon Magni 2-in-1 Volumizer,1,0,none,yes,19003918
+Pigeon,Personal Care,Pretti Volumizer,1,1,all,yes,19003917
+Pigeon,Personal Care,Pulse Massager,1,1,all,yes,19004380
+Pigeon,Personal Care,Relax Scalp Massager,1,1,all,yes,19004503
+Pigeon,Personal Care,Strike Beard Trimmer,1,1,all,yes,19003886
+Pigeon,Personal Care,Syna Leg Massager,1,0,none,yes,19004377
+Pigeon,Personal Care,Vibe Gun Massager,1,1,all,yes,19004378
+Pigeon,Pressure Cookers,All-In-One Super Cooker 3L Hard Anodised,1,0,none,yes,19000687
+Pigeon,Pressure Cookers,All-In-One Super Cooker 5L Hard Anodised,1,0,none,yes,19000689
+Pigeon,Pressure Cookers,Amelia Hard Anodised,4,1,some,yes,"19000204, 19001080, 19001081, 19002717"
+Pigeon,Pressure Cookers,Classic Aluminium,4,0,none,yes,"19000029, 19001936, 19001937, 19001951"
+Pigeon,Pressure Cookers,Classic Aluminium 5L IB,1,0,none,yes,19000885
+Pigeon,Pressure Cookers,Deluxe Aluminium,6,0,none,yes,"19000017, 19000018, 19000019, 19000020, 19000021, 19000022"
+Pigeon,Pressure Cookers,Deluxe Calida 3L,1,0,none,yes,19000025
+Pigeon,Pressure Cookers,Deluxe Calida 5L IB,1,0,none,yes,19000026
+Pigeon,Pressure Cookers,Deluxe Pan,2,1,some,yes,"19000023, 19000024"
+Pigeon,Pressure Cookers,Elite Shine Tri-Ply SS,6,0,none,yes,"19001902, 19001903, 19001905, 19003878, 19004319, 19004320"
+Pigeon,Pressure Cookers,Elite Shine Tri-Ply SS 2L+3L Combo,1,0,none,yes,19002863
+Pigeon,Pressure Cookers,Elite Shine Tri-Ply SS 2L+3L+5L Combo,1,0,none,yes,19003421
+Pigeon,Pressure Cookers,INOX Outer Lid,7,1,some,yes,"19000336, 19000338, 19001327, 19003853, 19003854, 19003855, 19003856"
+Pigeon,Pressure Cookers,INOX Plus Outer Lid,2,0,none,yes,"1190010931, 19001094"
+Pigeon,Pressure Cookers,INOX Pro Inner Lid,3,1,some,yes,"19003279, 19003280, 19004291"
+Pigeon,Pressure Cookers,INOX Pro Outer Lid,2,0,none,yes,"19001899, 19001910"
+Pigeon,Pressure Cookers,INOX SS Inner Lid,3,0,none,yes,"19001100, 19001101, 19001418"
+Pigeon,Pressure Cookers,INOX Sigma,2,1,some,yes,"19003615, 19003623"
+Pigeon,Pressure Cookers,Inner Lid Triply,2,1,some,yes,"19004590, 19004591"
+Pigeon,Pressure Cookers,Mabel Ceramic Cooker,3,3,all,yes,"19004302, 19004303, 19004304"
+Pigeon,Pressure Cookers,Mila 2L Aluminium,1,0,none,yes,19001080
+Pigeon,Pressure Cookers,Mila 3L Aluminium,1,0,none,yes,19001081
+Pigeon,Pressure Cookers,Mila 5L Aluminium,1,0,none,yes,19001082
+Pigeon,Pressure Cookers,Mila 7L Aluminium,1,0,none,yes,19002717
+Pigeon,Pressure Cookers,Mini Combi OL IB SS 3.5L+5L,1,0,none,yes,19004516
+Pigeon,Pressure Cookers,Mini Combo 2L+3L Aluminium,1,0,none,yes,19000244
+Pigeon,Pressure Cookers,Rio 3L Aluminium,1,0,none,yes,19001889
+Pigeon,Pressure Cookers,Starter Kit 3.5L+5L+Fry Pan+Tawa+Kadai,1,0,none,yes,19000015
+Pigeon,Pressure Cookers,Storm IB 3L Aluminium,1,0,none,yes,19000254
+Pigeon,Pressure Cookers,Storm IB 5L Aluminium,1,0,none,yes,19000256
+Pigeon,Pressure Cookers,Super Cooker Value Pack 5L Hard Anodised,1,0,none,yes,19000691
+Pigeon,Pressure Cookers,Titanium 3L Hard Anodised,1,0,none,yes,19000173
+Pigeon,Pressure Cookers,Titanium 5L Hard Anodised,1,0,none,yes,19000174
+Pigeon,Pressure Cookers,Titanium Easy Cook Combi 3L,1,1,all,yes,19003587
+Pigeon,Pressure Cookers,Titanium Handi 2L Hard Anodised,1,0,none,yes,19000250
+Pigeon,Pressure Cookers,Titanium Handi 3L Hard Anodised,1,0,none,yes,19000251
+Pigeon,Pressure Cookers,Titanium Handi 5L Hard Anodised,1,0,none,yes,19000252
+Pigeon,Pressure Cookers,Titanium Hard Anodised,2,1,some,yes,"19000909, 19000978"
+Pigeon,Rice Cookers,Electra Smart Cook EPC,2,1,some,yes,"19004463, 19004464"
+Pigeon,Rice Cookers,INOX 1.8L DX,1,0,none,yes,19004368
+Pigeon,Rice Cookers,INOX 1.8L SDX (Double Pot),1,0,none,yes,19004293
+Pigeon,Rice Cookers,INOX 1L DX,1,0,none,yes,19004367
+Pigeon,Rice Cookers,INOX 1L SDX (Double Pot),1,0,none,yes,19004292
+Pigeon,Rice Cookers,INOX Pro with Steamer 1.8L Double Pot Grey,1,0,none,yes,19004565
+Pigeon,Rice Cookers,INOX Pro with Steamer 1.8L Double Pot Yellow,1,0,none,yes,19004563
+Pigeon,Rice Cookers,INOX Pro with Steamer 1L DX Grey,1,1,all,yes,19004562
+Pigeon,Rice Cookers,INOX Pro with Steamer 1L DX Pink,1,1,all,yes,19004561
+Pigeon,Rice Cookers,INOX Pro with Steamer 1L DX Yellow,1,1,all,yes,19004560
+Pigeon,Rice Cookers,Joy Unlimited 0.6L DX Single Pot,1,0,none,yes,19004404
+Pigeon,Rice Cookers,Joy Unlimited 0.6L Double Pot,1,0,none,yes,19004340
+Pigeon,Rice Cookers,Joy Unlimited 1.8L DX Single Pot,1,0,none,yes,19001507
+Pigeon,Rice Cookers,Joy Unlimited 1.8L Double Pot,1,0,none,yes,19001511
+Pigeon,Rice Cookers,Joy Unlimited 1L DX Single Pot,1,0,none,yes,19001508
+Pigeon,Rice Cookers,Joy Unlimited 1L Double Pot,1,0,none,yes,19001509
+Pigeon,Rice Cookers,Joy Unlimited 2.8L DX Single Pot,1,0,none,yes,19001510
+Pigeon,Rice Cookers,Joy Unlimited 4.2L DX Single Pot,1,0,none,yes,19004341
+Pigeon,Rice Cookers,Ruby 1.8L DX Single Pot,1,0,none,yes,19001766
+Pigeon,Rice Cookers,Ruby 1L Double Pot,1,0,none,yes,19001767
+Pigeon,Small Appliances,3-in-1 Snack Maker Black (Toast+Grill+Waffle),1,0,none,yes,19003620
+Pigeon,Small Appliances,Grill Sandwich Maker Jumbo,1,1,all,yes,19004190
+Pigeon,Small Appliances,Modern Cucina Coffee Maker,1,1,all,yes,19001302
+Pigeon,Small Appliances,Panini Sandwich Griller Black,1,1,all,yes,19003621
+Pigeon,Small Appliances,Pop Up Toaster Black,1,1,all,yes,19003813
+Pigeon,Small Appliances,Pop Up Toaster White,1,1,all,yes,19003814
+Pigeon,Small Appliances,Sandwich Griller Black,1,1,all,yes,19004214
+Pigeon,Small Appliances,Sandwich Griller White,1,0,none,yes,19004215
+Pigeon,Small Appliances,Sandwich Toaster Black,1,1,all,yes,19003863
+Pigeon,Small Appliances,Sandwich Toaster White,1,0,none,yes,19003864
+Pigeon,Stainless Steel Cookware,Essential 7 Pcs Gift Set,1,0,none,yes,19002210
+Pigeon,Stainless Steel Cookware,Idly Maker 3 Plates,1,1,all,yes,16002431
+Pigeon,Stainless Steel Cookware,Idly Maker 4 Plates,1,1,all,yes,16002016
+Pigeon,Stainless Steel Cookware,Idly Maker 5 Plates,1,1,all,yes,16002432
+Pigeon,Stainless Steel Cookware,Idly Maker 6 Plates,1,1,all,yes,16002017
+Pigeon,Stainless Steel Cookware,SPL SS 3 Pcs Set (Kadai+Frypan+Sauce Pan),1,0,none,yes,16000816
+Pigeon,Stainless Steel Cookware,"Steelo Frypan 10"" Sandwich Bottom",1,1,all,yes,16002105
+Pigeon,Stainless Steel Cookware,"Steelo Frypan 12"" Sandwich Bottom",1,0,none,yes,16002106
+Pigeon,Stainless Steel Cookware,"Steelo Frypan 13"" Sandwich Bottom",1,0,none,yes,16002107
+Pigeon,Stainless Steel Cookware,"Steelo Kadai 10"" 2mm",1,1,all,yes,16002094
+Pigeon,Stainless Steel Cookware,"Steelo Kadai 12"" 2mm",1,0,none,yes,16002095
+Pigeon,Stainless Steel Cookware,"Steelo Kadai 12"" Sandwich Bottom",1,1,all,yes,16002097
+Pigeon,Stainless Steel Cookware,"Steelo Kadai 13"" 2mm",1,0,none,yes,16002096
+Pigeon,Stainless Steel Cookware,"Steelo Kadai 13"" Sandwich Bottom",1,0,none,yes,16002098
+Pigeon,Stainless Steel Cookware,"Steelo Kadai 14"" Sandwich Bottom",1,0,none,yes,16002099
+Pigeon,Stainless Steel Cookware,"Steelo Kadai 15"" Sandwich Bottom",1,0,none,yes,16002100
+Pigeon,Stainless Steel Cookware,"Steelo Kadai 16"" Sandwich Bottom",1,0,none,yes,16002101
+Pigeon,Stainless Steel Cookware,Steelo Multi Kadai 280 Sandwich Bottom,1,0,none,yes,19000256
+Pigeon,Stainless Steel Cookware,Steelo Multi Kadai 3L,1,0,none,yes,16002092
+Pigeon,Stainless Steel Cookware,"Steelo Sauce Pan 10"" Sandwich Bottom",1,1,all,yes,16002102
+Pigeon,Stainless Steel Cookware,"Steelo Sauce Pan 11"" Sandwich Bottom",1,0,none,yes,16002103
+Pigeon,Stainless Steel Cookware,"Steelo Sauce Pan 12"" Sandwich Bottom",1,0,none,yes,16002104
+Pigeon,Stainless Steel Cookware,Steelo Steamer 20cm,1,0,none,yes,16002110
+Pigeon,Stainless Steel Cookware,"Steelo Tope Set 10"" to 14""",1,0,none,yes,16002109
+Pigeon,Tri-Ply Cookware,Elite Tri-Ply Casserole,3,0,none,yes,"19002696, 19002697, 19002698"
+Pigeon,Tri-Ply Cookware,Elite Tri-Ply Fry Pan,3,0,none,yes,"19002699, 19002700, 19002701"
+Pigeon,Tri-Ply Cookware,Elite Tri-Ply Kadai,4,0,none,yes,"19002702, 19002703, 19002704, 19002705"
+Pigeon,Tri-Ply Cookware,Elite Tri-Ply Sauce Pan,3,0,none,yes,"19002706, 19002707, 19002708"
+Pigeon,Tri-Ply Cookware,Elite Tri-Ply Tope,5,0,none,yes,"19002709, 19002710, 19002711, 19002712, 19002713"
+Pigeon,Water Bottles (Clear Glass),Clear Glass Water Bottle 750ml Blue,1,1,all,yes,16002461
+Pigeon,Water Bottles (Clear Glass),Clear Glass Water Bottle 750ml Grey,1,1,all,yes,16002462
+Pigeon,Water Bottles (Clear Glass),Clear Glass Water Bottle 750ml Red,1,1,all,yes,16002464
+Pigeon,Water Bottles (Clear Glass),Clear Glass Water Bottle 750ml Yellow,1,0,none,yes,16002463
+Pigeon,Water Bottles (PU Insulated),Hue Insulated SS 500ml Blue,1,0,none,yes,16002042
+Pigeon,Water Bottles (PU Insulated),Hue Insulated SS 500ml Purple,1,0,none,yes,16002018
+Pigeon,Water Bottles (PU Insulated),Hue Insulated SS 500ml Yellow,1,0,none,yes,16002040
+Pigeon,Water Bottles (PU Insulated),Hue Insulated SS 750ml Blue,1,0,none,yes,16002043
+Pigeon,Water Bottles (PU Insulated),Hue Insulated SS 750ml Purple,1,0,none,yes,16002019
+Pigeon,Water Bottles (PU Insulated),Hue Insulated SS 750ml Yellow,1,0,none,yes,16002041
+Pigeon,Water Bottles (PU Insulated),Radiant Insulated SS 600ml Blue,1,0,none,yes,16002046
+Pigeon,Water Bottles (PU Insulated),Radiant Insulated SS 600ml Pink,1,0,none,yes,16002044
+Pigeon,Water Bottles (PU Insulated),Radiant Insulated SS 600ml Yellow,1,0,none,yes,16002048
+Pigeon,Water Bottles (PU Insulated),Radiant Insulated SS 800ml Blue,1,0,none,yes,16002047
+Pigeon,Water Bottles (PU Insulated),Radiant Insulated SS 800ml Pink,1,0,none,yes,16002045
+Pigeon,Water Bottles (PU Insulated),Radiant Insulated SS 800ml Yellow,1,0,none,yes,16002049
+Pigeon,Water Bottles (Single Wall),Blitz Water Bottle 975ml Black,1,0,none,yes,19004482
+Pigeon,Water Bottles (Single Wall),Blitz Water Bottle 975ml Blue,1,1,all,yes,19004480
+Pigeon,Water Bottles (Single Wall),INOX Hydra,2,0,none,yes,"19002686, 19002688"
+Pigeon,Water Bottles (Single Wall),INOX Hydra Duo 900ml,1,1,all,yes,19004266
+Pigeon,Water Bottles (Single Wall),INOX Hydra Plus,2,0,none,yes,"19002687, 19002689"
+Pigeon,Water Bottles (Thermo Cup),Thermo Cup 350ml Black,1,0,none,yes,16002249
+Pigeon,Water Bottles (Thermo Cup),Thermo Cup 350ml White,1,0,none,yes,16002262
+Pigeon,Water Bottles (Thermo Cup),Thermo Cup 400ml Black,1,1,all,yes,16002270
+Pigeon,Water Bottles (Thermo Cup),Thermo Cup 400ml White,1,0,none,yes,16002263
+Pigeon,Water Bottles (Vacuum SS),Bullet SDX 1000ml Red,1,1,all,yes,19004029
+Pigeon,Water Bottles (Vacuum SS),Glacier,2,0,none,yes,"19004657, 19004858"
+Pigeon,Water Bottles (Vacuum SS),SS Vacuum Aqua 1000ml Silver,1,1,all,yes,19004064
+Pigeon,Water Bottles (Vacuum SS),Stark Plus Navy 1000ml Blue,1,0,none,yes,19004490
+Pigeon,Water Bottles (Vacuum SS),Stark Plus Olive Green 1000ml,1,0,none,yes,19004489
+Pigeon,Water Bottles (Vacuum SS),Therminox Aqua Plus 1000ml Black,1,1,all,yes,19004321
+Pigeon,Water Bottles (Vacuum SS),Therminox Aqua Plus 1000ml Green,1,1,all,yes,19004461
+Yera,Beer/Juice Mugs,Auburn Lake Mug A – 325ml,1,1,all,yes,BM12A
+Yera,Beer/Juice Mugs,Auburn Lake Mug – 375ml,1,1,all,yes,BM120
+Yera,Beer/Juice Mugs,Bistro Beer Mug – 345ml,1,1,all,yes,BM345
+Yera,Beer/Juice Mugs,Bistro Mug – 360ml,1,1,all,yes,BM360
+Yera,Beer/Juice Mugs,Fructose Beer Mug – 290ml,1,1,all,yes,BM10PD
+Yera,Beer/Juice Mugs,Fructose Hexagon Mug – 260ml,1,1,all,yes,JM10A
+Yera,Beer/Juice Mugs,Irish Coffee Mug – 225ml,1,1,all,yes,CM225
+Yera,Beer/Juice Mugs,Stylo Mug,2,2,all,yes,"BM350, BM355"
+Yera,Beer/Juice Mugs,Stylo Mug M32 – 355ml,1,1,all,yes,BM355-M32
+Yera,Beer/Juice Mugs,Stylo Mug – 335ml (LSR),1,1,all,yes,BM335
+Yera,Bowls,Freezowarm Bowl,3,2,some,yes,"BS401, BS801, BS802"
+Yera,Bowls,Lumino Bowl – 170ml,1,1,all,yes,B6FL
+Yera,Bowls,Pacifica Bowl – 220ml,1,1,all,yes,B7PC
+Yera,Bowls,Polo Bowl,3,3,all,yes,"B16FL, B35FL, B55FL"
+Yera,Bowls,Venus Serving Bowl,3,3,all,yes,"B12SB, B35SB, B7SB"
+Yera,Cups & Mugs,Comfort Mug/Cup,3,1,some,yes,"CS4.CSFD/DD, CS6FD, CT4FS"
+Yera,Cups & Mugs,Comfort Plain Mug/Cup,2,1,some,yes,"CS6MO-Plain, CT4FS-plain"
+Yera,Cups & Mugs,Cosmos Design 1 Mug/Cup – 250ml,1,1,all,yes,CT9-D1
+Yera,Cups & Mugs,Cosmos Design 2 Mug/Cup – 250ml,1,1,all,yes,CT9-D2
+Yera,Cups & Mugs,Cosmos Mug/Cup,3,1,some,yes,"CT4.5U, CT6, CT9"
+Yera,Cups & Mugs,Mocha Mug/Cup – 225ml,1,1,all,yes,CT8B
+Yera,Ice Cream Bowls,Antartic Ice Cream Bowl – 125ml,1,1,all,yes,IC4IF
+Yera,Ice Cream Bowls,Iceberg Ice Cream Bowl – 100ml,1,1,all,yes,ICV7-M23
+Yera,Int'l Series,Fiona Jar 675ml,1,1,all,yes,NPR-0202
+Yera,Jars,Aahar Jar,7,4,some,yes,"JR-1, JR-1.5, JR-150, JR-2, JR-3, JR-4, JR-5"
+Yera,Jars,Aahar Square Jar,6,2,some,yes,"JS-1.5, JS-2, JS-3, JS-4, JS-6, JS-8"
+Yera,Jars,Deluxe Aahar Jar – 3.36L,1,1,all,yes,JR-120
+Yera,Jars,Jina Jar – 195ml (Steel Lid),1,1,all,yes,B7FH
+Yera,Jars,KR Round Jar,6,6,all,yes,"KR-0300, KR-0600, KR-0800, KR-1000, KR-1800, KR-3000"
+Yera,Jars,KRM Round Jar,4,4,all,yes,"KRM-0300, KRM-0600, KRM-0800, KRM-1000"
+Yera,Jars,KSM Jar,9,9,all,yes,"KSM-0300, KSM-0600, KSM-0800, KSM-1000, KSM-1800, KSM-2250, KSM-235, KSM-3000, KSM-4000"
+Yera,Jars,Omega Stackable Jar – 580ml,1,1,all,yes,KR600
+Yera,Jars,Pantry Jar,4,4,all,yes,"PJS-1000, PJS-1500, PJS-2000, PJS-550"
+Yera,Jars,Shell Jar – 320ml,1,1,all,yes,ICF-320-215
+Yera,Jars,Spice Jar – 285ml,1,1,all,yes,JC-250
+Yera,Jars,Steelex Jar,7,7,all,yes,"JR-1ST, JR-2ST, JR-3ST, JR-5ST, JR250ST, JR500ST, JR750ST"
+Yera,Jars,Zaika Jar,3,3,all,yes,"JR-250, JR-500, JR-750"
+Yera,Lemon Set / Jug,Volga Jug – 1700ml,1,1,all,yes,GS1700
+Yera,Sipper Bottles,Magnus Mason Jar – 440ml,1,1,all,yes,ISS-0495-0380
+Yera,Tumblers,Classic Tumbler T10BD – 285ml,1,1,all,yes,T10BD
+Yera,Tumblers,Classic Tumbler T10FB – 285ml,1,1,all,yes,T10FB
+Yera,Tumblers,Classic Tumbler T11FC – 360ml,1,1,all,yes,T11FC
+Yera,Tumblers,Classic Tumbler T7B – 210ml,1,1,all,yes,T7B
+Yera,Tumblers,Classic Tumbler T7BD – 220ml,1,1,all,yes,T7BD
+Yera,Tumblers,Classic Tumbler T9AHB – 250ml,1,0,none,yes,T9AHB
+Yera,Tumblers,Classic Tumbler T9C – 270ml,1,1,all,yes,T9C
+Yera,Tumblers,Classic Tumbler T9FC – 255ml,1,1,all,yes,T9FC
+Yera,Tumblers,Classic Tumbler – 180ml,1,1,all,yes,TS06HB-P0
+Yera,Tumblers,Desire,3,2,some,yes,"T10SQ, T11SQ, T8RSQ"
+Yera,Tumblers,Epitome Tumbler P/B,4,2,some,yes,"TP07-P0, TP08-P0, TP09-P0, TP10-P0"
+Yera,Tumblers,Mellow Gold Plain Tumbler – 325ml,1,1,all,yes,TS12HB
+Yera,Tumblers,Mellow Gold Tumbler,2,2,all,yes,"TS7P0, TS8P0"
+Yera,Tumblers,Stylo Conical Tumbler,4,2,some,yes,"TC-155, TC-215, TC-340, TC-435"
+Yera,Tumblers,Stylo Design Tumbler,8,6,some,yes,"T-160 TH, T-185 ST, T-205 TH, T-245 TH, T-260 TH, T-265 HS, T-270 TH, T-375 TH"
+Yera,Tumblers,Stylo Parabolic Tumbler,2,2,all,yes,"TP260, TP345"
+Yera,Tumblers,Stylo Straight Tumbler,12,7,some,yes,"T2PL, TQ060, TS-065, TS-145, TS-175, TS-220, TS-245, TS-265, TS-280, TS-290, TS-340, TS-385"
+Yera,Tumblers,Tumbler – Barrel 260,1,0,none,yes,TB10

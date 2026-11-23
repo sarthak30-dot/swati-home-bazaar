@@ -21,6 +21,7 @@ Run from the repository root with `python3`. Each step writes its output into
 | 8 | `8-harvest-product-details.py` | Harvests Pigeon descriptions, feature bullets, codes and MRPs. Yera's come from its Shopify feed and need no scraping. |
 | 9 | `9-match-product-details.py` | Matches that detail to products and writes `product-details-sourced.csv` for review. Writes nothing to the database. |
 | 10 | `10-portal-inventory-report.py` | Reports which products would remain if the catalogue were filtered to those with a description, and which still lack an image. Read-only. |
+| 11 | `11-write-product-details.py` | Writes the sourced copy to `products.description` and merges feature bullets into `products.specifications`. Needs an admin login. |
 
 ## Matching is deliberately strict
 
