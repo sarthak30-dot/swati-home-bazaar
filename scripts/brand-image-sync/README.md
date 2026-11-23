@@ -20,6 +20,7 @@ Run from the repository root with `python3`. Each step writes its output into
 | 7 | `7-apply-discounts.sql` | Sets selling_price to MRP minus 10-30%, which the brief specifies but which had never been applied. |
 | 8 | `8-harvest-product-details.py` | Harvests Pigeon descriptions, feature bullets, codes and MRPs. Yera's come from its Shopify feed and need no scraping. |
 | 9 | `9-match-product-details.py` | Matches that detail to products and writes `product-details-sourced.csv` for review. Writes nothing to the database. |
+| 10 | `10-portal-inventory-report.py` | Reports which products would remain if the catalogue were filtered to those with a description, and which still lack an image. Read-only. |
 
 ## Matching is deliberately strict
 
