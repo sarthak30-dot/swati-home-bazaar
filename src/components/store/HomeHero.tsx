@@ -5,36 +5,93 @@ import { Sparkles } from "lucide-react";
  *  keyframe divides one 9s cycle into three equal 3s slots. */
 const ROTATING = ["every kitchen.", "every festival.", "every order."];
 
+/** Public bucket holding the photography sourced from the brands' own sites. */
+const SOURCED =
+  "https://nvrkfhjsnepwqgjhjekt.supabase.co/storage/v1/object/public/product-images/brand-sourced";
+
 /**
- * Drifting collage of product photography.
+ * Collage of product photography, curated by hand.
  *
- * Sourced from Dubblin deliberately: it is the only brand whose images are
- * above 800px (all 59 of them). Every Pigeon and Yera asset is a sub-800px
- * catalogue crop that turns to mush at hero size.
+ * It used to be five Dubblin tiles, because Dubblin was once the only brand
+ * with images above 800px. That is no longer true: 233 SKUs now carry
+ * photography taken from the brands' own sites, Yera's at 3000px. Five tiles
+ * of one brand also misrepresented the shop — Pigeon is 565 of 920 SKUs, and
+ * the headline names three brands while the picture showed one, with
+ * "Dubblin" printed across every bottle.
  *
- * Each Dubblin file is a catalogue page — wholesale header text ("Ctn. 24 Pcs",
- * "MRP Rs. 939/-") sits in the top ~25%, with a styled product shot beneath.
- * `object-bottom` frames the photograph and leaves the header outside the crop,
- * which also keeps trade pricing off a retail storefront.
+ * So the set is balanced two Yera / two Pigeon / one Dubblin. Yera's are warm
+ * lifestyle shots that carry the mood; Pigeon's are styled cutouts on white,
+ * which sit happily on the cream tile. Dubblin has no sourced photography yet
+ * — its site cannot be enumerated — so it keeps a catalogue page and the crop
+ * that hides the wholesale header.
+ *
+ * To refresh: pick from `product_variants` where `image_source_url` is not
+ * null, favouring images that are square and at least 1000px.
  */
-const TILES = [
+type Tile = {
+  src: string;
+  alt: string;
+  /** Grid placement; empty means a single cell. */
+  cls?: string;
+  tilt: string;
+  delay: string;
+  dur: string;
+  /** Catalogue page: zoom past the wholesale header at the top of the scan. */
+  crop?: boolean;
+  /** Hidden on the narrowest screens to keep the hero inside one phone screen. */
+  smallScreen?: boolean;
+};
+
+const TILES: Tile[] = [
   {
-    src: "/images/products/dubblin/dolphin.jpg",
+    src: `${SOURCED}/KR-0800.jpg`,
+    alt: "Yera glass storage jar of lentils on a kitchen counter",
     cls: "col-span-2 row-span-2",
     tilt: "-2deg",
     delay: "0s",
     dur: "7s",
+    smallScreen: true,
   },
-  { src: "/images/products/dubblin/crest.jpg", cls: "", tilt: "3deg", delay: "0.9s", dur: "8.5s" },
-  { src: "/images/products/dubblin/banjo.jpg", cls: "", tilt: "-4deg", delay: "1.8s", dur: "6.5s" },
   {
-    src: "/images/products/dubblin/craze-800.jpg",
-    cls: "",
+    src: `${SOURCED}/19004521.webp`,
+    alt: "Pigeon digital air fryer with a basket of chips",
+    tilt: "3deg",
+    delay: "0.9s",
+    dur: "8.5s",
+    smallScreen: true,
+  },
+  {
+    src: `${SOURCED}/B12SB.jpg`,
+    alt: "Yera glass serving bowl filled with nuts",
+    tilt: "-4deg",
+    delay: "1.8s",
+    dur: "6.5s",
+    smallScreen: true,
+  },
+  {
+    src: "/images/products/dubblin/dolphin.jpg",
+    alt: "Dubblin insulated steel bottles",
     tilt: "4deg",
     delay: "0.4s",
     dur: "9s",
+    crop: true,
   },
-  { src: "/images/products/dubblin/euro.jpg", cls: "", tilt: "-3deg", delay: "1.3s", dur: "7.5s" },
+  {
+    src: `${SOURCED}/19003863.webp`,
+    alt: "Pigeon sandwich toaster",
+    tilt: "-3deg",
+    delay: "1.3s",
+    dur: "7.5s",
+  },
+  // Sixth tile fills the last cell: with five, the 3x3 grid left its
+  // bottom-right corner empty and the collage never resolved to a rectangle.
+  {
+    src: `${SOURCED}/KSM-235.jpg`,
+    alt: "Yera wood-lidded glass storage jars of almonds and sweets",
+    tilt: "2deg",
+    delay: "2.2s",
+    dur: "8s",
+  },
 ];
 
 export function HomeHero() {
@@ -42,7 +99,7 @@ export function HomeHero() {
     <section className="relative overflow-hidden border-b border-border">
       <div className="hero-mesh absolute inset-0 -z-10" aria-hidden="true" />
 
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 lg:grid-cols-[1.05fr_1fr] lg:py-20">
+      <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-10 sm:gap-10 lg:grid-cols-[1.05fr_1fr] lg:py-16">
         {/* ---- copy ---- */}
         <div>
           <span
@@ -105,7 +162,7 @@ export function HomeHero() {
           </div>
 
           <dl
-            className="animate-rise mt-9 flex flex-wrap gap-x-8 gap-y-3"
+            className="animate-rise mt-8 flex flex-wrap gap-x-8 gap-y-3"
             style={{ animationDelay: "0.45s" }}
           >
             {[
@@ -122,17 +179,23 @@ export function HomeHero() {
         </div>
 
         {/* ---- drifting collage ---- */}
-        {/* Fixed row height keeps the collage from ballooning on narrow screens,
-            where it sits under the copy rather than beside it. */}
+        {/* Fixed row heights keep the collage from ballooning on narrow screens,
+            where it sits under the copy rather than beside it. The two tiles
+            that carry no brand of their own are dropped below sm so the whole
+            hero still fits a phone screen. */}
         <div
-          className="animate-rise grid auto-rows-[7rem] grid-cols-3 gap-3 sm:auto-rows-[9rem] sm:gap-4 lg:auto-rows-[10rem]"
+          className="animate-rise grid auto-rows-[6rem] grid-cols-3 gap-3 sm:auto-rows-[8.5rem] sm:gap-4 lg:auto-rows-[9.5rem]"
           style={{ animationDelay: "0.3s" }}
           aria-hidden="true"
         >
           {TILES.map((t, i) => (
             <div
               key={t.src}
-              className={`animate-float overflow-hidden rounded-2xl border border-white/60 bg-white shadow-xl ${t.cls}`}
+              className={[
+                "animate-float overflow-hidden rounded-2xl border border-white/60 bg-card shadow-xl",
+                t.cls ?? "",
+                t.smallScreen ? "" : "hidden sm:block",
+              ].join(" ")}
               style={
                 {
                   "--tilt": t.tilt,
@@ -143,13 +206,18 @@ export function HomeHero() {
             >
               <img
                 src={t.src}
-                alt=""
+                alt={t.alt}
                 loading={i === 0 ? "eager" : "lazy"}
-                /* origin-bottom anchors the zoom to the foot of the frame, so
-                   scaling pushes the catalogue header off the top. object-bottom
-                   alone is not enough: a portrait tile shows the source's full
-                   height, header included. */
-                className="h-full w-full origin-bottom scale-[1.55] object-cover object-bottom"
+                {...(i === 0 ? { fetchPriority: "high" as const } : {})}
+                /* Sourced photography is already framed on the product, so it
+                   is shown as-is. A catalogue page is not: origin-bottom
+                   anchors the zoom to the foot of the frame so scaling pushes
+                   the wholesale header off the top. */
+                className={
+                  t.crop
+                    ? "h-full w-full origin-bottom scale-[1.55] object-cover object-bottom"
+                    : "h-full w-full object-cover"
+                }
               />
             </div>
           ))}
