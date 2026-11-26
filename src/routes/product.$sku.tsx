@@ -97,7 +97,7 @@ function ProductPage() {
     <div className={brandClass(item.brand_slug)}>
       <ProductJsonLd item={item} />
       <div className="mx-auto max-w-7xl px-4 py-6">
-        <nav className="mb-4 flex flex-wrap items-center gap-1 text-xs text-muted-foreground">
+        <nav className="mb-4 flex flex-wrap items-center gap-1 text-xs text-ink-secondary">
           <Link to="/" className="hover:text-gold">
             Home
           </Link>
@@ -137,37 +137,39 @@ function ProductPage() {
             <span className="inline-block rounded-full bg-brand px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white">
               {item.brand_name}
             </span>
-            <h1 className="mt-3 font-display text-2xl font-bold sm:text-3xl">
+            <h1 className="mt-3 font-display text-2xl font-bold text-ink sm:text-3xl">
               {item.product_name}
             </h1>
             <div className="mt-2 flex items-center gap-3">
               {item.rating != null && item.rating_count > 0 && (
                 <RatingChip rating={item.rating} count={item.rating_count} />
               )}
-              <span className="text-xs text-muted-foreground">SKU {item.sku_id}</span>
+              <span className="text-xs text-ink-secondary">SKU {item.sku_id}</span>
               {item.category_name && (
-                <span className="text-xs text-muted-foreground">{item.category_name}</span>
+                <span className="text-xs text-ink-secondary">{item.category_name}</span>
               )}
             </div>
 
             {/* Only show a struck-through MRP when it differs from the price
                 actually being charged. */}
             <div className="mt-4 flex flex-wrap items-baseline gap-2">
-              <span className="font-display text-3xl font-bold">{rupees(item.selling_price)}</span>
+              <span className="font-display text-3xl font-bold text-ink">
+                {rupees(item.selling_price)}
+              </span>
               {item.discount_pct > 0 && item.mrp > item.selling_price && (
                 <>
-                  <span className="text-base text-muted-foreground line-through">
+                  <span className="text-base text-ink-secondary line-through">
                     {rupees(item.mrp)}
                   </span>
                   <span className="text-base font-bold text-success">{item.discount_pct}% off</span>
                 </>
               )}
             </div>
-            <p className="mt-1 text-xs text-muted-foreground">Inclusive of all taxes</p>
+            <p className="mt-1 text-xs text-ink-muted">Inclusive of all taxes</p>
 
             {siblings && siblings.length > 1 && (
               <div className="mt-5">
-                <p className="mb-2 text-sm font-semibold">Available options</p>
+                <p className="mb-2 text-sm font-semibold text-ink">Available options</p>
                 <div className="flex flex-wrap gap-2">
                   {siblings.map((v) => (
                     <button
@@ -215,7 +217,7 @@ function ProductPage() {
                 <p className={cn("text-sm font-medium", out ? "text-destructive" : "text-success")}>
                   {INVENTORY_STATUS_LABELS[inventory.status]}
                 </p>
-                {!out && <p className="text-xs text-muted-foreground">{inventory.dispatchNote}</p>}
+                {!out && <p className="text-xs text-ink-muted">{inventory.dispatchNote}</p>}
               </div>
             </div>
 
@@ -260,15 +262,15 @@ function ProductPage() {
             <div className="mt-6 grid gap-3 rounded-2xl border border-border p-4 sm:grid-cols-3">
               <div className="flex items-start gap-2">
                 <Truck className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                <p className="text-xs">Free delivery above Rs. 999</p>
+                <p className="text-xs text-ink-muted">Free delivery above Rs. 999</p>
               </div>
               <div className="flex items-start gap-2">
                 <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                <p className="text-xs">Brand warranty included</p>
+                <p className="text-xs text-ink-muted">Brand warranty included</p>
               </div>
               <div className="flex items-start gap-2">
                 <RotateCcw className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                <p className="text-xs">7-day replacement</p>
+                <p className="text-xs text-ink-muted">7-day replacement</p>
               </div>
             </div>
           </div>
@@ -280,47 +282,47 @@ function ProductPage() {
         <div className={cn("mt-10 grid gap-8", description && "lg:grid-cols-2")}>
           {description && (
             <section>
-              <h2 className="font-display text-lg font-bold">Product description</h2>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              <h2 className="font-display text-lg font-bold text-ink">Product description</h2>
+              <p className="mt-2 text-sm leading-relaxed text-ink-secondary">
                 {description.summary}
               </p>
             </section>
           )}
           <section>
-            <h2 className="font-display text-lg font-bold">Specifications</h2>
+            <h2 className="font-display text-lg font-bold text-ink">Specifications</h2>
             <dl className="mt-2 divide-y divide-border rounded-2xl border border-border">
               <div className="grid grid-cols-2 gap-2 px-4 py-2.5 text-sm">
-                <dt className="text-muted-foreground">Brand</dt>
-                <dd className="font-medium">{item.brand_name}</dd>
+                <dt className="text-ink-secondary">Brand</dt>
+                <dd className="font-medium text-ink">{item.brand_name}</dd>
               </div>
               {item.capacity_or_size && (
                 <div className="grid grid-cols-2 gap-2 px-4 py-2.5 text-sm">
-                  <dt className="text-muted-foreground">Capacity / size</dt>
-                  <dd className="font-medium">
+                  <dt className="text-ink-secondary">Capacity / size</dt>
+                  <dd className="font-medium text-ink">
                     {formatCapacity(item.capacity_or_size, item.brand_slug)}
                   </dd>
                 </div>
               )}
               {item.color && (
                 <div className="grid grid-cols-2 gap-2 px-4 py-2.5 text-sm">
-                  <dt className="text-muted-foreground">Colour</dt>
-                  <dd className="font-medium">{item.color}</dd>
+                  <dt className="text-ink-secondary">Colour</dt>
+                  <dd className="font-medium text-ink">{item.color}</dd>
                 </div>
               )}
               {Object.entries(specs).map(([k, v]) => (
                 <div key={k} className="grid grid-cols-2 gap-2 px-4 py-2.5 text-sm">
-                  <dt className="capitalize text-muted-foreground">{k}</dt>
-                  <dd className="font-medium">{String(v)}</dd>
+                  <dt className="capitalize text-ink-secondary">{k}</dt>
+                  <dd className="font-medium text-ink">{String(v)}</dd>
                 </div>
               ))}
             </dl>
 
             {highlights.length > 0 && (
               <>
-                <h3 className="mt-6 font-display text-base font-bold">Key features</h3>
+                <h3 className="mt-6 font-display text-base font-bold text-ink">Key features</h3>
                 <ul className="mt-2 space-y-1.5">
                   {highlights.map((h) => (
-                    <li key={h} className="flex gap-2 text-sm text-muted-foreground">
+                    <li key={h} className="flex gap-2 text-sm text-ink-secondary">
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" aria-hidden="true" />
                       <span>{h}</span>
                     </li>
@@ -333,7 +335,7 @@ function ProductPage() {
 
         {related && related.length > 0 && (
           <section className="mt-12">
-            <h2 className="font-display text-lg font-bold">You may also like</h2>
+            <h2 className="font-display text-lg font-bold text-ink">You may also like</h2>
             <div className="no-scrollbar mt-4 flex gap-4 overflow-x-auto pb-2">
               {related.map((r) => (
                 <div key={r.id} className="w-44 shrink-0 sm:w-56">
