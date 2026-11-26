@@ -41,9 +41,9 @@ export function ProductCard({
       <Link
         to="/product/$sku"
         params={{ sku: item.sku_id }}
-        className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+        className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-shadow hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
       >
-        <div className="relative block aspect-square overflow-hidden">
+        <div className="relative block aspect-square overflow-hidden bg-media">
           <ProductImage
             name={item.product_name}
             capacity={item.capacity_or_size}
@@ -120,7 +120,7 @@ export function ProductCard({
           e.preventDefault();
           toggle(item.id);
         }}
-        className="absolute right-2 top-2 z-10 grid h-8 w-8 place-items-center rounded-full bg-background/90 shadow-sm transition-colors hover:bg-background"
+        className="absolute right-2 top-2 z-10 grid h-8 w-8 place-items-center rounded-full bg-surface/90 shadow-sm transition-colors hover:bg-surface"
       >
         <Heart
           className={cn(
@@ -135,8 +135,8 @@ export function ProductCard({
 
 export function ProductCardSkeleton() {
   return (
-    <div className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card">
-      <div className="aspect-square animate-pulse bg-muted" />
+    <div className="flex flex-col overflow-hidden rounded-2xl border border-border bg-surface">
+      <div className="aspect-square animate-pulse bg-media" />
       <div className="space-y-2 p-3">
         <div className="h-3 w-4/5 animate-pulse rounded bg-muted" />
         <div className="h-3 w-2/5 animate-pulse rounded bg-muted" />

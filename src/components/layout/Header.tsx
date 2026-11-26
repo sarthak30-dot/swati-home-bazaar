@@ -26,7 +26,7 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-border bg-surface/95 backdrop-blur">
       <div className="bg-brand text-white">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-3 gap-y-0.5 px-4 py-1.5 text-[11px] font-medium sm:text-xs">
           <span>Retail delivery across Delhi</span>

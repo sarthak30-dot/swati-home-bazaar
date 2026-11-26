@@ -120,8 +120,8 @@ function ProductPage() {
         </nav>
 
         <div className="grid gap-8 lg:grid-cols-2">
-          <div className="overflow-hidden rounded-2xl border border-border">
-            <div className="aspect-square">
+          <div className="overflow-hidden rounded-2xl border border-border bg-surface">
+            <div className="aspect-square bg-media">
               <ProductImage
                 name={item.product_name}
                 capacity={item.capacity_or_size}
@@ -180,7 +180,7 @@ function ProductPage() {
                         "rounded-lg border px-3 py-1.5 text-sm",
                         v.id === item.id
                           ? "border-brand bg-brand-tint font-semibold text-brand"
-                          : "border-border",
+                          : "border-border bg-surface",
                       )}
                     >
                       {formatCapacity(v.capacity_or_size, v.brand_slug) ??
@@ -194,7 +194,7 @@ function ProductPage() {
             )}
 
             <div className="mt-5 flex flex-wrap items-center gap-3">
-              <div className="flex items-center rounded-xl border border-border">
+              <div className="flex items-center rounded-xl border border-border bg-surface">
                 <button
                   type="button"
                   aria-label="Decrease quantity"
@@ -248,7 +248,7 @@ function ProductPage() {
                 type="button"
                 aria-label="Add to wishlist"
                 onClick={() => toggle(item.id)}
-                className="grid h-12 w-12 place-items-center rounded-xl border border-border"
+                className="grid h-12 w-12 place-items-center rounded-xl border border-border bg-surface"
               >
                 <Heart
                   className={cn(
@@ -259,7 +259,7 @@ function ProductPage() {
               </button>
             </div>
 
-            <div className="mt-6 grid gap-3 rounded-2xl border border-border p-4 sm:grid-cols-3">
+            <div className="mt-6 grid gap-3 rounded-2xl border border-border bg-surface p-4 sm:grid-cols-3">
               <div className="flex items-start gap-2">
                 <Truck className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
                 <p className="text-xs text-ink-muted">Free delivery above Rs. 999</p>
@@ -290,7 +290,7 @@ function ProductPage() {
           )}
           <section>
             <h2 className="font-display text-lg font-bold text-ink">Specifications</h2>
-            <dl className="mt-2 divide-y divide-border rounded-2xl border border-border">
+            <dl className="mt-2 divide-y divide-border rounded-2xl border border-border bg-surface">
               <div className="grid grid-cols-2 gap-2 px-4 py-2.5 text-sm">
                 <dt className="text-ink-secondary">Brand</dt>
                 <dd className="font-medium text-ink">{item.brand_name}</dd>
