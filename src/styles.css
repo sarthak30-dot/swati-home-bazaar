@@ -65,10 +65,45 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Modern Kitchen Hearth design tokens. New, additive utility names
+     (bg-canvas/surface/media, text-ink[-secondary|-muted]) that nothing
+     consumes yet — introduced here so components can adopt them
+     incrementally without a flag-day rewrite of bg-background/bg-card/
+     text-foreground etc, which stay exactly as they are. --brand and
+     --border are the two names this system shares with the existing shell:
+     their *default* value now comes from the Hearth tokens, but the
+     per-department overrides below (.brand-pigeon/.brand-dubblin/.brand-yera)
+     still reassign --brand/--brand-tint directly, so Pigeon/Dubblin/Yera
+     pages keep their own accent instead of all going terracotta. */
+  --color-canvas: var(--bg-canvas);
+  --color-surface: var(--bg-surface);
+  --color-media: var(--bg-media);
+  --color-ink: var(--ink-primary);
+  --color-ink-secondary: var(--ink-secondary);
+  --color-ink-muted: var(--ink-muted);
+  --color-brand-hover: var(--brand-primary-hover);
 }
 
 :root {
   --radius: 1rem;
+
+  /* Modern Kitchen Hearth: warm alabaster shell, terracotta copper brand. */
+  --bg-canvas: #faf8f5; /* Warm alabaster page background */
+  --bg-surface: #ffffff; /* Cards, filter panels, modals */
+  --bg-media: #f3f1ed; /* Uniform neutral pad behind product photos */
+
+  --ink-primary: #1c1917; /* Stone charcoal — WCAG AAA on canvas/surface */
+  --ink-secondary: #57534e; /* Specs, metadata, breadcrumbs */
+  --ink-muted: #78716c; /* Captions, helper text */
+
+  --brand-primary: #b4532a; /* Terracotta Copper — primary CTAs, active filters */
+  --brand-primary-hover: #92401e; /* Hover & active press */
+  --brand-accent-soft: #fbece5; /* Subtle promo tints, active pill backgrounds */
+
+  --border-subtle: #e7e5e4; /* 1px card hairlines & section dividers */
+  --status-stock: #15803d; /* Verified stock badge */
+  --status-warning: #b45309; /* Low stock / bulk inquiry */
   --background: oklch(1 0 0);
   --foreground: oklch(0.218 0 89.9);
   --card: oklch(1 0 0);
@@ -103,9 +138,10 @@
   --yera: oklch(0.532 0.208 25.3);
   --yera-tint: oklch(0.961 0.018 20);
 
-  /* Neutral shell default = gold; overridden inside brand contexts. */
-  --brand: var(--gold);
-  --brand-tint: var(--gold-tint);
+  /* Neutral shell default = Modern Kitchen Hearth terracotta; overridden
+     inside brand contexts (.brand-pigeon/.brand-dubblin/.brand-yera below). */
+  --brand: var(--brand-primary);
+  --brand-tint: var(--brand-accent-soft);
   --brand-foreground: oklch(1 0 0);
 
   --primary: var(--gold);
@@ -118,8 +154,8 @@
   --accent-foreground: oklch(0.218 0 89.9);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.912 0.01 85);
-  --input: oklch(0.912 0.01 85);
+  --border: var(--border-subtle);
+  --input: var(--border-subtle);
   --ring: var(--gold);
   --chart-1: var(--gold);
   --chart-2: oklch(0.596 0.108 219.6);
