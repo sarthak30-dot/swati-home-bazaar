@@ -256,6 +256,12 @@ export async function fetchRail(kind: "deals" | "bestsellers" | "new", limit = 1
   if (kind === "deals") query = query.order("discount_pct", { ascending: false });
   else if (kind === "bestsellers") query = query.order("rating_count", { ascending: false });
   else query = query.order("created_at", { ascending: false });
+  // Every row shares the same seeded created_at (and most share discount_pct
+  // too, since selling_price equals mrp almost everywhere), so without a
+  // tiebreaker here the primary sort is a near no-op and Postgres returns an
+  // arbitrary — observed in practice to be brand-skewed — slice. fetchShop
+  // already breaks ties on sku_id for the same reason; this matches it.
+  query = query.order("sku_id", { ascending: true });
   const { data, error } = await query.limit(limit);
   if (error) throw error;
   return (data ?? []) as CatalogVariant[];
