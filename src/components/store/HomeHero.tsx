@@ -94,6 +94,13 @@ const TILES: Tile[] = [
   },
 ];
 
+/**
+ * The collage's own image paths, so the data-driven sections below it
+ * (BrandSpotlight, New arrivals) can skip re-showing one of these same
+ * photos — the hero already claimed them.
+ */
+export const HERO_IMAGE_PATHS: string[] = TILES.map((t) => t.src);
+
 export function HomeHero() {
   return (
     <section className="relative overflow-hidden border-b border-border">

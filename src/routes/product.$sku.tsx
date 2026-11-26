@@ -10,8 +10,10 @@ import {
   getDescription,
   getHighlights,
   getInventory,
+  isSharedPackOfOne,
   INVENTORY_STATUS_COLORS,
   INVENTORY_STATUS_LABELS,
+  SHARED_PACK_OF_ONE_LABEL,
   type CatalogVariant,
 } from "@/lib/catalog";
 import { ProductImage, brandClass } from "@/components/store/ProductImage";
@@ -127,11 +129,19 @@ function ProductPage() {
                 name={item.product_name}
                 capacity={item.capacity_or_size}
                 brandSlug={item.brand_slug}
+                categorySlug={item.category_slug}
                 imageUrl={item.image_url}
                 variantCode={item.variant_code}
                 productSlug={item.product_slug}
               />
             </div>
+            {/* The photo may show a combo/set or a sibling SKU's shot, so make
+                explicit that this listing is still just one unit. */}
+            {isSharedPackOfOne(item) && (
+              <p className="border-t border-border px-3 py-1.5 text-[11px] font-medium uppercase tracking-wide text-ink-muted">
+                {SHARED_PACK_OF_ONE_LABEL}
+              </p>
+            )}
           </div>
 
           <div>

@@ -15,25 +15,44 @@ const BRANDS = [
 /**
  * Picks the variant to feature for a brand.
  *
- * Prefers one that will actually render a photograph — a spotlight card
- * showing a coloured placeholder defeats the point. Falls back to the
- * best-rated variant if the brand has no usable image at all.
+ * Requires a *verified* photo — a spotlight card showing a missing-image
+ * placeholder defeats the point — and skips any candidate whose resolved
+ * photo is already claimed (by the hero collage, or an earlier brand in
+ * this same section), so the same photograph never appears twice on the
+ * homepage. `claimed` is mutated: the chosen candidate's image is added to
+ * it before returning, so the next brand's pick excludes it too.
+ *
+ * Returns null when nothing qualifies, in which case the caller skips that
+ * brand's card entirely rather than render one with a bad photo.
  */
-function pickFeatured(candidates: CatalogVariant[] | undefined): CatalogVariant | null {
+function pickFeatured(
+  candidates: CatalogVariant[] | undefined,
+  claimed: Set<string>,
+): CatalogVariant | null {
   if (!candidates?.length) return null;
-  const withPhoto = candidates.find((v) =>
-    resolveProductImage(v.image_url, v.variant_code, v.product_slug),
-  );
-  return withPhoto ?? candidates[0] ?? null;
+  for (const v of candidates) {
+    if (v.image_status !== "verified") continue;
+    const img = resolveProductImage(v.image_url, v.variant_code, v.product_slug);
+    if (!img || claimed.has(img)) continue;
+    claimed.add(img);
+    return v;
+  }
+  return null;
 }
 
-export function BrandSpotlight() {
+export function BrandSpotlight({
+  excludeImages,
+}: {
+  /** Image paths already shown elsewhere on the page (the hero collage) — never re-picked here. */
+  excludeImages?: Iterable<string>;
+}) {
   const results = useQueries({
     queries: BRANDS.map((b) => ({
       queryKey: ["brand-best", b.slug],
       queryFn: () => fetchBrandBest(b.slug),
     })),
   });
+  const claimed = new Set(excludeImages);
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-10">
@@ -49,7 +68,7 @@ export function BrandSpotlight() {
       <div className="mt-5 grid gap-5 lg:grid-cols-3">
         {BRANDS.map((brand, i) => {
           const query = results[i];
-          const item = pickFeatured(query?.data);
+          const item = pickFeatured(query?.data, claimed);
 
           if (query?.isLoading) {
             return (
@@ -72,6 +91,7 @@ export function BrandSpotlight() {
                     name={item.product_name}
                     capacity={item.capacity_or_size}
                     brandSlug={item.brand_slug}
+                    categorySlug={item.category_slug}
                     imageUrl={item.image_url}
                     variantCode={item.variant_code}
                     productSlug={item.product_slug}

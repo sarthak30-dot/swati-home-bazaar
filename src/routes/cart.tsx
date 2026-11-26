@@ -61,6 +61,7 @@ function CartPage() {
                   name={variant.product_name}
                   capacity={variant.capacity_or_size}
                   brandSlug={variant.brand_slug}
+                  categorySlug={variant.category_slug}
                   imageUrl={variant.image_url}
                   variantCode={variant.variant_code}
                   productSlug={variant.product_slug}

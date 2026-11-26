@@ -46,6 +46,13 @@ export type CatalogVariant = {
    * `specifications.features` bullet list — see `getHighlights`.
    */
   description_highlights: string[];
+  /**
+   * Curated photo-quality classification — see scripts/tag-image-status.mjs.
+   * needs_shoot: no resolvable photo. needs_recrop: a photo exists but is a
+   * bad crop (curatorial only). variant_shared: the resolved photo is reused
+   * across >=2 active SKUs. verified: none of the above.
+   */
+  image_status: "verified" | "needs_shoot" | "needs_recrop" | "variant_shared";
 };
 
 /**
@@ -80,6 +87,19 @@ export function getInventory(item: CatalogVariant): {
 } {
   return { status: item.inventory_status, dispatchNote: item.dispatch_note };
 }
+
+/**
+ * True when a variant is sold as a single unit but its resolved photo is
+ * shared with other SKUs (a combo/set shot, a sibling's shot, etc.) — the
+ * shopper needs an explicit "this is one unit" line since the image alone
+ * may show more than one piece.
+ */
+export function isSharedPackOfOne(item: CatalogVariant): boolean {
+  const isSingleUnit = item.pack_or_carton_qty == null || item.pack_or_carton_qty === 1;
+  return isSingleUnit && item.image_status === "variant_shared";
+}
+
+export const SHARED_PACK_OF_ONE_LABEL = "Single Unit · Pack of 1";
 
 export const INVENTORY_STATUS_LABELS: Record<CatalogVariant["inventory_status"], string> = {
   in_stock: "In stock",

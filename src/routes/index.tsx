@@ -1,24 +1,19 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
+import { Truck, ShieldCheck, Store, BadgeIndianRupee } from "lucide-react";
 import {
-  CookingPot,
-  CupSoda,
-  Zap,
-  Package2,
-  Sandwich,
-  Sparkles,
-  Truck,
-  ShieldCheck,
-  Store,
-  BadgeIndianRupee,
-  type LucideIcon,
-} from "lucide-react";
-import { fetchBrands, fetchCategories, fetchCategoryCounts, fetchRail } from "@/lib/catalog";
+  fetchBrands,
+  fetchCategories,
+  fetchCategoryCounts,
+  fetchRail,
+  type CatalogVariant,
+} from "@/lib/catalog";
 import { ProductCard, ProductCardSkeleton } from "@/components/store/ProductCard";
-import { brandClass } from "@/components/store/ProductImage";
-import { HomeHero } from "@/components/store/HomeHero";
+import { brandClass, resolveProductImage } from "@/components/store/ProductImage";
+import { HomeHero, HERO_IMAGE_PATHS } from "@/components/store/HomeHero";
 import { BrandSpotlight } from "@/components/store/BrandSpotlight";
 import { DEPARTMENTS, assertCategoriesMapped, type DepartmentSlug } from "@/lib/departments";
+import { DEPARTMENT_ICONS } from "@/lib/department-icons";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -39,15 +34,31 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-/** Icons live in the UI layer so the taxonomy module stays pure data. */
-const DEPT_ICONS: Record<DepartmentSlug, LucideIcon> = {
-  cookware: CookingPot,
-  "drinkware-bottles": CupSoda,
-  "kitchen-appliances": Zap,
-  "storage-serveware": Package2,
-  "lunch-boxes": Sandwich,
-  "home-personal-care": Sparkles,
-};
+/**
+ * Homepage photo-quality filter, shared by any rail here that pulls from a
+ * live query rather than a hand-curated list: keeps only variants with a
+ * verified photo, and never lets two cards show the same resolved image —
+ * including one already claimed by `exclude` (the hero collage's own
+ * photos). Stops once `limit` cards are picked, since the candidate pool is
+ * fetched larger than what's shown specifically to absorb this filtering.
+ */
+function curateForHomepage(
+  candidates: CatalogVariant[],
+  limit: number,
+  exclude: Iterable<string> = [],
+): CatalogVariant[] {
+  const claimed = new Set(exclude);
+  const picked: CatalogVariant[] = [];
+  for (const item of candidates) {
+    if (item.image_status !== "verified") continue;
+    const img = resolveProductImage(item.image_url, item.variant_code, item.product_slug);
+    if (!img || claimed.has(img)) continue;
+    claimed.add(img);
+    picked.push(item);
+    if (picked.length >= limit) break;
+  }
+  return picked;
+}
 
 const USPS = [
   { icon: Store, title: "Authorised retailer", text: "Genuine Pigeon, Dubblin & Yera stock" },
@@ -63,10 +74,14 @@ function Home() {
     queryKey: ["category-counts"],
     queryFn: fetchCategoryCounts,
   });
-  const { data: fresh, isLoading: freshLoading } = useQuery({
+  // Fetches a bigger pool than the 12 shown, because the homepage-quality
+  // filter below (verified photo, never a repeat of the hero collage or an
+  // earlier card in this rail) can reject some of the newest rows.
+  const { data: freshPool, isLoading: freshLoading } = useQuery({
     queryKey: ["rail", "new"],
-    queryFn: () => fetchRail("new", 12),
+    queryFn: () => fetchRail("new", 30),
   });
+  const fresh = freshPool && curateForHomepage(freshPool, 12, HERO_IMAGE_PATHS);
 
   // Dev-only guard: warns if the seed adds a category no department claims.
   if (categories) assertCategoriesMapped(categories.map((c) => c.slug));
@@ -88,7 +103,7 @@ function Home() {
     <div>
       <HomeHero />
 
-      <BrandSpotlight />
+      <BrandSpotlight excludeImages={HERO_IMAGE_PATHS} />
 
       {/* Departments are the primary entry point — a shopper picks an intent
           here, then narrows by brand inside. */}
@@ -96,7 +111,7 @@ function Home() {
         <h2 className="font-display text-xl font-bold sm:text-2xl">Shop by category</h2>
         <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           {DEPARTMENTS.map((d) => {
-            const Icon = DEPT_ICONS[d.slug];
+            const Icon = DEPARTMENT_ICONS[d.slug];
             return (
               <Link
                 key={d.slug}

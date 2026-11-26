@@ -1,7 +1,14 @@
 // Scans the live catalogue (the `catalog_variants` view, is_active = true —
 // 756 rows as of writing) and reports data-quality issues: images, missing
 // descriptions, capacity mismatches, category problems and AI-cliché copy.
-// Read-only against Supabase; writes only missing-assets-report.csv.
+// Read-only against Supabase; writes only reports/missing-assets-report.csv.
+//
+// Image status (needs_shoot / needs_recrop / variant_shared / verified) is
+// read straight from catalog_variants.image_status — see
+// scripts/tag-image-status.mjs, which computes and keeps it up to date. This
+// script additionally re-checks the resolved image is actually reachable
+// (local file exists / remote URL returns 200), independent of that stored
+// classification, since a verified row's link can still rot after the fact.
 //
 // Usage:
 //   node scripts/validate-catalog.mjs [--offline] [--out <path>]
@@ -9,7 +16,7 @@
 // --offline skips the network HEAD check against remote (Supabase storage)
 // image URLs and reports them as "unverified" instead of broken/ok.
 
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { tmpdir } from "node:os";
@@ -18,7 +25,9 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
 const OFFLINE = args.includes("--offline");
 const outFlagIdx = args.indexOf("--out");
-const OUT_PATH = outFlagIdx !== -1 ? args[outFlagIdx + 1] : join(root, "missing-assets-report.csv");
+const OUT_PATH =
+  outFlagIdx !== -1 ? args[outFlagIdx + 1] : join(root, "reports", "missing-assets-report.csv");
+mkdirSync(dirname(OUT_PATH), { recursive: true });
 
 const AI_CLICHES = [
   "celestial sophistication",
@@ -35,7 +44,10 @@ const env = Object.fromEntries(
     .map((l) => [
       l.slice(0, l.indexOf("=")).trim(),
       // values in this .env are quoted
-      l.slice(l.indexOf("=") + 1).trim().replace(/^["']|["']$/g, ""),
+      l
+        .slice(l.indexOf("=") + 1)
+        .trim()
+        .replace(/^["']|["']$/g, ""),
     ]),
 );
 
@@ -101,14 +113,18 @@ function resolveImage(v) {
 function parseSizes(text) {
   if (!text) return [];
   const out = [];
-  const re = /(\d+(?:\.\d+)?)\s*(ml|millilitre|millilitres|l|litre|litres|liter|liters|kg|kilogram|kilograms|g|gm|gms|gram|grams)\b/gi;
+  const re =
+    /(\d+(?:\.\d+)?)\s*(ml|millilitre|millilitres|l|litre|litres|liter|liters|kg|kilogram|kilograms|g|gm|gms|gram|grams)\b/gi;
   let m;
   while ((m = re.exec(text))) {
     const value = Number.parseFloat(m[1]);
     const unit = m[2].toLowerCase();
-    if (unit === "l" || unit.startsWith("lit")) out.push({ unitClass: "volume_ml", value: value * 1000, raw: m[0] });
-    else if (unit === "ml" || unit.startsWith("milli")) out.push({ unitClass: "volume_ml", value, raw: m[0] });
-    else if (unit === "kg" || unit.startsWith("kilo")) out.push({ unitClass: "weight_g", value: value * 1000, raw: m[0] });
+    if (unit === "l" || unit.startsWith("lit"))
+      out.push({ unitClass: "volume_ml", value: value * 1000, raw: m[0] });
+    else if (unit === "ml" || unit.startsWith("milli"))
+      out.push({ unitClass: "volume_ml", value, raw: m[0] });
+    else if (unit === "kg" || unit.startsWith("kilo"))
+      out.push({ unitClass: "weight_g", value: value * 1000, raw: m[0] });
     else out.push({ unitClass: "weight_g", value, raw: m[0] }); // g/gm/gms/gram(s)
   }
   return out;
@@ -140,7 +156,13 @@ function sizesDisagree(a, b) {
 }
 
 // --- 4. run checks over every active row ------------------------------------
-const missingImage = [];
+// Image classification is the stored image_status, not re-derived here — see
+// scripts/tag-image-status.mjs. This loop only re-checks link health, which
+// that classification doesn't cover.
+const needsShoot = variants.filter((v) => v.image_status === "needs_shoot");
+const needsRecrop = variants.filter((v) => v.image_status === "needs_recrop");
+const variantShared = variants.filter((v) => v.image_status === "variant_shared");
+
 const brokenLocalImage = [];
 const brokenRemoteImage = [];
 const unverifiedRemoteImage = [];
@@ -148,20 +170,11 @@ const emptyDescription = [];
 const clicheHits = [];
 const capacityMismatches = [];
 
-const imageUsage = new Map(); // resolved image path -> [{sku_id, product_id, product_name}]
-
 for (const v of variants) {
   const img = resolveImage(v);
-  if (!img) {
-    missingImage.push(v);
-  } else {
-    if (img.startsWith("/")) {
-      const onDisk = join(root, "public", img.replace(/^\//, ""));
-      if (!existsSync(onDisk)) brokenLocalImage.push({ v, img });
-    }
-    const bucket = imageUsage.get(img) ?? [];
-    bucket.push(v);
-    imageUsage.set(img, bucket);
+  if (img?.startsWith("/")) {
+    const onDisk = join(root, "public", img.replace(/^\//, ""));
+    if (!existsSync(onDisk)) brokenLocalImage.push({ v, img });
   }
 
   const desc = (v.description ?? "").trim();
@@ -179,13 +192,21 @@ for (const v of variants) {
 
   if (descSizes.length) {
     const vsTitle = sizesDisagree(titleSizes, descSizes);
-    const vsCap = sizesDisagree(capSizes.filter((s) => s.unitClass !== "bare"), descSizes);
+    const vsCap = sizesDisagree(
+      capSizes.filter((s) => s.unitClass !== "bare"),
+      descSizes,
+    );
     const vsSpecs = sizesDisagree(specSizes, descSizes);
     const mismatch = vsCap ?? vsTitle ?? vsSpecs;
     if (mismatch) {
       capacityMismatches.push({
         v,
-        source: mismatch === vsCap ? "capacity_or_size" : mismatch === vsTitle ? "title" : "specifications",
+        source:
+          mismatch === vsCap
+            ? "capacity_or_size"
+            : mismatch === vsTitle
+              ? "title"
+              : "specifications",
         sourceValue: mismatch.sa.raw,
         descriptionValue: mismatch.sb.raw,
       });
@@ -225,17 +246,6 @@ for (const v of variants) {
 }
 await checkRemote(remoteCandidates);
 
-// Image reuse across distinct SKUs.
-const reusedSameProduct = [];
-const reusedCrossProduct = [];
-for (const [img, rows] of imageUsage) {
-  if (rows.length < 2) continue;
-  const distinctProducts = new Set(rows.map((r) => r.product_id));
-  const entry = { img, skus: rows.map((r) => r.sku_id), productNames: [...new Set(rows.map((r) => r.product_name))] };
-  if (distinctProducts.size > 1) reusedCrossProduct.push(entry);
-  else reusedSameProduct.push(entry);
-}
-
 // Categories with 0 products, and duplicate category names.
 const productCountByCategory = new Map();
 for (const v of variants) {
@@ -244,7 +254,9 @@ for (const v of variants) {
   set.add(v.product_id);
   productCountByCategory.set(v.category_id, set);
 }
-const emptyCategories = categories.filter((c) => (productCountByCategory.get(c.id)?.size ?? 0) === 0);
+const emptyCategories = categories.filter(
+  (c) => (productCountByCategory.get(c.id)?.size ?? 0) === 0,
+);
 
 const nameGroups = new Map();
 for (const c of categories) {
@@ -260,18 +272,25 @@ const uncategorized = variants.filter((v) => !v.category_id);
 // --- 5. report ----------------------------------------------------------------
 const brandOf = (v) => v.brand_name ?? v.brand_slug;
 
-console.log(`Catalogue validation — ${variants.length} active SKUs across ${categories.length} categories\n`);
+console.log(
+  `Catalogue validation — ${variants.length} active SKUs across ${categories.length} categories\n`,
+);
 
-console.log("## Images");
-console.log(`  Missing image (no image_url, no fallback match): ${missingImage.length}`);
+console.log("## Images (image_status, from scripts/tag-image-status.mjs)");
+console.log(`  needs_shoot (no resolvable photo):               ${needsShoot.length}`);
+console.log(`  needs_recrop (curatorial — bad crop):            ${needsRecrop.length}`);
+console.log(`  variant_shared (photo reused across >=2 SKUs):   ${variantShared.length}`);
+console.log(
+  `  verified:                                        ${variants.length - needsShoot.length - needsRecrop.length - variantShared.length}`,
+);
 console.log(`  Broken local image (file not found on disk):     ${brokenLocalImage.length}`);
 if (OFFLINE) {
   console.log(`  Remote image URLs (not checked, --offline):      ${unverifiedRemoteImage.length}`);
 } else {
-  console.log(`  Broken remote image (HEAD failed):               ${brokenRemoteImage.length} of ${remoteCandidates.length} checked`);
+  console.log(
+    `  Broken remote image (HEAD failed):               ${brokenRemoteImage.length} of ${remoteCandidates.length} checked`,
+  );
 }
-console.log(`  Image reused within the same product (ok, e.g. size variants): ${reusedSameProduct.length} image(s)`);
-console.log(`  Image reused across DIFFERENT products (risky):   ${reusedCrossProduct.length} image(s)`);
 
 console.log("\n## Descriptions");
 console.log(`  Empty or missing description: ${emptyDescription.length}`);
@@ -289,7 +308,8 @@ for (const m of capacityMismatches.slice(0, 20)) {
     `    ${m.v.sku_id.padEnd(22)} ${brandOf(m.v).padEnd(8)} "${m.v.product_name}" — ${m.source}: ${m.sourceValue} vs description: ${m.descriptionValue}`,
   );
 }
-if (capacityMismatches.length > 20) console.log(`    ... and ${capacityMismatches.length - 20} more`);
+if (capacityMismatches.length > 20)
+  console.log(`    ... and ${capacityMismatches.length - 20} more`);
 
 console.log("\n## Categories");
 console.log(`  Categories with 0 active products: ${emptyCategories.length}`);
@@ -304,39 +324,105 @@ if (uncategorized.length) console.log(`  SKUs with no category at all: ${uncateg
 
 console.log("\n## Summary counts");
 console.log(`  Total active SKUs:              ${variants.length}`);
-console.log(`  Needing a new/fixed photo:       ${missingImage.length + brokenLocalImage.length + brokenRemoteImage.length}`);
+console.log(
+  `  Needing a new/fixed photo:       ${needsShoot.length + needsRecrop.length + variantShared.length}`,
+);
 console.log(`  Needing a description:           ${emptyDescription.length}`);
-console.log(`  Needing a copy rewrite (cliché):  ${new Set(clicheHits.map((h) => h.v.sku_id)).size}`);
+console.log(
+  `  Needing a copy rewrite (cliché):  ${new Set(clicheHits.map((h) => h.v.sku_id)).size}`,
+);
 console.log(`  Needing a capacity/copy check:    ${capacityMismatches.length}`);
 
-// --- 6. missing-assets-report.csv ---------------------------------------------
-const csvRows = [["sku_id", "brand", "product_name", "category_name", "capacity_or_size", "issue", "image_path", "detail"]];
+// --- 6. reports/missing-assets-report.csv --------------------------------------
+// Every needs_shoot, needs_recrop and variant_shared SKU, clearly categorized —
+// the acceptance criterion this script exists to satisfy.
+const csvRows = [
+  [
+    "sku_id",
+    "brand",
+    "product_name",
+    "category_name",
+    "capacity_or_size",
+    "issue",
+    "image_path",
+    "detail",
+  ],
+];
 
 const csvEscape = (s) => `"${String(s ?? "").replace(/"/g, '""')}"`;
 
-for (const v of missingImage) {
-  csvRows.push([v.sku_id, brandOf(v), v.product_name, v.category_name, v.capacity_or_size, "missing_image", "", "No image_url and no fallback match in product-images.generated.ts"]);
+for (const v of needsShoot) {
+  csvRows.push([
+    v.sku_id,
+    brandOf(v),
+    v.product_name,
+    v.category_name,
+    v.capacity_or_size,
+    "needs_shoot",
+    "",
+    "No image_url and no fallback match — needs new photography.",
+  ]);
 }
-for (const { v, img } of brokenLocalImage) {
-  csvRows.push([v.sku_id, brandOf(v), v.product_name, v.category_name, v.capacity_or_size, "broken_local_image", img, "File does not exist under public/"]);
+for (const v of needsRecrop) {
+  csvRows.push([
+    v.sku_id,
+    brandOf(v),
+    v.product_name,
+    v.category_name,
+    v.capacity_or_size,
+    "needs_recrop",
+    resolveImage(v) ?? "",
+    "Photo resolves but is a bad crop (curatorial) — needs re-cropping.",
+  ]);
 }
-for (const { v, img, status } of brokenRemoteImage) {
-  csvRows.push([v.sku_id, brandOf(v), v.product_name, v.category_name, v.capacity_or_size, "broken_remote_image", img, `HEAD ${status}`]);
+
+// Group variant_shared rows by their resolved image so the "shared with"
+// detail names the actual siblings, not just a flag.
+const sharedByImage = new Map();
+for (const v of variantShared) {
+  const img = resolveImage(v) ?? "(unresolved)";
+  const bucket = sharedByImage.get(img) ?? [];
+  bucket.push(v);
+  sharedByImage.set(img, bucket);
 }
-for (const entry of reusedCrossProduct) {
-  for (const sku of entry.skus) {
-    const v = variants.find((x) => x.sku_id === sku);
+for (const [img, bucket] of sharedByImage) {
+  for (const v of bucket) {
+    const siblings = bucket.filter((s) => s.sku_id !== v.sku_id).map((s) => s.sku_id);
     csvRows.push([
-      sku,
-      v ? brandOf(v) : "",
-      v?.product_name ?? "",
-      v?.category_name ?? "",
-      v?.capacity_or_size ?? "",
-      "reused_cross_product_image",
-      entry.img,
-      `Shared with: ${entry.productNames.filter((n) => n !== v?.product_name).join(" / ") || entry.skus.filter((s) => s !== sku).join(", ")} — needs its own photo`,
+      v.sku_id,
+      brandOf(v),
+      v.product_name,
+      v.category_name,
+      v.capacity_or_size,
+      "variant_shared",
+      img,
+      `Shared with: ${siblings.join(", ")} — consider a distinct photo.`,
     ]);
   }
+}
+for (const { v, img } of brokenLocalImage) {
+  csvRows.push([
+    v.sku_id,
+    brandOf(v),
+    v.product_name,
+    v.category_name,
+    v.capacity_or_size,
+    "broken_local_image",
+    img,
+    "File does not exist under public/",
+  ]);
+}
+for (const { v, img, status } of brokenRemoteImage) {
+  csvRows.push([
+    v.sku_id,
+    brandOf(v),
+    v.product_name,
+    v.category_name,
+    v.capacity_or_size,
+    "broken_remote_image",
+    img,
+    `HEAD ${status}`,
+  ]);
 }
 
 writeFileSync(OUT_PATH, csvRows.map((r) => r.map(csvEscape).join(",")).join("\n") + "\n");

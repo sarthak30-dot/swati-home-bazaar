@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { Package } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { IMAGE_BY_VARIANT, IMAGE_BY_SLUG } from "@/lib/product-images.generated";
+import { departmentForCategory } from "@/lib/departments";
+import { DEPARTMENT_ICONS } from "@/lib/department-icons";
 
 const BRAND_CLASS: Record<string, string> = {
   pigeon: "brand-pigeon",
@@ -34,11 +37,23 @@ export function resolveProductImage(
   );
 }
 
-/** Product photo, falling back to a brand-tinted name tile when none exists. */
+/**
+ * Product photo, falling back to a refined department-matched placeholder
+ * when there is no photo (or the one we tried to load 404s/errors out from
+ * under us — `onError` catches that rather than letting the browser's own
+ * broken-image box show through).
+ *
+ * Sits on the neutral media pad (`bg-media`, the same `#F3F1ED` tone across
+ * every card, carousel and PDP) with `object-contain` so a tall bottle and a
+ * wide pan both read cleanly without cropping into the product. The one
+ * exception is a Dubblin catalogue-sheet scan, which keeps its own crop: see
+ * `isCatalogueSheet` below.
+ */
 export function ProductImage({
   name,
   capacity,
   brandSlug,
+  categorySlug,
   imageUrl,
   variantCode,
   productSlug,
@@ -47,60 +62,56 @@ export function ProductImage({
   name: string;
   capacity?: string | null;
   brandSlug: string;
+  /** Picks the department-matched fallback icon; omit to fall back to a generic box icon. */
+  categorySlug?: string | null;
   imageUrl?: string | null;
   variantCode?: string | null;
   productSlug?: string | null;
   className?: string;
 }) {
-  const src = resolveProductImage(imageUrl, variantCode, productSlug);
+  const [broken, setBroken] = useState(false);
+  const src = broken ? null : resolveProductImage(imageUrl, variantCode, productSlug);
+
   if (src) {
     // Dubblin assets are catalogue pages: the top quarter carries wholesale
-    // text ("Ctn. 24 Pcs", "MRP Rs. 939/-") above the product shot. Biasing the
-    // crop downwards frames the product and keeps trade pricing — which can
-    // contradict this store's own price — out of the tile.
+    // text ("Ctn. 24 Pcs", "MRP Rs. 939/-") above the product shot. object-contain
+    // would show that header instead of cropping it out, so this one case keeps
+    // the original cover-and-zoom treatment rather than the padded pad/contain
+    // every other photo gets.
     const isCatalogueSheet = src.includes("/dubblin/");
     return (
       <img
         src={src}
         alt={name}
         loading="lazy"
+        onError={() => setBroken(true)}
         className={cn(
-          "h-full w-full object-cover transition-transform duration-500 group-hover:scale-105",
-          isCatalogueSheet && "origin-bottom scale-[1.4] object-bottom",
+          "h-full w-full transition-transform duration-500 group-hover:scale-105",
+          isCatalogueSheet
+            ? "origin-bottom scale-[1.4] object-cover object-bottom"
+            : "bg-media object-contain p-4",
           className,
         )}
       />
     );
   }
-  // 554 SKUs still have no photograph, 429 of them Pigeon, so this tile is
-  // the dominant visual on much of the catalogue rather than a rare fallback.
-  // A flat tinted rectangle reads as a missing image; a framed card with the
-  // brand mark, a soft wash and the product name reads as a deliberate
-  // placeholder until real photography arrives.
+
+  const department = departmentForCategory(categorySlug ?? null);
+  const Icon = department ? DEPARTMENT_ICONS[department.slug] : Package;
+
   return (
     <div
       className={cn(
-        brandClass(brandSlug),
-        "relative flex h-full w-full flex-col items-center justify-center gap-1.5 overflow-hidden bg-brand-tint px-3 text-center",
+        "relative flex h-full w-full flex-col items-center justify-center gap-1.5 overflow-hidden bg-media p-4 text-center",
         className,
       )}
     >
-      {/* Soft radial wash so the tile has depth instead of reading as a
-          solid swatch. Decorative only. */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.75),transparent_70%)]"
-      />
-      <span
-        aria-hidden="true"
-        className="relative grid h-9 w-9 place-items-center rounded-full bg-brand/10 ring-1 ring-brand/20"
-      >
-        <Package className="h-4 w-4 text-brand" />
-      </span>
-      <span className="relative line-clamp-3 font-display text-[13px] font-semibold leading-tight text-brand sm:text-sm">
+      <Icon className="h-7 w-7 text-ink-muted/50" aria-hidden="true" strokeWidth={1.5} />
+      <span className="line-clamp-2 text-[11px] font-medium leading-tight text-ink-muted">
         {name}
       </span>
-      {capacity && <span className="relative text-[11px] font-medium text-brand">{capacity}</span>}
+      {capacity && <span className="text-[10px] text-ink-muted/80">{capacity}</span>}
+      <span className="text-[10px] italic text-ink-muted/70">Photo updating</span>
     </div>
   );
 }

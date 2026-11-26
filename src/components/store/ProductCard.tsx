@@ -5,8 +5,10 @@ import { formatCapacity, isRetailPack, rupees } from "@/lib/format";
 import {
   getDescription,
   getInventory,
+  isSharedPackOfOne,
   INVENTORY_STATUS_COLORS,
   INVENTORY_STATUS_LABELS,
+  SHARED_PACK_OF_ONE_LABEL,
   type CatalogVariant,
 } from "@/lib/catalog";
 import { ProductImage, brandClass } from "@/components/store/ProductImage";
@@ -55,6 +57,7 @@ export function ProductCard({
             name={item.product_name}
             capacity={item.capacity_or_size}
             brandSlug={item.brand_slug}
+            categorySlug={item.category_slug}
             imageUrl={item.image_url}
             variantCode={item.variant_code}
             productSlug={item.product_slug}
@@ -75,6 +78,13 @@ export function ProductCard({
         </div>
 
         <div className="flex flex-1 flex-col gap-1 p-3">
+          {/* The photo may show a combo/set or a sibling SKU's shot, so make
+              explicit that this listing is still just one unit. */}
+          {isSharedPackOfOne(item) && (
+            <p className="text-[10px] font-medium uppercase tracking-wide text-ink-muted">
+              {SHARED_PACK_OF_ONE_LABEL}
+            </p>
+          )}
           <h3 className="line-clamp-2 text-[13px] font-semibold leading-snug text-foreground sm:text-sm">
             {item.product_name}
           </h3>

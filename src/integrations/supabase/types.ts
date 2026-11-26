@@ -436,6 +436,7 @@ export type Database = {
           cost_price: number | null
           created_at: string
           id: string
+          image_status: string
           image_url: string | null
           mrp: number
           pack_or_carton_qty: number | null
@@ -452,6 +453,7 @@ export type Database = {
           cost_price?: number | null
           created_at?: string
           id?: string
+          image_status?: string
           image_url?: string | null
           mrp: number
           pack_or_carton_qty?: number | null
@@ -468,6 +470,7 @@ export type Database = {
           cost_price?: number | null
           created_at?: string
           id?: string
+          image_status?: string
           image_url?: string | null
           mrp?: number
           pack_or_carton_qty?: number | null
@@ -726,6 +729,7 @@ export type Database = {
           discount_pct: number | null
           dispatch_note: string | null
           id: string | null
+          image_status: string | null
           image_url: string | null
           inventory_status: string | null
           is_active: boolean | null
