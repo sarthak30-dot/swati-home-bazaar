@@ -10,6 +10,7 @@ import {
   getDescription,
   getHighlights,
   getInventory,
+  INVENTORY_STATUS_COLORS,
   INVENTORY_STATUS_LABELS,
   type CatalogVariant,
 } from "@/lib/catalog";
@@ -214,7 +215,7 @@ function ProductPage() {
                 </button>
               </div>
               <div>
-                <p className={cn("text-sm font-medium", out ? "text-destructive" : "text-success")}>
+                <p className={cn("text-sm font-medium", INVENTORY_STATUS_COLORS[inventory.status])}>
                   {INVENTORY_STATUS_LABELS[inventory.status]}
                 </p>
                 {!out && <p className="text-xs text-ink-muted">{inventory.dispatchNote}</p>}

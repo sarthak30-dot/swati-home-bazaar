@@ -83,6 +83,8 @@
   --color-ink-secondary: var(--ink-secondary);
   --color-ink-muted: var(--ink-muted);
   --color-brand-hover: var(--brand-primary-hover);
+  --color-status-stock: var(--status-stock);
+  --color-status-warning: var(--status-warning);
 }
 
 :root {

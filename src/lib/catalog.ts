@@ -88,6 +88,14 @@ export const INVENTORY_STATUS_LABELS: Record<CatalogVariant["inventory_status"],
   preorder: "Available for preorder",
 };
 
+/** Text-color utility per inventory_status, using the status-stock/status-warning tokens. */
+export const INVENTORY_STATUS_COLORS: Record<CatalogVariant["inventory_status"], string> = {
+  in_stock: "text-status-stock",
+  low_stock: "text-status-warning",
+  out_of_stock: "text-destructive",
+  preorder: "text-brand",
+};
+
 export type Review = {
   id: string;
   customer_id: string;
