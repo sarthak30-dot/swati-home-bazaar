@@ -124,12 +124,17 @@ function parseCapacityColumn(raw) {
   return [];
 }
 
+// A size "disagrees" only when a capacity/title value has NO match anywhere
+// among the description's same-unit sizes — not merely when some pair in the
+// cross product differs. A shared description legitimately listing several
+// sizes ("available in 2L, 3L, and 5L") must not be flagged just because the
+// first-mentioned size isn't this particular variant's.
 function sizesDisagree(a, b) {
   for (const sa of a) {
-    for (const sb of b) {
-      if (sa.unitClass !== sb.unitClass) continue;
-      if (Math.abs(sa.value - sb.value) > 0.01) return { sa, sb };
-    }
+    const sameClass = b.filter((sb) => sb.unitClass === sa.unitClass);
+    if (sameClass.length === 0) continue;
+    const anyMatch = sameClass.some((sb) => Math.abs(sa.value - sb.value) <= 0.01);
+    if (!anyMatch) return { sa, sb: sameClass[0] };
   }
   return null;
 }

@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { formatCapacity, isRetailPack, rupees } from "@/lib/format";
-import type { CatalogVariant } from "@/lib/catalog";
+import { getDescription, getInventory, type CatalogVariant } from "@/lib/catalog";
 import { ProductImage, brandClass } from "@/components/store/ProductImage";
 import { RatingChip } from "@/components/store/RatingChip";
 import { useWishlist } from "@/hooks/useWishlist";
@@ -26,8 +26,9 @@ export function ProductCard({
   variantCount?: number;
 }) {
   const { isWishlisted, toggle } = useWishlist();
-  const out = item.stock_qty <= 0;
+  const out = getInventory(item).status === "out_of_stock";
   const hasDiscount = item.discount_pct > 0 && item.mrp > item.selling_price;
+  const description = getDescription(item);
 
   // capacity_or_size is present on 651/920 variants and is the single most
   // useful disambiguator between two otherwise identically-named products.
@@ -78,9 +79,9 @@ export function ProductCard({
               existing height rather than reserving a blank row. No opacity
               on the text: /90 drops muted-foreground to 4.46:1 on white and
               fails AA by four hundredths. */}
-          {item.description && (
+          {description && (
             <p className="mt-1 line-clamp-2 text-[11px] leading-snug text-muted-foreground">
-              {item.description}
+              {description.summary}
             </p>
           )}
           {item.rating != null && item.rating_count > 0 && (

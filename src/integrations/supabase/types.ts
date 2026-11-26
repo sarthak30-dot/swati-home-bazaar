@@ -501,6 +501,7 @@ export type Database = {
           category_id: string | null
           created_at: string
           description: string | null
+          description_highlights: Json
           id: string
           is_active: boolean
           name: string
@@ -513,6 +514,7 @@ export type Database = {
           category_id?: string | null
           created_at?: string
           description?: string | null
+          description_highlights?: Json
           id?: string
           is_active?: boolean
           name: string
@@ -525,6 +527,7 @@ export type Database = {
           category_id?: string | null
           created_at?: string
           description?: string | null
+          description_highlights?: Json
           id?: string
           is_active?: boolean
           name?: string
@@ -710,6 +713,7 @@ export type Database = {
           brand_id: string | null
           brand_name: string | null
           brand_slug: string | null
+          capacity: string | null
           capacity_or_size: string | null
           category_id: string | null
           category_name: string | null
@@ -718,13 +722,17 @@ export type Database = {
           color_hex: string | null
           created_at: string | null
           description: string | null
+          description_highlights: Json | null
           discount_pct: number | null
+          dispatch_note: string | null
           id: string | null
           image_url: string | null
+          inventory_status: string | null
           is_active: boolean | null
           light_color_hex: string | null
           mrp: number | null
           pack_or_carton_qty: number | null
+          pack_size: string | null
           product_id: string | null
           product_name: string | null
           product_slug: string | null

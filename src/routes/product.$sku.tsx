@@ -3,7 +3,16 @@ import { useQuery } from "@tanstack/react-query";
 import { useEffect, useRef, useState } from "react";
 import { Check, Heart, Minus, Plus, ShieldCheck, Truck, RotateCcw } from "lucide-react";
 import { toast } from "sonner";
-import { fetchProductBySku, fetchRelated, fetchSiblings, type CatalogVariant } from "@/lib/catalog";
+import {
+  fetchProductBySku,
+  fetchRelated,
+  fetchSiblings,
+  getDescription,
+  getHighlights,
+  getInventory,
+  INVENTORY_STATUS_LABELS,
+  type CatalogVariant,
+} from "@/lib/catalog";
 import { ProductImage, brandClass } from "@/components/store/ProductImage";
 import { ProductCard } from "@/components/store/ProductCard";
 import { RatingChip } from "@/components/store/RatingChip";
@@ -72,13 +81,14 @@ function ProductPage() {
 
   if (!item) throw notFound();
 
-  const out = item.stock_qty <= 0;
-  const hasDescription = Boolean(item.description?.trim());
-  // `features` is an array of bullets, everything else is a scalar row, so
-  // the two are rendered differently: a comma-joined array in a <dd> reads as
+  const inventory = getInventory(item);
+  const out = inventory.status === "out_of_stock";
+  const description = getDescription(item);
+  const highlights = getHighlights(item);
+  // Scalar spec values only — `features` is rendered separately via
+  // `highlights` above, so a comma-joined array doesn't end up in a <dd> as
   // one unbroken blob.
   const allSpecs = item.specifications ?? {};
-  const features = Array.isArray(allSpecs["features"]) ? allSpecs["features"] : [];
   const specs = Object.fromEntries(
     Object.entries(allSpecs).filter(([k, v]) => k !== "features" && !Array.isArray(v)),
   ) as Record<string, string>;
@@ -201,9 +211,12 @@ function ProductPage() {
                   <Plus className="h-4 w-4" />
                 </button>
               </div>
-              <p className={cn("text-sm font-medium", out ? "text-destructive" : "text-success")}>
-                {out ? "Out of stock" : `In stock (${item.stock_qty} available)`}
-              </p>
+              <div>
+                <p className={cn("text-sm font-medium", out ? "text-destructive" : "text-success")}>
+                  {INVENTORY_STATUS_LABELS[inventory.status]}
+                </p>
+                {!out && <p className="text-xs text-muted-foreground">{inventory.dispatchNote}</p>}
+              </div>
             </div>
 
             <div className="mt-5 flex flex-wrap gap-3">
@@ -261,16 +274,15 @@ function ProductPage() {
           </div>
         </div>
 
-        {/* No product in the catalogue carries a description yet, so the
-            heading would otherwise sit above empty space and read as broken.
-            Hidden until there is copy, and the grid collapses to one column
-            so Specifications does not leave half the row blank. */}
-        <div className={cn("mt-10 grid gap-8", hasDescription && "lg:grid-cols-2")}>
-          {hasDescription && (
+        {/* Hidden on the rare row with no summary yet, so the heading doesn't
+            sit above empty space; the grid then collapses to one column so
+            Specifications doesn't leave half the row blank. */}
+        <div className={cn("mt-10 grid gap-8", description && "lg:grid-cols-2")}>
+          {description && (
             <section>
               <h2 className="font-display text-lg font-bold">Product description</h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {item.description}
+                {description.summary}
               </p>
             </section>
           )}
@@ -303,14 +315,14 @@ function ProductPage() {
               ))}
             </dl>
 
-            {features.length > 0 && (
+            {highlights.length > 0 && (
               <>
                 <h3 className="mt-6 font-display text-base font-bold">Key features</h3>
                 <ul className="mt-2 space-y-1.5">
-                  {features.map((f) => (
-                    <li key={f} className="flex gap-2 text-sm text-muted-foreground">
+                  {highlights.map((h) => (
+                    <li key={h} className="flex gap-2 text-sm text-muted-foreground">
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" aria-hidden="true" />
-                      <span>{f}</span>
+                      <span>{h}</span>
                     </li>
                   ))}
                 </ul>

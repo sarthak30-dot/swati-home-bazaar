@@ -32,6 +32,60 @@ export type CatalogVariant = {
   /** Real average from `reviews`, rounded to 1 decimal. `null` when the product has no reviews yet. */
   rating: number | null;
   rating_count: number;
+  /** Normalized echo of capacity_or_size, computed in the view — the structured capacity field. */
+  capacity: string | null;
+  /** Human-readable pack/carton size derived from pack_or_carton_qty, e.g. "Pack of 6", "Single unit". */
+  pack_size: string;
+  /** Qualitative stock status, computed live from stock_qty — replaces showing a raw count to shoppers. */
+  inventory_status: "in_stock" | "low_stock" | "out_of_stock" | "preorder";
+  /** Shopper-facing dispatch/shipping note that accompanies inventory_status. */
+  dispatch_note: string;
+  /**
+   * Spec-driven bullet points, authored alongside `description` for a growing
+   * subset of products. Empty for rows not yet migrated off the legacy
+   * `specifications.features` bullet list — see `getHighlights`.
+   */
+  description_highlights: string[];
+};
+
+/**
+ * `sku_id` is this catalogue's canonical SKU: unique, required, and the
+ * identifier used in URLs and order line items. Nothing else aliases it.
+ */
+
+/** The structured `description` shape the UI should render: a short factual summary plus bullets. */
+export function getDescription(
+  item: CatalogVariant,
+): { summary: string; highlights: string[] } | null {
+  const summary = item.description?.trim();
+  if (!summary) return null;
+  return { summary, highlights: getHighlights(item) };
+}
+
+/**
+ * Prefers the new `description_highlights` once a product has been migrated
+ * to it, falling back to the legacy `specifications.features` bullet list for
+ * the rows that have not been (most of the catalogue, still).
+ */
+export function getHighlights(item: CatalogVariant): string[] {
+  if (item.description_highlights.length > 0) return item.description_highlights;
+  const features = item.specifications?.["features"];
+  return Array.isArray(features) ? features : [];
+}
+
+/** The structured `inventory` shape the UI should render instead of a raw stock count. */
+export function getInventory(item: CatalogVariant): {
+  status: CatalogVariant["inventory_status"];
+  dispatchNote: string;
+} {
+  return { status: item.inventory_status, dispatchNote: item.dispatch_note };
+}
+
+export const INVENTORY_STATUS_LABELS: Record<CatalogVariant["inventory_status"], string> = {
+  in_stock: "In stock",
+  low_stock: "Low stock",
+  out_of_stock: "Out of stock",
+  preorder: "Available for preorder",
 };
 
 export type Review = {
