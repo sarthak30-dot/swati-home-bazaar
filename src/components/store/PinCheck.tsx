@@ -104,8 +104,8 @@ export function PinCheck({ className }: { className?: string }) {
             <div
               className={cn(
                 "mt-2 rounded-lg px-2.5 py-2 text-[11px] leading-relaxed",
-                result.status === "serviceable" && "bg-success/10 text-success",
-                result.status === "bulk-only" && "bg-gold/10 text-foreground",
+                result.status === "serviceable" && "bg-status-stock/10 text-status-stock",
+                result.status === "bulk-only" && "bg-status-warning/10 text-status-warning",
                 result.status === "invalid" && "bg-destructive/10 text-destructive",
               )}
             >
