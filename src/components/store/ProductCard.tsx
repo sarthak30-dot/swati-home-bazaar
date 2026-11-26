@@ -2,7 +2,13 @@ import { Link } from "@tanstack/react-router";
 import { Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { formatCapacity, isRetailPack, rupees } from "@/lib/format";
-import { getDescription, getInventory, type CatalogVariant } from "@/lib/catalog";
+import {
+  getDescription,
+  getInventory,
+  INVENTORY_STATUS_COLORS,
+  INVENTORY_STATUS_LABELS,
+  type CatalogVariant,
+} from "@/lib/catalog";
 import { ProductImage, brandClass } from "@/components/store/ProductImage";
 import { RatingChip } from "@/components/store/RatingChip";
 import { useWishlist } from "@/hooks/useWishlist";
@@ -26,7 +32,8 @@ export function ProductCard({
   variantCount?: number;
 }) {
   const { isWishlisted, toggle } = useWishlist();
-  const out = getInventory(item).status === "out_of_stock";
+  const inventory = getInventory(item);
+  const out = inventory.status === "out_of_stock";
   const hasDiscount = item.discount_pct > 0 && item.mrp > item.selling_price;
   const description = getDescription(item);
 
@@ -104,6 +111,18 @@ export function ProductCard({
                 </>
               )}
             </div>
+            {/* Skipped when out of stock — the image overlay already says so;
+                repeating it here would be redundant. */}
+            {!out && (
+              <p
+                className={cn(
+                  "mt-0.5 text-[11px] font-medium",
+                  INVENTORY_STATUS_COLORS[inventory.status],
+                )}
+              >
+                {INVENTORY_STATUS_LABELS[inventory.status]}
+              </p>
+            )}
             {isRetailPack(item.pack_or_carton_qty) && (
               <p className="mt-0.5 text-[11px] text-muted-foreground">
                 Pack of {item.pack_or_carton_qty}
