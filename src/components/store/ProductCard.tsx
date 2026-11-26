@@ -41,7 +41,7 @@ export function ProductCard({
       <Link
         to="/product/$sku"
         params={{ sku: item.sku_id }}
-        className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+        className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
       >
         <div className="relative block aspect-square overflow-hidden">
           <ProductImage

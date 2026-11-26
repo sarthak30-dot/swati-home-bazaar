@@ -27,7 +27,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
-      <div className="bg-gold text-white">
+      <div className="bg-brand text-white">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-3 gap-y-0.5 px-4 py-1.5 text-[11px] font-medium sm:text-xs">
           <span>Retail delivery across Delhi</span>
           <span aria-hidden className="opacity-60">
@@ -57,7 +57,7 @@ export function Header() {
             {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
           <Link to="/" className="flex min-h-11 min-w-0 items-center gap-2">
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-gold font-display text-sm font-bold text-white">
+            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand font-display text-sm font-bold text-white">
               SE
             </span>
             <span className="hidden min-w-0 flex-col leading-tight sm:flex">
@@ -77,7 +77,7 @@ export function Header() {
             onChange={(e) => setTerm(e.target.value)}
             placeholder="Search pressure cookers, bottles, jars or a product code"
             aria-label="Search products"
-            className="w-full rounded-xl border border-border bg-muted/60 py-2 pl-9 pr-3 text-sm focus-visible:border-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+            className="w-full rounded-xl border border-border bg-muted/60 py-2 pl-9 pr-3 text-sm focus-visible:border-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           />
         </form>
 
@@ -103,7 +103,7 @@ export function Header() {
           >
             <ShoppingCart className="h-5 w-5" />
             {count > 0 && (
-              <span className="absolute -right-0.5 -top-0.5 grid h-4 min-w-4 place-items-center rounded-full bg-gold px-1 text-[10px] font-bold text-white">
+              <span className="absolute -right-0.5 -top-0.5 grid h-4 min-w-4 place-items-center rounded-full bg-brand px-1 text-[10px] font-bold text-white">
                 {count}
               </span>
             )}
@@ -116,7 +116,7 @@ export function Header() {
           "Dubblin's vacuum range". */}
       <div className="hidden border-t border-border lg:block">
         <div className="mx-auto flex max-w-7xl items-center gap-5 px-4 py-2 text-sm font-medium">
-          <Link to="/shop" className="whitespace-nowrap hover:text-gold">
+          <Link to="/shop" className="whitespace-nowrap hover:text-brand">
             All products
           </Link>
           {DEPARTMENTS.map((d) => (
@@ -124,20 +124,20 @@ export function Header() {
               key={d.slug}
               to="/department/$slug"
               params={{ slug: d.slug }}
-              className="whitespace-nowrap hover:text-gold"
+              className="whitespace-nowrap hover:text-brand"
             >
               {d.name}
             </Link>
           ))}
           <Link
             to="/bulk-orders"
-            className="ml-auto flex items-center gap-1 whitespace-nowrap font-semibold text-gold hover:underline"
+            className="ml-auto flex items-center gap-1 whitespace-nowrap font-semibold text-brand hover:text-brand-hover hover:underline"
           >
             <Package className="h-4 w-4" />
             Bulk orders
           </Link>
           {isAdmin && (
-            <Link to="/admin" className="whitespace-nowrap font-semibold text-gold">
+            <Link to="/admin" className="whitespace-nowrap font-semibold text-brand">
               Admin
             </Link>
           )}
@@ -153,7 +153,7 @@ export function Header() {
               onChange={(e) => setTerm(e.target.value)}
               placeholder="Search products"
               aria-label="Search products"
-              className="w-full rounded-xl border border-border bg-muted/60 py-2 pl-9 pr-3 text-sm focus-visible:border-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+              className="w-full rounded-xl border border-border bg-muted/60 py-2 pl-9 pr-3 text-sm focus-visible:border-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             />
           </form>
 
@@ -197,7 +197,7 @@ export function Header() {
             <Link
               to="/bulk-orders"
               onClick={() => setMenuOpen(false)}
-              className="font-semibold text-gold"
+              className="font-semibold text-brand"
             >
               Bulk orders (pan-India)
             </Link>
@@ -211,7 +211,7 @@ export function Header() {
               Contact
             </Link>
             {isAdmin && (
-              <Link to="/admin" onClick={() => setMenuOpen(false)} className="text-gold">
+              <Link to="/admin" onClick={() => setMenuOpen(false)} className="text-brand">
                 Admin
               </Link>
             )}
