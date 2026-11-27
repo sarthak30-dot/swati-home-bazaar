@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { Truck, ShieldCheck, Store, BadgeIndianRupee } from "lucide-react";
 import {
+  fetchActiveSkuCount,
   fetchBrands,
   fetchCategories,
   fetchCategoryCounts,
@@ -74,6 +75,10 @@ function Home() {
     queryKey: ["category-counts"],
     queryFn: fetchCategoryCounts,
   });
+  const { data: skuCount } = useQuery({
+    queryKey: ["active-sku-count"],
+    queryFn: fetchActiveSkuCount,
+  });
   // Fetches a bigger pool than the 12 shown, because the homepage-quality
   // filter below (verified photo, never a repeat of the hero collage or an
   // earlier card in this rail) can reject some of the newest rows.
@@ -101,7 +106,7 @@ function Home() {
 
   return (
     <div>
-      <HomeHero />
+      <HomeHero skuCount={skuCount} />
 
       <BrandSpotlight excludeImages={HERO_IMAGE_PATHS} />
 

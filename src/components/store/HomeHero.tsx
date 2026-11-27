@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { Sparkles } from "lucide-react";
 
 /** Words cycled through by the headline rotator. Keep to three: the CSS
  *  keyframe divides one 9s cycle into three equal 3s slots. */
@@ -101,7 +100,8 @@ const TILES: Tile[] = [
  */
 export const HERO_IMAGE_PATHS: string[] = TILES.map((t) => t.src);
 
-export function HomeHero() {
+export function HomeHero({ skuCount }: { skuCount?: number | undefined }) {
+  const skuLabel = skuCount != null ? skuCount.toLocaleString("en-IN") : null;
   return (
     <section className="relative overflow-hidden border-b border-border">
       <div className="hero-mesh absolute inset-0 -z-10" aria-hidden="true" />
@@ -110,22 +110,26 @@ export function HomeHero() {
         {/* ---- copy ---- */}
         <div>
           <span
-            className="animate-rise inline-flex items-center gap-1.5 rounded-full border border-gold/30 bg-white/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-gold backdrop-blur"
+            className="animate-rise inline-flex items-center rounded-full border border-gold/30 bg-white/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-gold backdrop-blur"
             style={{ animationDelay: "0.05s" }}
           >
-            <Sparkles className="h-3.5 w-3.5" />
-            Chandni Chowk, Delhi
+            Chandni Chowk, Delhi · Est. Wholesale &amp; Retail
           </span>
 
           <h1
             className="animate-rise mt-5 font-display text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl"
             style={{ animationDelay: "0.15s" }}
           >
-            Built for
-            {/* The rotator is inline-grid so all three words occupy one cell;
-                the tallest word therefore sets the height and the line below
+            <span className="block">Built for</span>
+            {/* Block, not inline: "Built for" and the rotator always sit on
+                their own flush-left line each, rather than one depending on
+                whether the text happens to wrap at the viewport's width (the
+                bug: an inline rotator carried its left margin onto whichever
+                line it landed on, so the two lines only aligned by accident).
+                The rotator is still a grid so all three words occupy one
+                cell; the tallest word sets the height and the line below
                 never shifts as the words swap. */}
-            <span className="word-rotator relative ml-3 inline-grid text-left align-baseline">
+            <span className="word-rotator relative grid w-fit text-left align-baseline">
               {ROTATING.map((word, i) => (
                 <span
                   key={word}
@@ -146,8 +150,8 @@ export function HomeHero() {
             className="animate-rise mt-5 max-w-xl text-base text-foreground/75 sm:text-lg"
             style={{ animationDelay: "0.25s" }}
           >
-            Over 900 genuine SKUs from Pigeon, Dubblin and Yera Glassware &mdash; delivered across
-            Delhi, and shipped pan-India for bulk orders.
+            {skuLabel ?? "Hundreds of"} genuine SKUs from Pigeon, Dubblin and Yera Glassware &mdash;
+            delivered across Delhi, and shipped pan-India for bulk orders.
           </p>
 
           <div
@@ -173,7 +177,7 @@ export function HomeHero() {
             style={{ animationDelay: "0.45s" }}
           >
             {[
-              ["900+", "Products"],
+              [skuLabel ?? "—", "Genuine SKUs"],
               ["3", "Trusted brands"],
               ["Pan-India", "Bulk delivery"],
             ].map(([value, label]) => (

@@ -205,6 +205,16 @@ export async function fetchCategoryCounts(): Promise<Record<string, number>> {
   return counts;
 }
 
+/** Total active SKUs across the whole catalogue — the hero's live headline count. */
+export async function fetchActiveSkuCount(): Promise<number> {
+  const { count, error } = await supabase
+    .from("catalog_variants")
+    .select("id", { count: "exact", head: true })
+    .eq("is_active", true);
+  if (error) throw error;
+  return count ?? 0;
+}
+
 export async function fetchShop(filters: ShopFilters) {
   let query = supabase
     .from("catalog_variants")
