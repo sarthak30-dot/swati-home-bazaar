@@ -1,5 +1,15 @@
 import { Link } from "@tanstack/react-router";
 
+/** Digits only, with country code, e.g. "911145678900" — see .env.example. */
+const STORE_PHONE = import.meta.env["VITE_STORE_PHONE"] as string | undefined;
+
+/** "911145678900" -> "+91 11 4567 8900". Falls back to the raw digits if the
+ *  configured number doesn't match this shape, rather than mis-grouping it. */
+function formatStorePhone(digits: string): string {
+  const match = /^(\d{2})(\d{2})(\d{4})(\d{4})$/.exec(digits);
+  return match ? `+${match[1]} ${match[2]} ${match[3]} ${match[4]}` : digits;
+}
+
 export function Footer() {
   return (
     <footer className="mt-16 border-t border-border bg-muted/50">
@@ -79,11 +89,13 @@ export function Footer() {
           <address className="mt-3 space-y-1 text-sm not-italic text-muted-foreground">
             <p>Swati Enterprises</p>
             <p>Chandni Chowk, Delhi 110006</p>
-            <p>
-              <a href="tel:+911145678900" className="hover:text-gold">
-                +91 11 4567 8900
-              </a>
-            </p>
+            {STORE_PHONE && (
+              <p>
+                <a href={`tel:+${STORE_PHONE}`} className="hover:text-gold">
+                  {formatStorePhone(STORE_PHONE)}
+                </a>
+              </p>
+            )}
             <p>
               <a href="mailto:care@swatienterprises.in" className="hover:text-gold">
                 care@swatienterprises.in
