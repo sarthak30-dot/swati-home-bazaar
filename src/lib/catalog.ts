@@ -205,6 +205,39 @@ export async function fetchCategoryCounts(): Promise<Record<string, number>> {
   return counts;
 }
 
+/**
+ * Variant count per category slug for the given filters, with `categories`
+ * itself left out — this is what a category or department pill on /shop
+ * would show if the shopper clicked it next, holding brand/price/rating/
+ * discount/search as they currently are. Same client-side-count approach as
+ * `fetchCategoryCounts` above, for the same reason (no GROUP BY over REST).
+ */
+export async function fetchFacetCounts(
+  filters: Pick<
+    ShopFilters,
+    "brands" | "minPrice" | "maxPrice" | "minRating" | "minDiscount" | "q"
+  >,
+): Promise<Record<string, number>> {
+  let query = supabase.from("catalog_variants").select("category_slug").eq("is_active", true);
+
+  if (filters.brands?.length) query = query.in("brand_slug", filters.brands);
+  if (filters.minPrice != null) query = query.gte("selling_price", filters.minPrice);
+  if (filters.maxPrice != null) query = query.lte("selling_price", filters.maxPrice);
+  if (filters.minRating != null) query = query.gte("rating", filters.minRating);
+  if (filters.minDiscount != null) query = query.gte("discount_pct", filters.minDiscount);
+  if (filters.q) query = query.ilike("product_name", `%${filters.q}%`);
+
+  const { data, error } = await query;
+  if (error) throw error;
+
+  const counts: Record<string, number> = {};
+  for (const row of data ?? []) {
+    const slug = (row as { category_slug: string | null }).category_slug;
+    if (slug) counts[slug] = (counts[slug] ?? 0) + 1;
+  }
+  return counts;
+}
+
 /** Total active SKUs across the whole catalogue — the hero's live headline count. */
 export async function fetchActiveSkuCount(): Promise<number> {
   const { count, error } = await supabase

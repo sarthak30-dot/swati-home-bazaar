@@ -47,18 +47,25 @@ function DepartmentPage() {
 
   // Supplier categories inside this department, largest first — this is the
   // first place a shopper can see that e.g. all 112 water bottles exist as one
-  // group rather than scattered across three brands.
+  // group rather than scattered across three brands. A zero-count category
+  // (no active stock) is dropped rather than shown as a dead click; until
+  // `counts` has loaded, nothing is dropped yet, so the grid doesn't flash
+  // empty.
   const subCategories = dept.categorySlugs
     .map((s) => ({
       slug: s,
       name: (categories ?? []).find((c) => c.slug === s)?.name ?? s,
       count: counts?.[s] ?? 0,
     }))
+    .filter((c) => counts == null || c.count > 0)
     .sort((a, b) => b.count - a.count);
 
-  // Material only applies where the merge actually destroyed a distinction.
-  const materials = MATERIALS.filter((m) =>
-    m.categorySlugs.every((s) => dept.categorySlugs.includes(s)),
+  // Material only applies where the merge actually destroyed a distinction,
+  // and only while it still has active stock (same zero-count rule as above).
+  const materials = MATERIALS.filter(
+    (m) =>
+      m.categorySlugs.every((s) => dept.categorySlugs.includes(s)) &&
+      (counts == null || m.categorySlugs.some((s) => (counts[s] ?? 0) > 0)),
   );
 
   return (

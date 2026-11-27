@@ -2,7 +2,13 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import { Search, SlidersHorizontal, X } from "lucide-react";
 import { useState } from "react";
-import { fetchBrands, fetchCategories, fetchShop, PAGE_SIZE } from "@/lib/catalog";
+import {
+  fetchBrands,
+  fetchCategories,
+  fetchFacetCounts,
+  fetchShop,
+  PAGE_SIZE,
+} from "@/lib/catalog";
 import { ProductCard, ProductCardSkeleton } from "@/components/store/ProductCard";
 import { rupees } from "@/lib/format";
 import { cn } from "@/lib/utils";
@@ -85,6 +91,32 @@ function Shop() {
   const { data: brands } = useQuery({ queryKey: ["brands"], queryFn: fetchBrands });
   const { data: categories } = useQuery({ queryKey: ["categories"], queryFn: fetchCategories });
 
+  // Counts for every category/department pill if it were clicked next, given
+  // the brand/price/rating/discount/search filters currently active — not
+  // the global tally fetchCategoryCounts gives on the homepage. Left out of
+  // its own queryKey: `categories` (a pill's own selection doesn't shrink its
+  // own count — only the *other* active filters do).
+  const { data: facetCounts } = useQuery({
+    queryKey: [
+      "shop-facet-counts",
+      selBrands,
+      search.min,
+      search.max,
+      search.rating,
+      search.discount,
+      search.q,
+    ],
+    queryFn: () =>
+      fetchFacetCounts({
+        brands: selBrands.length ? selBrands : undefined,
+        minPrice: search.min,
+        maxPrice: search.max,
+        minRating: search.rating,
+        minDiscount: search.discount,
+        q: search.q,
+      }),
+  });
+
   const { data, isLoading, isFetching } = useQuery({
     queryKey: ["shop", search],
     placeholderData: keepPreviousData,
@@ -109,12 +141,52 @@ function Shop() {
   const visibleCats = (categories ?? []).filter(
     (c) => !brandIds.length || !c.brand_id || brandIds.includes(c.brand_id),
   );
-  // A selected category always stays visible, so a search term can never hide
-  // a filter that is currently applied.
-  const matchingCats = visibleCats.filter(
-    (c) =>
-      selCats.includes(c.slug) || c.name.toLowerCase().includes(catFilter.trim().toLowerCase()),
+  // A selected category always stays visible — a search term, or the filter
+  // dropping its count to zero, can never hide a pill that is currently
+  // applied, or there'd be no way left to switch it back off. Otherwise,
+  // until facetCounts has loaded, don't filter on count (it would briefly
+  // read every category as 0 and empty the whole list).
+  const matchingCats = visibleCats.filter((c) => {
+    if (selCats.includes(c.slug)) return true;
+    if (!c.name.toLowerCase().includes(catFilter.trim().toLowerCase())) return false;
+    return facetCounts == null || (facetCounts[c.slug] ?? 0) > 0;
+  });
+
+  const departmentCounts = facetCounts
+    ? Object.fromEntries(
+        DEPARTMENTS.map((d) => [
+          d.slug,
+          d.categorySlugs.reduce((n, s) => n + (facetCounts[s] ?? 0), 0),
+        ]),
+      )
+    : null;
+
+  const activeDepartment = DEPARTMENTS.find(
+    (d) =>
+      d.categorySlugs.length === selCats.length &&
+      d.categorySlugs.every((s) => selCats.includes(s)),
   );
+  const singleCategory =
+    !activeDepartment && selCats.length === 1
+      ? (categories ?? []).find((c) => c.slug === selCats[0])
+      : undefined;
+  const brandLabel =
+    selBrands.length === 1
+      ? (brands ?? []).find((b) => b.slug === selBrands[0])?.name
+      : selBrands.length > 1
+        ? `${selBrands.length} brands`
+        : undefined;
+  const headingParts = [brandLabel, activeDepartment?.name ?? singleCategory?.name].filter(
+    (p): p is string => Boolean(p),
+  );
+  const countLabel = isLoading ? "…" : total.toLocaleString("en-IN");
+  const heading = search.q
+    ? `Results for "${search.q}"`
+    : headingParts.length === 0
+      ? `All Products (${countLabel})`
+      : headingParts.length === 1
+        ? `${headingParts[0]} Products (${countLabel})`
+        : `${headingParts.join(" · ")} (${countLabel})`;
 
   const toggleList = (key: "brands" | "categories", value: string) => {
     const current = key === "brands" ? selBrands : selCats;
@@ -153,10 +225,11 @@ function Shop() {
       <div>
         <h2 className="mb-2 text-sm font-semibold">Department</h2>
         <div className="space-y-1">
-          {DEPARTMENTS.map((d) => {
-            const active =
-              d.categorySlugs.length === selCats.length &&
-              d.categorySlugs.every((s) => selCats.includes(s));
+          {DEPARTMENTS.filter(
+            (d) => d.slug === activeDepartment?.slug || (departmentCounts?.[d.slug] ?? 1) > 0,
+          ).map((d) => {
+            const active = d.slug === activeDepartment?.slug;
+            const count = departmentCounts?.[d.slug];
             return (
               <button
                 key={d.slug}
@@ -165,11 +238,14 @@ function Shop() {
                   setSearch({ categories: active ? undefined : d.categorySlugs.join(",") })
                 }
                 className={cn(
-                  "block w-full truncate rounded-lg border px-3 py-1.5 text-left text-sm",
+                  "flex w-full items-center justify-between gap-2 rounded-lg border px-3 py-1.5 text-left text-sm",
                   active ? "border-gold bg-gold-tint font-semibold text-gold" : "border-border",
                 )}
               >
-                {d.name}
+                <span className="truncate">{d.name}</span>
+                {count != null && (
+                  <span className="shrink-0 text-xs text-muted-foreground">{count}</span>
+                )}
               </button>
             );
           })}
@@ -202,7 +278,12 @@ function Shop() {
                 onChange={() => toggleList("categories", c.slug)}
                 className="h-4 w-4 accent-[var(--gold)]"
               />
-              <span className="min-w-0 truncate">{c.name}</span>
+              <span className="min-w-0 flex-1 truncate">{c.name}</span>
+              {facetCounts != null && (
+                <span className="shrink-0 text-xs text-muted-foreground">
+                  {facetCounts[c.slug] ?? 0}
+                </span>
+              )}
             </label>
           ))}
         </div>
@@ -292,9 +373,7 @@ function Shop() {
     <div className="mx-auto max-w-7xl px-4 py-6">
       <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
         <div className="min-w-0">
-          <h1 className="truncate font-display text-2xl font-bold">
-            {search.q ? `Results for "${search.q}"` : "All products"}
-          </h1>
+          <h1 className="truncate font-display text-2xl font-bold">{heading}</h1>
           <p className="text-sm text-muted-foreground">
             {isLoading ? "Loading catalogue..." : `${total.toLocaleString("en-IN")} products`}
           </p>
