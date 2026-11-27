@@ -4,10 +4,9 @@ import { Building2, Gift, Store, Truck } from "lucide-react";
 import { toast } from "sonner";
 import { DEPARTMENTS } from "@/lib/departments";
 import { supabase } from "@/integrations/supabase/client";
+import { STORE_PHONE, formatStorePhone } from "@/lib/store-contact";
 
-/** Ops contact points. Update both if the store number or inbox changes. */
 const BULK_EMAIL = "care@swatienterprises.in";
-const BULK_WHATSAPP = "911145678900";
 
 export const Route = createFileRoute("/bulk-orders")({
   head: () => ({
@@ -87,9 +86,11 @@ function BulkOrders() {
     `Bulk order enquiry${form.company ? ` — ${form.company}` : ""}`,
   )}&body=${encodeURIComponent(enquiryBody)}`;
 
-  const whatsapp = `https://wa.me/${BULK_WHATSAPP}?text=${encodeURIComponent(
-    `Bulk order enquiry\n\n${enquiryBody}`,
-  )}`;
+  const whatsapp = STORE_PHONE
+    ? `https://wa.me/${STORE_PHONE}?text=${encodeURIComponent(
+        `Bulk order enquiry\n\n${enquiryBody}`,
+      )}`
+    : undefined;
 
   const ready = form.name.trim() !== "" && form.phone.trim() !== "";
 
@@ -285,12 +286,12 @@ function BulkOrders() {
               Send by email
             </a>
             <a
-              href={ready ? whatsapp : undefined}
+              href={ready && whatsapp ? whatsapp : undefined}
               target="_blank"
               rel="noreferrer"
-              aria-disabled={!ready}
+              aria-disabled={!ready || !whatsapp}
               className={`rounded-xl border border-border px-5 py-2.5 text-sm font-semibold ${
-                ready ? "hover:bg-muted" : "pointer-events-none opacity-40"
+                ready && whatsapp ? "hover:bg-muted" : "pointer-events-none opacity-40"
               }`}
             >
               Send on WhatsApp
@@ -298,13 +299,15 @@ function BulkOrders() {
           </div>
         </div>
 
-        <p className="mt-4 text-xs text-muted-foreground">
-          Prefer to talk? Call{" "}
-          <a className="font-semibold text-gold underline" href={`tel:+${BULK_WHATSAPP}`}>
-            +91 11 4567 8900
-          </a>
-          , Monday to Saturday, 10:00 AM to 8:00 PM.
-        </p>
+        {STORE_PHONE && (
+          <p className="mt-4 text-xs text-muted-foreground">
+            Prefer to talk? Call{" "}
+            <a className="font-semibold text-gold underline" href={`tel:+${STORE_PHONE}`}>
+              {formatStorePhone(STORE_PHONE)}
+            </a>
+            , Monday to Saturday, 10:00 AM to 8:00 PM.
+          </p>
+        )}
       </section>
     </div>
   );

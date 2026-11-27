@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { StaticPage } from "@/components/layout/StaticPage";
+import { STORE_PHONE, formatStorePhone } from "@/lib/store-contact";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -30,10 +31,14 @@ export const Route = createFileRoute("/contact")({
       <section>
         <h2>Phone &amp; email</h2>
         <p>
-          <a className="text-gold underline" href="tel:+911145678900">
-            +91 11 4567 8900
-          </a>
-          <br />
+          {STORE_PHONE && (
+            <>
+              <a className="text-gold underline" href={`tel:+${STORE_PHONE}`}>
+                {formatStorePhone(STORE_PHONE)}
+              </a>
+              <br />
+            </>
+          )}
           <a className="text-gold underline" href="mailto:care@swatienterprises.in">
             care@swatienterprises.in
           </a>
